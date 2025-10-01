@@ -1,0 +1,1395 @@
+{
+	"frames": {
+		"1_slot_item_drop_icon.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"2_slot_item_drop_icon.png": {
+			"frame": {
+				"x": 41,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"accuracy_icon.png": {
+			"frame": {
+				"x": 81,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"add_dmg_icon.png": {
+			"frame": {
+				"x": 121,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"all_amp_icon.png": {
+			"frame": {
+				"x": 161,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"all_atk_icon.png": {
+			"frame": {
+				"x": 201,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"alz_bomb_chance_icon.png": {
+			"frame": {
+				"x": 241,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"alz_drop_amount_icon.png": {
+			"frame": {
+				"x": 281,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"alz_drop_rate_icon.png": {
+			"frame": {
+				"x": 321,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"attack_icon.png": {
+			"frame": {
+				"x": 361,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"attack_rate_icon.png": {
+			"frame": {
+				"x": 401,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"aura_duration_increase_icon.png": {
+			"frame": {
+				"x": 441,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"battle_mode_increase_icon.png": {
+			"frame": {
+				"x": 481,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"boost_hp_restoration_icon.png": {
+			"frame": {
+				"x": 521,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"cancel_ignore_damage_reduction_icon.png": {
+			"frame": {
+				"x": 561,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"cancel_ignore_evasion_icon.png": {
+			"frame": {
+				"x": 601,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"cancel_ignore_penetration_icon.png": {
+			"frame": {
+				"x": 641,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"critical_damage_icon.png": {
+			"frame": {
+				"x": 681,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"critical_rate_icon.png": {
+			"frame": {
+				"x": 721,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"defense_icon.png": {
+			"frame": {
+				"x": 761,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"defense_rate_icon.png": {
+			"frame": {
+				"x": 801,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"dex_icon.png": {
+			"frame": {
+				"x": 841,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"dmg_reduction_icon.png": {
+			"frame": {
+				"x": 881,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"evasion_icon.png": {
+			"frame": {
+				"x": 921,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"exp_icon.png": {
+			"frame": {
+				"x": 961,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"final_dmg_decrease_icon.png": {
+			"frame": {
+				"x": 1001,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"final_dmg_increase_icon.png": {
+			"frame": {
+				"x": 1041,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"hp_absorb_icon.png": {
+			"frame": {
+				"x": 1081,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"hp_auto_heal_icon.png": {
+			"frame": {
+				"x": 1121,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"hp_icon.png": {
+			"frame": {
+				"x": 1161,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"ignore_accuracy_icon.png": {
+			"frame": {
+				"x": 1201,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"ignore_damage_reduction_icon.png": {
+			"frame": {
+				"x": 1241,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"ignore_evasion_icon.png": {
+			"frame": {
+				"x": 1281,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"ignore_penetration_icon.png": {
+			"frame": {
+				"x": 1321,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"ignore_resist_crit_dmg_icon.png": {
+			"frame": {
+				"x": 1361,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"ignore_resist_crit_rate_icon.png": {
+			"frame": {
+				"x": 1401,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"ignore_resist_down_icon.png": {
+			"frame": {
+				"x": 1441,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"ignore_resist_knockback_icon.png": {
+			"frame": {
+				"x": 1481,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"ignore_resist_skill_amp_icon.png": {
+			"frame": {
+				"x": 1521,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"ignore_resist_stun_icon.png": {
+			"frame": {
+				"x": 1561,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"int_icon.png": {
+			"frame": {
+				"x": 1601,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"magic_amp_icon.png": {
+			"frame": {
+				"x": 1641,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"mana_icon.png": {
+			"frame": {
+				"x": 1681,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"mattack_icon.png": {
+			"frame": {
+				"x": 1721,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"max_crit_rate_icon.png": {
+			"frame": {
+				"x": 1761,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"max_hp_absorb_icon.png": {
+			"frame": {
+				"x": 1801,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"max_mp_absorb_icon.png": {
+			"frame": {
+				"x": 1841,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"min_dmg_icon.png": {
+			"frame": {
+				"x": 1881,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"mp_absorb_icon.png": {
+			"frame": {
+				"x": 1921,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"mp_auto_heal_icon.png": {
+			"frame": {
+				"x": 1961,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"normal_dmg_icon.png": {
+			"frame": {
+				"x": 2001,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"party_exp_icon.png": {
+			"frame": {
+				"x": 2041,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"penetration_icon.png": {
+			"frame": {
+				"x": 2081,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"pet_exp_icon.png": {
+			"frame": {
+				"x": 2121,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"resist_crit_dmg_icon.png": {
+			"frame": {
+				"x": 2161,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"resist_critical_rate_icon.png": {
+			"frame": {
+				"x": 2201,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"resist_down_icon.png": {
+			"frame": {
+				"x": 2241,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"resist_knock_back_icon.png": {
+			"frame": {
+				"x": 2281,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"resist_silence_icon.png": {
+			"frame": {
+				"x": 2321,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"resist_skill_amp_icon.png": {
+			"frame": {
+				"x": 2361,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"resist_suppression_icon.png": {
+			"frame": {
+				"x": 2401,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"resist_unable_move_icon.png": {
+			"frame": {
+				"x": 2441,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"root_icon.png": {
+			"frame": {
+				"x": 2481,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"silence_icon.png": {
+			"frame": {
+				"x": 2521,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"skill_exp_icon.png": {
+			"frame": {
+				"x": 2561,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"str_icon.png": {
+			"frame": {
+				"x": 2601,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"stun_resist_icon.png": {
+			"frame": {
+				"x": 2641,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"suppression_icon.png": {
+			"frame": {
+				"x": 2681,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		},
+		"sword_amp_icon.png": {
+			"frame": {
+				"x": 2721,
+				"y": 1,
+				"w": 38,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 38
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 2760,
+			"h": 40
+		},
+		"scale": "1"
+	}
+}

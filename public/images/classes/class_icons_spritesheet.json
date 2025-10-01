@@ -1,0 +1,195 @@
+{
+	"frames": {
+		"blader_icon.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 35,
+				"h": 35
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 35,
+				"h": 35
+			},
+			"sourceSize": {
+				"w": 35,
+				"h": 35
+			}
+		},
+		"dark_mage_icon.png": {
+			"frame": {
+				"x": 38,
+				"y": 1,
+				"w": 35,
+				"h": 35
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 35,
+				"h": 35
+			},
+			"sourceSize": {
+				"w": 35,
+				"h": 35
+			}
+		},
+		"force_archer_icon.png": {
+			"frame": {
+				"x": 75,
+				"y": 1,
+				"w": 35,
+				"h": 35
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 35,
+				"h": 35
+			},
+			"sourceSize": {
+				"w": 35,
+				"h": 35
+			}
+		},
+		"force_blader_icon.png": {
+			"frame": {
+				"x": 112,
+				"y": 1,
+				"w": 35,
+				"h": 35
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 35,
+				"h": 35
+			},
+			"sourceSize": {
+				"w": 35,
+				"h": 35
+			}
+		},
+		"force_gunner_icon.png": {
+			"frame": {
+				"x": 149,
+				"y": 1,
+				"w": 35,
+				"h": 35
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 35,
+				"h": 35
+			},
+			"sourceSize": {
+				"w": 35,
+				"h": 35
+			}
+		},
+		"force_shielder_icon.png": {
+			"frame": {
+				"x": 186,
+				"y": 1,
+				"w": 35,
+				"h": 35
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 35,
+				"h": 35
+			},
+			"sourceSize": {
+				"w": 35,
+				"h": 35
+			}
+		},
+		"gladiator_icon.png": {
+			"frame": {
+				"x": 223,
+				"y": 1,
+				"w": 35,
+				"h": 35
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 35,
+				"h": 35
+			},
+			"sourceSize": {
+				"w": 35,
+				"h": 35
+			}
+		},
+		"warrior_icon.png": {
+			"frame": {
+				"x": 260,
+				"y": 1,
+				"w": 35,
+				"h": 35
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 35,
+				"h": 35
+			},
+			"sourceSize": {
+				"w": 35,
+				"h": 35
+			}
+		},
+		"wizard_icon.png": {
+			"frame": {
+				"x": 297,
+				"y": 1,
+				"w": 35,
+				"h": 35
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 35,
+				"h": 35
+			},
+			"sourceSize": {
+				"w": 35,
+				"h": 35
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 333,
+			"h": 37
+		},
+		"scale": "1"
+	}
+}

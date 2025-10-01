@@ -2,13 +2,19 @@
 
 A comprehensive web application providing tools, guides, and calculators for Cabal Online players.
 
+## Disclaimer
+
+Cabal Online and all related game assets, data, and intellectual property are owned by ESTsoft Corp. This is an unofficial fan-made tool. We are not affiliated with or endorsed by ESTsoft.
+
+This project's code is open source under MIT License. Game-related content (names, stats, images) remains property of ESTsoft. Contributors must respect ESTsoft's intellectual property rights.
+
 ## Overview
 
-Nipperlug is a  Next.js application that serves as a resource hub for Cabal Online.
+Nipperlug is a  Next.js application that offers helpful tools like calculators and planners for Cabal Online.
 
 ### Core Tools
 - **Build Planner** - Character optimization with 16+ game systems including equipment, pets, runes, achievements, and more
-- **Damage Calculator** - Comprehensive damage analysis with monster selection and stat optimization
+- **Damage Calculator** - damage analysis with monster selection and stat optimization
 - **Collection Tracker** - Track collection progress and optimize stat bonuses
 - **Monster Database** - Searchable database with 4000+ monsters and detailed stats
 
@@ -23,7 +29,7 @@ Nipperlug is a  Next.js application that serves as a resource hub for Cabal Onli
 
 ### Resources
 - **Tier Lists** - class tier list
-- **Stats Wiki** - game stats reference guide
+- **Stats Wiki** - wiki styled guide to stats and their effects
 - **BM3 Target Damage Boost** - Battle Mode 3 damage boost table
 - **Penetration Effectiveness Table** - Defense vs penetration analysis (accuracy of formulas not confirmed)
 - **Myth Level Data Viewer** - Myth mastery data and node costs/chances
@@ -37,10 +43,6 @@ Nipperlug is a  Next.js application that serves as a resource hub for Cabal Onli
 - **Build Sharing**: github gists for storage
 
 ## Getting Started
-
-### Prerequisites
-- Node.js v18 or later
-- npm package manager
 
 ### Installation
 

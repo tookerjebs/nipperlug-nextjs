@@ -1,6 +1,6 @@
 # Contributing to Nipperlug
 
-We welcome all contributions. Whether you're fixing bugs, optimizing code, improving responsiveness, adding features, correcting errors, enhancing documentation, or updating game data—your help is appreciated.
+We welcome all contributions! Whether you're fixing bugs, optimizing code, improving responsiveness, adding features, correcting errors, enhancing documentation, or updating game data—your help is appreciated.
 
 ## Ways to Contribute
 
@@ -12,12 +12,51 @@ We welcome all contributions. Whether you're fixing bugs, optimizing code, impro
 
 ## Getting Started
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Make your changes
-4. Test thoroughly: `npm run build` and `npm run dev`
-5. Commit with clear messages
-6. Push and create a Pull Request
+### First Time Contributors
+
+1. **Fork the repository** - Click the "Fork" button at the top right of the GitHub page
+2. **Clone your fork** and install dependencies (see [README](README.md) for setup instructions)
+3. **Create a feature branch**:
+   ```bash
+   git checkout -b feature/your-feature-name
+   # or for bug fixes:
+   git checkout -b fix/bug-description
+   ```
+4. **Make your changes** and test locally with `npm run dev`
+5. **Test the production build** with `npm run build` before submitting
+6. **Commit your changes** with clear, descriptive messages:
+   ```bash
+   git add .
+   git commit -m "Add: brief description of your changes"
+   ```
+7. **Push to your fork**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+8. **Create a Pull Request** - Go to your fork on GitHub and click "Compare & pull request"
+
+### Pull Request Guidelines
+
+- **Title**: Use clear, descriptive titles (e.g., "Fix: Monster database filter bug" or "Add: New calculator for X")
+- **Description**: Explain what you changed and why
+- **Screenshots**: Include before/after screenshots for UI changes
+- **Testing**: Describe how you tested your changes
+- **Keep it focused**: One feature or fix per PR makes review easier
+
+### Syncing Your Fork
+
+Keep your fork up to date with the main repository:
+
+```bash
+# Add the original repository as upstream (one time only)
+git remote add upstream https://github.com/tookerjebs/nipperlug-nextjs.git
+
+# Fetch and merge updates
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+```
 
 ## Important Guidelines
 

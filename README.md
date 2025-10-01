@@ -48,7 +48,7 @@ Nipperlug is a  Next.js application that offers helpful tools like calculators a
 
 ```bash
 # Clone the repository
-git clone https://github.com/tookerjebs/nextjs-nipperlug.git
+git clone https://github.com/tookerjebs/nipperlug-nextjs.git
 
 # Navigate to project directory
 cd nextjs-nipperlug

@@ -19,13 +19,6 @@ Universal damage analysis tool for Cabal Online. Manual stat input works across 
 - **monsterStore**: Selected monster data
 - **statRegistryStore**: Stat aggregation system
 
-### Key Files
-- `stores/buildPlannerStore.ts` - Main state, damage recalculation logic
-- `utils/damageCalculationUtils.ts` - Core damage formulas (⚠️ needs refinement)
-- `utils/statOptimizationUtils.ts` - Stat efficiency analysis
-- `data/stats-config.ts` - Stat definitions (40+ stats)
-- `data/cp-weights.ts` - Combat power calculation weights
-
 ## Features
 
 ### Damage Type Selection

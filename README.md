@@ -79,6 +79,37 @@ We welcome contributions! Please see our [Contributing Guide](docs/CONTRIBUTING.
 
 This project is open source and available under the MIT License.
 
+## To-Do List (of known issues)
+
+### Build Planner
+- Refine damage calculation formulas
+- Add missing item icons and images
+- Optimize image loading (implement spritesheets or similar performance improvements)
+- Verify and correct stat point scaling for all classes
+- Complete the class-specific passive skill implementations
+- Extend Force Wing levels to 500
+- Update achievement data for recent episodes
+- Update collection system data for recent episodes
+- Complete Platinum Merit system implementation
+- Expand available potions and buffs
+- Consider adding Battle Configuration system
+
+### Calculators
+- Verify Force Wing EXP calculator data (EXP requirements seem high)
+- add missing Chloe Craft Recipes
+- improve Chloe craft performance
+
+### Resources
+- Improve Stats Wiki content accuracy and clarity
+- Validate Penetration Effectiveness formulas (defense reduction and penetration effects)
+
+### Damage Calculator
+- needs the same formula improvements as Build Planner
+
+### General Improvements
+- Enhance search functionality
+- Address performance bottlenecks and code inefficiencies
+
 ## Credits
 
 Built with data and insights from the Cabal Online community. Special thanks to all contributors and data sources documented in the [Credits](src/app/credits/page.tsx) page.

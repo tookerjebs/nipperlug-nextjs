@@ -245,7 +245,7 @@ Upgrade costs vary by extreme level and item type:
 
 The extreme upgrade calculator should support:
 
-1. **Server Selection**: Toggle between PlayCabal and Standard server mechanics
+1. **Server Selection**: Toggle between Other and Standard server mechanics
 2. **Success Rate Calculation**: Real-time calculation based on core combinations
 3. **Cost Analysis**: Total Alz and core costs for upgrade attempts
 4. **Expected Value Calculations**: Statistical analysis of costs to reach target levels

@@ -29,20 +29,20 @@ export const DEFAULT_COLUMNS: TableColumn[] = [
   { key: 'hp', title: getDisplayName('hp'), visible: true, sortable: true, width: '110px', category: 'basic' },
   
   // Offensive Stats - Attack-related stats
-  { key: 'attackRate', title: getDisplayName('attackRate'), visible: true, sortable: true, width: '100px', category: 'offensive' },
-  { key: 'penetration', title: getDisplayName('penetration'), visible: true, sortable: true, width: '110px', category: 'offensive' },
+  { key: 'attackRate', title: getDisplayName('attackRate'), visible: false, sortable: true, width: '100px', category: 'offensive' },
+  { key: 'penetration', title: getDisplayName('penetration'), visible: false, sortable: true, width: '110px', category: 'offensive' },
   { key: 'ignoreAccuracy', title: getDisplayName('ignoreAccuracy'), visible: false, sortable: true, width: '110px', category: 'offensive' },
   { key: 'ignoreDamageReduction', title: getDisplayName('ignoreDamageReduction'), visible: false, sortable: true, width: '150px', category: 'offensive' },
-  { key: 'ignorePenetration', title: getDisplayName('ignorePenetration'), visible: false, sortable: true, width: '150px', category: 'offensive' },
   { key: 'absoluteDamage', title: getDisplayName('absoluteDamage'), visible: false, sortable: true, width: '140px', category: 'offensive' },
   { key: 'hpProportionDamage', title: getDisplayName('hpProportionDamage'), visible: false, sortable: true, width: '140px', category: 'offensive' },
   
   // Defensive Stats - Defense-related stats and resistances
   { key: 'defense', title: getDisplayName('defense'), visible: true, sortable: true, width: '90px', category: 'defensive' },
-  { key: 'defenseRate', title: getDisplayName('defenseRate'), visible: false, sortable: true, width: '100px', category: 'defensive' },
+  { key: 'defenseRate', title: getDisplayName('defenseRate'), visible: true, sortable: true, width: '100px', category: 'defensive' },
   { key: 'hpRecharge', title: getDisplayName('hpRecharge'), visible: false, sortable: true, width: '110px', category: 'defensive' },
   { key: 'damageReduction', title: getDisplayName('damageReduction'), visible: false, sortable: true, width: '90px', category: 'defensive' },
   { key: 'evasion', title: getDisplayName('evasion'), visible: false, sortable: true, width: '80px', category: 'defensive' },
+  { key: 'ignorePenetration', title: getDisplayName('ignorePenetration'), visible: true, sortable: true, width: '110px', category: 'defensive' },
   { key: 'resistCritRate', title: getDisplayName('resistCritRate'), visible: true, sortable: true, width: '90px', category: 'defensive' },
   { key: 'resistSkillAmp', title: getDisplayName('resistSkillAmp'), visible: true, sortable: true, width: '90px', category: 'defensive' },
   { key: 'resistCritDamage', title: getDisplayName('resistCritDamage'), visible: true, sortable: true, width: '90px', category: 'defensive' },

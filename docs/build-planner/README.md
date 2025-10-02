@@ -58,22 +58,6 @@ All systems follow a consistent pattern:
 - Automatic stat registry integration
 - Consistent UI patterns
 
-## Documentation Files
-
-### For Developers
-
-**[new_system_implementation_guide.md](new_system_implementation_guide.md)**
-Complete guide for adding new systems to the Build Planner. Covers directory structure, store creation, UI implementation, and integration with the main planner.
-
-**[system_integration_guide.md](system_integration_guide.md)**
-Detailed guide for integrating systems with the stat management architecture. Explains the Stat Registry pattern and how systems communicate.
-
-**[adding_new_systems_to_sharing.md](adding_new_systems_to_sharing.md)**
-Guide for registering new systems with the build sharing functionality. Covers the registry pattern and best practices for serialization.
-
-**[build_sharing_implementation_analysis.md](build_sharing_implementation_analysis.md)**
-Technical analysis of the build sharing system including implementation details, data sizes, compression strategies, and future enhancements.
-
 ## Development Guidelines
 
 ### Adding a New System

@@ -54,18 +54,6 @@ Calculate profit/loss for in-game crafting and upgrade systems using real-time m
 - Shared across all profit calculators
 - Real-time price updates
 
-### Common Components
-- Price input fields with store integration
-- Profit display with color coding (green/red)
-- Export/import price data
-- Responsive layout
-
-## Technical Stack
-- **Framework**: Next.js 15 + React 19
-- **State**: Zustand (price store)
-- **Styling**: Tailwind CSS
-- **Type Safety**: TypeScript
-
 ## Contributing
 
 ### Adding New Profit Calculator

@@ -71,9 +71,6 @@ npm run build
 # Start production server
 npm start
 ```
-## Contributing
-
-We welcome contributions! Please see our [Contributing Guide](docs/CONTRIBUTING.md) for details on how to get started.
 
 ## License
 
@@ -112,4 +109,4 @@ This project is open source and available under the MIT License.
 
 ## Credits
 
-Built with data and insights from the Cabal Online community. Special thanks to all contributors and data sources documented in the [Credits](src/app/credits/page.tsx) page.
+Built with data and insights from the Cabal Online community. Special thanks to all contributors and data sources.

@@ -1,10 +1,6 @@
 # Cabal Online Damage Calculation System
 
-## Overview
-
-We are working to reverse engineer the damage calculation formula used in Cabal Online through careful analysis and testing. This is an ongoing research project where we're building a prototype damage calculator that attempts to replicate the game's complex damage mechanics.
-
-**Important Note**: This is a work-in-progress prototype based on research and observation. Some aspects of the actual game formula remain mysteries, and we're being transparent about what we know versus what we're still investigating.
+**Important Note**: This is a work-in-progress prototype based on research and observation. Some aspects of the actual game formula remain mysteries. This document will be updated regularly as new information becomes available.
 
 ### Character Classes and Damage Types
 
@@ -42,8 +38,6 @@ The game has an extensive resist system where many offensive stats have correspo
 - Accuracy, Ignore Accuracy
 - Damage Reduction, Ignore Damage Reduction, Cancel Ignore Damage Reduction
 
-Those are all !
-
 And resist stats can never reduce below zero! Same goes for counter resist stats!
 ---
 
@@ -60,7 +54,7 @@ And resist stats can never reduce below zero! Same goes for counter resist stats
  **Additional Damage** → Flat damage addition
  **Enemy Damage Reduction** → Flat reduction first, then percentage reduction
  **Final Damage Increase** → Final amplification with enemy final damage decrease
- **Variance** → 20% variance for sword (0.80x to 1.0x), none for sword classes and only
+ **Variance** → 20% variance for sword (0.80x to 1.0x), none for sword classes and only (that variance needs more testing/confirmation)
 
 ---
 **Current Implementation**: Attack (physical) or Magic Attack is the foundation.
@@ -74,7 +68,7 @@ Skill amplification is applied with different bonuses for normal vs critical hit
 The general skill amp below, is just like the Skill Attack we mentioned above. every skill you use for attacking gives some additional attack/magic attack and sword skill amp/magic skill amp (depending on class).
 - **Physical Classes**: Use `swordSkillAmp` + general `skillAmp` + `allSkillAmp`
 - **Magic Classes**: Use `magicSkillAmp` + general `skillAmp` + `allSkillAmp`
-- **Normal Hit Bonus**: Normal hits get 25% skill amp bonus (`totalSkillAmp * 1.25`)
+- **Normal Hit Bonus**: Normal hits get 25% skill amp bonus (`totalSkillAmp * 1.25`), Why ? more testing needed
 - **Critical Hit**: Critical hits use base effective skill amp (no bonus)
 - **EFFECTIVE AMP**: Dont forget about the resist stats, Resist Skill Amp and Ignore Resist Skill Amp to determine effective magic/sword skill amp. 
 
@@ -82,14 +76,12 @@ The general skill amp below, is just like the Skill Attack we mentioned above. e
 Total Skill Amp = skillAmp + (swordSkillAmp OR magicSkillAmp) + allSkillAmp
 Normal Hit Skill Amp = Total Skill Amp × 1.25
 Critical Hit Skill Amp = Total Skill Amp
-
-And here again dont forget the resistance stats !
 ```
 
 ### Level Difference Penalty
 
 - **Formula**: `levelDifference * 2%` where level difference is capped at 25 levels
-- **Maximum Penalty**: 50% at 25+ level difference
+- **Maximum Penalty**: 50% at 25+ level difference. This one needs more testing, other sources have 25% max. level penalty.
 
 ```
 Level Difference = min(25, max(0, Enemy Level - 200))
@@ -104,11 +96,12 @@ Level Penalty Percent = Level Difference × 2
 - **Ignore Penetration**: Enemy stat reduces our effective penetration
 - **Cancel Ignore Penetration**: Our stat counters enemy ignore penetration (but only to 0)
 
+
 **Example**: 5000 defense, 2000 penetration
 - Base: `1 - 1000/(1000+5000) = 83.3%`
 - Penetration multiplier: `1 - 2000/5000 = 0.6`
 - Final: `83.3% × 0.6 = 50%`
-
+Source:osaka. not confirmed or tested !
 ```
 Effective Enemy Ignore Pen = max(0, Enemy Ignore Penetration - Our Cancel Ignore Penetration)
 Effective Penetration = max(0, Our Penetration - Effective Enemy Ignore Pen)
@@ -116,7 +109,7 @@ Effective Penetration = max(0, Our Penetration - Effective Enemy Ignore Pen)
 Base Defense Reduction = 1 - 1000/(1000 + Enemy Defense)
 Capped Defense Reduction = min(Base Defense Reduction, 0.95)
 Penetration Multiplier = max(0, 1 - Effective Penetration / Enemy Defense)
-Final Defense Reduction = max(0.003, Capped Defense Reduction × Penetration Multiplier)
+Final Defense Reduction = max(0.003, Capped Defense Reduction × Penetration Multiplier). Why 0.3% ? Got it from official cabal korean site. weird number
 ```
 
 **🔬 Research Data - Defense Scaling**:
@@ -186,11 +179,11 @@ Magic Min/Max Damage = Final Damage (no variance)
 ## Research Status
 
 - **Attack Foundation**: Attack/Magic Attack is the base for all damage
-- **Skill Amplification**: 25% bonus for normal hits, base skill amp for critical hits
+- **Skill Amplification**: 25% bonus for normal hits??, base skill amp for critical hits ??
 - **All Stats**: Stats like All Skill Amp and All Attack Up increase as the name suggests All attack types (magic attack and attack, all skill amp increases magic skill amp and sword skill amp)
-- **Defense Formula**: `1 - 1000/(1000 + Defense)` with 95% maximum cap
+- **Defense Formula**: `1 - 1000/(1000 + Defense)` with 95% maximum cap ??
 - **Penetration Mechanics**: Multiplies defense reduction by `(1 - Penetration/Defense)`
-- **Level Penalty**: 2% per level difference, capped at 25 levels (50% max)
+- **Level Penalty**: 2% per level difference, capped at 25 levels (50% max)???
 - **Critical Damage**: Reduced by enemy resist critical damage
 - **Normal Damage Up**: Applied to normal hits only
 - **Additional Damage**: Flat damage addition after normal/critical calculation but before final dmg increased

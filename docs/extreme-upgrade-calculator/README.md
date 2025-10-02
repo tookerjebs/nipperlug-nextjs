@@ -47,9 +47,3 @@ Success rate formula: `(Factor × SumCorePower) / (100 × BaseLevel)`
 ## Documentation
 
 **[EXTREME_UPGRADE_SYSTEM.md](EXTREME_UPGRADE_SYSTEM.md)** - Complete system mechanics, formulas, stat bonuses, and implementation details
-
-## Data Sources
-
-- [PlayCabal Wiki - Extreme Upgrade](https://wiki.playcabal.to/content/systems/upgrading/extreme-upgrade)
-- [Mr. Wormy - Extreme Upgrade Guide](https://mrwormy.com/extreme-upgrade/)
-- Build Planner extreme upgrade data files

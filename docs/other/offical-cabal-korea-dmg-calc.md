@@ -1,6 +1,6 @@
-ATTENTION: this has been copy pasted from for dmg calculation research purposes !  https://cabal.co.kr/gameInfo/forcebook/%EC%BA%90%EB%A6%AD%ED%84%B0%EB%8A%A5%EB%A0%A5%EC%B9%98#:~:text=%EC%82%AC%EC%9A%A9%ED%95%9C%20%EA%B3%B5%EA%B2%A9%20%EC%8A%A4%ED%82%AC%EC%97%90%20%EB%94%B0%EB%9D%BC%20%EA%B8%B0%EB%B3%B8%20%EB%8D%B0%EB%AF%B8%EC%A7%80%20%EA%B3%84%EC%82%B0%EC%86%8C%EB%93%9C%20%EC%8A%A4%ED%82%AC,%EB%B0%8F%20%EB%AC%B4%EC%8B%9C%20%EC%83%81%EC%87%84)%20%EA%B0%92%EC%97%90%20%EB%94%B0%EB%9D%BC%20%EB%8D%B0%EB%AF%B8%EC%A7%80%20%EA%B0%90%EC%86%8C%EC%9C%A8%20%EC%A0%81%EC%9A%A9
+ATTENTION: this has been copy pasted from the link below.  for dmg calculation research purposes !  https://cabal.co.kr/gameInfo/forcebook/%EC%BA%90%EB%A6%AD%ED%84%B0%EB%8A%A5%EB%A0%A5%EC%B9%98#:~:text=%EC%82%AC%EC%9A%A9%ED%95%9C%20%EA%B3%B5%EA%B2%A9%20%EC%8A%A4%ED%82%AC%EC%97%90%20%EB%94%B0%EB%9D%BC%20%EA%B8%B0%EB%B3%B8%20%EB%8D%B0%EB%AF%B8%EC%A7%80%20%EA%B3%84%EC%82%B0%EC%86%8C%EB%93%9C%20%EC%8A%A4%ED%82%AC,%EB%B0%8F%20%EB%AC%B4%EC%8B%9C%20%EC%83%81%EC%87%84)%20%EA%B0%92%EC%97%90%20%EB%94%B0%EB%9D%BC%20%EB%8D%B0%EB%AF%B8%EC%A7%80%20%EA%B0%90%EC%86%8C%EC%9C%A8%20%EC%A0%81%EC%9A%A9
 
-and translated via google. However the page is official, its from cabal online official page ! but be catious when it comes to the information here. This should just be a basic rundown. 
+ translated via google.  its from cabal online official page but be catious when it comes to the information here. This should just be a basic rundown. 
 
 Character Stats
 PVP / PVE stats are applied in the same way as the stat description below when fighting against players and monsters.

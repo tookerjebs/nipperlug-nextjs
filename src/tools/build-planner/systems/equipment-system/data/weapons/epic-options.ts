@@ -164,10 +164,10 @@ export const weaponSlotOptionsByGrade: Record<string, { normal: SlotOption; enha
       magicSkillAmp: 8
     },
     enhanced: {
-      criticalDamage: 15,
+      criticalDamage: 18,
       criticalRate: 8,
-      swordSkillAmp: 12,
-      magicSkillAmp: 12
+      swordSkillAmp: 11,
+      magicSkillAmp: 11
     }
   }
 };

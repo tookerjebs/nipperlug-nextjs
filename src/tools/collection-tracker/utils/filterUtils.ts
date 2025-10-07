@@ -1,8 +1,20 @@
 import collectionData from '@/lib/game-data/collection-tracker-data.json';
-import type { Collection, CollectionData, FilterOptions } from '../types';
+import type { Collection, CollectionData, FilterOptions, CollectionProgress } from '../types';
 
 // Re-export FilterOptions for backward compatibility
 export type { FilterOptions };
+
+// Interface for item with aggregated data
+export interface ItemWithCount {
+  name: string;
+  totalCount: number;
+  collections: Array<{
+    collectionId: string;
+    collectionName: string;
+    tabName: string;
+    count: number;
+  }>;
+}
 
 // Extract all unique stats from collection data
 export function getAllAvailableStats(): string[] {
@@ -129,16 +141,113 @@ function normalizeSearchText(text: string): string {
     .trim();
 }
 
-// Check if search term matches item name with flexible matching
-function itemMatchesSearch(itemName: string, searchTerm: string): boolean {
-  const normalizedItem = normalizeSearchText(itemName);
-  const normalizedSearch = normalizeSearchText(searchTerm);
+// Extract all unique items from collection data with their counts
+export function getAllAvailableItems(): ItemWithCount[] {
+  const itemsMap = new Map<string, ItemWithCount>();
   
-  // Split search term into words
-  const searchWords = normalizedSearch.split(' ').filter(word => word.length > 0);
+  Object.entries((collectionData as CollectionData).tabs).forEach(([tabName, tab]) => {
+    Object.values(tab.pages).forEach(page => {
+      Object.values(page.collections).forEach((collection: Collection) => {
+        if (collection.missions) {
+          Object.values(collection.missions).forEach(mission => {
+            if (mission.items) {
+              mission.items.forEach(item => {
+                const existing = itemsMap.get(item.name);
+                if (existing) {
+                  existing.totalCount += item.count;
+                  existing.collections.push({
+                    collectionId: collection.id,
+                    collectionName: collection.name,
+                    tabName: tabName,
+                    count: item.count
+                  });
+                } else {
+                  itemsMap.set(item.name, {
+                    name: item.name,
+                    totalCount: item.count,
+                    collections: [{
+                      collectionId: collection.id,
+                      collectionName: collection.name,
+                      tabName: tabName,
+                      count: item.count
+                    }]
+                  });
+                }
+              });
+            }
+          });
+        }
+      });
+    });
+  });
   
-  // Check if all search words are present in the item name
-  return searchWords.every(word => normalizedItem.includes(word));
+  return Array.from(itemsMap.values()).sort((a, b) => a.name.localeCompare(b.name));
+}
+
+// Search items by query string
+export function searchItems(query: string, limit: number = 10): ItemWithCount[] {
+  if (!query || query.trim().length < 2) return [];
+  
+  const allItems = getAllAvailableItems();
+  const normalizedQuery = normalizeSearchText(query);
+  
+  return allItems
+    .filter(item => {
+      const normalizedItemName = normalizeSearchText(item.name);
+      return normalizedItemName.includes(normalizedQuery);
+    })
+    .slice(0, limit);
+}
+
+// Calculate remaining items needed based on progress
+export function calculateRemainingItems(
+  itemName: string,
+  collectionProgress: CollectionProgress
+): { total: number; completed: number; remaining: number } {
+  const allItems = getAllAvailableItems();
+  const itemData = allItems.find(item => item.name === itemName);
+  
+  if (!itemData) {
+    return { total: 0, completed: 0, remaining: 0 };
+  }
+  
+  let completedCount = 0;
+  
+  // Check each collection that contains this item
+  itemData.collections.forEach(({ collectionId, count }) => {
+    const progress = collectionProgress[collectionId];
+    if (progress) {
+      // Find the collection data
+      Object.values((collectionData as CollectionData).tabs).forEach(tab => {
+        Object.values(tab.pages).forEach(page => {
+          const collection = Object.values(page.collections).find(
+            (c: Collection) => c.id === collectionId
+          ) as Collection | undefined;
+          
+          if (collection) {
+            // Check each mission in the collection
+            Object.values(collection.missions).forEach(mission => {
+              mission.items.forEach(item => {
+                if (item.name === itemName) {
+                  // Check if this specific item is completed
+                  const itemId = `${mission.name}|||${item.name}|||${item.count}`;
+                  if (progress.completedItems.includes(itemId)) {
+                    completedCount += item.count;
+                  }
+                }
+              });
+            });
+          }
+        });
+      });
+    }
+  });
+  
+  return {
+    total: itemData.totalCount,
+    completed: completedCount,
+    remaining: itemData.totalCount - completedCount
+  };
 }
 
 // Filter collections based on filter options
@@ -148,21 +257,12 @@ export function filterCollections(
   getCollectionProgress: (collectionId: string, collectionData: any) => number
 ): Collection[] {
   return collections.filter(collection => {
-    // Enhanced search term filter - search both collection names AND items
-    if (filters.searchTerm) {
-      const searchLower = filters.searchTerm.toLowerCase();
-      
-      // Check collection name (existing behavior)
-      const matchesCollectionName = collection.name.toLowerCase().includes(searchLower);
-      
-      // Check item names with flexible matching (NEW)
-      const matchesItemName = Object.values(collection.missions).some(mission =>
-        mission.items.some(item => itemMatchesSearch(item.name, filters.searchTerm))
+    // Item filter
+    if (filters.selectedItem) {
+      const hasItem = Object.values(collection.missions).some(mission =>
+        mission.items.some(item => item.name === filters.selectedItem)
       );
-      
-      if (!matchesCollectionName && !matchesItemName) {
-        return false;
-      }
+      if (!hasItem) return false;
     }
     
     // Stats filter

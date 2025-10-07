@@ -13,9 +13,10 @@ interface CollectionSidebarProps {
   activePage: number;
   onPageChange: (page: number) => void;
   hasFilters?: boolean;
+  selectedItem?: string | null;
 }
 
-export function CollectionSidebar({ collections, activeCollection, onSelectCollection, availablePages, activePage, onPageChange, hasFilters = false }: CollectionSidebarProps) {
+export function CollectionSidebar({ collections, activeCollection, onSelectCollection, availablePages, activePage, onPageChange, hasFilters = false, selectedItem = null }: CollectionSidebarProps) {
   const { getCollectionProgress, getActualCollectionProgress } = useCollectionTrackerStore();
   const [isClient, setIsClient] = useState(false);
 
@@ -41,6 +42,19 @@ export function CollectionSidebar({ collections, activeCollection, onSelectColle
       statTexts.push(`${statId} +${value}`);
     }
     return statTexts.slice(0, 2).join(', ') + (statTexts.length > 2 ? '...' : '');
+  };
+
+  // Get item count for a collection
+  const getItemCountInCollection = (collection: Collection, itemName: string): number => {
+    let totalCount = 0;
+    Object.values(collection.missions).forEach(mission => {
+      mission.items.forEach(item => {
+        if (item.name === itemName) {
+          totalCount += item.count;
+        }
+      });
+    });
+    return totalCount;
   };
 
   return (
@@ -115,6 +129,9 @@ export function CollectionSidebar({ collections, activeCollection, onSelectColle
               statsPreview = formatStatsPreview(collection.stats[30], true);
             }
 
+            // Calculate item count if an item is selected
+            const itemCount = selectedItem ? getItemCountInCollection(collection, selectedItem) : 0;
+
             return (
               <div
                 key={collection.id}
@@ -131,6 +148,12 @@ export function CollectionSidebar({ collections, activeCollection, onSelectColle
                   <div className="font-medium text-sm leading-tight flex-1">
                     {collection.name}
                   </div>
+                  {/* Item Count Badge */}
+                  {selectedItem && itemCount > 0 && (
+                    <div className="ml-2 px-2 py-0.5 bg-game-gold/20 border border-game-gold/30 rounded text-xs font-bold text-game-gold">
+                      {itemCount} pcs
+                    </div>
+                  )}
                 </div>
 
                 {/* Stats Preview */}

@@ -7,10 +7,9 @@ import type { Collection } from '../types';
 
 interface CollectionDetailsProps {
   collection: Collection;
-  searchTerm?: string;
 }
 
-export function CollectionDetails({ collection, searchTerm = '' }: CollectionDetailsProps) {
+export function CollectionDetails({ collection }: CollectionDetailsProps) {
   const { 
     getCollectionProgress, 
     isMissionCompleted, 
@@ -26,27 +25,6 @@ export function CollectionDetails({ collection, searchTerm = '' }: CollectionDet
 
   const currentProgress = isClient ? getCollectionProgress(collection.id, collection) : 0;
   const missions = Object.values(collection.missions);
-
-  // Normalize text for flexible searching
-  const normalizeSearchText = (text: string): string => {
-    return text
-      .toLowerCase()
-      .replace(/[()]/g, '')
-      .replace(/[^\w\s]/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-  };
-
-  // Check if item matches search term
-  const itemMatchesSearch = (itemName: string): boolean => {
-    if (!searchTerm) return false;
-    
-    const normalizedItem = normalizeSearchText(itemName);
-    const normalizedSearch = normalizeSearchText(searchTerm);
-    const searchWords = normalizedSearch.split(' ').filter(word => word.length > 0);
-    
-    return searchWords.every(word => normalizedItem.includes(word));
-  };
 
   // Format stats for display
   const formatStatsDisplay = (stats: Record<string, number>) => {
@@ -191,7 +169,6 @@ export function CollectionDetails({ collection, searchTerm = '' }: CollectionDet
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {mission.items.map((item, itemIndex) => {
                       const isCompleted = isClient ? isItemCompleted(collection.id, mission.name, item.name, item.count) : false;
-                      const matchesSearch = itemMatchesSearch(item.name);
                       
                       return (
                         <div 
@@ -200,8 +177,6 @@ export function CollectionDetails({ collection, searchTerm = '' }: CollectionDet
                             "flex items-center justify-between p-2.5 rounded-lg border-2 transition-all duration-200 cursor-pointer",
                             isCompleted
                               ? "bg-green-500/10 border-green-500/30 shadow-sm"
-                              : matchesSearch
-                              ? "bg-blue-500/20 border-blue-400/50 shadow-md ring-2 ring-blue-400/30"
                               : "bg-theme-darker/50 hover:bg-theme-darker/70 border-border-light hover:border-border-highlight"
                           )}
                           onClick={() => toggleItemCompletion(collection.id, mission.name, item.name, item.count)}

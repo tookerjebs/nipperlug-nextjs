@@ -15,6 +15,14 @@ interface PatchItem {
 
 const RECENT_PATCHES: PatchItem[] = [
   {
+    id: '2025-10-07',
+    date: '2025-10-07',
+    type: 'improvement',
+    title: 'Collection Tracker Enhanced',
+    description: 'Added better item search bar, tracking with item summary banner.',
+    category: 'Collection Tracker'
+  },
+  {
     id: '2025-09-28',
     date: '2025-09-28',
     type: 'feature',
@@ -219,6 +227,7 @@ const getToolRoute = (title: string): string | null => {
   const routeMap: Record<string, string> = {
     'Myth Level Data Table': '/myth-level-data',
     'BM3 Damage Boost Overview': '/bm3-target-damage-boost',
+    'Collection Tracker Enhanced': '/collection-tracker',
     'Collection Tracker': '/collection-tracker',
     'Extreme Upgrade Calculator': '/extreme-upgrade-calculator',
     'Penetration Effectiveness Table': '/penetration-effectiveness-table',

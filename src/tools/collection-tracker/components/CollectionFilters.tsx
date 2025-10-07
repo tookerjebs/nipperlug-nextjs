@@ -4,6 +4,8 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { cn } from '@/tools/build-planner/lib/utils';
 import { X, ChevronDown } from 'lucide-react';
 import type { FilterOptions } from '../types';
+import { ItemSearchBar } from './ItemSearchBar';
+import { ItemSummaryBanner } from './ItemSummaryBanner';
 
 interface CollectionFiltersProps {
   onFiltersChange: (filters: FilterOptions) => void;
@@ -12,10 +14,12 @@ interface CollectionFiltersProps {
 }
 
 const FILTERS_STORAGE_KEY = 'collection-tracker-filters';
+const FILTERS_VERSION_KEY = 'collection-tracker-filters-version';
+const CURRENT_FILTERS_VERSION = '2'; // Increment this when FilterOptions interface changes
 
 export function CollectionFilters({ onFiltersChange, availableStats, availableRewards }: CollectionFiltersProps) {
   const [filters, setFilters] = useState<FilterOptions>({
-    searchTerm: '',
+    selectedItem: null,
     selectedStats: [],
     selectedRewards: [],
     progressFilter: 'all'
@@ -24,16 +28,35 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
   // Load filters from localStorage on mount
   useEffect(() => {
     try {
+      const savedVersion = localStorage.getItem(FILTERS_VERSION_KEY);
+      
+      // If version doesn't match, clear old filters
+      if (savedVersion !== CURRENT_FILTERS_VERSION) {
+        localStorage.removeItem(FILTERS_STORAGE_KEY);
+        localStorage.setItem(FILTERS_VERSION_KEY, CURRENT_FILTERS_VERSION);
+        return;
+      }
+      
       const savedFilters = localStorage.getItem(FILTERS_STORAGE_KEY);
       if (savedFilters) {
         const parsed = JSON.parse(savedFilters);
-        setFilters(parsed);
-        onFiltersChange(parsed);
+        // Clean up any legacy properties (like searchTerm)
+        const cleanedFilters: FilterOptions = {
+          selectedItem: parsed.selectedItem || null,
+          selectedStats: parsed.selectedStats || [],
+          selectedRewards: parsed.selectedRewards || [],
+          progressFilter: parsed.progressFilter || 'all'
+        };
+        setFilters(cleanedFilters);
+        onFiltersChange(cleanedFilters);
       }
     } catch (error) {
       console.error('Failed to load filters from localStorage:', error);
+      // Clear corrupted data
+      localStorage.removeItem(FILTERS_STORAGE_KEY);
+      localStorage.setItem(FILTERS_VERSION_KEY, CURRENT_FILTERS_VERSION);
     }
-  }, []);
+  }, [onFiltersChange]);
 
   const updateFilters = (newFilters: Partial<FilterOptions>) => {
     const updatedFilters = { ...filters, ...newFilters };
@@ -43,6 +66,7 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
     // Save to localStorage
     try {
       localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(updatedFilters));
+      localStorage.setItem(FILTERS_VERSION_KEY, CURRENT_FILTERS_VERSION);
     } catch (error) {
       console.error('Failed to save filters to localStorage:', error);
     }
@@ -50,7 +74,7 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
 
   const clearAllFilters = () => {
     const clearedFilters: FilterOptions = {
-      searchTerm: '',
+      selectedItem: null,
       selectedStats: [],
       selectedRewards: [],
       progressFilter: 'all'
@@ -67,7 +91,7 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
   };
 
   const hasActiveFilters = useMemo(() => {
-    return filters.searchTerm !== '' || 
+    return filters.selectedItem !== null ||
            filters.selectedStats.length > 0 || 
            filters.selectedRewards.length > 0 || 
            filters.progressFilter !== 'all';
@@ -88,23 +112,24 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
   };
 
   return (
-    <div className="bg-component-card border border-border-dark rounded-lg p-6 mb-6">
-      <div className="flex flex-wrap gap-4 items-center mb-4">
-        {/* Search Bar */}
-        <div className="flex-1 min-w-64">
-          <div className="relative">
-            <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">🔍</span>
-            <input
-              type="text"
-              placeholder="Search collections or items... (e.g., 'force core highest')"
-              value={filters.searchTerm}
-              onChange={(e) => updateFilters({ searchTerm: e.target.value })}
-              className="w-full pl-10 pr-4 py-2 bg-theme-dark border border-border-dark rounded-lg text-white placeholder-gray-400 focus:border-game-gold focus:outline-none transition-colors"
-            />
-          </div>
-        </div>
+    <div className="space-y-4 mb-6">
+      {/* Item Search Bar - Full Width Row */}
+      <div className="bg-component-card border border-border-dark rounded-lg p-6">
+        <ItemSearchBar 
+          onItemSelect={(itemName) => updateFilters({ selectedItem: itemName })}
+          selectedItem={filters.selectedItem}
+        />
+      </div>
 
-        {/* Progress Filter */}
+      {/* Item Summary Banner - Shows when item is selected */}
+      {filters.selectedItem && (
+        <ItemSummaryBanner selectedItem={filters.selectedItem} />
+      )}
+
+      {/* Other Filters Row */}
+      <div className="bg-component-card border border-border-dark rounded-lg p-6">
+        <div className="flex flex-wrap gap-4 items-center mb-4">
+          {/* Progress Filter */}
         <select
           value={filters.progressFilter}
           onChange={(e) => updateFilters({ progressFilter: e.target.value as any })}
@@ -153,61 +178,62 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
           ))}
         </select>
 
-        {/* Clear Filters */}
-        {hasActiveFilters && (
-          <button
-            onClick={clearAllFilters}
-            className="flex items-center gap-1 px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors border border-border-dark rounded-lg hover:border-border-light"
-          >
-            <X className="w-3 h-3" />
-            Clear All
-          </button>
+          {/* Clear Filters */}
+          {hasActiveFilters && (
+            <button
+              onClick={clearAllFilters}
+              className="flex items-center gap-1 px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors border border-border-dark rounded-lg hover:border-border-light"
+            >
+              <X className="w-3 h-3" />
+              Clear All
+            </button>
+          )}
+        </div>
+
+        {/* Active Filters Display */}
+        {(filters.selectedStats.length > 0 || filters.selectedRewards.length > 0) && (
+          <div className="flex flex-wrap gap-2">
+            {filters.selectedStats.map((stat) => (
+              <span
+                key={stat}
+                className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded"
+                style={{
+                  backgroundColor: 'rgba(255, 215, 0, 0.2)',
+                  color: 'var(--gold)',
+                  border: '1px solid rgba(255, 215, 0, 0.3)'
+                }}
+              >
+                {stat}
+                <button
+                  onClick={() => toggleStat(stat)}
+                  className="hover:text-white transition-colors"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
+            ))}
+            {filters.selectedRewards.map((reward) => (
+              <span
+                key={reward}
+                className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded"
+                style={{
+                  backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                  color: '#93c5fd',
+                  border: '1px solid rgba(96, 165, 250, 0.3)'
+                }}
+              >
+                {reward.length > 20 ? `${reward.substring(0, 20)}...` : reward}
+                <button
+                  onClick={() => toggleReward(reward)}
+                  className="hover:text-white transition-colors"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
+            ))}
+          </div>
         )}
       </div>
-
-      {/* Active Filters Display */}
-      {(filters.selectedStats.length > 0 || filters.selectedRewards.length > 0) && (
-        <div className="flex flex-wrap gap-2">
-          {filters.selectedStats.map((stat) => (
-            <span
-              key={stat}
-              className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded"
-              style={{
-                backgroundColor: 'rgba(255, 215, 0, 0.2)',
-                color: 'var(--gold)',
-                border: '1px solid rgba(255, 215, 0, 0.3)'
-              }}
-            >
-              {stat}
-              <button
-                onClick={() => toggleStat(stat)}
-                className="hover:text-white transition-colors"
-              >
-                <X className="w-3 h-3" />
-              </button>
-            </span>
-          ))}
-          {filters.selectedRewards.map((reward) => (
-            <span
-              key={reward}
-              className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded"
-              style={{
-                backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                color: '#93c5fd',
-                border: '1px solid rgba(96, 165, 250, 0.3)'
-              }}
-            >
-              {reward.length > 20 ? `${reward.substring(0, 20)}...` : reward}
-              <button
-                onClick={() => toggleReward(reward)}
-                className="hover:text-white transition-colors"
-              >
-                <X className="w-3 h-3" />
-              </button>
-            </span>
-          ))}
-        </div>
-      )}
     </div>
   );
 }

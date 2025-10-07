@@ -56,7 +56,7 @@ export const useCollectionTrackerStore = create<CollectionTrackerState>()(subscr
         const { collectionProgress } = get();
         const current = collectionProgress[collectionId] || { completedItems: [] };
         const completedItems = current.completedItems || [];
-        const itemId = `${missionName}::${itemName}::${itemCount}`;
+        const itemId = `${missionName}|||${itemName}|||${itemCount}`;
         const isCompleted = completedItems.includes(itemId);
         
         const newCompletedItems = isCompleted
@@ -82,7 +82,7 @@ export const useCollectionTrackerStore = create<CollectionTrackerState>()(subscr
         // Generate all item IDs for this collection
         Object.values(collectionData.missions).forEach((mission: any) => {
           mission.items.forEach((item: any) => {
-            const itemId = `${mission.name}::${item.name}::${item.count}`;
+            const itemId = `${mission.name}|||${item.name}|||${item.count}`;
             allItemIds.push(itemId);
           });
         });
@@ -139,7 +139,7 @@ export const useCollectionTrackerStore = create<CollectionTrackerState>()(subscr
 
       isItemCompleted: (collectionId: string, missionName: string, itemName: string, itemCount: number) => {
         const { collectionProgress } = get();
-        const itemId = `${missionName}::${itemName}::${itemCount}`;
+        const itemId = `${missionName}|||${itemName}|||${itemCount}`;
         return collectionProgress[collectionId]?.completedItems?.includes(itemId) || false;
       },
 
@@ -182,8 +182,24 @@ if (typeof window !== 'undefined') {
       const parsedData = JSON.parse(savedData);
       
       if (parsedData && typeof parsedData === 'object') {
+        // Migrate old item IDs from :: to ||| separator
+        let collectionProgress = parsedData.collectionProgress || {};
+        if (collectionProgress && typeof collectionProgress === 'object') {
+          const migratedProgress: CollectionProgress = {};
+          Object.entries(collectionProgress).forEach(([collectionId, data]: [string, any]) => {
+            if (data && data.completedItems && Array.isArray(data.completedItems)) {
+              migratedProgress[collectionId] = {
+                completedItems: data.completedItems.map((itemId: string) => 
+                  itemId.replace(/::/g, '|||')
+                )
+              };
+            }
+          });
+          collectionProgress = migratedProgress;
+        }
+        
         useCollectionTrackerStore.setState({
-          collectionProgress: parsedData.collectionProgress || {},
+          collectionProgress,
           activeTab: parsedData.activeTab || 'Dungeon',
           activePage: parsedData.activePage || 1,
           isInitialized: true,

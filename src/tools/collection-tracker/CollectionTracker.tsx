@@ -35,7 +35,7 @@ export function CollectionTracker() {
 
   // Filter state
   const [filters, setFilters] = useState<FilterOptions>({
-    searchTerm: '',
+    selectedItem: null,
     selectedStats: [],
     selectedRewards: [],
     progressFilter: 'all'
@@ -50,7 +50,7 @@ export function CollectionTracker() {
   
   // Check if any filters are active
   const hasActiveFilters = useMemo(() => {
-    return filters.searchTerm !== '' || 
+    return filters.selectedItem !== null ||
            filters.selectedStats.length > 0 || 
            filters.selectedRewards.length > 0 || 
            filters.progressFilter !== 'all';
@@ -251,6 +251,7 @@ export function CollectionTracker() {
                 setActiveCollection(null); // Reset selection to trigger auto-selection
               }}
               hasFilters={hasActiveFilters}
+              selectedItem={filters.selectedItem}
             />
           </div>
 
@@ -258,8 +259,7 @@ export function CollectionTracker() {
           <div className="lg:col-span-3 component-bg-dark">
             {selectedCollection && (
               <CollectionDetails 
-                collection={selectedCollection} 
-                searchTerm={filters.searchTerm}
+                collection={selectedCollection}
               />
             )}
           </div>

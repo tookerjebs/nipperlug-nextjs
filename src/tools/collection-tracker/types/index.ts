@@ -41,7 +41,7 @@ export interface CollectionData {
 }
 
 export interface FilterOptions {
-  searchTerm: string;
+  selectedItem: string | null; // Selected item from autocomplete
   selectedStats: string[];
   selectedRewards: string[];
   progressFilter: 'all' | 'completed' | 'not-completed';

@@ -211,7 +211,7 @@ export function CollectionTracker() {
       {/* Unified Content Container */}
       <div className="component-bg-light overflow-hidden mb-6">
         {/* Tab Navigation */}
-        <div className="flex border-b border-border-dark -m-3 mb-0 p-3 pb-0">
+        <div className="flex gap-2 bg-theme-darker p-3 pb-0">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -221,11 +221,10 @@ export function CollectionTracker() {
                 setActiveCollection(null); // Reset selection to trigger auto-selection
               }}
               className={cn(
-                "flex-1 px-4 py-3 text-sm font-medium transition-all duration-200",
-                "border-b-2 border-r border-border-dark last:border-r-0",
+                "flex-1 px-6 py-3 text-sm font-semibold transition-all duration-200 rounded-t-lg",
                 activeTab === tab.name
-                  ? "text-white border-b-game-gold"
-                  : "text-gray-300 hover:text-white border-b-transparent hover:border-b-border-light"
+                  ? "text-white bg-theme-light"
+                  : "text-gray-400 bg-theme-dark hover:text-white hover:bg-theme-light/50"
               )}
             >
               {tab.name}
@@ -234,7 +233,7 @@ export function CollectionTracker() {
         </div>
 
         {/* Main Content Area */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 min-h-[600px] -m-3 mt-0">
+        <div className="grid grid-cols-1 lg:grid-cols-4 min-h-[600px]">
           
           {/* Collections Sidebar */}
           <div className="lg:col-span-1 border-r border-border-dark">

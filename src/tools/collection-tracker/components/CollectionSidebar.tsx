@@ -47,10 +47,15 @@ export function CollectionSidebar({ collections, activeCollection, onSelectColle
     <div className="h-full flex flex-col">
       {/* Page Navigation */}
       {(availablePages.length > 1 || hasFilters) && (
-        <div className="p-4 border-b border-border-dark flex-shrink-0">
+        <div className="p-4 flex-shrink-0" style={{ 
+          borderBottom: '2px solid rgba(100, 100, 120, 0.3)',
+          backgroundColor: 'rgba(18, 18, 26, 0.5)'
+        }}>
           {hasFilters && (
             <div className="text-center mb-3">
-              <div className="text-xs text-game-gold font-medium">
+              <div className="text-xs text-game-gold font-medium rounded px-2 py-1 inline-block" style={{
+                backgroundColor: 'rgba(255, 215, 0, 0.1)'
+              }}>
                 Filtered Results - {collections.length} collection{collections.length !== 1 ? 's' : ''} found
                 {availablePages.length === 1 ? ` on page ${availablePages[0]}` : ' on this page'}
               </div>

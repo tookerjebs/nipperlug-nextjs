@@ -209,9 +209,9 @@ export function CollectionTracker() {
       />
 
       {/* Unified Content Container */}
-      <div className="component-bg-light overflow-hidden mb-6">
+      <div className="component-bg-light overflow-hidden mb-6 rounded-lg" style={{ border: '2px solid rgba(100, 100, 120, 0.3)' }}>
         {/* Tab Navigation */}
-        <div className="flex gap-2 bg-theme-darker p-3 pb-0">
+        <div className="flex gap-2 bg-theme-darker p-3 pb-0" style={{ borderBottom: '2px solid rgba(100, 100, 120, 0.3)' }}>
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -221,10 +221,10 @@ export function CollectionTracker() {
                 setActiveCollection(null); // Reset selection to trigger auto-selection
               }}
               className={cn(
-                "flex-1 px-6 py-3 text-sm font-semibold transition-all duration-200 rounded-t-lg",
+                "flex-1 px-6 py-3 text-sm font-semibold transition-all duration-200 rounded-t-lg border-b-2",
                 activeTab === tab.name
-                  ? "text-white bg-theme-light"
-                  : "text-gray-400 bg-theme-dark hover:text-white hover:bg-theme-light/50"
+                  ? "text-white bg-theme-light border-white"
+                  : "text-gray-400 bg-theme-dark border-transparent hover:text-white hover:bg-theme-light/50"
               )}
             >
               {tab.name}
@@ -236,7 +236,10 @@ export function CollectionTracker() {
         <div className="grid grid-cols-1 lg:grid-cols-4 min-h-[600px]">
           
           {/* Collections Sidebar */}
-          <div className="lg:col-span-1 border-r border-border-dark">
+          <div className="lg:col-span-1 shadow-inner" style={{ 
+            backgroundColor: 'rgba(22, 22, 30, 0.3)',
+            borderRight: '2px solid rgba(100, 100, 120, 0.3)'
+          }}>
             <CollectionSidebar 
               collections={currentPageCollections}
               activeCollection={activeCollection}
@@ -254,7 +257,10 @@ export function CollectionTracker() {
           {/* Collection Details */}
           <div className="lg:col-span-3 component-bg-dark">
             {selectedCollection && (
-              <CollectionDetails collection={selectedCollection} />
+              <CollectionDetails 
+                collection={selectedCollection} 
+                searchTerm={filters.searchTerm}
+              />
             )}
           </div>
 

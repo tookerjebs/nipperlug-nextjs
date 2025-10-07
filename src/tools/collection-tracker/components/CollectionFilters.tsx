@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { cn } from '@/tools/build-planner/lib/utils';
 import { X, ChevronDown } from 'lucide-react';
 import type { FilterOptions } from '../types';
@@ -11,6 +11,8 @@ interface CollectionFiltersProps {
   availableRewards: string[];
 }
 
+const FILTERS_STORAGE_KEY = 'collection-tracker-filters';
+
 export function CollectionFilters({ onFiltersChange, availableStats, availableRewards }: CollectionFiltersProps) {
   const [filters, setFilters] = useState<FilterOptions>({
     searchTerm: '',
@@ -19,10 +21,31 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
     progressFilter: 'all'
   });
 
+  // Load filters from localStorage on mount
+  useEffect(() => {
+    try {
+      const savedFilters = localStorage.getItem(FILTERS_STORAGE_KEY);
+      if (savedFilters) {
+        const parsed = JSON.parse(savedFilters);
+        setFilters(parsed);
+        onFiltersChange(parsed);
+      }
+    } catch (error) {
+      console.error('Failed to load filters from localStorage:', error);
+    }
+  }, []);
+
   const updateFilters = (newFilters: Partial<FilterOptions>) => {
     const updatedFilters = { ...filters, ...newFilters };
     setFilters(updatedFilters);
     onFiltersChange(updatedFilters);
+    
+    // Save to localStorage
+    try {
+      localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(updatedFilters));
+    } catch (error) {
+      console.error('Failed to save filters to localStorage:', error);
+    }
   };
 
   const clearAllFilters = () => {
@@ -34,6 +57,13 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
     };
     setFilters(clearedFilters);
     onFiltersChange(clearedFilters);
+    
+    // Clear from localStorage
+    try {
+      localStorage.removeItem(FILTERS_STORAGE_KEY);
+    } catch (error) {
+      console.error('Failed to clear filters from localStorage:', error);
+    }
   };
 
   const hasActiveFilters = useMemo(() => {
@@ -94,7 +124,7 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
               e.target.value = ''; // Reset dropdown
             }
           }}
-          className="bg-theme-dark border border-border-dark rounded-lg px-3 py-2 text-white focus:border-game-gold focus:outline-none min-w-[140px]"
+          className="bg-theme-dark border border-border-dark rounded-lg px-3 py-2 text-white focus:border-game-gold focus:outline-none min-w-[140px] dark-scrollbar"
         >
           <option value="">Select stat...</option>
           {availableStats.map((stat) => (
@@ -113,7 +143,7 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
               e.target.value = ''; // Reset dropdown
             }
           }}
-          className="bg-theme-dark border border-border-dark rounded-lg px-3 py-2 text-white focus:border-game-gold focus:outline-none min-w-[140px]"
+          className="bg-theme-dark border border-border-dark rounded-lg px-3 py-2 text-white focus:border-game-gold focus:outline-none min-w-[140px] dark-scrollbar"
         >
           <option value="">Select reward...</option>
           {availableRewards.slice(0, 15).map((reward) => (
@@ -141,7 +171,12 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
           {filters.selectedStats.map((stat) => (
             <span
               key={stat}
-              className="inline-flex items-center gap-1 px-2 py-1 bg-game-gold/20 text-game-gold text-xs rounded-full border border-game-gold/40"
+              className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded"
+              style={{
+                backgroundColor: 'rgba(255, 215, 0, 0.2)',
+                color: 'var(--gold)',
+                border: '1px solid rgba(255, 215, 0, 0.3)'
+              }}
             >
               {stat}
               <button
@@ -155,7 +190,12 @@ export function CollectionFilters({ onFiltersChange, availableStats, availableRe
           {filters.selectedRewards.map((reward) => (
             <span
               key={reward}
-              className="inline-flex items-center gap-1 px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/40"
+              className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded"
+              style={{
+                backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                color: '#93c5fd',
+                border: '1px solid rgba(96, 165, 250, 0.3)'
+              }}
             >
               {reward.length > 20 ? `${reward.substring(0, 20)}...` : reward}
               <button

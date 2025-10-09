@@ -104,7 +104,6 @@ const forceWingLevels = [
   { levelFrom: 97, levelTo: 98, expNeeded: 18000000, forceEssence: 98, uniqueEssenceOfWing: 1, rareEssenceOfWing: 0, epicEssenceOfWing: 0 },
   { levelFrom: 98, levelTo: 99, expNeeded: 18000000, forceEssence: 99, uniqueEssenceOfWing: 1, rareEssenceOfWing: 0, epicEssenceOfWing: 0 },
   { levelFrom: 99, levelTo: 100, expNeeded: 18000000, forceEssence: 100, uniqueEssenceOfWing: 1, rareEssenceOfWing: 0, epicEssenceOfWing: 0 },
-  { levelFrom: 100, levelTo: 101, expNeeded: 18000000, forceEssence: 101, uniqueEssenceOfWing: 1, rareEssenceOfWing: 0, epicEssenceOfWing: 0 },
   
   // Levels 101-200 (complete data from WordPress)
   { levelFrom: 101, levelTo: 102, expNeeded: 525000, forceEssence: 4, uniqueEssenceOfWing: 0, rareEssenceOfWing: 0, epicEssenceOfWing: 0 },
@@ -631,19 +630,13 @@ export default function ForceWingCalculator() {
   }, [currentLevel, currentPercentage, targetLevel, validateInputs]);
 
   const handleCurrentLevelChange = (value: number) => {
-    const level = Math.max(1, Math.min(499, value));
+    const level = Math.min(499, value);
     setCurrentLevel(level);
-    if (level >= targetLevel) {
-      setTargetLevel(level + 1);
-    }
   };
 
   const handleTargetLevelChange = (value: number) => {
-    const level = Math.max(2, Math.min(500, value));
+    const level = Math.min(500, value);
     setTargetLevel(level);
-    if (level <= currentLevel) {
-      setCurrentLevel(level - 1);
-    }
   };
 
   const handlePercentageChange = (value: number) => {

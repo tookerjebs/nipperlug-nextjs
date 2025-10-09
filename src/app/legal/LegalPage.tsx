@@ -98,36 +98,48 @@ export default function LegalPage() {
               3. Privacy Policy
             </h2>
 
+            <div className="glass-panel p-4 border-l-4 border-green-500 bg-green-900/10 mb-4">
+              <p className="text-green-200">
+                <strong>Privacy First:</strong> No tracking, no analytics, no user accounts. 
+                Your data stays on your device.
+              </p>
+            </div>
+
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-semibold text-gray-200 mb-2">3.1 What We Collect</h3>
+                <h3 className="text-lg font-semibold text-gray-200 mb-2">3.1 What We Don't Collect</h3>
                 <ul className="list-disc list-inside text-gray-300 space-y-1 ml-4">
-                  <li>Calculator prices (stored locally)</li>
-                  <li>Contact info (only if you email us)</li>
+                  <li>No personal information or user accounts</li>
+                  <li>No tracking cookies or analytics</li>
+                  <li>No advertising data or third-party trackers</li>
+                  <li>No comments or user-generated content</li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-200 mb-2">3.2 What We Don't Collect</h3>
-                <ul className="list-disc list-inside text-gray-300 space-y-1 ml-4">
-                  <li>Personal information</li>
-                  <li>Tracking or analytics</li>
-                  <li>Advertising data</li>
-                </ul>
+                <h3 className="text-lg font-semibold text-gray-200 mb-2">3.2 Local Data Storage</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Tool preferences (build configurations, calculator prices) are stored in your browser's 
+                  local storage. This data never leaves your device and can be cleared through your browser settings.
+                </p>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-200 mb-2">3.3 Cookies</h3>
+                <h3 className="text-lg font-semibold text-gray-200 mb-2">3.3 Third-Party Services</h3>
                 <ul className="list-disc list-inside text-gray-300 space-y-1 ml-4">
-                  <li>Google Fonts (typography)</li>
-                  <li>No tracking or advertising cookies</li>
+                  <li><strong>Google Fonts:</strong> Typography (may set functional cookies)</li>
+                  <li><strong>Vercel:</strong> Hosting (standard server logs for security)</li>
+                  <li><strong>GitHub:</strong> Optional build sharing (only when you choose to share)</li>
                 </ul>
+                <p className="text-gray-300 leading-relaxed mt-2 text-sm">
+                  None of these services are used for tracking or advertising.
+                </p>
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold text-gray-200 mb-2">3.4 Contact</h3>
                 <p className="text-gray-300">
-                  Questions: contact@nipperlug.com
+                  Privacy questions: contact@nipperlug.com
                 </p>
               </div>
             </div>

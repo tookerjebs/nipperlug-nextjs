@@ -2,9 +2,23 @@
 
 Contributions are welcome. Whether you're fixing bugs, optimizing code, improving responsiveness, adding features, correcting errors, enhancing documentation, or updating game data.
 
-## Getting Started
+## Prerequisites
 
-### First Time Contributors
+Before you start, make sure you have these installed:
+
+- **Git** - [Download here](https://git-scm.com/downloads)
+- **Node.js** (v18 or later) - [Download here](https://nodejs.org/)
+- **npm** (comes with Node.js)
+- **A code editor** - For example [VS Code](https://code.visualstudio.com/)
+
+To verify your installations, run:
+```bash
+git --version
+node --version
+npm --version
+```
+
+## Getting Started
 
 1. **Fork the repository** - Click the "Fork" button at the top right of the GitHub page
 2. **Clone your fork** and install dependencies (see [README](README.md) for setup instructions)

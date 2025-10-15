@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "Cabal Online Resources - Tier Lists, Collection Tracker & Charts - nipperlug",
-  description: "Essential Cabal Online resources including tier lists, collection tracker, and effectiveness charts for optimal gameplay and progress tracking.",
-  keywords: "Cabal Online resources, tier lists, collection tracker, penetration effectiveness, reference guides, game charts, class rankings, progress tracking",
+  description: "Essential Cabal Online resources including tier lists, collection tracker, BM3 damage boost, and effectiveness charts for optimal gameplay and progress tracking.",
+  keywords: "Cabal Online resources, tier lists, collection tracker, penetration effectiveness, BM3 damage boost, reference guides, game charts, class rankings, progress tracking",
   robots: {
     index: true,
     follow: true,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Cabal Online Resources - Tier Lists, Collection Tracker & Charts - nipperlug",
-    description: "Essential Cabal Online resources including tier lists, collection tracker, and effectiveness charts for optimal gameplay and progress tracking.",
+    description: "Essential Cabal Online resources including tier lists, collection tracker, BM3 damage boost, and effectiveness charts for optimal gameplay and progress tracking.",
     url: "https://nipperlug.com/resources/",
     type: "website",
     siteName: "nipperlug",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Cabal Online Resources - Tier Lists, Collection Tracker & Charts - nipperlug",
-    description: "Essential Cabal Online resources including tier lists, collection tracker, and effectiveness charts for optimal gameplay and progress tracking.",
+    description: "Essential Cabal Online resources including tier lists, collection tracker, BM3 damage boost, and effectiveness charts for optimal gameplay and progress tracking.",
   },
   alternates: {
     canonical: "https://nipperlug.com/resources/",
@@ -55,15 +55,12 @@ export default function ResourcesPage() {
               Track your collection progress across Dungeon, World, Special, and Boss collections. 
               Monitor completion milestones and export/import your progress.
             </p>
-            <div className="flex items-center justify-between">
-              <Link 
-                href="/collection-tracker" 
-                className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
-              >
-                Track Progress
-              </Link>
-              <span className="text-xs text-foreground/50">Progress Tool</span>
-            </div>
+            <Link 
+              href="/collection-tracker" 
+              className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
+            >
+              Track Progress
+            </Link>
           </div>
 
           {/* Tier Lists */}
@@ -73,15 +70,12 @@ export default function ResourcesPage() {
               Comprehensive rankings of all Cabal Online classes across different game modes and scenarios.
               Updated rankings based on current meta and balance changes.
             </p>
-            <div className="flex items-center justify-between">
-              <Link
-                href="/tier-lists"
-                className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
-              >
-                View Rankings
-              </Link>
-              <span className="text-xs text-foreground/50">Class Guide</span>
-            </div>
+            <Link
+              href="/tier-lists"
+              className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
+            >
+              View Rankings
+            </Link>
           </div>
 
           {/* Myth Level Data */}
@@ -91,15 +85,12 @@ export default function ResourcesPage() {
               Complete myth level data with accurate probability calculations for all 78 nodes.
               View stat selection chances, level probabilities, holy power costs, and stat values.
             </p>
-            <div className="flex items-center justify-between">
-              <Link
-                href="/myth-level-data"
-                className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
-              >
-                View Data
-              </Link>
-              <span className="text-xs text-foreground/50">Reference</span>
-            </div>
+            <Link
+              href="/myth-level-data"
+              className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
+            >
+              View Data
+            </Link>
           </div>
 
 
@@ -111,15 +102,27 @@ export default function ResourcesPage() {
               Comprehensive table showing penetration effectiveness percentages against various defense values. 
               Essential for understanding damage reduction mechanics.
             </p>
-            <div className="flex items-center justify-between">
-              <Link 
-                href="/penetration-effectiveness-table" 
-                className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
-              >
-                View Table
-              </Link>
-              <span className="text-xs text-foreground/50">Reference Chart</span>
-            </div>
+            <Link 
+              href="/penetration-effectiveness-table" 
+              className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
+            >
+              View Table
+            </Link>
+          </div>
+
+          {/* BM3 Target Damage Boost */}
+          <div className="bg-component-card border border-border-dark p-6 rounded-lg hover:border-blue-500/30 transition-colors">
+            <h3 className="text-xl font-semibold mb-3">BM3 Target Damage Boost</h3>
+            <p className="text-foreground/70 mb-4 text-sm leading-relaxed">
+              Complete BM3 damage boost overview showing how each class damage changes based on number of targets hit.
+              Essential for optimizing damage output in Battle Mode 3.
+            </p>
+            <Link 
+              href="/bm3-target-damage-boost" 
+              className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
+            >
+              View Overview
+            </Link>
           </div>
 
         </div>

@@ -1,6 +1,6 @@
 # Nipperlug - Cabal Online Guide & Optimizer
 
-A comprehensive web application providing tools, guides, and calculators for Cabal Online players.
+A web application providing tools, guides, and calculators for Cabal Online players.
 
 ## Disclaimer
 

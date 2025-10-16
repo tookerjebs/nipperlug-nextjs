@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Cabal Online Resources - Tier Lists, Collection Tracker & Charts - nipperlug",
-  description: "Essential Cabal Online resources including tier lists, collection tracker, BM3 damage boost, and effectiveness charts for optimal gameplay and progress tracking.",
-  keywords: "Cabal Online resources, tier lists, collection tracker, penetration effectiveness, BM3 damage boost, reference guides, game charts, class rankings, progress tracking",
+  title: "Cabal Online Resources - Event Mobs, Tier Lists, Collection Tracker & More",
+  description: "Essential Cabal Online resources including event mob spawn locations, tier lists, collection tracker, BM3 damage boost, and effectiveness charts for optimal gameplay and farming strategies.",
+  keywords: "Cabal Online resources, event mobs location, tier lists, collection tracker, penetration effectiveness, BM3 damage boost, reference guides, game charts, class rankings, progress tracking, hunting routes",
   robots: {
     index: true,
     follow: true,
@@ -14,16 +14,16 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Cabal Online Resources - Tier Lists, Collection Tracker & Charts - nipperlug",
-    description: "Essential Cabal Online resources including tier lists, collection tracker, BM3 damage boost, and effectiveness charts for optimal gameplay and progress tracking.",
+    title: "Cabal Online Resources - Event Mobs, Tier Lists & Collection Tracker",
+    description: "Find all your Cabal Online resources in one place: event mob spawn locations, tier lists, collection tracking, and more.",
     url: "https://nipperlug.com/resources/",
     type: "website",
-    siteName: "nipperlug",
+    siteName: "Nipperlug - Cabal Online Tools",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cabal Online Resources - Tier Lists, Collection Tracker & Charts - nipperlug",
-    description: "Essential Cabal Online resources including tier lists, collection tracker, BM3 damage boost, and effectiveness charts for optimal gameplay and progress tracking.",
+    title: "Cabal Online Resources & Tools",
+    description: "Event mobs location, tier lists, collection tracker, and essential Cabal Online resources for players.",
   },
   alternates: {
     canonical: "https://nipperlug.com/resources/",
@@ -48,6 +48,21 @@ export default function ResourcesPage() {
         {/* All Resources */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
+          {/* Event Mobs Location */}
+          <div className="bg-component-card border border-border-dark p-6 rounded-lg hover:border-blue-500/30 transition-colors">
+            <h3 className="text-xl font-semibold mb-3">Event Mobs Location</h3>
+            <p className="text-foreground/70 mb-4 text-sm leading-relaxed">
+              Interactive maps showing spawn locations for all event mobs in Cabal Online. 
+              Select a mob type to discover all spawn points and optimize your hunting routes.
+            </p>
+            <Link 
+              href="/event-mobs-location" 
+              className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
+            >
+              View Map
+            </Link>
+          </div>
+
           {/* Collection Tracker */}
           <div className="bg-component-card border border-border-dark p-6 rounded-lg hover:border-blue-500/30 transition-colors">
             <h3 className="text-xl font-semibold mb-3">Collection Tracker</h3>

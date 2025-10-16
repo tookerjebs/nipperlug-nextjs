@@ -15,6 +15,14 @@ interface PatchItem {
 
 const RECENT_PATCHES: PatchItem[] = [
   {
+    id: '2025-10-16',
+    date: '2025-10-16',
+    type: 'tool',
+    title: 'Event Mobs Location',
+    description: 'Interactive map showing spawn locations for all Event Mobs.',
+    category: 'New Tool'
+  },
+  {
     id: '2025-10-07',
     date: '2025-10-07',
     type: 'improvement',
@@ -225,6 +233,7 @@ const getTypeColor = (type: PatchItem['type']) => {
 
 const getToolRoute = (title: string): string | null => {
   const routeMap: Record<string, string> = {
+    'Event Mobs Location': '/event-mobs-location',
     'Myth Level Data Table': '/myth-level-data',
     'BM3 Damage Boost Overview': '/bm3-target-damage-boost',
     'Collection Tracker Enhanced': '/collection-tracker',

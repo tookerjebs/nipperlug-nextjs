@@ -94,6 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Additional tool pages
   const additionalTools = [
+    'event-mobs-location',
     'penetration-effectiveness-table',
     'resources'
   ];

@@ -468,6 +468,41 @@ input[type="number"] {
   appearance: textfield;
 }
 
+/* Dark theme select/dropdown styling */
+select {
+  background-color: var(--theme-darker) !important;
+  color: var(--foreground) !important;
+  border: 1px solid var(--border-dark) !important;
+  border-radius: 0.375rem;
+  padding: 0.75rem 0.75rem !important;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c0c0c0' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+}
+
+select:hover {
+  border-color: var(--highlight) !important;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+select option {
+  background-color: var(--theme-darker);
+  color: var(--foreground);
+}
+
+select option:checked {
+  background-color: var(--highlight);
+  background-image: linear-gradient(var(--highlight), var(--highlight));
+  color: var(--theme-darkest);
+}
+
 /* Custom Prose Styling for Dark Theme */
 @layer base {
   .prose-wiki {

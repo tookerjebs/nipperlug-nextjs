@@ -69,6 +69,7 @@ const navigationItems: NavigationItem[] = [
     name: 'Resources',
     href: '/resources',
     subItems: [
+      { name: 'Event Mobs Location', href: '/event-mobs-location' },
       { name: 'Collection Tracker', href: '/collection-tracker' },
       { name: 'Tier Lists', href: '/tier-lists' },
       { name: 'Myth Level Data', href: '/myth-level-data' },

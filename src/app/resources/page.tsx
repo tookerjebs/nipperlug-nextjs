@@ -82,7 +82,7 @@ export default function ResourcesPage() {
           <div className="bg-component-card border border-border-dark p-6 rounded-lg hover:border-blue-500/30 transition-colors">
             <h3 className="text-xl font-semibold mb-3">Tier Lists</h3>
             <p className="text-foreground/70 mb-4 text-sm leading-relaxed">
-              Comprehensive rankings of all Cabal Online classes across different game modes and scenarios.
+              Rankings of all Cabal Online classes across different game modes and scenarios.
               Updated rankings based on current meta and balance changes.
             </p>
             <Link
@@ -114,7 +114,7 @@ export default function ResourcesPage() {
           <div className="bg-component-card border border-border-dark p-6 rounded-lg hover:border-blue-500/30 transition-colors">
             <h3 className="text-xl font-semibold mb-3">Penetration Effectiveness</h3>
             <p className="text-foreground/70 mb-4 text-sm leading-relaxed">
-              Comprehensive table showing penetration effectiveness percentages against various defense values. 
+              Table showing penetration effectiveness percentages against various defense values. 
               Essential for understanding damage reduction mechanics.
             </p>
             <Link 

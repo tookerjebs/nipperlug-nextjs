@@ -1,9 +1,9 @@
 import EventMobsLocation from '@/tools/event-mobs-location/EventMobsLocation';
 
 export const metadata = {
-  title: 'Cabal Online Event Mobs Spawn Locations - Interactive Map & Hunting Routes',
-  description: 'Explore event mob spawn locations across Cabal Online maps. Select a mob type to discover all spawn points and optimize your hunting routes. Interactive map with coordinate display.',
-  keywords: 'Cabal Online event mobs, spawn locations, hunting routes, event mob map, mob spawners, event farming',
+  title: 'Cabal Online Event Mobs Spawn Locations',
+  description: 'Explore event mob spawn locations across Cabal Online maps. Lanterns, Cabal Rangers, Fortune Pigs, Snowmen, and more. Discover all spawn points and optimize your hunting routes.',
+  keywords: 'Cabal Online event mobs, spawn locations, hunting routes, event mob map, cabal event, event farming',
   robots: {
     index: true,
     follow: true,
@@ -13,7 +13,7 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: 'Cabal Online Event Mobs Spawn Locations - Interactive Map',
+    title: 'Cabal Online Event Mobs Spawn Locations',
     description: 'Find all event mob spawn locations on interactive maps. Perfect for optimizing hunting routes and farming strategies.',
     url: 'https://nipperlug.com/event-mobs-location/',
     type: 'website',

@@ -38,9 +38,9 @@ export default function CreditsPage() {
                   <a href="https://mrwormy.com/" target="_blank" rel="noopener noreferrer" 
                      className="text-game-gold hover:text-yellow-300 transition-colors">
                     MrWormy.com ↗
-                  </a> - Primary source for all tools on this site that require detailled game data. 
+                  </a> - Source for many tools on this site that require detailled game information. 
                   MrWormy's site and the structured, 
-                  easy to access information made it an invaluable resource and saved countless hours
+                  easy to access information and all the collected Patch Notes made it an invaluable resource and saved many hours
                   of gathering data manually.
                 </p>
               </div>
@@ -60,7 +60,7 @@ export default function CreditsPage() {
                 
                 <div className="glass-panel p-3 border-l-2 border-yellow-500 bg-yellow-900/10">
                   <p className="text-yellow-200 text-sm">
-                    Project still in active development,  any errors or inaccuracies in damage calculations on this site do not reflect
+                    Project still in active development, any errors or inaccuracies in damage calculations on this site do not reflect
                     on the quality or accuracy of the original formulas.
                   </p>
                 </div>
@@ -68,8 +68,8 @@ export default function CreditsPage() {
 
               <div className="glass-panel p-4 border-l-4 border-stat-utility">
                 <p className="text-gray-300 leading-relaxed">
-                  To all the <span className="text-emerald-300">content creators, theorycrafters, and data miners </span> 
-                  in the community who share their knowledge and make resources like this possible.
+                  All the <span className="text-emerald-300">content creators, theorycrafters, and data miners </span> 
+                  in the community who share their knowledge.
                 </p>
               </div>
 
@@ -93,7 +93,7 @@ export default function CreditsPage() {
                 <li>• Vercel - Hosting platform</li>
                 <li>• Next.js 15 - React framework</li>
                 <li>• Tailwind CSS - Styling framework</li>
-                <li>• Supabase and Github gists - Database storage</li>
+                <li>• Github gists - Database storage (builds)</li>
               </ul>
             </div>
           </section>
@@ -107,7 +107,11 @@ export default function CreditsPage() {
             <div className="glass-panel p-4 border-l-4 border-game-gold bg-green-900/10 mb-4">
               <h3 className="text-lg font-semibold text-green-200 mb-2">🚧 Active Development</h3>
               <p className="text-gray-300 leading-relaxed">
-                This project is ongoing and actively maintained.
+                This project is open source and actively maintained. You can contribute on{' '}
+                <a href="https://github.com/tookerjebs/nipperlug-nextjs" target="_blank" rel="noopener noreferrer" 
+                   className="text-game-gold hover:text-yellow-300 transition-colors">
+                  GitHub ↗
+                </a>
               </p>
             </div>
 

@@ -38,7 +38,7 @@ export const statsConfig: StatsConfig = {
     criticalDamage: 20      // Base critical damage is 20%
   },
 
-  // Comprehensive stat definitions
+  //stat definitions
   stats: {
     //======================================
     // OFFENSIVE STATS

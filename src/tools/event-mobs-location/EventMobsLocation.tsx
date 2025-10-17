@@ -7,6 +7,8 @@ import {
   WORLD_ID_MAP,
   AVAILABLE_MAPS,
 } from '@/lib/game-data/event-mobs';
+import { ClipboardDocumentIcon } from '@heroicons/react/24/outline';
+import toast from 'react-hot-toast';
 
 interface TransformMatrix {
   scaleX: number;
@@ -49,6 +51,19 @@ export default function EventMobsLocation() {
     if (!selectedMob) return [];
     return getMobSpawnersOnMap(selectedMob, selectedMapName);
   }, [selectedMob, selectedMapName]);
+
+  // Copy all coordinates to clipboard
+  const copyAllCoordinates = () => {
+    const coordText = currentSpawners.map(s => `${s.x}, ${s.y}`).join('\n');
+    navigator.clipboard.writeText(coordText).then(() => {
+      toast.success(`Copied ${currentSpawners.length} coordinate${currentSpawners.length !== 1 ? 's' : ''}`, {
+        duration: 2000,
+        position: 'top-center',
+      });
+    }).catch(() => {
+      toast.error('Failed to copy coordinates');
+    });
+  };
 
   // Map name to image filename conversion (handles special cases)
   const getMapImagePath = (mapName: string): string => {
@@ -196,6 +211,37 @@ export default function EventMobsLocation() {
                     <p className="text-foreground/50 text-sm italic">
                       📍 {currentSpawners.length} spawn location{currentSpawners.length !== 1 ? 's' : ''} for <span className="text-game-gold">{selectedMob}</span> found in <span className="text-game-gold">{selectedMapName}</span>
                     </p>
+                  </div>
+                )}
+
+                {/* Coordinates List */}
+                {currentSpawners.length > 0 && (
+                  <div className="mt-6 pt-6 border-t border-border-dark">
+                    <div className="flex items-center justify-between mb-3">
+                      <label className="text-game-gold text-sm font-semibold">Coordinates:</label>
+                      <button
+                        onClick={copyAllCoordinates}
+                        className="p-1.5 rounded hover:bg-game-gold/20 transition-colors flex items-center gap-1.5"
+                        title="Copy all coordinates"
+                      >
+                        <ClipboardDocumentIcon className="w-4 h-4 text-game-gold" />
+                        <span className="text-xs text-game-gold">Copy All</span>
+                      </button>
+                    </div>
+                    <div className="space-y-1 max-h-96 overflow-y-auto">
+                      {currentSpawners.map((spawner, idx) => (
+                        <div
+                          key={`coord-${idx}`}
+                          className="px-2 py-1 rounded bg-background/50 hover:bg-background/70 transition-colors cursor-pointer"
+                          onMouseEnter={() => setHoveredSpawner({ x: spawner.x, y: spawner.y })}
+                          onMouseLeave={() => setHoveredSpawner(null)}
+                        >
+                          <span className="text-foreground text-sm font-mono">
+                            {spawner.x}, {spawner.y}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>

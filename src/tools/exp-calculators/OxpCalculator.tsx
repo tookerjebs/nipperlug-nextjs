@@ -197,6 +197,7 @@ export default function OxpCalculator() {
   };
 
   const handleTargetLevelChange = (value: number) => {
+    if (isNaN(value)) return; // Allow free input without forcing a value
     const level = Math.max(2, Math.min(100, value));
     setTargetLevel(level);
     if (level <= currentLevel) {
@@ -224,7 +225,7 @@ export default function OxpCalculator() {
             max="99"
             value={currentLevel}
             onChange={(e) => handleCurrentLevelChange(parseInt(e.target.value) || 1)}
-            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight focus:ring-2 focus:ring-game-highlight/30"
+            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight"
             placeholder="Enter current Overlord level (1-99)"
           />
         </div>
@@ -240,7 +241,7 @@ export default function OxpCalculator() {
             max="99"
             value={currentPercentage}
             onChange={(e) => handlePercentageChange(parseInt(e.target.value) || 0)}
-            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight focus:ring-2 focus:ring-game-highlight/30"
+            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight"
             placeholder="Enter current level progress (0-99%)"
           />
           <p className="text-xs text-foreground/60">Optional. Enter your progress in the current level (0-99%)</p>
@@ -255,9 +256,9 @@ export default function OxpCalculator() {
             id="target-olevel"
             min="2"
             max="100"
-            value={targetLevel}
-            onChange={(e) => handleTargetLevelChange(parseInt(e.target.value) || 2)}
-            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight focus:ring-2 focus:ring-game-highlight/30"
+            value={targetLevel || ''}
+            onChange={(e) => handleTargetLevelChange(parseInt(e.target.value))}
+            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight"
             placeholder="Enter target Overlord level (2-100)"
           />
         </div>

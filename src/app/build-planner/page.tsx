@@ -61,6 +61,7 @@ function BuildPlannerContent() {
   
   const initialSystem = getValidSystemId(searchParams.get('system'));
   const [activeSystem, setActiveSystem] = useState(initialSystem);
+  const [showKnownIssues, setShowKnownIssues] = useState(false);
 
   // Function to handle system changes and update URL
   const handleSystemChange = (systemId: string) => {
@@ -162,7 +163,10 @@ function BuildPlannerContent() {
 
       {/* Development Notice */}
       <div className="mb-4 sm:mb-6">
-        <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg border-l-4 border-l-yellow-500/60 p-3 sm:p-4">
+        <div 
+          className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg border-l-4 border-l-yellow-500/60 p-3 sm:p-4 cursor-pointer hover:bg-yellow-500/15 transition-colors"
+          onClick={() => setShowKnownIssues(!showKnownIssues)}
+        >
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0 mt-0.5">
               <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -170,10 +174,51 @@ function BuildPlannerContent() {
               </svg>
             </div>
             <div className="flex-1">
-              <h3 className="text-sm font-medium text-yellow-400 mb-1">Development Notice</h3>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                The Build Planner is actively under development. Some features may be missing or inaccurate.
-              </p>
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-medium text-yellow-400">Development Notice</h3>
+                <svg 
+                  className={`w-5 h-5 text-yellow-400 transition-transform ${showKnownIssues ? 'rotate-180' : ''}`} 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              {!showKnownIssues ? (
+                <p className="text-xs sm:text-sm text-gray-300 mt-1">
+                  Some features are incomplete or need refinement. Click to show known issues.
+                </p>
+              ) : (
+                <div className="mt-2">
+                  <p className="text-xs sm:text-sm text-gray-300 mb-2">
+                    Some features are incomplete or need refinement. Known issues:
+                  </p>
+                  <ul className="text-xs sm:text-sm text-gray-300 space-y-1 list-disc list-inside ml-1">
+                    <li><strong className="text-yellow-300">Battle Configuration:</strong> Incomplete </li>
+                    <li><strong className="text-yellow-300">Damage Calculation:</strong> Formulas need refinement for accuracy</li>
+                    <li><strong className="text-yellow-300">Combat Power:</strong> Needs to be improved to show PvE, PvP CP</li>
+                    <li><strong className="text-yellow-300">Equipment System:</strong> Some equipment items and images are missing</li>
+                    <li><strong className="text-yellow-300">Class Passive Skills:</strong> Missing Overlord stat bonuses</li>
+                    <li><strong className="text-yellow-300">Buffs and Potions:</strong> Missing buffs/potions and images</li>
+                    <li><strong className="text-yellow-300">Platinum Merit:</strong> Incomplete</li>
+                    <li><strong className="text-yellow-300">Stat Optimization:</strong> Recommendations need refinement</li>
+                    <li><strong className="text-yellow-300">General:</strong> Many minor issues remain including image optimization, performance improvements, and responsive design enhancements</li>
+                  </ul>
+                  <p className="text-xs text-gray-400 mt-3 pt-2 border-t border-yellow-500/20">
+                    This is an open source project. Want to help? Check out the{' '}
+                    <a 
+                      href="https://github.com/tookerjebs/nipperlug-nextjs" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-yellow-300 hover:text-yellow-200 underline"
+                    >
+                      GitHub repository
+                    </a>
+                    {' '}to contribute!
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>

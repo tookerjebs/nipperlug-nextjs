@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useMemo } from 'react';
+import { useState, useRef, useMemo, useEffect } from 'react';
 import {
   getAllEventMobs,
   getMobSpawnersOnMap,
@@ -41,7 +41,9 @@ export default function EventMobsLocation() {
   const [selectedMapName, setSelectedMapName] = useState('Bloody Ice');
   const [selectedMob, setSelectedMob] = useState<string | null>(null);
   const [hoveredSpawner, setHoveredSpawner] = useState<HoveredSpawner | null>(null);
+  const [imageScale, setImageScale] = useState(1);
   const imageRef = useRef<HTMLImageElement>(null);
+  const BASE_SIZE = 510; // Base size that calibration is designed for
 
   // Get all mobs
   const allMobs = useMemo(() => getAllEventMobs(), []);
@@ -51,6 +53,33 @@ export default function EventMobsLocation() {
     if (!selectedMob) return [];
     return getMobSpawnersOnMap(selectedMob, selectedMapName);
   }, [selectedMob, selectedMapName]);
+
+  // Update scale when image loads or window resizes
+  useEffect(() => {
+    const updateScale = () => {
+      if (imageRef.current) {
+        const actualWidth = imageRef.current.offsetWidth;
+        const scale = actualWidth / BASE_SIZE;
+        setImageScale(scale);
+      }
+    };
+
+    updateScale();
+    window.addEventListener('resize', updateScale);
+    
+    // Also update when image loads
+    const img = imageRef.current;
+    if (img) {
+      img.addEventListener('load', updateScale);
+    }
+
+    return () => {
+      window.removeEventListener('resize', updateScale);
+      if (img) {
+        img.removeEventListener('load', updateScale);
+      }
+    };
+  }, [selectedMapName]);
 
   // Copy all coordinates to clipboard
   const copyAllCoordinates = () => {
@@ -96,30 +125,35 @@ export default function EventMobsLocation() {
           <div className="flex-1 min-w-0">
             <div className="component-bg-light">
               <div className="glass-panel-dark p-3 sm:p-4 flex justify-center">
-                <div className="relative" style={{ width: '510px', height: '510px' }}>
+                <div className="relative w-full max-w-[510px] aspect-square">
                   <img
                     ref={imageRef}
                     src={mapImagePath}
                     alt={selectedMapName}
-                    style={{ width: '510px', height: '510px' }}
+                    className="w-full h-full"
                   />
                   {/* Show selected mob spawners on image */}
-                  {currentSpawners.length > 0 && (
+                  {currentSpawners.length > 0 && imageScale > 0 && (
                     <>
                       {currentSpawners.map((spawner, idx) => {
                         const pixel = gameToPixel(spawner.x, spawner.y, CALIBRATION);
+                        const scaledX = pixel.pixelX * imageScale;
+                        const scaledY = pixel.pixelY * imageScale;
                         const isHovered = hoveredSpawner?.x === spawner.x && hoveredSpawner?.y === spawner.y;
+                        const markerSize = isHovered ? 28 : 20;
+                        const scaledMarkerSize = Math.max(markerSize * imageScale, 12); // Minimum 12px
+                        
                         return (
                           <div
                             key={`spawner-${idx}`}
                             style={{
                               position: 'absolute',
-                              width: isHovered ? '28px' : '20px',
-                              height: isHovered ? '28px' : '20px',
+                              width: `${scaledMarkerSize}px`,
+                              height: `${scaledMarkerSize}px`,
                               backgroundColor: '#FFB700',
                               borderRadius: '50%',
-                              left: `${pixel.pixelX}px`,
-                              top: `${pixel.pixelY}px`,
+                              left: `${scaledX}px`,
+                              top: `${scaledY}px`,
                               transform: 'translate(-50%, -50%)',
                               boxShadow: 'none',
                               pointerEvents: 'auto',

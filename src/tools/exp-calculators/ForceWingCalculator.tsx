@@ -635,6 +635,7 @@ export default function ForceWingCalculator() {
   };
 
   const handleTargetLevelChange = (value: number) => {
+    if (isNaN(value)) return; // Allow free input without forcing a value
     const level = Math.min(500, value);
     setTargetLevel(level);
   };
@@ -659,7 +660,7 @@ export default function ForceWingCalculator() {
             max="499"
             value={currentLevel}
             onChange={(e) => handleCurrentLevelChange(parseInt(e.target.value) || 1)}
-            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight focus:ring-2 focus:ring-game-highlight/30"
+            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight"
             placeholder="Enter current level (1-499)"
           />
         </div>
@@ -675,7 +676,7 @@ export default function ForceWingCalculator() {
             max="99"
             value={currentPercentage}
             onChange={(e) => handlePercentageChange(parseInt(e.target.value) || 0)}
-            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight focus:ring-2 focus:ring-game-highlight/30"
+            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight"
             placeholder="Enter current % (0-99)"
           />
           <p className="text-xs text-foreground/60">If you're 50% through your current level, enter 50</p>
@@ -690,9 +691,9 @@ export default function ForceWingCalculator() {
             id="target-level"
             min="2"
             max="500"
-            value={targetLevel}
-            onChange={(e) => handleTargetLevelChange(parseInt(e.target.value) || 2)}
-            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight focus:ring-2 focus:ring-game-highlight/30"
+            value={targetLevel || ''}
+            onChange={(e) => handleTargetLevelChange(parseInt(e.target.value))}
+            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight"
             placeholder="Enter target level (2-500)"
           />
         </div>

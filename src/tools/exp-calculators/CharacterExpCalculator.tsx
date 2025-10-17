@@ -299,9 +299,10 @@ export default function CharacterExpCalculator() {
   };
 
   const handleTargetLevelChange = (value: number) => {
-    const level = Math.max(2, Math.min(200, value));
+    if (isNaN(value)) return; // Allow free input without forcing a value
+    const level = Math.min(200, value);
     setTargetLevel(level);
-    if (level <= currentLevel) {
+    if (level <= currentLevel && level >= 2) {
       setCurrentLevel(level - 1);
     }
   };
@@ -326,7 +327,7 @@ export default function CharacterExpCalculator() {
             max="199"
             value={currentLevel}
             onChange={(e) => handleCurrentLevelChange(parseInt(e.target.value) || 1)}
-            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight focus:ring-2 focus:ring-game-highlight/30"
+            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight"
             placeholder="Enter current level (1-199)"
           />
         </div>
@@ -342,7 +343,7 @@ export default function CharacterExpCalculator() {
             max="99"
             value={currentPercentage}
             onChange={(e) => handlePercentageChange(parseInt(e.target.value) || 0)}
-            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight focus:ring-2 focus:ring-game-highlight/30"
+            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight"
             placeholder="Enter current level progress (0-99%)"
           />
           <p className="text-xs text-foreground/60">Optional. Enter your progress in the current level (0-99%)</p>
@@ -357,9 +358,9 @@ export default function CharacterExpCalculator() {
             id="target-level"
             min="2"
             max="200"
-            value={targetLevel}
-            onChange={(e) => handleTargetLevelChange(parseInt(e.target.value) || 2)}
-            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight focus:ring-2 focus:ring-game-highlight/30"
+            value={targetLevel || ''}
+            onChange={(e) => handleTargetLevelChange(parseInt(e.target.value))}
+            className="w-full bg-theme-dark border border-border-dark rounded-lg px-4 py-2 text-foreground focus:outline-none focus:border-game-highlight"
             placeholder="Enter target level (2-200)"
           />
         </div>

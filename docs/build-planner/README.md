@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Build Planner is the flagship tool of Nipperlug, providing comprehensive character optimization for Cabal Online. It integrates 16+ game systems into a unified interface where players can experiment with different configurations and see real-time stat calculations and damage output.
+The Build Planner is the flagship tool of Nipperlug, providing character optimization for Cabal Online. It integrates 16+ game systems into a unified interface where players can experiment with different configurations and see real-time stat calculations and damage output.
 
 ## Current State
 

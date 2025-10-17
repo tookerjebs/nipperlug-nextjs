@@ -98,13 +98,6 @@ export default function LegalPage() {
               3. Privacy Policy
             </h2>
 
-            <div className="glass-panel p-4 border-l-4 border-green-500 bg-green-900/10 mb-4">
-              <p className="text-green-200">
-                <strong>Privacy First:</strong> No tracking, no analytics, no user accounts. 
-                Your data stays on your device.
-              </p>
-            </div>
-
             <div className="space-y-4">
               <div>
                 <h3 className="text-lg font-semibold text-gray-200 mb-2">3.1 What We Don't Collect</h3>

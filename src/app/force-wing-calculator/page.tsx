@@ -4,6 +4,9 @@ import ForceWingCalculator from '@/tools/exp-calculators/ForceWingCalculator';
 // Force static generation - no server-side rendering needed
 export const dynamic = 'force-static';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Cabal Online Force Wing EXP Calculator - nipperlug",
   description: "Calculate experience points needed for Force Wing upgrades and levels in Cabal Online. Plan your Force Wing progression with accurate EXP requirements.",

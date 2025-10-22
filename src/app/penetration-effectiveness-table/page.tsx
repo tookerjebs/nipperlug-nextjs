@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import PenetrationEffectivenessTable from '@/tools/penetration-effectiveness/PenetrationEffectivenessTable';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Cabal Online Penetration Effectiveness Table - Boss Defense Calculator - nipperlug",
   description: "Complete Cabal Online penetration effectiveness table showing damage reduction vs boss defense values. Essential penetration calculator for optimizing damage against bosses, dungeons, and PvP. Includes early game to endgame boss defense ranges.",

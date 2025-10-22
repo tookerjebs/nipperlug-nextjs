@@ -4,6 +4,9 @@ import { DevilShopCalculator } from '@/tools/devil-shop-calculator';
 // Force static generation - no server-side rendering needed
 export const dynamic = 'force-static';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Devil Shop Profit Calculator - nipperlug",
   description: "Calculate profits from Devil Shop items in Cabal Online. Compare token costs vs market prices to maximize your Devil Shop investments.",

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from 'next/link';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Cabal Online Calculators - EXP, Crafting & Upgrade Tools - nipperlug",
   description: "Comprehensive collection of Cabal Online calculators including EXP, Force Wing, OXP, Chloe Craft, Devil Shop, Amity, and Extreme Upgrade calculators for optimal progression and profit.",

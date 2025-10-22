@@ -4,6 +4,9 @@ import ExtremeUpgradeCalculator from '@/tools/extreme-upgrade-calculator/Extreme
 // Force static generation - no server-side rendering needed
 export const dynamic = 'force-static';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Cabal Online Extreme Upgrade Calculator - nipperlug",
   description: "Calculate success rates, costs, and materials needed for extreme upgrades in Cabal Online. Plan your equipment upgrades with accurate probability calculations and cost analysis.",

@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 // Force static generation - no server-side rendering needed
 export const dynamic = 'force-static';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Chloe Amity Calculator - nipperlug",
   description: "Calculate optimal amity paths for Chloe crafting in Cabal Online. Find the most cost-effective way to reach your target amity level.",

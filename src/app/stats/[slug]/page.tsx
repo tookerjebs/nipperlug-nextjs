@@ -11,6 +11,9 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import type { Metadata } from 'next';
 
+// ISR: Revalidate every 30 days (content updates require deployment anyway)
+export const revalidate = 2592000;
+
 // Get all available stat slugs for static generation
 export async function generateStaticParams() {
   // Get slugs from stats config (this ensures we only generate pages for valid stats)

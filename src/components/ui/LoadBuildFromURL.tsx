@@ -62,11 +62,18 @@ export default function LoadBuildFromURL({
         }
         onLoadComplete?.(true, result.data);
         
-        // Clean up URL parameters after successful load
-        const url = new URL(window.location.href);
-        url.searchParams.delete('build');
-        url.searchParams.delete('gist');
-        window.history.replaceState({}, '', url.toString());
+        // Handle system parameter from shared URL (only for shared builds)
+        const urlParams = new URLSearchParams(window.location.search);
+        const systemFromUrl = urlParams.get('system');
+        if (systemFromUrl) {
+          // Save system to localStorage only for shared builds
+          // This ensures the friend sees the correct tab when opening a shared build
+          localStorage.setItem('activeSystem', systemFromUrl);
+        }
+        
+        // Don't clean up URL parameters immediately - let the user see the shared URL
+        // The build parameter will be cleaned up only when the user navigates away
+        // This preserves the sharing context while still allowing normal navigation
       } else {
         const errorMsg = result.error || 'Failed to load build from URL';
         if (showNotifications) {

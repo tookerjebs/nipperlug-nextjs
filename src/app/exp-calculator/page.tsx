@@ -4,6 +4,9 @@ import CharacterExpCalculator from '@/tools/exp-calculators/CharacterExpCalculat
 // Force static generation - no server-side rendering needed
 export const dynamic = 'force-static';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Cabal Online Character EXP Calculator - nipperlug",
   description: "Calculate experience points needed to reach your target character level in Cabal Online. Plan your leveling efficiently with accurate EXP calculations.",

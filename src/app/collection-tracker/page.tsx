@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   },
 };
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export default function CollectionTrackerPage() {
   return (
     <div className="min-h-screen bg-theme-darkest">

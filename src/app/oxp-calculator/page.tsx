@@ -4,6 +4,9 @@ import OxpCalculator from '@/tools/exp-calculators/OxpCalculator';
 // Force static generation - no server-side rendering needed
 export const dynamic = 'force-static';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Cabal Online OXP Calculator - nipperlug",
   description: "Calculate OXP (Overlord Experience Points) requirements in Cabal Online. Plan your Overlord progression with accurate OXP calculations and level requirements.",

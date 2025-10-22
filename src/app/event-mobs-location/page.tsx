@@ -1,5 +1,8 @@
 import EventMobsLocation from '@/tools/event-mobs-location/EventMobsLocation';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata = {
   title: 'Cabal Online Event Mobs Spawn Locations',
   description: 'Explore event mob spawn locations across Cabal Online maps. Lanterns, Cabal Rangers, Fortune Pigs, Snowmen, and more. Discover all spawn points and optimize your hunting routes.',

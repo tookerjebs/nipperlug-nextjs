@@ -4,6 +4,9 @@ import ChloeCalculator from '@/tools/chloe-calculator/components/ChloeCalculator
 // Force static generation - no server-side rendering needed
 export const dynamic = 'force-static';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Chloe Craft Profit Calculator - nipperlug",
   description: "CABAL Online Profit Calculator for Chloe Crafting. Helps you determine which items will yield the most profit.",

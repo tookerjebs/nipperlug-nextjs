@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import BM3TargetDamageTable from '@/tools/bm3-target-damage/BM3TargetDamageTable';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Cabal Online BM3 Damage Boost Overview - Class Damage by Target Count - nipperlug",
   description: "Complete BM3 damage boost overview for Cabal Online. Learn how each class damage changes based on number of targets hit. Essential for optimizing damage output in BM3 battles.",

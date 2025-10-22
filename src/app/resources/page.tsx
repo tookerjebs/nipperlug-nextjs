@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from 'next/link';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Cabal Online Resources - Event Mobs, Tier Lists, Collection Tracker & More",
   description: "Essential Cabal Online resources including event mob spawn locations, tier lists, collection tracker, BM3 damage boost, and effectiveness charts for optimal gameplay and farming strategies.",

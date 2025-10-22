@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { MythLevelDataViewer } from '@/tools/myth-level-data/MythLevelDataViewer';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export const metadata: Metadata = {
   title: "Cabal Online Myth Level Data - Complete Stats & Probabilities | Nipperlug",
   description: "Complete Cabal Online myth level data with accurate probability calculations, stat values, holy power costs, and success chances for all 78 nodes. Essential reference for myth level planning.",

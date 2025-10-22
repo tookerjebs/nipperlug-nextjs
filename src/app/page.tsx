@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import RecentPatches from '@/components/ui/RecentPatches';
 
+// ISR: Revalidate every 30 days
+export const revalidate = 2592000;
+
 export default function HomePage() {
   return (
     <div className="text-foreground relative">

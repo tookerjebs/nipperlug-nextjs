@@ -45,7 +45,7 @@ function BuildPlannerContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   
-  // Get initial system from URL or default to 'equipment'
+  // Get valid system ID helper function
   const getValidSystemId = (systemId: string | null): string => {
     if (!systemId) return 'equipment';
     
@@ -59,27 +59,47 @@ function BuildPlannerContent() {
     return validSystem ? systemId : 'equipment';
   };
   
-  const initialSystem = getValidSystemId(searchParams.get('system'));
-  const [activeSystem, setActiveSystem] = useState(initialSystem);
+  // Initialize with a default value to avoid hydration mismatch
+  const [activeSystem, setActiveSystem] = useState('equipment');
+  const [isInitialized, setIsInitialized] = useState(false);
   const [showKnownIssues, setShowKnownIssues] = useState(false);
 
-  // Function to handle system changes and update URL
+  // Initialize system from URL params (for shared builds) or localStorage
+  useEffect(() => {
+    // Check if we have a system parameter in URL (for shared builds)
+    const systemFromUrl = searchParams.get('system');
+    let initialSystem = 'equipment';
+    
+    if (systemFromUrl) {
+      // Priority 1: URL parameter (for shared builds)
+      initialSystem = getValidSystemId(systemFromUrl);
+    } else if (typeof window !== 'undefined') {
+      // Priority 2: localStorage (for returning users)
+      const savedSystem = localStorage.getItem('activeSystem');
+      if (savedSystem) {
+        initialSystem = getValidSystemId(savedSystem);
+      }
+    }
+    
+    setActiveSystem(initialSystem);
+    setIsInitialized(true);
+  }, [searchParams]);
+
+  // Don't clean up URL parameters - keep shared URLs intact
+  // This allows users to copy the shared URL again after loading
+
+  // Function to handle system changes and save to localStorage
   const handleSystemChange = (systemId: string) => {
     setActiveSystem(systemId);
     
-    // Update URL with new system parameter
-    const newSearchParams = new URLSearchParams(searchParams.toString());
-    newSearchParams.set('system', systemId);
-    router.replace(`?${newSearchParams.toString()}`, { scroll: false });
-  };
-
-  // Sync state with URL changes (for browser back/forward navigation)
-  useEffect(() => {
-    const systemFromUrl = getValidSystemId(searchParams.get('system'));
-    if (systemFromUrl !== activeSystem) {
-      setActiveSystem(systemFromUrl);
+    // Save to localStorage for persistence
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('activeSystem', systemId);
     }
-  }, [searchParams]); // Removed activeSystem from dependencies to prevent race condition
+    
+    // NO LONGER update URL - this was causing cache issues
+    // We only use URL parameters for shared builds
+  };
 
   // Auto-load saved build on page load
   useEffect(() => {

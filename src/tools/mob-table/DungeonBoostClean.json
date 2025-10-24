@@ -9,6 +9,18 @@
     "5": { "steps": 25, "displayName": "Max Boost" }
   },
   "boostStats": {
+    "level": {
+      "boostValue": 1,
+      "valueType": 1,
+      "values": {
+        "0": 0,
+        "1": 2,
+        "2": 5,
+        "3": 11,
+        "4": 17,
+        "5": 25
+      }
+    },
     "hp": {
       "boostValue": 7,
       "valueType": 2,

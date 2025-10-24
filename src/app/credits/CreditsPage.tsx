@@ -38,7 +38,7 @@ export default function CreditsPage() {
                   <a href="https://mrwormy.com/" target="_blank" rel="noopener noreferrer" 
                      className="text-game-gold hover:text-yellow-300 transition-colors">
                     MrWormy.com ↗
-                  </a> - Source for many tools on this site that require detailled game information. 
+                  </a> - Source for many tools on this site that require detailed game information. 
                   MrWormy's site and the structured, 
                   easy to access information and all the collected Patch Notes made it an invaluable resource and saved many hours
                   of gathering data manually.
@@ -54,7 +54,7 @@ export default function CreditsPage() {
 
               <div className="glass-panel p-4 border-l-4 border-stat-utility">
                 <p className="text-gray-300 leading-relaxed mb-3">
-                  <span className="text-purple-300">osaka [Discord contribution] </span> - Shared a detailled damage calculation that covers all aspects from start to finish. It helped
+                  <span className="text-purple-300">osaka [Discord contribution] </span> - Shared a detailed damage calculation that covers all aspects from start to finish. It helped
                   understand how the game calculates damage and how different factors affect it.
                 </p>
                 

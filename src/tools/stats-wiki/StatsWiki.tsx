@@ -117,7 +117,7 @@ export default function StatsWiki() {
         <div className="bg-component-card border border-border-dark rounded-xl p-6 mb-8 shadow-lg">
           <h1 className="text-4xl font-bold text-foreground mb-3">Cabal Online Stats Wiki</h1>
           <p className="text-foreground/80 mb-6 leading-relaxed">
-            Complete reference for all game stats avilable in Cabal Online with formulas and detailled explanations. 
+            Complete reference for all game stats avilable in Cabal Online with formulas and detailed explanations. 
             This page contains {allStats.length} stats across {Object.keys(statsByCategory).length} categories.
             Each stat page includes detailed formulas, examples, typical values, and optimization tips for character builds.
           </p>

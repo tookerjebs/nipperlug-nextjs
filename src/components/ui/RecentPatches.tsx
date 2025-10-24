@@ -15,6 +15,14 @@ interface PatchItem {
 
 const RECENT_PATCHES: PatchItem[] = [
   {
+    id: '2025-10-24',
+    date: '2025-10-24',
+    type: 'improvement',
+    title: 'Dungeon Boost Slider',
+    description: 'Added dungeon boost slider in monster detailed information window.',
+    category: 'Monster Database'
+  },
+  {
     id: '2025-10-16',
     date: '2025-10-16',
     type: 'tool',
@@ -240,6 +248,7 @@ const getToolRoute = (title: string): string | null => {
     'Collection Tracker': '/collection-tracker',
     'Extreme Upgrade Calculator': '/extreme-upgrade-calculator',
     'Penetration Effectiveness Table': '/penetration-effectiveness-table',
+    'Dungeon Boost Slider': '/monster-database',
     'Game Stats Wiki': '/stats-wiki',
     'Build Planner Launch': '/build-planner',
     'Passive Skills Added to Build Planner': '/build-planner',

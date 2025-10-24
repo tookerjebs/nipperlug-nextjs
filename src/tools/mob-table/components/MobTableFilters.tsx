@@ -76,7 +76,7 @@ export const MobTableFilters: React.FC<MobTableFiltersProps> = ({
                 });
               }
             }}
-            className="w-full px-3 py-2 bg-component-card border border-border-dark rounded-md text-foreground focus:outline-none focus:ring-2 focus:ring-stat-offensive focus:border-transparent"
+            className="w-full px-3 py-2 bg-component-card border border-border-dark rounded-md text-foreground focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
           >
             <option value="all">All Monsters</option>
             <option value="0">Regular Monsters</option>
@@ -96,7 +96,7 @@ export const MobTableFilters: React.FC<MobTableFiltersProps> = ({
               ...filters,
               dungeonId: e.target.value || undefined
             })}
-            className="w-full px-3 py-2 bg-component-card border border-border-dark rounded-md text-foreground focus:outline-none focus:ring-2 focus:ring-stat-offensive focus:border-transparent"
+            className="w-full px-3 py-2 bg-component-card border border-border-dark rounded-md text-foreground focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
           >
             <option value="">All Dungeons</option>
             {sortedDungeonOptions.map(({ id, name }) => (

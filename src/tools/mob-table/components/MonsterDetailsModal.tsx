@@ -1,9 +1,12 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MonsterStats } from '../../../lib/game-data/monsters/types';
 import { getDungeonName } from '../../../lib/game-data/monsters/dungeonMapping';
 import { getCategorizedFields } from '../config/fieldMappings';
+import { BoostSlider } from './BoostSlider';
+import { BoostedStatDisplay } from './BoostedStatDisplay';
+import { calculateAllBoostedStats, BoostedStats } from '../utils/boostCalculator';
 
 interface MonsterDetailsModalProps {
   monster: MonsterStats | null;
@@ -16,6 +19,7 @@ export const MonsterDetailsModal: React.FC<MonsterDetailsModalProps> = ({
   isOpen,
   onClose
 }) => {
+  const [boostLevel, setBoostLevel] = useState(0);
   // Close modal on Escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -36,6 +40,9 @@ export const MonsterDetailsModal: React.FC<MonsterDetailsModalProps> = ({
   }, [isOpen, onClose]);
 
   if (!isOpen || !monster) return null;
+
+  // Calculate boosted stats
+  const boostedStats = calculateAllBoostedStats(monster, boostLevel);
 
   const formatValue = (key: string, value: any): string => {
     if (value === null || value === undefined) return 'N/A';
@@ -79,25 +86,32 @@ export const MonsterDetailsModal: React.FC<MonsterDetailsModalProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-border-dark">
           <div>
-            <h2 className="text-2xl font-bold text-game-gold">
-              {monster.name}
-              {monster.serverBossType > 0 && (
-                <span className="ml-3 px-3 py-1 bg-stat-offensive text-white text-sm rounded">
-                  {monster.serverBossType === 1 ? 'MAP BOSS' : 'WORLD BOSS'}
-                </span>
-              )}
-            </h2>
-            <p className="text-foreground/60 mt-1">Level {monster.level} Monster</p>
-          </div>
-          
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-component-card rounded-lg transition-colors text-foreground/60 hover:text-foreground"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+              <h2 className="text-2xl font-bold text-game-gold">
+                {monster.name}
+                {monster.serverBossType > 0 && (
+                  <span className="ml-3 px-3 py-1 bg-stat-offensive text-white text-sm rounded">
+                    {monster.serverBossType === 1 ? 'MAP BOSS' : 'WORLD BOSS'}
+                  </span>
+                )}
+              </h2>
+              <p className="text-foreground/60 mt-1">Level {monster.level} Monster</p>
+            </div>
+            
+            <div className="flex items-center gap-4">
+              <BoostSlider
+                currentLevel={boostLevel}
+                onLevelChange={setBoostLevel}
+              />
+            
+              <button
+                onClick={onClose}
+                className="p-2 hover:bg-component-card rounded-lg transition-colors text-foreground/60 hover:text-foreground"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
         </div>
 
         {/* Content */}
@@ -105,19 +119,36 @@ export const MonsterDetailsModal: React.FC<MonsterDetailsModalProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {Object.entries(statCategories).map(([categoryName, stats]) => (
               <div key={categoryName} className="component-bg">
-                <h3 className="text-lg font-semibold text-game-gold mb-4">
+                <h3 className="text-lg font-semibold text-game-gold mb-4 text-center">
                   {categoryName}
+                  {boostLevel > 0 && (
+                    <span className="ml-2 text-xs text-game-gold bg-game-gold/20 px-2 py-1 rounded">
+                      Boost Active
+                    </span>
+                  )}
                 </h3>
                 
                 <div className="space-y-2">
-                  {stats.map(({ key, label, value }) => (
-                    <div key={key} className="flex justify-between items-center py-1">
-                      <span className="text-foreground/80 text-sm">{label}:</span>
-                      <span className="text-foreground font-medium">
-                        {formatValue(key, value)}
-                      </span>
-                    </div>
-                  ))}
+                  {stats.map(({ key, label, value }) => {
+                    const boostedStat = boostedStats[key];
+                    if (boostedStat && boostLevel > 0) {
+                      return (
+                        <BoostedStatDisplay
+                          key={key}
+                          label={label}
+                          boostedStat={boostedStat}
+                        />
+                      );
+                    }
+                    return (
+                      <div key={key} className="flex justify-between items-center py-1">
+                        <span className="text-foreground/80 text-sm">{label}:</span>
+                        <span className="text-foreground font-medium">
+                          {formatValue(key, value)}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ))}

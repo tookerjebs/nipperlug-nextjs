@@ -9,6 +9,7 @@ import { ColumnVisibilitySelector } from './components/ColumnVisibilitySelector'
 import { MonsterDetailsModal } from './components/MonsterDetailsModal';
 import { SortableTableHeader } from './components/SortableTableHeader';
 import { DEFAULT_COLUMNS, TableColumn, SortConfig, SortDirection } from './config/columns';
+import { ChevronDown } from 'lucide-react';
 
 export const MobTable: React.FC = () => {
   const { isLoading, error, searchMonsters, getDungeonIds } = useMonsterData();
@@ -170,6 +171,7 @@ export const MobTable: React.FC = () => {
             <p><strong>Sort Data:</strong> Click column headers to sort by any stat (ascending/descending)</p>
             <p><strong>Customize View:</strong> Show/hide columns to focus on the stats you need</p>
             <p><strong>Detailed Info:</strong> Click any row to view complete monster statistics and abilities</p>
+            <p><strong>Dungeon Boost:</strong> Select Dungeon Boost Level in the detailed information window. Note: the dungeon boost slider will appear for every mob, regardless of whether it is a dungeon mob or not.</p>
           </div>
         </div>
 
@@ -195,16 +197,22 @@ export const MobTable: React.FC = () => {
               {/* Items per page selector */}
               <div className="flex items-center gap-2">
                 <label className="text-foreground/80 text-sm font-medium">Show:</label>
-                <select
-                  value={itemsPerPage}
-                  onChange={(e) => setItemsPerPage(Number(e.target.value))}
-                  className="px-3 py-1 bg-component-card border border-border-dark rounded-md text-foreground text-sm focus:outline-none focus:border-stat-offensive transition-colors"
-                >
-                  <option value={10}>10</option>
-                  <option value={25}>25</option>
-                  <option value={50}>50</option>
-                  <option value={100}>100</option>
-                </select>
+                <div className="relative">
+                  <select
+                    value={itemsPerPage}
+                    onChange={(e) => setItemsPerPage(Number(e.target.value))}
+                    className="pl-3 pr-8 py-1 bg-component-card border border-border-dark rounded-md text-foreground text-sm focus:outline-none focus:border-stat-offensive transition-colors appearance-none"
+                    style={{
+                      backgroundImage: 'none'
+                    }}
+                  >
+                    <option value={10}>10</option>
+                    <option value={25}>25</option>
+                    <option value={50}>50</option>
+                    <option value={100}>100</option>
+                  </select>
+                  <ChevronDown className="pointer-events-none absolute right-2 top-1/2 h-4 w-4 -translate-y-1/2 text-foreground/60" />
+                </div>
                 <span className="text-foreground/60 text-sm">entries</span>
               </div>
               
@@ -326,10 +334,7 @@ export const MobTable: React.FC = () => {
         {/* Footer Info */}
         <div className="mt-8 text-center text-foreground/60 text-sm space-y-2">
           <p>
-            <strong className="text-game-gold">Monster Database Features:</strong> Real-time search, advanced filtering, sortable columns, and detailed stat viewing
-          </p>
-          <p>
-            Data includes HP, defense, damage reduction, resistances, attack patterns, and dungeon locations for all Cabal Online monsters
+            <strong className="text-game-gold">Monster Database Features:</strong> Real-time search, advanced filtering, sortable columns, detailed stat viewing, boosted stats
           </p>
         </div>
 

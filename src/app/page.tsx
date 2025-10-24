@@ -67,7 +67,7 @@ export default function HomePage() {
                   Monster Database
                 </h3>
                 <p className="text-foreground/80 mb-4 text-sm leading-relaxed flex-grow">
-                  Complete monster stats and information database.
+                  Stats of all monsters in the game.
                 </p>
                 <div className="flex items-center gap-2 text-game-highlight font-normal opacity-70 group-hover:opacity-100 transition-opacity duration-300 mt-auto">
                   <span>Open</span>

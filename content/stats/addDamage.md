@@ -32,7 +32,7 @@ If you have:
 - Base Damage after Defense: 50,000
 - Additional Damage: 100
 
-Result: `50,000 + 100 = 50,100` damage before final modifiers
+Result: `50,000 + 100 = 50,100` damage before Normal Damage Up or Critical Damage modifiers
 
 ## Sources
 

@@ -1,3 +1,5 @@
+import spritesheetData from '../../../lib/game-data/spritesheet-stat-icons.json';
+
 interface SpriteFrame {
   frame: { x: number; y: number; w: number; h: number };
 }
@@ -13,47 +15,21 @@ interface SpritesheetMeta {
   size: { w: number; h: number };
 }
 
-let spriteFrames: Record<string, SpriteFrame> | null = null;
-let spritesheetMeta: SpritesheetMeta | null = null;
-let loadingPromise: Promise<Record<string, SpriteFrame>> | null = null;
+// Static import - data is available synchronously at module load
+const spriteFrames: Record<string, SpriteFrame> = spritesheetData.frames;
+const spritesheetMeta: SpritesheetMeta = spritesheetData.meta;
 
-export async function loadSpriteData(): Promise<Record<string, SpriteFrame>> {
-  if (spriteFrames) return spriteFrames;
-  
-  if (loadingPromise) return loadingPromise;
-  
-  // Use dynamic import with caching to avoid multiple fetches
-  loadingPromise = import('../../../lib/game-data/spritesheet-stat-icons.json')
-    .then(module => {
-      spriteFrames = module.default.frames;
-      spritesheetMeta = module.default.meta;
-      return spriteFrames || {};
-    })
-    .catch(error => {
-      console.error('Failed to load sprite data:', error);
-      return {};
-    });
-  
-  return loadingPromise;
+// No longer needed - data is loaded statically
+export function loadSpriteData(): Record<string, SpriteFrame> {
+  return spriteFrames;
 }
 
 export function getSpritesheetDimensions(): { width: number; height: number } {
-  if (spritesheetMeta) {
-    return { width: spritesheetMeta.size.w, height: spritesheetMeta.size.h };
-  }
-  // Fallback dimensions if meta data isn't loaded yet
-  return { width: 4234, height: 42 };
+  return { width: spritesheetMeta.size.w, height: spritesheetMeta.size.h };
 }
 
 export function getSpriteData(iconPath: string): SpriteData | null {
   if (!iconPath) return null;
-  
-  // Ensure sprite data is loaded
-  if (!spriteFrames) {
-    loadSpriteData();
-  }
-  
-  if (!spriteFrames) return null;
   
   // Extract filename: "/images/stat icons/attack_icon.png" -> "attack_icon.png"
   const filename = iconPath.split('/').pop();

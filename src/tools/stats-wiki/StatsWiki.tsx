@@ -141,8 +141,9 @@ export default function StatsWiki() {
                 <ul className="space-y-2">
                   {filteredStats.map((stat) => (
                     <li key={stat.id}>
-                      <Link 
+                      <Link
                         href={`/stats/${statIdToSlug(stat.id)}`}
+                        prefetch={false}
                         className="flex items-start gap-3 hover:underline group"
                       >
                         <StatIconClient 
@@ -196,8 +197,9 @@ export default function StatsWiki() {
                   <ul className="space-y-2">
                     {categoryStats.map((stat) => (
                       <li key={stat.id}>
-                        <Link 
+                        <Link
                           href={`/stats/${getTargetStatSlug(stat.id)}`}
+                          prefetch={false}
                           className="flex items-start gap-3 hover:underline group p-2 rounded-lg hover:bg-theme-dark/20 transition-all duration-200"
                         >
                           <StatIconClient 

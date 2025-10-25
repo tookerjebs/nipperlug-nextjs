@@ -539,6 +539,7 @@ export default async function StatPage({ params }: { params: Promise<{ slug: str
                       <li key={relatedStatId} className="break-inside-avoid">
                         <Link
                           href={`/stats/${relatedSlug}`}
+                          prefetch={false}
                           className="flex items-center space-x-3 p-2 rounded hover:bg-theme-darker/50 hover:text-game-highlight transition-all group"
                         >
                           <div className="flex-shrink-0">

@@ -18,9 +18,7 @@ This utility stat increases the chance that defeated monsters will drop Alz.
 
 ## Notes and Tips
 
-- Essential for consistent Alz farming
 - Works well with [Alz Drop Amount](/stats/alz-drop-amount)
-- Particularly valuable for sustained farming
 
 ## Related Stats
 

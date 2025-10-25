@@ -17,6 +17,6 @@ This defensive stat decreases the probability of being knocked down by enemy abi
 
 ## Related Stats
 
-- [Resist Knockback](/stats/resistKnockback) - Prevents knockback effects
-- [Resist Unable to Move](/stats/resistUnableToMove) - Prevents movement impairment
-- [Resist Stun](/stats/resistStun) - Prevents stun effects
+- [Resist Knockback](/stats/resist-knockback) - Prevents knockback effects
+- [Resist Unable to Move](/stats/resist-unable-to-move) - Prevents movement impairment
+- [Resist Stun](/stats/resist-stun) - Prevents stun effects

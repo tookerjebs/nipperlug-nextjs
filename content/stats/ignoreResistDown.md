@@ -1,7 +1,7 @@
 ---
 title: "Ignore Resist Down"
 category: "utility"
-priority: "medium"
+priority: "low"
 isPercentage: true
 ---
 

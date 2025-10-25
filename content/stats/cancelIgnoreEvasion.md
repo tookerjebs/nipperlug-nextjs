@@ -11,7 +11,7 @@ lastUpdated: "2025-01-08"
 
 # Cancel Ignore Evasion
 
-Counters enemy [Ignore Evasion](/stats/ignore-evasion) effects.
+Counters enemy [Ignore Evasion](/stats/ignore-evasion) effects on a 1:1 basis.
 
 ## Overview
 

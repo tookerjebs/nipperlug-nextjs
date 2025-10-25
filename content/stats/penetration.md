@@ -18,7 +18,7 @@ Penetration works by reducing the effectiveness of enemy [Defense](/stats/defens
 
 Your penetration is reduced by enemy [Ignore Penetration](/stats/ignore-penetration) on a 1:1 ratio , but can be restored with [Cancel Ignore Penetration](/stats/cancel-ignore-penetration) on the same 1:1 basis.
 
-The exact interaction between Defense and Petentration has not been officially confirmed, but this [Penetration Effectiveness Table](/penetration-effectiveness-table/) shows a good approximation of how it works.
+The exact interaction between Defense and Penetration has not been officially confirmed, but this [Penetration Effectiveness Table](/penetration-effectiveness-table/) shows a good approximation of how it works.
 
 ## Example
 

@@ -22,7 +22,7 @@ Additional Damage is applied as a flat increase to your damage output:
 
 ## Typical Values
 
-Not a stat that is abundantly available across all progression systems in high enough amounts to make it worth investing in.
+Not a stat that is abundantly available across progression systems in high enough amounts to make it worth investing in.
 
 ## Calculation
 

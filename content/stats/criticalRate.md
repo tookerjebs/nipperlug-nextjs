@@ -54,7 +54,7 @@ Critical Rate can be obtained through:
 
 - Pair with Critical Damage for maximum effectiveness
 - Consider enemy resistance in high-end content when building critical rate
-- Bosses in end-game dungeons can have up to 50% resist critical rate
+- Bosses in end-game dungeons can have up to 50% resist critical rate.
 
 ## PvE and Pvp Variants
 

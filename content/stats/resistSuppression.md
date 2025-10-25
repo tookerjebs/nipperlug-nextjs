@@ -21,5 +21,5 @@ This defensive stat decreases the probability of being suppressed by enemy abili
 
 ## Related Stats
 
-- [Resist Silence](/stats/resistSilence) - Prevents silence effects
-- [Resist Stun](/stats/resistStun) - Prevents stun effects
+- [Resist Silence](/stats/resist-silence) - Prevents silence effects
+- [Resist Stun](/stats/resist-stun) - Prevents stun effects

@@ -8,7 +8,7 @@ variants: ["pvp", "pve"]
 
 # Cancel Ignore Penetration
 
-Reduces enemy [Ignore Penetration](/stats/ignore-penetration).
+Reduces enemy [Ignore Penetration](/stats/ignore-penetration) on a 1:1 basis.
 
 ## Overview
 

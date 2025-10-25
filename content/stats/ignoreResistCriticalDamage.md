@@ -1,7 +1,7 @@
 ---
 title: "Ignore Resist Critical DMG"
 category: "offensive"
-priority: "medium"
+priority: "high"
 isPercentage: true
 variants: ["pvp", "pve"]
 ---

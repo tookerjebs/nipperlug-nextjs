@@ -21,5 +21,5 @@ This defensive stat decreases the probability of being silenced by enemy abiliti
 
 ## Related Stats
 
-- [Resist Suppression](/stats/resistSuppression) - Prevents suppression effects
-- [Resist Stun](/stats/resistStun) - Prevents stun effects
+- [Resist Suppression](/stats/resist-suppression) - Prevents suppression effects
+- [Resist Stun](/stats/resist-stun) - Prevents stun effects

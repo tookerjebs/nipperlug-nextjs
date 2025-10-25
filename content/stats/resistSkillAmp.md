@@ -13,7 +13,7 @@ Increases your [Resist Magic Skill Amp](/stats/resist-magic-skill-amp) and [Resi
 ## Overview
 
 Defensive stat that increases Skill Amp resistance. Only useful in PvP (your Resist Skill Amp does not reduce damage taken in PvE). Can be countered by [Ignore Resist Skill Amp](/stats/ignore-resist-skill-amp).
-Reduses enemy Skill Amp on a 1:1 basis.
+Reduces enemy Skill Amp on a 1:1 basis.
 
 ## Sources
 
@@ -26,5 +26,5 @@ Reduses enemy Skill Amp on a 1:1 basis.
 
 ## Related Stats
 
-- [Resist Magic Skill Amp](/stats/resistMagicSkillAmp) - Magic-specific resistance
-- [Resist Sword Skill Amp](/stats/resistSwordSkillAmp) - Sword-specific resistance
+- [Resist Magic Skill Amp](/stats/resist-magic-skill-amp) - Magic-specific resistance
+- [Resist Sword Skill Amp](/stats/resist-sword-skill-amp) - Sword-specific resistance

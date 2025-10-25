@@ -20,7 +20,7 @@ When you land a critical hit (determined by [Critical Rate](/stats/critical-rate
 **Key Mechanics:**
 - Base critical damage is always 20% (cannot be reduced)
 - Critical Damage stat adds to this base value
-- Enemy [Reist Critical Damage](/stats/resist-critical-damage) can reduce your effective critical damage
+- Enemy [Resist Critical Damage](/stats/resist-critical-damage) can reduce your effective critical damage
 - You can counter enemy resist with [Ignore Resist Critical Damage](/stats/ignore-resist-critical-damage)
 - Only applies when critical hits occur
 
@@ -85,7 +85,7 @@ Critical Damage values vary significantly based on build focus:
 ## Notes and Tips
 
 - **Synergy is Key:** Critical Damage is less effective without sufficient Critical Rate
-- **Base Protection:** The 20% base, that can not be bypassed
+- **Base Protection:** The 20% base, that cannot be bypassed
 - **Resistance Matters:** High-end enemies always have critical damage resistance
 - **Cost vs. Benefit:** Extremely high critical damage has diminishing returns
 - **Build Balance:** Consider Normal Damage Up for non-critical hits in PvP scenarios

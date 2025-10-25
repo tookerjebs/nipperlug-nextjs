@@ -11,7 +11,7 @@ lastUpdated: "2025-01-08"
 
 # Cancel Ignore DMG Reduction
 
-Counters enemy [Ignore DMG Reduction](/stats/ignore-damage-reduction) effects.
+Counters enemy [Ignore DMG Reduction](/stats/ignore-damage-reduction) effects on a 1:1 basis.
 
 ## Overview
 

@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { getStatInfo } from '../data/stats-config';
-import { getSpritesheetDimensions, loadSpriteData, getSpriteData } from '../utils/spriteIconUtils';
+import { getSpritesheetDimensions, getSpriteData } from '../utils/spriteIconUtils';
 
 interface StatIconProps {
   statId: string;
@@ -14,17 +14,15 @@ interface StatIconProps {
   circular?: boolean; // If true, makes the icon circular (for stellar system)
 }
 
-export const StatIcon: React.FC<StatIconProps> = ({ 
-  statId, 
-  width = 32, 
-  height = 32, 
+export const StatIcon: React.FC<StatIconProps> = ({
+  statId,
+  width = 32,
+  height = 32,
   className = '',
   alt,
   fill = false,
   circular = false
 }) => {
-  const [spriteData, setSpriteData] = useState<any>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   // Detect PVP/PVE variants and extract base stat
   const getVariantInfo = (id: string) => {
@@ -42,26 +40,16 @@ export const StatIcon: React.FC<StatIconProps> = ({
   const { variant, baseStatId } = getVariantInfo(statId);
   const statInfo = getStatInfo(baseStatId);
 
-  useEffect(() => {
-    const loadSprite = async () => {
-      await loadSpriteData();
-      if (statInfo?.icon) {
-        const data = getSpriteData(statInfo.icon);
-        setSpriteData(data);
-      }
-      setIsLoaded(true);
-    };
-    
-    loadSprite();
-  }, [statInfo?.icon]);
+  // Get sprite data synchronously - no loading needed
+  const spriteData = statInfo?.icon ? getSpriteData(statInfo.icon) : null;
 
-  // Don't render anything until loaded and sprite data is available
-  if (!isLoaded || !spriteData || !statInfo) {
+  // Don't render anything if sprite data is not available
+  if (!spriteData || !statInfo) {
     return (
-      <div 
+      <div
         className={`inline-flex items-center justify-center relative ${className}`}
         style={{
-          width: `${width}px`, 
+          width: `${width}px`,
           height: `${height}px`,
         }}
       />

@@ -22,23 +22,19 @@ export async function loadSpriteData(): Promise<Record<string, SpriteFrame>> {
   
   if (loadingPromise) return loadingPromise;
   
-  if (typeof window !== 'undefined') {
-    loadingPromise = fetch('/spritesheet-stat-icons.json')
-      .then(response => response.json())
-      .then(data => {
-        spriteFrames = data.frames;
-        spritesheetMeta = data.meta;
-        return spriteFrames || {};
-      })
-      .catch(error => {
-        console.error('Failed to load sprite data:', error);
-        return {};
-      });
-    
-    return loadingPromise;
-  }
+  // Use dynamic import with caching to avoid multiple fetches
+  loadingPromise = import('../../../lib/game-data/spritesheet-stat-icons.json')
+    .then(module => {
+      spriteFrames = module.default.frames;
+      spritesheetMeta = module.default.meta;
+      return spriteFrames || {};
+    })
+    .catch(error => {
+      console.error('Failed to load sprite data:', error);
+      return {};
+    });
   
-  return {}; // Return empty object if not loaded (server-side)
+  return loadingPromise;
 }
 
 export function getSpritesheetDimensions(): { width: number; height: number } {
@@ -52,11 +48,9 @@ export function getSpritesheetDimensions(): { width: number; height: number } {
 export function getSpriteData(iconPath: string): SpriteData | null {
   if (!iconPath) return null;
   
-  // If sprites aren't loaded yet, try to load them synchronously if possible
-  if (!spriteFrames && typeof window !== 'undefined') {
-    // Trigger loading but don't wait for it
+  // Ensure sprite data is loaded
+  if (!spriteFrames) {
     loadSpriteData();
-    return null;
   }
   
   if (!spriteFrames) return null;
@@ -75,18 +69,5 @@ export function getSpriteData(iconPath: string): SpriteData | null {
     width: frame.w,
     height: frame.h
   };
-}
-
-// Preload sprite data immediately when this module loads (client-side only)
-if (typeof window !== 'undefined') {
-  // Start loading immediately
-  loadSpriteData();
-  
-  // Also try to load when DOM is ready in case the above doesn't work
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => loadSpriteData());
-  } else {
-    loadSpriteData();
-  }
 }
 

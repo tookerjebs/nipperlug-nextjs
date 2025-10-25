@@ -1,7 +1,7 @@
 ---
 title: "Ignore Penetration"
 category: "defensive"
-priority: "medium"
+priority: "high"
 isPercentage: false
 variants: ["pvp", "pve"]
 related: ["penetration", "cancel-ignore-penetration"]
@@ -22,7 +22,8 @@ Defensive stat that counters enemy [Penetration](/stats/penetration) on a 1:1 ra
 
 ## Notes and Tips
 
-- important defensive stat in PvE and PvP
+- Important defensive stat in PvE and PvP.
+- Bosses in end game dungeons can have between 3000-6000 Penetration, making Ignore Penetration a critical stat for survival.
 - Can be countered by enemy [Cancel Ignore Penetration](/stats/cancel-ignore-penetration)
 
 ## PvE and PvP Variants

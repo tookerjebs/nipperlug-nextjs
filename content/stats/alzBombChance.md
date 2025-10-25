@@ -17,8 +17,7 @@ Increases the chance of Alz bombs being dropped by defeated enemies.
 
 ## Notes and Tips
 
-- Provides large Alz rewards when triggered
-- Rare but highly valuable drops
+- Alz Bombs provide large Alz rewards when triggered
 
 ## Related Stats
 

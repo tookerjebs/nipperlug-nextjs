@@ -21,7 +21,6 @@ The exact formula is unknown, but it's a function that considers both your Attac
 
 `Block Chance = f(Your Attack Rate, Enemy Defense Rate)`
 
-
 ## Sources
 
 - **Equipment:** Weapons and their upgrades (extreme/divine), Accessories and their upgrades
@@ -43,9 +42,10 @@ The exact formula is unknown, but it's a function that considers both your Attac
 ## Usage Notes
 
 - Effectiveness varies based on enemy Defense Rate
+- for consistent hits you need at least as much attack rate as your targets defense rate (ideally 10-20% more than their defense rate).
 - Essential for consistent damage output in both PvE and PvP
 
-## PvE and Pvp Variants
+## PvE and PvP Variants
 
 Attack Rate has specialized variants that provide additional accuracy in specific content:
 

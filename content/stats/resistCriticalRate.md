@@ -20,9 +20,9 @@ Defensive stat that decreases the enemy ciritical rate by an equal amount. It di
 ## Notes and Tips
 
 - Only useful in PvP scenarios
-- Helps reduce burst damage from critical-heavy builds
+- Helps reduce burst damage from critical-heavy builds.
 
 ## Related Stats
 
-- [Critical Rate](/stats/criticalRate) - The offensive stat this resists
-- [Resist Critical DMG](/stats/resistCriticalDamage) - Reduces critical damage taken
+- [Critical Rate](/stats/critical-rate) - The offensive stat this resists
+- [Resist Critical DMG](/stats/resist-critical-damage) - Reduces critical damage taken

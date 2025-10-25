@@ -18,9 +18,7 @@ Utility stat that provides a percentage increase to the amount of Alz dropped wh
 
 ## Notes and Tips
 
-- Essential for farming Alz currency
-- Stacks with other Alz-related bonuses
-- Particularly valuable for wealth accumulation
+- Stacks with itself.
 
 ## Related Stats
 

@@ -20,8 +20,8 @@ This utility stat improves the frequency at which monsters drop equipment with 2
 
 ## Notes and Tips
 
-- Useful for farming equipment with upgrade slots
-- Works in PvE content
+- According to multiple reports and tests this stat seems bugged or highly ineffective.
+- (Should) work only on monster drops and not on chests.
 
 ## Related Stats
 

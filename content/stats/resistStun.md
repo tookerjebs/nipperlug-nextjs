@@ -22,7 +22,7 @@ Defensive stat that decreases the probability of being stunned by enemy abilitie
 
 ## Related Stats
 
-- [Resist Silence](/stats/resistSilence) - Prevents silence effects
-- [Resist Suppression](/stats/resistSuppression) - Prevents suppression effects
-- [Resist Down](/stats/resistDown) - Prevents knockdown effects
-- [Resist Knockback](/stats/resistKnockback) - Prevents knockback effects
+- [Resist Silence](/stats/resist-silence) - Prevents silence effects
+- [Resist Suppression](/stats/resist-suppression) - Prevents suppression effects
+- [Resist Down](/stats/resist-down) - Prevents knockdown effects
+- [Resist Knockback](/stats/resist-knockback) - Prevents knockback effects

@@ -17,6 +17,6 @@ This defensive stat decreases the probability of being pushed away from your pos
 
 ## Related Stats
 
-- [Resist Down](/stats/resistDown) - Prevents knockdown effects
-- [Resist Unable to Move](/stats/resistUnableToMove) - Prevents movement impairment
-- [Resist Stun](/stats/resistStun) - Prevents stun effects
+- [Resist Down](/stats/resist-down) - Prevents knockdown effects
+- [Resist Unable to Move](/stats/resist-unable-to-move) - Prevents movement impairment
+- [Resist Stun](/stats/resist-stun) - Prevents stun effects

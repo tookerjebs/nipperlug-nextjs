@@ -1,13 +1,13 @@
 ---
 title: "Aura Duration Increase"
 category: "utility"
-priority: "medium"
+priority: "low"
 isPercentage: false
 ---
 
 # Aura Duration Increase
 
-Extends aura skill duration.
+Increases the duration of Battle Auras.
 
 ## Overview
 

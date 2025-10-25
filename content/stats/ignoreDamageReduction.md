@@ -1,7 +1,7 @@
 ---
 title: "Ignore DMG Reduction"
 category: "offensive"
-priority: "medium"
+priority: "low"
 isPercentage: false
 variants: ["pvp", "pve"]
 related: ["damageReduction", "cancelIgnoreDamageReduction"]

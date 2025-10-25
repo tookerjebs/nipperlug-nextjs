@@ -1,7 +1,7 @@
 ---
 title: "HP Auto Heal"
 category: "utility"
-priority: "medium"
+priority: "low"
 formula: "HP regenerated per tick over time"
 related: ["hp"]
 lastUpdated: "2025-01-08"

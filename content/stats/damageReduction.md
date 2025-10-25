@@ -10,7 +10,7 @@ lastUpdated: "2025-01-08"
 
 # DMG Reduction
 
-Flat damage reduction.
+Provides flat damage reduction.
 
 ## Overview
 

@@ -16,6 +16,6 @@ Decreases the probability of being affected by abilities that prevent or restric
 
 ## Related Stats
 
-- [Resist Down](/stats/resistDown) - Prevents knockdown effects
-- [Resist Knockback](/stats/resistKnockback) - Prevents knockback effects
-- [Resist Stun](/stats/resistStun) - Prevents stun effects
+- [Resist Down](/stats/resist-down) - Prevents knockdown effects
+- [Resist Knockback](/stats/resist-knockback) - Prevents knockback effects
+- [Resist Stun](/stats/resist-stun) - Prevents stun effects

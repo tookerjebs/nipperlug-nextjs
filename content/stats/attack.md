@@ -10,7 +10,7 @@ variants: ["pvp", "pve"]
 
 # Attack
 
-The foundation stat for sword-based classes (Blader, Warrior, Gladiator, Force Blader, Force Shielder). Attack serves as the base in the damage calculation pipeline, working together with All Attack Up and skill-specific attack bonuses to determine your effective attack power.
+The foundation stat for sword-based classes (Blader, Warrior, Gladiator, Force Blader, Force Shielder). Attack serves as the base in the damage calculation pipeline, working together with All Attack Up and skill-specific attack bonuses to determine your effective attack.
 
 ## Overview
 
@@ -47,7 +47,7 @@ Please Note: These values can be increased further with various temporary buffs
 
 ## Notes and Tips
 
-- **Weapon upgrades** provide the most significant Attack increases
+- **Weapon upgrades** provide a significant Attack increases
 - **Each skill** provides its own attack bonus that varies by skill level and type
 - **Variance applies:** Sword damage has 20% variance (0.80x to 1.0x) for normal hits only
 

@@ -118,6 +118,7 @@ export default function SearchComponent({ isOpen, onToggle, onClose }: SearchCom
                           <Link
                             key={page.href}
                             href={page.href}
+                            prefetch={false}
                             onClick={handleResultClick}
                             className="block p-3 rounded-md bg-black/20 hover:bg-black/30 border border-white/10 hover:border-white/20 transition-all group"
                           >

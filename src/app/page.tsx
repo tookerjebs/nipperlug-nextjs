@@ -29,7 +29,7 @@ export default function HomePage() {
         {/* Tools Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {/* Build Planner */}
-            <Link href="/build-planner" className="block h-full">
+            <Link href="/build-planner" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-gold mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Build Planner
@@ -45,7 +45,7 @@ export default function HomePage() {
             </Link>
 
             {/* Tier Lists */}
-            <Link href="/tier-lists" className="block h-full">
+            <Link href="/tier-lists" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-platinum/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Tier Lists
@@ -61,7 +61,7 @@ export default function HomePage() {
             </Link>
 
             {/* Monster Database */}
-            <Link href="/monster-database" className="block h-full">
+            <Link href="/monster-database" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Monster Database
@@ -77,7 +77,7 @@ export default function HomePage() {
             </Link>
 
             {/* Collection Tracker */}
-            <Link href="/collection-tracker" className="block h-full">
+            <Link href="/collection-tracker" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Collection Tracker
@@ -93,7 +93,7 @@ export default function HomePage() {
             </Link>
 
             {/* Myth Level Data */}
-            <Link href="/myth-level-data" className="block h-full">
+            <Link href="/myth-level-data" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Myth Level Data
@@ -109,7 +109,7 @@ export default function HomePage() {
             </Link>
 
             {/* Character EXP Calculator */}
-            <Link href="/exp-calculator" className="block h-full">
+            <Link href="/exp-calculator" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Character EXP
@@ -125,7 +125,7 @@ export default function HomePage() {
             </Link>
 
             {/* OXP Calculator */}
-            <Link href="/oxp-calculator" className="block h-full">
+            <Link href="/oxp-calculator" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   OXP Calculator
@@ -141,7 +141,7 @@ export default function HomePage() {
             </Link>
 
             {/* Force Wing Calculator */}
-            <Link href="/force-wing-calculator" className="block h-full">
+            <Link href="/force-wing-calculator" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Force Wing EXP
@@ -157,7 +157,7 @@ export default function HomePage() {
             </Link>
 
             {/* Chloe Craft Profit */}
-            <Link href="/chloe-craft-profit-calculator" className="block h-full">
+            <Link href="/chloe-craft-profit-calculator" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Chloe Craft Profit
@@ -173,7 +173,7 @@ export default function HomePage() {
             </Link>
 
             {/* Devil Shop Calculator */}
-            <Link href="/devils-shop-calculator" className="block h-full">
+            <Link href="/devils-shop-calculator" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Devil Shop
@@ -189,7 +189,7 @@ export default function HomePage() {
             </Link>
 
             {/* Chloe Amity Calculator */}
-            <Link href="/chloe-amity-calculator" className="block h-full">
+            <Link href="/chloe-amity-calculator" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Chloe Amity
@@ -205,7 +205,7 @@ export default function HomePage() {
             </Link>
 
             {/* Extreme Upgrade Calculator */}
-            <Link href="/extreme-upgrade-calculator" className="block h-full">
+            <Link href="/extreme-upgrade-calculator" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Extreme Upgrade
@@ -221,7 +221,7 @@ export default function HomePage() {
             </Link>
 
             {/* Stats Guide */}
-            <Link href="/stats-wiki" className="block h-full">
+            <Link href="/stats-wiki" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   Stats Wiki
@@ -237,7 +237,7 @@ export default function HomePage() {
             </Link>
 
             {/* BM3 Damage Boost Overview */}
-            <Link href="/bm3-target-damage-boost" className="block h-full">
+            <Link href="/bm3-target-damage-boost" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
                 <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
                   BM3 Damage Boost

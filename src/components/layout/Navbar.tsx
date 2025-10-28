@@ -122,8 +122,9 @@ export default function Navbar() {
           <div className="flex justify-between items-center h-16 md:h-20">
             {/* Site Name/Brand */}
             <div className="flex items-center">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
+                prefetch={false}
                 className="text-lg md:text-xl font-bold text-white drop-shadow-lg hover:text-game-highlight transition-colors"
                 style={{ 
                   fontFamily: '"Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif',
@@ -141,6 +142,7 @@ export default function Navbar() {
                 <div key={item.name} className="relative group">
                   <Link
                     href={item.href}
+                    prefetch={false}
                     className={cn(
                       "px-6 py-4 text-sm font-semibold text-white drop-shadow-lg rounded-lg transition-all duration-200 bg-black/60 backdrop-blur-sm border border-white/15",
                       "hover:text-game-highlight hover:bg-black/70 hover:border-white/25 hover:shadow-lg",
@@ -173,6 +175,7 @@ export default function Navbar() {
                                   <Link
                                     key={categoryItem.name}
                                     href={categoryItem.href}
+                                    prefetch={false}
                                     className={cn(
                                       "block px-6 py-2 text-sm pl-8 text-white hover:text-game-highlight hover:bg-white/10 transition-colors",
                                       pathname === categoryItem.href && "text-game-highlight bg-white/10"
@@ -185,6 +188,7 @@ export default function Navbar() {
                             ) : (
                               <Link
                                 href={subItem.href}
+                                prefetch={false}
                                 className={cn(
                                   "block px-4 py-3 text-sm text-white hover:text-game-highlight hover:bg-white/10 transition-colors",
                                   pathname === subItem.href && "text-game-highlight bg-white/10"
@@ -243,6 +247,7 @@ export default function Navbar() {
                 <div className="flex items-center justify-between">
                   <Link
                     href={item.href}
+                    prefetch={false}
                     className={cn(
                       "block px-4 py-3 text-base font-medium text-white hover:text-game-highlight hover:bg-white/10 rounded-md transition-colors",
                       pathname === item.href && "text-game-highlight bg-white/10"
@@ -280,6 +285,7 @@ export default function Navbar() {
                               <Link
                                 key={categoryItem.name}
                                 href={categoryItem.href}
+                                prefetch={false}
                                 className={cn(
                                   "block px-6 py-2 text-sm pl-8 font-normal text-white hover:text-game-highlight hover:bg-white/10 rounded-md transition-colors",
                                   pathname === categoryItem.href && "text-game-highlight bg-white/10"
@@ -293,6 +299,7 @@ export default function Navbar() {
                         ) : (
                           <Link
                             href={subItem.href}
+                            prefetch={false}
                             className={cn(
                               "block px-4 py-3 text-sm font-medium text-white hover:text-game-highlight hover:bg-white/10 rounded-md transition-colors",
                               pathname === subItem.href && "text-game-highlight bg-white/10"

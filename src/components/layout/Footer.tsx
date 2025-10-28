@@ -8,10 +8,10 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div className="flex justify-center items-center mb-6">
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm">
-            <Link href="/credits" className="text-gray-300 hover:text-white transition-colors text-center">
+            <Link href="/credits" prefetch={false} className="text-gray-300 hover:text-white transition-colors text-center">
               About & Credits
             </Link>
-            <Link href="/legal" className="text-gray-300 hover:text-white transition-colors text-center">
+            <Link href="/legal" prefetch={false} className="text-gray-300 hover:text-white transition-colors text-center">
               Legal
             </Link>
             <a 

@@ -57,29 +57,6 @@ const nextConfig = {
   },
   // Enable compression
   compress: true,
-  // SEO redirects to consolidate duplicate content
-  async redirects() {
-    return [
-      {
-        source: '/complete-game-stats-guide',
-        destination: '/stats-wiki',
-        permanent: true, // 301 redirect
-      },
-    ];
-  },
-  // Generate sitemap automatically
-  async rewrites() {
-    return [
-      {
-        source: '/sitemap.xml',
-        destination: '/sitemap.xml',
-      },
-      {
-        source: '/robots.txt',
-        destination: '/robots.txt',
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;

@@ -112,7 +112,7 @@ export default function NotFound() {
                 <Link href="/extreme-upgrade-calculator" className="text-stat-defensive hover:text-game-gold transition-colors">
                   Extreme Upgrade Calculator
                 </Link>
-                <Link href="/complete-game-stats-guide" className="text-stat-defensive hover:text-game-gold transition-colors">
+                <Link href="/stats-wiki" className="text-stat-defensive hover:text-game-gold transition-colors">
                   Stats Guide
                 </Link>
                 <Link href="/penetration-effectiveness-table" className="text-stat-defensive hover:text-game-gold transition-colors">

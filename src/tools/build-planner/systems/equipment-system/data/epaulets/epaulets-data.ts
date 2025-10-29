@@ -106,7 +106,7 @@ export const epaulets: Epaulet[] = [
     type: 'accessory',
     subtype: 'epaulet',
     grade: 'ultimate',
-    imagePath: '/images/equipment-system/epaulets/palladium_epaulet_of_sage.png',
+    imagePath: '/images/equipment-system/epaulets/palladium-epaulet-sage.png',
     baseStats: {
       magicAttack: 150,
       attackRate: 240,
@@ -121,7 +121,7 @@ export const epaulets: Epaulet[] = [
     type: 'accessory',
     subtype: 'epaulet',
     grade: 'ultimate',
-    imagePath: '/images/equipment-system/epaulets/palladium_epaulet_of_fighter.png',
+    imagePath: '/images/equipment-system/epaulets/palladium-epaulet-fighter.png',
     baseStats: {
       attack: 150,
       attackRate: 240,

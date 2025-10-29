@@ -26,7 +26,7 @@ const StatInputItem = ({
   const hasValue = parseFloat(localValue) !== 0;
   
   // Debounce timer ref
-  const debounceRef = React.useRef<NodeJS.Timeout>();
+  const debounceRef = React.useRef<NodeJS.Timeout | undefined>(undefined);
   
   // Update local value when store value changes (e.g., from reset all)
   React.useEffect(() => {

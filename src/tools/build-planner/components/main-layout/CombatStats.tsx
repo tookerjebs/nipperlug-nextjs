@@ -8,8 +8,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useBuildPlannerStore } from '@/tools/build-planner/stores/buildPlannerStore';
 import { useClassStore } from '@/tools/build-planner/systems/class/stores';
-import { Sparkles, Sword as SwordIcon } from 'lucide-react';
-import { Sword } from 'lucide-react';
 import { Info, TrendingUp, TrendingDown } from 'lucide-react';
 import { getClassDamageType } from '@/tools/build-planner/utils/classDamageUtils';
 import CPWeightsModal from './CPWeightsModal';
@@ -142,7 +140,6 @@ const CombatStats: React.FC = () => {
     }
 
     const damageType = getClassDamageType(selectedClass);
-    const damageIcon = damageType === 'magic' ? <Sparkles /> : <Sword fill="currentColor" />;
     const damageTypeLabel = damageType === 'magic' ? 'Magic' : 'Sword';
 
     return (
@@ -150,9 +147,6 @@ const CombatStats: React.FC = () => {
         {/* PvE Damage */}
         <div className="glass-panel p-3 sm:p-4 flex flex-col items-center justify-center">
           <div className="text-xs sm:text-sm text-gray-300 mb-1 flex items-center gap-1">
-            <span className="text-game-gold">
-              {damageIcon}
-            </span>
             PvE {damageTypeLabel}
             <button
               onClick={() => setShowPvEModal(true)}

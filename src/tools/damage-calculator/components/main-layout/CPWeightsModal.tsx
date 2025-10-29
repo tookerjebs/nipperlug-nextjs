@@ -7,7 +7,7 @@
 
 import React from 'react';
 import { cpWeights } from '../../data/cp-weights';
-import { IoClose } from 'react-icons/io5';
+import { X } from 'lucide-react';
 
 interface CPWeightsModalProps {
   isOpen: boolean;
@@ -115,7 +115,7 @@ const CPWeightsModal: React.FC<CPWeightsModalProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
             className="text-gray-400 hover:text-white transition-colors"
           >
-            <IoClose size={24} />
+            <X size={24} />
           </button>
         </div>
 

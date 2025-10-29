@@ -50,5 +50,5 @@ Universal damage analysis tool for Cabal Online. Manual stat input works across 
 ## Dependencies
 - Monster database: `/src/lib/game-data/monsters/`
 - Shared utilities: Build Planner calculation logic
-- Icons: react-icons (GiMagicSwirl, RiSwordFill, IoCalculator, etc.)
+- Icons: lucide-react
 - State: Zustand with subscribeWithSelector middleware

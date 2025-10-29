@@ -12,9 +12,9 @@ import { useMonsterStore } from '@/tools/build-planner/stores/monsterStore';
 import DamageCalculationModal from '../../components/main-layout/DamageCalculationModal';
 import { analyzeStatOptimization, formatDamageNumber, formatPercentage } from '../../utils/statOptimizationUtils';
 import { getAllCombinedStats } from '../../utils/statCombinationUtils';
-import { IoCalculator, IoTrendingUp, IoBarChart } from 'react-icons/io5';
-import { GiMagicSwirl, GiCrosshair, GiUpgrade } from 'react-icons/gi';
-import { RiSwordFill } from 'react-icons/ri';
+import { Calculator, TrendingUp, BarChart3 } from 'lucide-react';
+import { Sparkles, Crosshair, TrendingUp as TrendingUpIcon } from 'lucide-react';
+import { Sword } from 'lucide-react';
 import { getClassDamageType } from '@/tools/build-planner/utils/classDamageUtils';
 
 const DamageAnalysisSystem: React.FC = () => {
@@ -49,7 +49,7 @@ const DamageAnalysisSystem: React.FC = () => {
     return (
       <div className="text-center py-12">
         <div className="mb-4">
-          <IoBarChart className="mx-auto text-6xl text-gray-600" />
+          <BarChart3 className="mx-auto text-6xl text-gray-600" />
         </div>
         <h3 className="text-xl font-semibold text-gray-400 mb-2">No Class Selected</h3>
         <p className="text-gray-500 mb-4">
@@ -63,7 +63,7 @@ const DamageAnalysisSystem: React.FC = () => {
   }
 
   const damageType = getClassDamageType(selectedClass);
-  const damageIcon = damageType === 'magic' ? <GiMagicSwirl /> : <RiSwordFill />;
+  const damageIcon = damageType === 'magic' ? <Sparkles /> : <Sword fill="currentColor" />;
   const damageTypeLabel = damageType === 'magic' ? 'Magic' : 'Sword';
 
   return (
@@ -72,7 +72,7 @@ const DamageAnalysisSystem: React.FC = () => {
         {/* Header */}
         <div className="text-center">
           <div className="flex items-center justify-center gap-3 mb-2">
-            <IoBarChart className="text-3xl text-game-gold" />
+            <BarChart3 className="text-3xl text-game-gold" />
             <h2 className="text-2xl font-bold text-game-gold">Damage Analysis</h2>
           </div>
           <p className="text-gray-400">
@@ -83,7 +83,7 @@ const DamageAnalysisSystem: React.FC = () => {
         {/* Current Target Info */}
         <div className="glass-panel p-4">
           <h3 className="text-lg font-semibold text-red-400 mb-3 flex items-center gap-2">
-            <GiCrosshair />
+            <Crosshair />
             Analysis Target: {selectedMonster?.name || 'No Monster Selected'}
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
@@ -159,7 +159,7 @@ const DamageAnalysisSystem: React.FC = () => {
               onClick={() => setShowCalculationModal(true)}
               className="px-6 py-2 bg-blue-600/20 text-blue-400 rounded border border-blue-400/30 hover:bg-blue-600/30 transition-colors flex items-center gap-2 mx-auto"
             >
-              <IoCalculator />
+              <Calculator />
               View Step-by-Step Calculation
             </button>
           </div>
@@ -169,13 +169,13 @@ const DamageAnalysisSystem: React.FC = () => {
         {optimizationAnalysis && (
           <div className="glass-panel p-6">
             <h3 className="text-lg font-semibold text-game-gold mb-4 flex items-center gap-2">
-              <IoTrendingUp />
+              <TrendingUp />
               Stat Optimization Analysis
             </h3>
             
             <div className="mb-4 p-3 bg-gradient-to-r from-game-gold/10 to-green-500/10 rounded-lg border border-game-gold/20">
               <div className="flex items-center gap-2 mb-2">
-                <GiUpgrade className="text-game-gold" />
+                <TrendingUpIcon className="text-game-gold" />
                 <span className="text-sm font-semibold text-game-gold">Best Stat to Increase</span>
               </div>
               <div className="text-lg font-bold text-white">

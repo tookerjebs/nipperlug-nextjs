@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { getStatInfo, formatStatValue } from '../../../data/stats-config';
-import { IoSearch, IoClose } from 'react-icons/io5';
+import { Search, X } from 'lucide-react';
 
 // Base interface that all equipment items should implement
 interface BaseEquipmentItem {
@@ -200,7 +200,7 @@ function ItemSelectionGrid<T extends BaseEquipmentItem>({
             {showSearch && (
               <div className={`relative ${showModalHeader ? 'flex-1' : 'flex-1 max-w-md'}`}>
                 <div className="relative">
-                  <IoSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <input
                     type="text"
                     placeholder="Search equipment..."
@@ -214,7 +214,7 @@ function ItemSelectionGrid<T extends BaseEquipmentItem>({
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-foreground transition-colors"
                       title="Clear search"
                     >
-                      <IoClose className="w-4 h-4" />
+                      <X className="w-4 h-4" />
                     </button>
                   )}
                 </div>

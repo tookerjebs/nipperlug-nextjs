@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { Menu, X } from 'lucide-react';
 import { cn } from '../../utils/cn';
 import SearchComponent from './SearchComponent';
 
@@ -223,9 +223,9 @@ export default function Navbar() {
                 >
                   <span className="sr-only">Open main menu</span>
                   {isOpen ? (
-                    <FiX className="block h-5 w-5" aria-hidden="true" />
+                    <X className="block h-5 w-5" aria-hidden="true" />
                   ) : (
-                    <FiMenu className="block h-5 w-5" aria-hidden="true" />
+                    <Menu className="block h-5 w-5" aria-hidden="true" />
                   )}
                 </button>
               </div>

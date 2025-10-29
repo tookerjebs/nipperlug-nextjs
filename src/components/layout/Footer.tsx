@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FiGithub } from 'react-icons/fi';
+import { Github } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -31,7 +31,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-gray-300 hover:text-game-highlight transition-colors text-sm group"
           >
-            <FiGithub className="h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
+            <Github className="h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
             <span>Open Source Project</span>
           </a>
         </div>

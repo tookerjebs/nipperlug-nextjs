@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { FiSearch, FiX } from 'react-icons/fi';
+import { Search, X } from 'lucide-react';
 
 interface SearchPage {
   name: string;
@@ -65,7 +65,7 @@ export default function SearchComponent({ isOpen, onToggle, onClose }: SearchCom
         className="flex items-center gap-2 px-4 py-3 text-sm font-semibold text-white drop-shadow-lg rounded-lg transition-all duration-200 bg-black/20 backdrop-blur-sm border border-white/10 hover:text-game-highlight hover:bg-black/30 hover:border-white/20 hover:shadow-lg"
         aria-label="Search tools and pages"
       >
-        <FiSearch className="w-4 h-4" />
+        <Search className="w-4 h-4" />
         <span className="hidden sm:inline">Search</span>
       </button>
 
@@ -90,7 +90,7 @@ export default function SearchComponent({ isOpen, onToggle, onClose }: SearchCom
                 {/* Search Input */}
                 <form onSubmit={handleSearchSubmit} className="relative">
                   <div className="relative">
-                    <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 w-4 h-4" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 w-4 h-4" />
                     <input
                       type="text"
                       placeholder="Search tools, calculators, guides..."
@@ -104,7 +104,7 @@ export default function SearchComponent({ isOpen, onToggle, onClose }: SearchCom
                       onClick={handleClose}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/60 hover:text-white/80"
                     >
-                      <FiX className="w-4 h-4" />
+                      <X className="w-4 h-4" />
                     </button>
                   </div>
                 </form>

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { FiSearch, FiX } from 'react-icons/fi';
+import { Search, X } from 'lucide-react';
 
 interface MythDataFiltersProps {
   searchTerm: string;
@@ -33,7 +33,7 @@ export function MythDataFilters({
             onClick={clearAllFilters}
             className="flex items-center gap-2 px-3 py-1 bg-red-500/20 hover:bg-red-500/30 text-red-400 rounded-lg transition-colors text-sm"
           >
-            <FiX size={14} />
+            <X size={14} />
             Clear All
           </button>
         )}
@@ -63,7 +63,7 @@ export function MythDataFilters({
             Search Stats
           </label>
           <div className="relative">
-            <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-foreground/50" size={16} />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-foreground/50" size={16} />
             <input
               type="text"
               value={searchTerm}

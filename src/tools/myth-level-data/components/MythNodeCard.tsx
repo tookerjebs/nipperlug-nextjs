@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { cn } from '@/tools/build-planner/lib/utils';
 import { MythNodeData } from '../data/mythLevelData';
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 interface MythNodeCardProps {
   node: MythNodeData;
@@ -66,7 +66,7 @@ export function MythNodeCard({ node }: MythNodeCardProps) {
           className="w-full flex items-center justify-center gap-2 py-2 px-3 bg-theme-darker hover:bg-theme-dark rounded-lg transition-colors text-sm font-medium text-foreground/80"
         >
           {isExpanded ? 'Hide Details' : 'Show All Stats'}
-          {isExpanded ? <FiChevronUp size={16} /> : <FiChevronDown size={16} />}
+          {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
         </button>
       </div>
 

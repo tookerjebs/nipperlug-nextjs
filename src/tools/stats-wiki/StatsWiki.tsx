@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { getStatsByCategory, getStatInfo, statsConfig } from '../build-planner/data/stats-config';
 import { StatIconClient } from './components/StatIconClient';
 import { statIdToSlug, getTargetStatSlug } from '../../utils/stat-url-utils';
-import { ArrowRightIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+import { ChevronRight } from 'lucide-react';
 
 type StatCategory = 'offensive' | 'defensive' | 'utility';
 
@@ -158,7 +158,7 @@ export default function StatsWiki() {
                             {stat.info.description}
                           </div>
                         </div>
-                        <ChevronRightIcon className="w-4 h-4 text-foreground/30 group-hover:text-foreground/50 transition-colors flex-shrink-0 mt-1" />
+                        <ChevronRight className="w-4 h-4 text-foreground/30 group-hover:text-foreground/50 transition-colors flex-shrink-0 mt-1" />
                       </Link>
                     </li>
                   ))}
@@ -222,7 +222,7 @@ export default function StatsWiki() {
                               {stat.info.description}
                             </div>
                           </div>
-                          <ChevronRightIcon className="w-4 h-4 text-foreground/30 group-hover:text-foreground/50 transition-colors flex-shrink-0 mt-1" />
+                          <ChevronRight className="w-4 h-4 text-foreground/30 group-hover:text-foreground/50 transition-colors flex-shrink-0 mt-1" />
                         </Link>
                       </li>
                     ))}

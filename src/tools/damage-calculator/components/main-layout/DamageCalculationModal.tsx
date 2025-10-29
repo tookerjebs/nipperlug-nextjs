@@ -10,7 +10,7 @@ import { useBuildPlannerStore } from '../../stores/buildPlannerStore';
 import { useStatRegistryStore } from '../../stores/statRegistryStore';
 import { getAllCombinedStats } from '../../utils/statCombinationUtils';
 import { calculateDamageWithSteps, type DamageCalculationStats } from '../../utils/damageCalculationUtils';
-import { IoClose } from 'react-icons/io5';
+import { X } from 'lucide-react';
 
 interface DamageCalculationModalProps {
   isOpen: boolean;
@@ -165,7 +165,7 @@ const DamageCalculationModal: React.FC<DamageCalculationModalProps> = ({
             onClick={onClose}
             className="text-gray-400 hover:text-game-gold transition-colors p-1 rounded-md hover:bg-theme-light/30"
           >
-            <IoClose size={24} />
+            <X size={24} />
           </button>
         </div>
 

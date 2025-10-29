@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { HomeIcon, CalculatorIcon, ChartBarIcon, TableCellsIcon } from '@heroicons/react/24/outline';
+import { Home, Calculator, BarChart3, Table } from 'lucide-react';
 
 export default function NotFound() {
   return (
@@ -34,7 +34,7 @@ export default function NotFound() {
                 className="glass-panel p-4 border-l-4 border-game-gold hover:bg-component-panel transition-colors group"
               >
                 <div className="flex items-center gap-3">
-                  <HomeIcon className="h-8 w-8 text-game-gold" />
+                  <Home className="h-8 w-8 text-game-gold" />
                   <div>
                     <h4 className="text-foreground font-semibold mb-1">Build Planner</h4>
                     <p className="text-foreground/80 text-sm">Optimize your character builds</p>
@@ -47,7 +47,7 @@ export default function NotFound() {
                 className="glass-panel p-4 border-l-4 border-stat-utility hover:bg-component-panel transition-colors group"
               >
                 <div className="flex items-center gap-3">
-                  <CalculatorIcon className="h-8 w-8 text-stat-utility" />
+                  <Calculator className="h-8 w-8 text-stat-utility" />
                   <div>
                     <h4 className="text-foreground font-semibold mb-1">Chloe Calculator</h4>
                     <p className="text-foreground/80 text-sm">Calculate craft profits</p>
@@ -60,7 +60,7 @@ export default function NotFound() {
                 className="glass-panel p-4 border-l-4 border-game-platinum hover:bg-component-panel transition-colors group"
               >
                 <div className="flex items-center gap-3">
-                  <ChartBarIcon className="h-8 w-8 text-game-platinum" />
+                  <BarChart3 className="h-8 w-8 text-game-platinum" />
                   <div>
                     <h4 className="text-foreground font-semibold mb-1">Tier Lists</h4>
                     <p className="text-foreground/80 text-sm">Class rankings and guides</p>
@@ -73,7 +73,7 @@ export default function NotFound() {
                 className="glass-panel p-4 border-l-4 border-stat-offensive hover:bg-component-panel transition-colors group"
               >
                 <div className="flex items-center gap-3">
-                  <TableCellsIcon className="h-8 w-8 text-stat-offensive" />
+                  <Table className="h-8 w-8 text-stat-offensive" />
                   <div>
                     <h4 className="text-foreground font-semibold mb-1">Monster Database</h4>
                     <p className="text-foreground/80 text-sm">Complete monster stats</p>
@@ -128,7 +128,7 @@ export default function NotFound() {
               href="/" 
               className="inline-flex items-center gap-2 bg-game-gold hover:bg-game-gold/80 text-theme-darkest px-6 py-3 rounded-lg transition-all duration-200 font-semibold hover:scale-105"
             >
-              <HomeIcon className="h-5 w-5" />
+              <Home className="h-5 w-5" />
               Back to Home
             </Link>
           </section>

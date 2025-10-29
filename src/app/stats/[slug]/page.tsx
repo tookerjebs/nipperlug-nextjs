@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, TagIcon, BookOpenIcon } from '@heroicons/react/24/outline';
+import { ChevronLeft, Calendar, Tag, BookOpen } from 'lucide-react';
 import { StatIconClient } from '../../../tools/stats-wiki/components/StatIconClient';
 import { slugToStatId, statIdToSlug, getTargetStatSlug, getAllStatSlugs, isValidStatId } from '../../../utils/stat-url-utils';
 import { getStatInfo } from '../../../tools/build-planner/data/stats-config';
@@ -292,7 +292,7 @@ export default async function StatPage({ params }: { params: Promise<{ slug: str
                 href="/stats-wiki" 
                 className="inline-flex items-center text-foreground/60 hover:text-game-highlight transition-colors group"
               >
-                <ArrowLeftIcon className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+                <ChevronLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
                 Stats Wiki
               </Link>
               <span className="text-foreground/40">•</span>

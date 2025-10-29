@@ -5,9 +5,8 @@
 
 import React from 'react';
 import { useMonsterStore } from '../../stores/monsterStore';
-import { IoSettings, IoInformationCircleOutline, IoSkull } from 'react-icons/io5';
-import { GiDragonHead } from 'react-icons/gi';
-import { IconContext } from 'react-icons';
+import { Settings, Info, Skull } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 const MonsterSelectionPanel: React.FC = () => {
   const { selectedMonster, openMonsterModal } = useMonsterStore();
@@ -15,16 +14,16 @@ const MonsterSelectionPanel: React.FC = () => {
   return (
     <div className="glass-panel p-3 sm:p-4 flex flex-col items-center justify-center">
       <div className="text-xs sm:text-sm text-gray-300 mb-1 flex items-center gap-1">
-        <IconContext.Provider value={{ className: 'text-game-gold' }}>
-          <GiDragonHead />
-        </IconContext.Provider>
+        <span className="text-game-gold">
+          <Sparkles />
+        </span>
         Target Monster
         <button
           onClick={openMonsterModal}
           className="text-gray-400 hover:text-game-gold transition-colors"
           title="Change Target Monster"
         >
-          <IoSettings size={14} />
+          <Settings size={14} />
         </button>
       </div>
       

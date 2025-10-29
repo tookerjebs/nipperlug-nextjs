@@ -7,7 +7,7 @@ import {
   WORLD_ID_MAP,
   AVAILABLE_MAPS,
 } from '@/lib/game-data/event-mobs';
-import { ClipboardDocumentIcon } from '@heroicons/react/24/outline';
+import { Clipboard } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 interface TransformMatrix {
@@ -258,7 +258,7 @@ export default function EventMobsLocation() {
                         className="p-1.5 rounded hover:bg-game-gold/20 transition-colors flex items-center gap-1.5"
                         title="Copy all coordinates"
                       >
-                        <ClipboardDocumentIcon className="w-4 h-4 text-game-gold" />
+                        <Clipboard className="w-4 h-4 text-game-gold" />
                         <span className="text-xs text-game-gold">Copy All</span>
                       </button>
                     </div>

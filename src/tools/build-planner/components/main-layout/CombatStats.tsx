@@ -8,10 +8,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useBuildPlannerStore } from '@/tools/build-planner/stores/buildPlannerStore';
 import { useClassStore } from '@/tools/build-planner/systems/class/stores';
-import { GiMagicSwirl, GiCrossedSwords } from 'react-icons/gi';
-import { RiSwordFill } from 'react-icons/ri';
-import { IconContext } from 'react-icons';
-import { IoInformationCircleOutline, IoTrendingUp, IoTrendingDown } from 'react-icons/io5';
+import { Sparkles, Sword as SwordIcon } from 'lucide-react';
+import { Sword } from 'lucide-react';
+import { Info, TrendingUp, TrendingDown } from 'lucide-react';
 import { getClassDamageType } from '@/tools/build-planner/utils/classDamageUtils';
 import CPWeightsModal from './CPWeightsModal';
 import DamageCalculationModal from './DamageCalculationModal';
@@ -102,7 +101,7 @@ const CombatStats: React.FC = () => {
           className="text-gray-400 hover:text-game-gold transition-colors"
           title="View CP Weights"
         >
-          <IoInformationCircleOutline size={14} />
+          <Info size={14} />
         </button>
       </div>
       <div className="flex flex-col items-center">
@@ -117,9 +116,9 @@ const CombatStats: React.FC = () => {
               : 'text-red-400'
           }`}>
             {cpChange > 0 ? (
-              <IoTrendingUp size={12} />
+              <TrendingUp size={12} />
             ) : (
-              <IoTrendingDown size={12} />
+              <TrendingDown size={12} />
             )}
             <span>
               {cpChange > 0 ? '+' : ''}{formatNumber(cpChange)}
@@ -143,7 +142,7 @@ const CombatStats: React.FC = () => {
     }
 
     const damageType = getClassDamageType(selectedClass);
-    const damageIcon = damageType === 'magic' ? <GiMagicSwirl /> : <RiSwordFill />;
+    const damageIcon = damageType === 'magic' ? <Sparkles /> : <Sword fill="currentColor" />;
     const damageTypeLabel = damageType === 'magic' ? 'Magic' : 'Sword';
 
     return (
@@ -151,16 +150,16 @@ const CombatStats: React.FC = () => {
         {/* PvE Damage */}
         <div className="glass-panel p-3 sm:p-4 flex flex-col items-center justify-center">
           <div className="text-xs sm:text-sm text-gray-300 mb-1 flex items-center gap-1">
-            <IconContext.Provider value={{ className: 'text-game-gold' }}>
+            <span className="text-game-gold">
               {damageIcon}
-            </IconContext.Provider>
+            </span>
             PvE {damageTypeLabel}
             <button
               onClick={() => setShowPvEModal(true)}
               className="text-gray-400 hover:text-game-gold transition-colors"
               title={`View PvE ${damageTypeLabel} Damage Calculation`}
             >
-              <IoInformationCircleOutline size={14} />
+              <Info size={14} />
             </button>
           </div>
           <div className="flex gap-2 sm:gap-4">
@@ -180,9 +179,9 @@ const CombatStats: React.FC = () => {
                     : 'text-red-400'
                 }`}>
                   {pveNormalChange > 0 ? (
-                    <IoTrendingUp size={10} />
+                    <TrendingUp size={10} />
                   ) : (
-                    <IoTrendingDown size={10} />
+                    <TrendingDown size={10} />
                   )}
                   <span>
                     {pveNormalChange > 0 ? '+' : ''}{formatNumber(pveNormalChange)}
@@ -206,9 +205,9 @@ const CombatStats: React.FC = () => {
                     : 'text-red-400'
                 }`}>
                   {pveCritChange > 0 ? (
-                    <IoTrendingUp size={10} />
+                    <TrendingUp size={10} />
                   ) : (
-                    <IoTrendingDown size={10} />
+                    <TrendingDown size={10} />
                   )}
                   <span>
                     {pveCritChange > 0 ? '+' : ''}{formatNumber(pveCritChange)}

@@ -8,8 +8,8 @@
 import React from 'react';
 import { MonsterSelectionPanel } from '../../components/monster-selection';
 import { useMonsterStore } from '../../stores/monsterStore';
-import { GiDragonHead, GiCrosshair } from 'react-icons/gi';
-import { IoInformationCircleOutline } from 'react-icons/io5';
+import { Sparkles, Crosshair } from 'lucide-react';
+import { Info } from 'lucide-react';
 
 const MonsterSelectionSystem: React.FC = () => {
   const { selectedMonster } = useMonsterStore();
@@ -19,7 +19,7 @@ const MonsterSelectionSystem: React.FC = () => {
       {/* Header */}
       <div className="text-center">
         <div className="flex items-center justify-center gap-3 mb-2">
-          <GiDragonHead className="text-3xl text-game-gold" />
+          <Sparkles className="text-3xl text-game-gold" />
           <h2 className="text-2xl font-bold text-game-gold">Target Monster</h2>
         </div>
         <p className="text-gray-400">
@@ -36,7 +36,7 @@ const MonsterSelectionSystem: React.FC = () => {
       {selectedMonster && (
         <div className="glass-panel p-6 max-w-2xl mx-auto">
           <h3 className="text-lg font-semibold text-red-400 mb-4 flex items-center gap-2">
-            <GiCrosshair />
+            <Crosshair />
             Target Details: {selectedMonster.name}
           </h3>
           
@@ -64,7 +64,7 @@ const MonsterSelectionSystem: React.FC = () => {
           {selectedMonster.ignorePenetration > 0 && (
             <div className="mt-4 p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
               <div className="flex items-center gap-2 text-yellow-400">
-                <IoInformationCircleOutline />
+                <Info />
                 <span className="font-medium">Special Defense</span>
               </div>
               <div className="text-sm text-gray-300 mt-1">
@@ -79,7 +79,7 @@ const MonsterSelectionSystem: React.FC = () => {
       {!selectedMonster && (
         <div className="text-center py-8">
           <div className="mb-4">
-            <GiDragonHead className="mx-auto text-6xl text-gray-600" />
+            <Sparkles className="mx-auto text-6xl text-gray-600" />
           </div>
           <h3 className="text-xl font-semibold text-gray-400 mb-2">No Monster Selected</h3>
           <p className="text-gray-500 mb-4">

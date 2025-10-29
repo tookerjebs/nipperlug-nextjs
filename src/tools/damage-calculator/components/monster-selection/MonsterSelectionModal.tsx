@@ -8,7 +8,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useMonsterStore } from '../../stores/monsterStore';
 import { MonsterStats } from '../../../../lib/game-data/monsters/types';
 import { useMonsterData } from '../../hooks/useMonsterData';
-import { IoClose, IoSearch, IoShield, IoSkull, IoSparkles, IoFilter } from 'react-icons/io5';
+import { X, Search, Shield, Skull, Sparkles, Filter } from 'lucide-react';
 
 // Helper function to format HP values
 const formatHP = (hp: number): string => {
@@ -83,9 +83,9 @@ const MonsterSelectionModal: React.FC = () => {
 
   const getMonsterIcon = (isABoss: boolean) => {
     return isABoss ? (
-      <IoSkull className="text-red-400" />
+      <Skull className="text-red-400" />
     ) : (
-      <IoShield className="text-gray-400" />
+      <Shield className="text-gray-400" />
     );
   };
 
@@ -115,7 +115,7 @@ const MonsterSelectionModal: React.FC = () => {
             onClick={closeMonsterModal}
             className="text-gray-400 hover:text-game-gold transition-colors"
           >
-            <IoClose size={24} />
+            <X size={24} />
           </button>
         </div>
 
@@ -123,7 +123,7 @@ const MonsterSelectionModal: React.FC = () => {
         <div className="p-4 border-b border-gray-700 space-y-3">
           {/* Search Bar */}
           <div className="relative">
-            <IoSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
             <input
               type="text"
               placeholder="Search monsters by name or level..."
@@ -140,7 +140,7 @@ const MonsterSelectionModal: React.FC = () => {
                 onClick={() => setShowFilters(!showFilters)}
                 className="flex items-center gap-1 px-3 py-1 bg-theme-dark text-gray-300 rounded-lg hover:bg-gray-700 transition-colors"
               >
-                <IoFilter size={14} />
+                <Filter size={14} />
                 Filters
               </button>
               
@@ -152,13 +152,13 @@ const MonsterSelectionModal: React.FC = () => {
                     : 'bg-theme-dark text-gray-300 hover:bg-gray-700'
                 }`}
               >
-                <IoSkull size={14} />
+                <Skull size={14} />
                 Bosses Only
               </button>
 
               {!searchTerm && (
                 <div className="flex items-center gap-1 text-xs text-gray-400">
-                  <IoSparkles size={12} />
+                  <Sparkles size={12} />
                   Showing popular monsters
                 </div>
               )}

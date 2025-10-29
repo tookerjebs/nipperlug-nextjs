@@ -6,7 +6,7 @@ import {
   SYSTEM_CATEGORIES, 
   getSystemsGroupedByCategory 
 } from '@/tools/build-planner/data/systems-config';
-import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import { ChevronRight, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 interface SystemsSidebarProps {
@@ -99,7 +99,7 @@ export default function SystemsSidebar({ activeSystem, onSystemChange }: Systems
           </div>
         </div>
         <div className={`transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`}>
-          <ChevronRightIcon className="w-3 h-3 text-gray-400" />
+          <ChevronRight className="w-3 h-3 text-gray-400" />
         </div>
       </button>
     );

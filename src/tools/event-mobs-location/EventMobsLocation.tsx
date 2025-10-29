@@ -37,11 +37,21 @@ function gameToPixel(gameX: number, gameY: number, transform: TransformMatrix) {
   return { pixelX, pixelY };
 }
 
+// Color options for spawn points
+const COLOR_OPTIONS = [
+  { name: 'Gold', value: '#FFB700' },
+  { name: 'Red', value: '#FF3B30' },
+  { name: 'Blue', value: '#007AFF' },
+  { name: 'Green', value: '#34C759' },
+  { name: 'Purple', value: '#AF52DE' },
+];
+
 export default function EventMobsLocation() {
   const [selectedMapName, setSelectedMapName] = useState('Bloody Ice');
   const [selectedMob, setSelectedMob] = useState<string | null>(null);
   const [hoveredSpawner, setHoveredSpawner] = useState<HoveredSpawner | null>(null);
   const [imageScale, setImageScale] = useState(1);
+  const [selectedColor, setSelectedColor] = useState('#FFB700'); // Default gold color
   const imageRef = useRef<HTMLImageElement>(null);
   const BASE_SIZE = 510; // Base size that calibration is designed for
 
@@ -150,7 +160,7 @@ export default function EventMobsLocation() {
                               position: 'absolute',
                               width: `${scaledMarkerSize}px`,
                               height: `${scaledMarkerSize}px`,
-                              backgroundColor: '#FFB700',
+                              backgroundColor: selectedColor,
                               borderRadius: '50%',
                               left: `${scaledX}px`,
                               top: `${scaledY}px`,
@@ -237,6 +247,26 @@ export default function EventMobsLocation() {
                       <option key={mob.name} value={mob.name}>{mob.name}</option>
                     ))}
                   </select>
+                </div>
+
+                {/* Spawn Point Color Selector */}
+                <div>
+                  <label className="text-game-gold text-sm font-semibold block mb-3">Spawn Point Color:</label>
+                  <div className="flex flex-wrap gap-2">
+                    {COLOR_OPTIONS.map((color) => (
+                      <button
+                        key={color.value}
+                        onClick={() => setSelectedColor(color.value)}
+                        className={`w-8 h-8 rounded-full border-2 transition-all ${
+                          selectedColor === color.value
+                            ? 'border-game-gold scale-110 shadow-lg'
+                            : 'border-gray-600 hover:border-gray-400'
+                        }`}
+                        style={{ backgroundColor: color.value }}
+                        title={color.name}
+                      />
+                    ))}
+                  </div>
                 </div>
 
                 {/* Status Info */}

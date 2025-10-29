@@ -14,7 +14,6 @@ import { getAllCombinedStats } from '../../utils/statCombinationUtils';
 import { IoCalculator, IoTrendingUp, IoBarChart } from 'react-icons/io5';
 import { GiMagicSwirl, GiCrosshair, GiUpgrade } from 'react-icons/gi';
 import { RiSwordFill } from 'react-icons/ri';
-import { getClassDamageType } from '../../utils/classDamageUtils';
 
 const DamageAnalysisSystem: React.FC = () => {
   const [showCalculationModal, setShowCalculationModal] = useState(false);
@@ -61,7 +60,7 @@ const DamageAnalysisSystem: React.FC = () => {
     );
   }
 
-  const damageType = getClassDamageType(selectedClass);
+  const damageType = selectedClass; // selectedClass is already a damage type in the damage calculator
   const damageIcon = damageType === 'magic' ? <GiMagicSwirl /> : <RiSwordFill />;
   const damageTypeLabel = damageType === 'magic' ? 'Magic' : 'Sword';
 

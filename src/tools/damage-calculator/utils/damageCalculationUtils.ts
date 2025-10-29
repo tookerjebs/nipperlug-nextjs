@@ -4,7 +4,6 @@
  * Used by both the build planner store and damage calculation modal
  */
 
-import { getClassDamageType } from './classDamageUtils';
 import type { BuildStats } from '../stores/buildPlannerStore';
 
 // Define the build stats structure for calculations

@@ -9,7 +9,6 @@ import React from 'react';
 import { useBuildPlannerStore } from '../../stores/buildPlannerStore';
 import { useStatRegistryStore } from '../../stores/statRegistryStore';
 import { getAllCombinedStats } from '../../utils/statCombinationUtils';
-import { getClassDamageType, getClassPrimaryStats } from '../../utils/classDamageUtils';
 import { calculateDamageWithSteps, type DamageCalculationStats } from '../../utils/damageCalculationUtils';
 import { IoClose } from 'react-icons/io5';
 

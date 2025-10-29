@@ -6,7 +6,6 @@
 import React from 'react';
 import { useMonsterStore } from '../../stores/monsterStore';
 import { Settings, Info, Skull } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
 
 const MonsterSelectionPanel: React.FC = () => {
   const { selectedMonster, openMonsterModal } = useMonsterStore();
@@ -14,9 +13,6 @@ const MonsterSelectionPanel: React.FC = () => {
   return (
     <div className="glass-panel p-3 sm:p-4 flex flex-col items-center justify-center">
       <div className="text-xs sm:text-sm text-gray-300 mb-1 flex items-center gap-1">
-        <span className="text-game-gold">
-          <Sparkles />
-        </span>
         Target Monster
         <button
           onClick={openMonsterModal}

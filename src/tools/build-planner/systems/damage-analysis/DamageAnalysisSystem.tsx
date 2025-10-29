@@ -12,9 +12,6 @@ import { useMonsterStore } from '@/tools/build-planner/stores/monsterStore';
 import DamageCalculationModal from '../../components/main-layout/DamageCalculationModal';
 import { analyzeStatOptimization, formatDamageNumber, formatPercentage } from '../../utils/statOptimizationUtils';
 import { getAllCombinedStats } from '../../utils/statCombinationUtils';
-import { Calculator, TrendingUp, BarChart3 } from 'lucide-react';
-import { Sparkles, Crosshair, TrendingUp as TrendingUpIcon } from 'lucide-react';
-import { Sword } from 'lucide-react';
 import { getClassDamageType } from '@/tools/build-planner/utils/classDamageUtils';
 
 const DamageAnalysisSystem: React.FC = () => {
@@ -48,9 +45,6 @@ const DamageAnalysisSystem: React.FC = () => {
   if (!selectedClass) {
     return (
       <div className="text-center py-12">
-        <div className="mb-4">
-          <BarChart3 className="mx-auto text-6xl text-gray-600" />
-        </div>
         <h3 className="text-xl font-semibold text-gray-400 mb-2">No Class Selected</h3>
         <p className="text-gray-500 mb-4">
           Please select a character class to access damage analysis.
@@ -63,27 +57,14 @@ const DamageAnalysisSystem: React.FC = () => {
   }
 
   const damageType = getClassDamageType(selectedClass);
-  const damageIcon = damageType === 'magic' ? <Sparkles /> : <Sword fill="currentColor" />;
   const damageTypeLabel = damageType === 'magic' ? 'Magic' : 'Sword';
 
   return (
     <>
       <div className="space-y-6">
-        {/* Header */}
-        <div className="text-center">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <BarChart3 className="text-3xl text-game-gold" />
-            <h2 className="text-2xl font-bold text-game-gold">Damage Analysis</h2>
-          </div>
-          <p className="text-gray-400">
-            Detailed damage calculations and stat optimization recommendations
-          </p>
-        </div>
-
         {/* Current Target Info */}
-        <div className="glass-panel p-4">
-          <h3 className="text-lg font-semibold text-red-400 mb-3 flex items-center gap-2">
-            <Crosshair />
+        <div className="component-bg p-4">
+          <h3 className="text-lg font-semibold text-game-gold mb-3">
             Analysis Target: {selectedMonster?.name || 'No Monster Selected'}
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
@@ -111,9 +92,8 @@ const DamageAnalysisSystem: React.FC = () => {
         </div>
 
         {/* Current Damage Overview */}
-        <div className="glass-panel p-6">
-          <h3 className="text-lg font-semibold text-blue-400 mb-4 flex items-center gap-2">
-            {damageIcon}
+        <div className="component-bg p-6">
+          <h3 className="text-lg font-semibold text-game-gold mb-4">
             Current {damageTypeLabel} Damage
           </h3>
           
@@ -157,9 +137,8 @@ const DamageAnalysisSystem: React.FC = () => {
           <div className="mt-4 text-center">
             <button
               onClick={() => setShowCalculationModal(true)}
-              className="px-6 py-2 bg-blue-600/20 text-blue-400 rounded border border-blue-400/30 hover:bg-blue-600/30 transition-colors flex items-center gap-2 mx-auto"
+              className="px-6 py-2 bg-blue-600/20 text-blue-400 rounded border border-blue-400/30 hover:bg-blue-600/30 transition-colors mx-auto"
             >
-              <Calculator />
               View Step-by-Step Calculation
             </button>
           </div>
@@ -167,15 +146,13 @@ const DamageAnalysisSystem: React.FC = () => {
 
         {/* Stat Optimization Analysis */}
         {optimizationAnalysis && (
-          <div className="glass-panel p-6">
-            <h3 className="text-lg font-semibold text-game-gold mb-4 flex items-center gap-2">
-              <TrendingUp />
+          <div className="component-bg p-6">
+            <h3 className="text-lg font-semibold text-game-gold mb-4">
               Stat Optimization Analysis
             </h3>
             
-            <div className="mb-4 p-3 bg-gradient-to-r from-game-gold/10 to-green-500/10 rounded-lg border border-game-gold/20">
-              <div className="flex items-center gap-2 mb-2">
-                <TrendingUpIcon className="text-game-gold" />
+            <div className="mb-4 p-3 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg">
+              <div className="mb-2">
                 <span className="text-sm font-semibold text-game-gold">Best Stat to Increase</span>
               </div>
               <div className="text-lg font-bold text-white">
@@ -190,11 +167,9 @@ const DamageAnalysisSystem: React.FC = () => {
             <div className="space-y-2">
               <h4 className="text-sm font-semibold text-gray-300 mb-3">Damage Increase per +1 Stat Point</h4>
               {optimizationAnalysis.optimizations.slice(0, 8).map((stat, index) => (
-                <div 
+                <div
                   key={stat.statName}
-                  className={`flex items-center justify-between p-3 rounded-lg ${
-                    index === 0 ? 'bg-game-gold/10 border border-game-gold/20' : 'bg-gray-800/30'
-                  }`}
+                  className="flex items-center justify-between p-3 rounded-lg bg-gray-800/30"
                 >
                   <div className="flex items-center gap-3">
                     <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
@@ -221,14 +196,6 @@ const DamageAnalysisSystem: React.FC = () => {
                   </div>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-4 p-3 bg-blue-500/10 rounded-lg border border-blue-400/20">
-              <div className="text-xs text-blue-400 space-y-1">
-                <div>💡 <strong>Tip:</strong> Focus on the top-ranked stats for maximum damage improvement</div>
-                <div>📊 Analysis shows damage increase for adding exactly 1 point to each stat</div>
-                <div>⚖️ Consider stat costs and availability when making upgrade decisions</div>
-              </div>
             </div>
           </div>
         )}

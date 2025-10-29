@@ -111,7 +111,7 @@ export function ItemSearchBar({ onItemSelect, selectedItem }: ItemSearchBarProps
           disabled={!!selectedItem}
           className={cn(
             "w-full pl-12 pr-4 py-3 bg-theme-dark border-2 border-border-dark rounded-lg text-white placeholder-gray-400 transition-all",
-            "focus:border-game-gold focus:outline-none focus:ring-2 focus:ring-game-gold/20",
+            "focus:border-game-gold focus:outline-none",
             selectedItem && "opacity-50 cursor-not-allowed"
           )}
         />

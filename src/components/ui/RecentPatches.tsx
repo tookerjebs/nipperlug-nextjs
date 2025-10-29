@@ -288,46 +288,44 @@ export default function RecentPatches() {
   };
 
   return (
-    <div className="glass-panel p-6 rounded-lg">
-      <div className="flex items-center justify-between mb-5">
+    <div className="glass-panel p-3 sm:p-4 lg:p-6 rounded-lg">
+      <div className="flex items-center justify-between mb-3 sm:mb-4 lg:mb-5">
         <div className="flex items-center gap-2">
-          <Calendar className="w-5 h-5 text-game-gold" />
-          <h2 className="text-xl font-medium text-game-gold">Recent Updates</h2>
+          <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-game-gold" />
+          <h2 className="text-lg sm:text-xl font-medium text-game-gold">Recent Updates</h2>
         </div>
-        <div className="text-sm text-foreground/60">
+        <div className="text-xs sm:text-sm text-foreground/60">
           {RECENT_PATCHES.length} total updates
         </div>
       </div>
 
       {/* Updates List */}
-      <div className="space-y-3 mb-6">
+      <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-5 lg:mb-6">
         {currentPatches.map((patch) => {
           const isNewTool = patch.category === 'New Tool';
           const toolRoute = getToolRoute(patch.title);
           const isLinkable = toolRoute !== null;
           
           const content = (
-            <div className="flex items-start justify-between gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-2">
-                  <h3 className="font-medium text-game-platinum group-hover:text-game-highlight">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                  <h3 className="font-medium text-game-platinum group-hover:text-game-highlight text-sm sm:text-base">
                     {patch.title}
                   </h3>
                   {patch.category && (
-                    <span className={`px-2 py-1 text-xs rounded-full border ${getTypeColor(patch.type)}`}>
+                    <span className={`px-2 py-1 text-xs rounded-full border font-medium ${getTypeColor(patch.type)}`}>
                       {patch.category}
                     </span>
                   )}
                   {isLinkable && (
-                    <ExternalLink className="w-4 h-4 text-game-gold/60 group-hover:text-game-highlight transition-colors" />
+                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-game-gold/60 group-hover:text-game-highlight transition-colors ml-1" />
                   )}
                 </div>
-                <p className="text-foreground/80 leading-relaxed text-sm">{patch.description}</p>
+                <p className="text-foreground/80 leading-relaxed text-xs sm:text-sm">{patch.description}</p>
               </div>
-              <div className="text-right flex-shrink-0">
-                <span className="text-xs text-foreground/50">
-                  {new Date(patch.date).toLocaleDateString()}
-                </span>
+              <div className="text-xs sm:text-right flex-shrink-0 text-foreground/50">
+                {new Date(patch.date).toLocaleDateString()}
               </div>
             </div>
           );
@@ -335,7 +333,7 @@ export default function RecentPatches() {
           if (isLinkable) {
             return (
               <Link key={patch.id} href={toolRoute} className="block group">
-                <div className="glass-panel-light border border-border-light/30 rounded-lg p-4 hover:glass-panel transition-all duration-200 hover:border-border-light/50 hover:border-game-gold/30 cursor-pointer">
+                <div className="glass-panel-light border border-border-light/30 rounded-lg p-3 sm:p-4 hover:glass-panel transition-all duration-200 hover:border-border-light/50 hover:border-game-gold/30 hover:shadow-lg hover:shadow-game-gold/10 cursor-pointer">
                   {content}
                 </div>
               </Link>
@@ -343,7 +341,7 @@ export default function RecentPatches() {
           }
 
           return (
-            <div key={patch.id} className="glass-panel-light border border-border-light/30 rounded-lg p-4 hover:glass-panel transition-all duration-200 hover:border-border-light/50">
+            <div key={patch.id} className="glass-panel-light border border-border-light/30 rounded-lg p-3 sm:p-4 hover:glass-panel transition-all duration-200 hover:border-border-light/50 hover:shadow-lg hover:shadow-game-gold/10">
               {content}
             </div>
           );
@@ -352,22 +350,22 @@ export default function RecentPatches() {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0">
           <button
             onClick={goToPrevPage}
             disabled={currentPage === 0}
-            className="flex items-center gap-2 px-3 py-2 text-sm glass-panel-light hover:glass-panel disabled:opacity-50 disabled:cursor-not-allowed rounded-lg transition-all duration-200"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-3 py-2 text-sm glass-panel-light hover:glass-panel disabled:opacity-50 disabled:cursor-not-allowed rounded-lg transition-all duration-200 min-h-[44px] sm:min-h-[40px]"
           >
             <ChevronLeft className="w-4 h-4" />
             Previous
           </button>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center gap-1 sm:gap-2 flex-wrap max-w-full overflow-x-auto">
             {Array.from({ length: totalPages }, (_, i) => (
               <button
                 key={i}
                 onClick={() => goToPage(i)}
-                className={`w-8 h-8 text-sm rounded-lg transition-all duration-200 ${
+                className={`w-10 h-10 sm:w-8 sm:h-8 text-sm rounded-lg transition-all duration-200 ${
                   currentPage === i
                     ? 'bg-game-highlight text-theme-darkest font-semibold'
                     : 'glass-panel-light hover:glass-panel text-foreground/80'
@@ -381,7 +379,7 @@ export default function RecentPatches() {
           <button
             onClick={goToNextPage}
             disabled={currentPage === totalPages - 1}
-            className="flex items-center gap-2 px-3 py-2 text-sm glass-panel-light hover:glass-panel disabled:opacity-50 disabled:cursor-not-allowed rounded-lg transition-all duration-200"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-3 py-2 text-sm glass-panel-light hover:glass-panel disabled:opacity-50 disabled:cursor-not-allowed rounded-lg transition-all duration-200 min-h-[44px] sm:min-h-[40px]"
           >
             Next
             <ChevronRight className="w-4 h-4" />
@@ -390,7 +388,7 @@ export default function RecentPatches() {
       )}
 
       {/* Page Info */}
-      <div className="text-center mt-4 text-xs text-foreground/50">
+      <div className="text-center mt-3 sm:mt-4 text-xs text-foreground/50">
         Showing {startIndex + 1}-{Math.min(endIndex, RECENT_PATCHES.length)} of {RECENT_PATCHES.length} updates
       </div>
     </div>

@@ -13,14 +13,3 @@ export function getDamageTypeStats(damageType: 'sword' | 'magic') {
     skillAmpStat: damageType === 'magic' ? 'magicSkillAmp' : 'swordSkillAmp'
   };
 }
-
-// Legacy function for backward compatibility - now just returns the damage type
-export function getClassDamageType(characterClass: any): 'sword' | 'magic' {
-  // Default to sword for backward compatibility
-  return 'sword';
-}
-
-// Legacy function for backward compatibility
-export function getClassPrimaryStats(characterClass: any) {
-  return getDamageTypeStats('sword');
-}

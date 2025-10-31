@@ -161,18 +161,29 @@ export function CollectionSidebar({ collections, activeCollection, onSelectColle
                   {statsPreview}
                 </div>
 
-                {/* Progress Bar */}
-                <div className="mt-2 h-1.5 bg-theme-darker rounded-full overflow-hidden">
-                  <div 
-                    className={cn(
-                      "h-full transition-all duration-300 rounded-full",
-                      progressClass === 'high' && "bg-game-gold shadow-sm",
-                      progressClass === 'medium' && "bg-yellow-400",
-                      progressClass === 'low' && "bg-orange-400",
-                      !progressClass && "bg-gray-500"
-                    )}
-                    style={{ width: `${actualProgress}%` }}
-                  />
+                {/* Progress Bar with Percentage */}
+                <div className="mt-2 flex items-center gap-2">
+                  <div className="flex-1 h-1.5 bg-theme-darker rounded-full overflow-hidden">
+                    <div
+                      className={cn(
+                        "h-full transition-all duration-300 rounded-full",
+                        progressClass === 'high' && "bg-game-gold shadow-sm",
+                        progressClass === 'medium' && "bg-yellow-400",
+                        progressClass === 'low' && "bg-orange-400",
+                        !progressClass && "bg-gray-500"
+                      )}
+                      style={{ width: `${actualProgress}%` }}
+                    />
+                  </div>
+                  <span className={cn(
+                    "text-xs font-medium min-w-[3rem] text-right",
+                    progressClass === 'high' && "text-game-gold",
+                    progressClass === 'medium' && "text-yellow-400",
+                    progressClass === 'low' && "text-orange-400",
+                    !progressClass && "text-gray-500"
+                  )}>
+                    {actualProgress}%
+                  </span>
                 </div>
               </div>
             );

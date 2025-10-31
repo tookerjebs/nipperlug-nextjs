@@ -25,6 +25,21 @@ export function CollectionDetails({ collection }: CollectionDetailsProps) {
 
   const currentProgress = isClient ? getCollectionProgress(collection.id, collection) : 0;
   const missions = Object.values(collection.missions);
+  
+  // Sort missions based on completion status
+  // Incomplete missions first, then completed missions
+  const sortedMissions = [...missions].sort((a, b) => {
+    const isACompleted = isClient ? isMissionCompleted(collection.id, a.name, a) : false;
+    const isBCompleted = isClient ? isMissionCompleted(collection.id, b.name, b) : false;
+    
+    // If both missions have the same completion status, maintain original order
+    if (isACompleted === isBCompleted) {
+      return 0;
+    }
+    
+    // Incomplete missions (false) should come before completed missions (true)
+    return isACompleted ? 1 : -1;
+  });
 
   // Format stats for display
   const formatStatsDisplay = (stats: Record<string, number>) => {
@@ -126,7 +141,7 @@ export function CollectionDetails({ collection }: CollectionDetailsProps) {
       {/* Missions List */}
       <div className="flex-1 overflow-y-auto dark-scrollbar min-h-0">
         <div className="p-6 space-y-4">
-          {missions.map((mission, index) => {
+          {sortedMissions.map((mission, index) => {
             const isMissionComplete = isClient ? isMissionCompleted(collection.id, mission.name, mission) : false;
             const completedMissionItems = isClient ? mission.items.filter(item => 
               isItemCompleted(collection.id, mission.name, item.name, item.count)

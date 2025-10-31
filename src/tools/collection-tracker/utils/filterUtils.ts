@@ -212,9 +212,10 @@ export function calculateRemainingItems(
   }
   
   let completedCount = 0;
+  const processedItemIds = new Set<string>(); // Track processed items to avoid double counting
   
   // Check each collection that contains this item
-  itemData.collections.forEach(({ collectionId, count }) => {
+  itemData.collections.forEach(({ collectionId }) => {
     const progress = collectionProgress[collectionId];
     if (progress) {
       // Find the collection data
@@ -231,8 +232,9 @@ export function calculateRemainingItems(
                 if (item.name === itemName) {
                   // Check if this specific item is completed
                   const itemId = `${mission.name}|||${item.name}|||${item.count}`;
-                  if (progress.completedItems.includes(itemId)) {
+                  if (progress.completedItems.includes(itemId) && !processedItemIds.has(itemId)) {
                     completedCount += item.count;
+                    processedItemIds.add(itemId); // Mark as processed to avoid double counting
                   }
                 }
               });
@@ -242,6 +244,9 @@ export function calculateRemainingItems(
       });
     }
   });
+  
+  // Ensure completed count doesn't exceed total
+  completedCount = Math.min(completedCount, itemData.totalCount);
   
   return {
     total: itemData.totalCount,

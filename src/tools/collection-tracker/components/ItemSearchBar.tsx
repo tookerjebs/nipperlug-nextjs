@@ -3,7 +3,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { cn } from '@/tools/build-planner/lib/utils';
 import { Search, X } from 'lucide-react';
-import { searchItems, type ItemWithCount } from '../utils/filterUtils';
+import { searchItems, type ItemWithCount, calculateRemainingItems } from '../utils/filterUtils';
+import { useCollectionTrackerStore } from '../stores/collectionTrackerStore';
 
 interface ItemSearchBarProps {
   onItemSelect: (itemName: string | null) => void;
@@ -17,6 +18,9 @@ export function ItemSearchBar({ onItemSelect, selectedItem }: ItemSearchBarProps
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  
+  // Get collection progress from store
+  const { collectionProgress } = useCollectionTrackerStore();
 
   // Handle click outside to close suggestions
   useEffect(() => {
@@ -141,7 +145,13 @@ export function ItemSearchBar({ onItemSelect, selectedItem }: ItemSearchBarProps
                       {item.name}
                     </div>
                     <div className="text-xs text-gray-400">
-                      Found in {item.collections.length} collection{item.collections.length !== 1 ? 's' : ''}
+                      Progress: {(() => {
+                        const progress = calculateRemainingItems(item.name, collectionProgress);
+                        // Cap the completed at total to prevent over 100%
+                        const actualCompleted = Math.min(progress.completed, progress.total);
+                        const percentage = progress.total > 0 ? Math.round((actualCompleted / progress.total) * 100) : 0;
+                        return `${actualCompleted}/${progress.total} completed (${percentage}%)`;
+                      })()}
                     </div>
                   </div>
                   <div className="flex-shrink-0 text-right">

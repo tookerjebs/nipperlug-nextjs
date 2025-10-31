@@ -139,27 +139,48 @@ export function ItemSearchBar({ onItemSelect, selectedItem }: ItemSearchBarProps
                   highlightedIndex === index && "bg-theme-light border-game-gold/30"
                 )}
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="flex-1 min-w-0">
-                    <div className="text-white font-medium truncate mb-1">
-                      {item.name}
+                <div className="grid grid-cols-12 items-center gap-2">
+                  {/* Left Column: Item Name with Remaining */}
+                  <div className="col-span-5 min-w-0">
+                    <div className="text-white font-medium truncate">
+                      {item.name} <span className="text-gray-400">
+                        ({(() => {
+                          const progress = calculateRemainingItems(item.name, collectionProgress);
+                          const actualCompleted = Math.min(progress.completed, progress.total);
+                          const remaining = progress.total - actualCompleted;
+                          return `${remaining} remaining`;
+                        })()})
+                      </span>
                     </div>
-                    <div className="text-xs text-gray-400">
-                      Progress: {(() => {
+                  </div>
+                  
+                  {/* Middle Column: Progress Bar */}
+                  <div className="col-span-4 flex flex-col items-center justify-center">
+                    <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-game-gold transition-all duration-300"
+                        style={{
+                          width: `${(() => {
+                            const progress = calculateRemainingItems(item.name, collectionProgress);
+                            const actualCompleted = Math.min(progress.completed, progress.total);
+                            return progress.total > 0 ? Math.round((actualCompleted / progress.total) * 100) : 0;
+                          })()}%`
+                        }}
+                      />
+                    </div>
+                    <div className="text-xs text-gray-400 mt-1 text-center">
+                      {(() => {
                         const progress = calculateRemainingItems(item.name, collectionProgress);
-                        // Cap the completed at total to prevent over 100%
                         const actualCompleted = Math.min(progress.completed, progress.total);
-                        const percentage = progress.total > 0 ? Math.round((actualCompleted / progress.total) * 100) : 0;
-                        return `${actualCompleted}/${progress.total} completed (${percentage}%)`;
+                        return `${actualCompleted}/${progress.total}`;
                       })()}
                     </div>
                   </div>
-                  <div className="flex-shrink-0 text-right">
+                  
+                  {/* Right Column: Total Count */}
+                  <div className="col-span-3 text-right">
                     <div className="text-game-gold font-bold text-sm">
-                      {item.totalCount.toLocaleString()}
-                    </div>
-                    <div className="text-xs text-gray-400">
-                      total needed
+                      Total: {item.totalCount.toLocaleString()}
                     </div>
                   </div>
                 </div>

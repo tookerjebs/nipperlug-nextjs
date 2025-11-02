@@ -266,6 +266,14 @@ const getToolRoute = (title: string): string | null => {
   return routeMap[title] || null;
 };
 
+const formatDate = (dateString: string): string => {
+  const date = new Date(dateString);
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+  const year = date.getFullYear();
+  return `${month}/${day}/${year}`;
+};
+
 export default function RecentPatches() {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 5;
@@ -288,8 +296,8 @@ export default function RecentPatches() {
   };
 
   return (
-    <div className="glass-panel p-3 sm:p-4 lg:p-6 rounded-lg">
-      <div className="flex items-center justify-between mb-3 sm:mb-4 lg:mb-5">
+    <div className="mb-8">
+      <div className="flex items-center justify-between mb-3 sm:mb-4 lg:mb-5 pb-3 border-b" style={{ borderColor: 'rgba(40, 40, 50, 0.4)' }}>
         <div className="flex items-center gap-2">
           <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-game-gold" />
           <h2 className="text-lg sm:text-xl font-medium text-game-gold">Recent Updates</h2>
@@ -325,7 +333,7 @@ export default function RecentPatches() {
                 <p className="text-foreground/80 leading-relaxed text-xs sm:text-sm">{patch.description}</p>
               </div>
               <div className="text-xs sm:text-right flex-shrink-0 text-foreground/50">
-                {new Date(patch.date).toLocaleDateString()}
+                {formatDate(patch.date)}
               </div>
             </div>
           );

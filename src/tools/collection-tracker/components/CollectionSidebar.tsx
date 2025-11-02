@@ -17,7 +17,7 @@ interface CollectionSidebarProps {
 }
 
 export function CollectionSidebar({ collections, activeCollection, onSelectCollection, availablePages, activePage, onPageChange, hasFilters = false, selectedItem = null }: CollectionSidebarProps) {
-  const { getCollectionProgress, getActualCollectionProgress } = useCollectionTrackerStore();
+  const { getCollectionProgress, getActualCollectionProgress, isItemCompleted } = useCollectionTrackerStore();
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -55,6 +55,20 @@ export function CollectionSidebar({ collections, activeCollection, onSelectColle
       });
     });
     return totalCount;
+  };
+
+  // Check if a specific item is fully completed in a collection
+  const isItemFullyCompleted = (collection: Collection, itemName: string): boolean => {
+    for (const mission of Object.values(collection.missions)) {
+      for (const item of mission.items) {
+        if (item.name === itemName) {
+          if (!isItemCompleted(collection.id, mission.name, item.name, item.count)) {
+            return false;
+          }
+        }
+      }
+    }
+    return true;
   };
 
   return (
@@ -150,8 +164,16 @@ export function CollectionSidebar({ collections, activeCollection, onSelectColle
                   </div>
                   {/* Item Count Badge */}
                   {selectedItem && itemCount > 0 && (
-                    <div className="ml-2 px-2 py-0.5 bg-game-gold/20 border border-game-gold/30 rounded text-xs font-bold text-game-gold">
+                    <div className={cn(
+                      "ml-2 px-2 py-0.5 border rounded text-xs font-bold flex items-center gap-1",
+                      isItemFullyCompleted(collection, selectedItem)
+                        ? "bg-green-500/20 border-green-500/30 text-green-400"
+                        : "bg-game-gold/20 border-game-gold/30 text-game-gold"
+                    )}>
                       {itemCount} pcs
+                      {isItemFullyCompleted(collection, selectedItem) && (
+                        <span className="text-green-400">✓</span>
+                      )}
                     </div>
                   )}
                 </div>

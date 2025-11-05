@@ -42,20 +42,7 @@ export default function PenetrationEffectivenessTablePage() {
           <p className="text-foreground/80 mb-4">
             Reference table showing how penetration reduces enemy damage reduction across defense values.
           </p>
-          <div className="bg-blue-900/30 border border-blue-500/50 p-4 rounded-lg text-sm">
-            <h3 className="font-semibold mb-2">📊 How to Read This Table</h3>
-            <p className="text-foreground/80 mb-2">
-              Find your target's <strong>boss defense</strong> (rows) and your <strong>penetration stat</strong> (columns). 
-              The intersection shows the <strong>final damage reduction percentage</strong> you'll face.
-            </p>
-            <div className="flex flex-wrap gap-3 text-xs">
-              <span className="bg-green-900/50 text-green-300 px-2 py-1 rounded">Green = Excellent (5-15% reduction)</span>
-              <span className="bg-yellow-800/50 text-yellow-200 px-2 py-1 rounded">Yellow = Good (15-30% reduction)</span>
-              <span className="bg-red-800/50 text-red-200 px-2 py-1 rounded">Red = Poor (50%+ reduction)</span>
-            </div>
-          </div>
         </div>
-        
         <PenetrationEffectivenessTable />
       </div>
     </div>

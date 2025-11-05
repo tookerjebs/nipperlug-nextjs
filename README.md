@@ -10,39 +10,34 @@ This project's code is open source under MIT License. Game-related content (name
 
 ## Overview
 
-Nipperlug is a  Next.js application that offers helpful tools like calculators and planners for Cabal Online.
-
 ### Core Tools
-- **Build Planner** - Character optimization with 16+ game systems including equipment, pets, runes, achievements, and more
-- **Damage Calculator** - damage analysis with monster selection and stat optimization
-- **Collection Tracker** - Track collection progress and optimize stat bonuses
+- **Build Planner** - Character optimization with 16+ game systems including equipment, pets, runes, and achievements
+- **Damage Calculator** - Damage analysis with monster selection and stat optimization
+- **Collection Tracker** - Track collection progress with stat bonus optimization
 - **Monster Database** - Searchable database with 4000+ monsters and detailed stats
 
 ### Calculators
-- **EXP Calculator** 
-- **Force Wing Calculator** 
-- **OXP Calculator**
-- **Chloe Craft Profit Calculator** - Crafting profitability analysis
-- **Devil's Shop Calculator** - Devil shop profitability analysis
-- **Chloe Amity Calculator** - Calculate optimal path for Chloe Craft Amity
+- **EXP Calculator** - Character experience planning and leveling projections
+- **Force Wing Calculator** - Force Wing progression planning with stat bonuses
+- **OXP Calculator** - Overlord experience calculations
+- **Chloe Craft Profit Calculator** - Crafting profitability analysis with batch calculations
+- **Devil's Shop Calculator** - Devil shop item profitability analysis
+- **Chloe Amity Calculator** - Calculate optimal path for Chloe Craft Amity progression
 - **Extreme Upgrade Calculator** - Equipment upgrade planning with success rates
 
 ### Resources
-- **Tier Lists** - class tier list
-- **Stats Wiki** - wiki styled guide to stats and their effects
-- **BM3 Target Damage Boost** - Battle Mode 3 damage boost table
-- **Penetration Effectiveness Table** - Defense vs penetration analysis (accuracy of formulas not confirmed)
-- **Myth Level Data Viewer** - Myth mastery data and node costs/chances
-
-## Technology Stack
-
-- **Framework**: Next.js 15.3.3 with App Router
-- **Language**: TypeScript 5.x
-- **Styling**: Tailwind CSS 3.4.3
-- **State Management**: Zustand 5.0.5
-- **Build Sharing**: github gists for storage
+- **Tier Lists** - Class tier lists
+- **Stats Wiki** - Guide to stats and their effects
+- **BM3 Target Damage Boost** - Battle Mode 3 damage boost reference tables
+- **Penetration Effectiveness Table** - Defense vs penetration analysis
+- **Myth Level Data Viewer** - Myth mastery data, node costs, and success probabilities
+- **Event Mobs Location** - Event mob spawn locations
 
 ## Getting Started
+
+### Prerequisites
+- Node.js 18.x or later
+- npm or yarn package manager
 
 ### Installation
 
@@ -51,7 +46,7 @@ Nipperlug is a  Next.js application that offers helpful tools like calculators a
 git clone https://github.com/tookerjebs/nipperlug-nextjs.git
 
 # Navigate to project directory
-cd nextjs-nipperlug
+cd nipperlug-nextjs
 
 # Install dependencies
 npm install
@@ -76,36 +71,35 @@ npm start
 
 This project is open source and available under the MIT License.
 
-## To-Do List (of known issues)
+## To-Do List
 
 ### Build Planner
 - Refine damage calculation formulas
-- Add missing item icons and images
-- Optimize image loading (implement spritesheets or similar performance improvements)
+- Add missing item icons and implement sprite sheets
 - Verify and correct stat point scaling for all classes
-- Complete the class-specific passive skill implementations
+- Complete class-specific passive skill implementations
 - Extend Force Wing levels to 500
 - Update achievement data for recent episodes
 - Update collection system data for recent episodes
 - Complete Platinum Merit system implementation
 - Expand available potions and buffs
-- Consider adding Battle Configuration system
+- Implement Battle Configuration system
 
 ### Calculators
-- Verify Force Wing EXP calculator data (EXP requirements seem high)
-- add missing Chloe Craft Recipes
-- improve Chloe craft performance
+- Add missing Chloe Craft Recipes
+- Improve Chloe craft performance
+- Implement market API integration for real-time prices
 
 ### Resources
-- Improve Stats Wiki content accuracy and clarity
-- Validate Penetration Effectiveness formulas (defense reduction and penetration effects)
+- Improve Stats Wiki content accuracy
+- Validate Penetration Effectiveness formulas
 
 ### Damage Calculator
-- needs the same formula improvements as Build Planner
+- Implement same formula improvements as Build Planner
 
 ### General Improvements
 - Enhance search functionality
-- Address performance bottlenecks and code inefficiencies
+- Address performance bottlenecks
 
 ## Credits
 

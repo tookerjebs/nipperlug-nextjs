@@ -1255,21 +1255,304 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
   {
     "name": "Extreme Core Pocket(Normal) I",
     "recipe": "Extreme Core Pocket (Normal) I",
-    "iconPath": "",
+    "iconPath": "extreme_core_pocket_normal_icon.png",
     "outputQuantity": 1,
-    "requiredAmity": 1000,
-    "obtainedAmity": null,
+    "requiredAmity": 0,
+    "obtainedAmity": 3,
     "registerCost": 10000000,
     "successRate": 90,
     "category": "Misc",
     "ingredients": [
       {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 5
+      },
+      {
         "name": "Force Core(Highest)",
         "quantity": 5
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 1
       }
     ],
-    "time": 3,
-    "demand": "Low"
+    "time": 2
+  },
+  {
+    "name": "Extreme Core Pocket(Normal) II",
+    "recipe": "Extreme Core Pocket (Normal) II",
+    "iconPath": "extreme_core_pocket_normal_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 0,
+    "obtainedAmity": 3,
+    "registerCost": 10000000,
+    "successRate": 90,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Extreme Core(Piece)",
+        "quantity": 20
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Extreme Core Pocket(Rare)",
+    "recipe": "Extreme Core Pocket (Rare)",
+    "iconPath": "extreme_core_pocket_rare_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 3500,
+    "obtainedAmity": 11,
+    "registerCost": 30000000,
+    "successRate": 90,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Extreme Core(Lv. 1)",
+        "quantity": 2
+      },
+      {
+        "name": "Extreme Core(Lv. 2)",
+        "quantity": 2
+      },
+      {
+        "name": "Extreme Core(Lv. 3)",
+        "quantity": 2
+      },
+      {
+        "name": "Extreme Core(Lv. 4)",
+        "quantity": 2
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Extreme Core Pocket(Epic)",
+    "recipe": "Extreme Core Pocket (Epic)",
+    "iconPath": "extreme_core_pocket_epic_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 5500,
+    "obtainedAmity": 4,
+    "registerCost": 45000000,
+    "successRate": 90,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Extreme Core(Lv. 5)",
+        "quantity": 2
+      },
+      {
+        "name": "Extreme Core(Lv. 6)",
+        "quantity": 2
+      },
+      {
+        "name": "Extreme Core(Lv. 7)",
+        "quantity": 2
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Extreme Core Pocket(Unique)",
+    "recipe": "Extreme Core Pocket (Unique)",
+    "iconPath": "extreme_core_pocket_unique_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 8500,
+    "obtainedAmity": 4,
+    "registerCost": 60000000,
+    "successRate": 90,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Extreme Core(Lv. 8)",
+        "quantity": 2
+      },
+      {
+        "name": "Extreme Core(Lv. 9)",
+        "quantity": 2
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Chaos Core Set",
+    "recipe": "Chaos Core Set (x1)",
+    "iconPath": "chaos_core_set_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 1500,
+    "obtainedAmity": 0,
+    "registerCost": 20000000,
+    "successRate": 100,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Chaos Core",
+        "quantity": 1
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Chaos Core Set",
+    "recipe": "Chaos Core Set (x3)",
+    "iconPath": "chaos_core_set_icon.png",
+    "outputQuantity": 3,
+    "requiredAmity": 2500,
+    "obtainedAmity": 0,
+    "registerCost": 60000000,
+    "successRate": 100,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Chaos Core",
+        "quantity": 3
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Chaos Core Set",
+    "recipe": "Chaos Core Set (x8)",
+    "iconPath": "chaos_core_set_icon.png",
+    "outputQuantity": 8,
+    "requiredAmity": 3500,
+    "obtainedAmity": 0,
+    "registerCost": 100000000,
+    "successRate": 100,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Chaos Core",
+        "quantity": 8
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Chaos Core Set",
+    "recipe": "Chaos Core Set (x15)",
+    "iconPath": "chaos_core_set_icon.png",
+    "outputQuantity": 15,
+    "requiredAmity": 4500,
+    "obtainedAmity": 0,
+    "registerCost": 140000000,
+    "successRate": 100,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Chaos Core",
+        "quantity": 15
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Chaos Core Set",
+    "recipe": "Chaos Core Set (x30)",
+    "iconPath": "chaos_core_set_icon.png",
+    "outputQuantity": 30,
+    "requiredAmity": 5500,
+    "obtainedAmity": 0,
+    "registerCost": 180000000,
+    "successRate": 100,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Chaos Core",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Divine Stone Set",
+    "recipe": "Divine Stone Set (x1)",
+    "iconPath": "divine_stone_set_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 1500,
+    "obtainedAmity": 0,
+    "registerCost": 30000000,
+    "successRate": 100,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Divine Core",
+        "quantity": 1
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Divine Stone Set",
+    "recipe": "Divine Stone Set (x3)",
+    "iconPath": "divine_stone_set_icon.png",
+    "outputQuantity": 3,
+    "requiredAmity": 2500,
+    "obtainedAmity": 0,
+    "registerCost": 90000000,
+    "successRate": 100,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Divine Core",
+        "quantity": 3
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Divine Stone Set",
+    "recipe": "Divine Stone Set (x8)",
+    "iconPath": "divine_stone_set_icon.png",
+    "outputQuantity": 8,
+    "requiredAmity": 3500,
+    "obtainedAmity": 0,
+    "registerCost": 150000000,
+    "successRate": 100,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Divine Core",
+        "quantity": 8
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Divine Stone Set",
+    "recipe": "Divine Stone Set (x15)",
+    "iconPath": "divine_stone_set_icon.png",
+    "outputQuantity": 15,
+    "requiredAmity": 4500,
+    "obtainedAmity": 0,
+    "registerCost": 210000000,
+    "successRate": 100,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Divine Core",
+        "quantity": 15
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Divine Stone Set",
+    "recipe": "Divine Stone Set (x30)",
+    "iconPath": "divine_stone_set_icon.png",
+    "outputQuantity": 30,
+    "requiredAmity": 5500,
+    "obtainedAmity": 0,
+    "registerCost": 270000000,
+    "successRate": 100,
+    "category": "Misc",
+    "ingredients": [
+      {
+        "name": "Divine Core",
+        "quantity": 30
+      }
+    ],
+    "time": 2
   },
   {
     "name": "Shiny Jewel of Nix",
@@ -1306,7 +1589,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 100,
     "obtainedAmity": 10,
     "registerCost": 5000000,
-    "successRate": 80,
+    "successRate": 90,
     "category": "Slot Extender",
     "ingredients": [
       {
@@ -1365,6 +1648,122 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "time": 2
   },
   {
+    "name": "Perfect Core(Low)",
+    "recipe": "Perfect Core (Low) x 1",
+    "iconPath": "perfect_core_low_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 5900,
+    "obtainedAmity": 5,
+    "registerCost": 500000000,
+    "successRate": 30,
+    "category": "Perfect Core",
+    "ingredients": [
+      {
+        "name": "Upgrade Core(Piece)",
+        "quantity": 80
+      },
+      {
+        "name": "Plasma Circuit",
+        "quantity": 40
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 20
+      }
+    ],
+    "time": 15
+  },
+  {
+    "name": "Perfect Core(Medium)",
+    "recipe": "Perfect Core (Medium) x 1",
+    "iconPath": "perfect_core_medium_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 6800,
+    "obtainedAmity": 5,
+    "registerCost": 2500000000,
+    "successRate": 20,
+    "category": "Perfect Core",
+    "ingredients": [
+      {
+        "name": "Upgrade Core(Piece)",
+        "quantity": 80
+      },
+      {
+        "name": "Plasma Circuit",
+        "quantity": 40
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 20
+      },
+      {
+        "name": "Perfect Core(Low)",
+        "quantity": 1
+      }
+    ],
+    "time": 20
+  },
+  {
+    "name": "Perfect Core(High)",
+    "recipe": "Perfect Core (High) x 1",
+    "iconPath": "perfect_core_high_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7900,
+    "obtainedAmity": 5,
+    "registerCost": 7500000000,
+    "successRate": 10,
+    "category": "Perfect Core",
+    "ingredients": [
+      {
+        "name": "Upgrade Core(Piece)",
+        "quantity": 80
+      },
+      {
+        "name": "Plasma Circuit",
+        "quantity": 40
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 20
+      },
+      {
+        "name": "Perfect Core(Medium)",
+        "quantity": 1
+      }
+    ],
+    "time": 30
+  },
+  {
+    "name": "Perfect Core(Highest)",
+    "recipe": "Perfect Core (Highest) x 1",
+    "iconPath": "perfect_core_highest_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 8900,
+    "obtainedAmity": 5,
+    "registerCost": 12000000000,
+    "successRate": 5,
+    "category": "Perfect Core",
+    "ingredients": [
+      {
+        "name": "Upgrade Core(Piece)",
+        "quantity": 80
+      },
+      {
+        "name": "Plasma Circuit",
+        "quantity": 40
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 20
+      },
+      {
+        "name": "Perfect Core(High)",
+        "quantity": 1
+      }
+    ],
+    "time": 30
+  },
+  {
     "name": "Extender Circuit",
     "recipe": "Extender Circuit x 10",
     "iconPath": "extender_circuit_icon.png",
@@ -1394,7 +1793,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 5900,
     "obtainedAmity": 5,
     "registerCost": 500000000,
-    "successRate": 20,
+    "successRate": 30,
     "category": "Slot Extender",
     "ingredients": [
       {
@@ -1410,7 +1809,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
         "quantity": 20
       }
     ],
-    "time": 2
+    "time": 15
   },
   {
     "name": "Slot Extender(Low)",
@@ -1446,7 +1845,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 6800,
     "obtainedAmity": 5,
     "registerCost": 1000000000,
-    "successRate": 15,
+    "successRate": 20,
     "category": "Slot Extender",
     "ingredients": [
       {
@@ -1466,7 +1865,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
         "quantity": 1
       }
     ],
-    "time": 2
+    "time": 20
   },
   {
     "name": "Slot Extender(Medium)",
@@ -1534,7 +1933,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "iconPath": "slot_extender_high_icon.png",
     "outputQuantity": 2,
     "requiredAmity": 8500,
-    "obtainedAmity": null,
+    "obtainedAmity": 5,
     "registerCost": 7500000000,
     "successRate": 7.5,
     "category": "Slot Extender",
@@ -1556,7 +1955,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
         "quantity": 2
       }
     ],
-    "time": 2
+    "time": 30
   },
   {
     "name": "Slot Extender(Highest)",
@@ -1606,6 +2005,28 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
       {
         "name": "Merit Medal Trade Certificate",
         "quantity": 1
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Unbound Merit Medal",
+    "recipe": "Unbound Merit Medal x 5",
+    "iconPath": "unbound_merit_medal_icon.png",
+    "outputQuantity": 5,
+    "requiredAmity": 6500,
+    "obtainedAmity": 5,
+    "registerCost": 100000000,
+    "successRate": 100,
+    "category": "Merit Medal",
+    "ingredients": [
+      {
+        "name": "Merit Medal Exchange Ticket",
+        "quantity": 5
+      },
+      {
+        "name": "Merit Medal Trade Certificate",
+        "quantity": 5
       }
     ],
     "time": 2
@@ -2029,6 +2450,204 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "time": 2
   },
   {
+    "name": "Flame Disc(Lv. 4)",
+    "recipe": "Flame Dice (Lv. 4) x 1",
+    "iconPath": "all_dice_icon.png",
+    "outputQuantity": 50,
+    "requiredAmity": 6600,
+    "obtainedAmity": 5,
+    "registerCost": 15000000,
+    "successRate": 100,
+    "category": "Disc(Lv.4)",
+    "ingredients": [
+      {
+        "name": "Flame Disc(Lv. 3)",
+        "quantity": 100
+      },
+      {
+        "name": "Force Core(Crystal)",
+        "quantity": 20
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Dark Disc(Lv. 4)",
+    "recipe": "Dark Dice (Lv. 4) x 1",
+    "iconPath": "all_dice_icon.png",
+    "outputQuantity": 50,
+    "requiredAmity": 6600,
+    "obtainedAmity": 5,
+    "registerCost": 15000000,
+    "successRate": 100,
+    "category": "Disc(Lv.4)",
+    "ingredients": [
+      {
+        "name": "Dark Disc(Lv. 3)",
+        "quantity": 100
+      },
+      {
+        "name": "Force Core(Crystal)",
+        "quantity": 20
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Holy Disc(Lv. 4)",
+    "recipe": "Holy Dice (Lv. 4) x 1",
+    "iconPath": "all_dice_icon.png",
+    "outputQuantity": 50,
+    "requiredAmity": 6600,
+    "obtainedAmity": 5,
+    "registerCost": 15000000,
+    "successRate": 100,
+    "category": "Disc(Lv.4)",
+    "ingredients": [
+      {
+        "name": "Holy Disc(Lv. 3)",
+        "quantity": 100
+      },
+      {
+        "name": "Force Core(Crystal)",
+        "quantity": 20
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Air Disc(Lv. 4)",
+    "recipe": "Air Dice (Lv. 4) x 1",
+    "iconPath": "all_dice_icon.png",
+    "outputQuantity": 50,
+    "requiredAmity": 6600,
+    "obtainedAmity": 5,
+    "registerCost": 15000000,
+    "successRate": 100,
+    "category": "Disc(Lv.4)",
+    "ingredients": [
+      {
+        "name": "Air Disc(Lv. 3)",
+        "quantity": 100
+      },
+      {
+        "name": "Force Core(Crystal)",
+        "quantity": 20
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Thunder Disc(Lv. 4)",
+    "recipe": "Thunder Dice (Lv. 4) x 1",
+    "iconPath": "all_dice_icon.png",
+    "outputQuantity": 50,
+    "requiredAmity": 6600,
+    "obtainedAmity": 5,
+    "registerCost": 15000000,
+    "successRate": 100,
+    "category": "Disc(Lv.4)",
+    "ingredients": [
+      {
+        "name": "Thunder Disc(Lv. 3)",
+        "quantity": 100
+      },
+      {
+        "name": "Force Core(Crystal)",
+        "quantity": 20
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Bloody Disc(Lv. 4)",
+    "recipe": "Bloody Dice (Lv. 4) x 1",
+    "iconPath": "all_dice_icon.png",
+    "outputQuantity": 50,
+    "requiredAmity": 6600,
+    "obtainedAmity": 5,
+    "registerCost": 15000000,
+    "successRate": 100,
+    "category": "Disc(Lv.4)",
+    "ingredients": [
+      {
+        "name": "Bloody Disc(Lv. 3)",
+        "quantity": 100
+      },
+      {
+        "name": "Force Core(Crystal)",
+        "quantity": 20
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Earth Disc(Lv. 4)",
+    "recipe": "Earth Dice (Lv. 4) x 1",
+    "iconPath": "all_dice_icon.png",
+    "outputQuantity": 50,
+    "requiredAmity": 6600,
+    "obtainedAmity": 5,
+    "registerCost": 15000000,
+    "successRate": 100,
+    "category": "Disc(Lv.4)",
+    "ingredients": [
+      {
+        "name": "Earth Disc(Lv. 3)",
+        "quantity": 100
+      },
+      {
+        "name": "Force Core(Crystal)",
+        "quantity": 20
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Aqua Disc(Lv. 4)",
+    "recipe": "Aqua Dice (Lv. 4) x 1",
+    "iconPath": "all_dice_icon.png",
+    "outputQuantity": 50,
+    "requiredAmity": 6600,
+    "obtainedAmity": 5,
+    "registerCost": 15000000,
+    "successRate": 100,
+    "category": "Disc(Lv.4)",
+    "ingredients": [
+      {
+        "name": "Aqua Disc(Lv. 3)",
+        "quantity": 100
+      },
+      {
+        "name": "Force Core(Crystal)",
+        "quantity": 20
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Soul Disc(Lv. 4)",
+    "recipe": "Soul Dice (Lv. 4) x 1",
+    "iconPath": "all_dice_icon.png",
+    "outputQuantity": 50,
+    "requiredAmity": 6600,
+    "obtainedAmity": 5,
+    "registerCost": 15000000,
+    "successRate": 100,
+    "category": "Disc(Lv.4)",
+    "ingredients": [
+      {
+        "name": "Soul Disc(Lv. 3)",
+        "quantity": 100
+      },
+      {
+        "name": "Force Core(Crystal)",
+        "quantity": 20
+      }
+    ],
+    "time": 2
+  },
+  {
     "name": "Essence Rune(DEX II)",
     "recipe": "Essence Rune (DEX II)",
     "iconPath": "essence_rune_2_icon.png",
@@ -2095,8 +2714,8 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "time": 2
   },
   {
-    "name": "Mirror of Obervation (Bronze)",
-    "recipe": "Mirror of Obervation (Bronze)",
+    "name": "Mirror of Observation (Bronze)",
+    "recipe": "Mirror of Observation (Bronze)",
     "iconPath": "mirror_of_observation_bronze_icon.png",
     "outputQuantity": 1,
     "requiredAmity": null,
@@ -2117,8 +2736,8 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "time": 2
   },
   {
-    "name": "Mirror of Obervation (Silver)",
-    "recipe": "Mirror of Obervation (Silver)",
+    "name": "Mirror of Observation (Silver)",
+    "recipe": "Mirror of Observation (Silver)",
     "iconPath": "mirror_of_observation_silver_icon.png",
     "outputQuantity": 1,
     "requiredAmity": null,
@@ -2128,7 +2747,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Misc",
     "ingredients": [
       {
-        "name": "Mirror of Obervation (Bronze)",
+        "name": "Mirror of Observation (Bronze)",
         "quantity": 1
       },
       {
@@ -2591,6 +3210,92 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "time": 2
   },
   {
+    "name": "Fury Potion (Lv. 1)",
+    "recipe": "Fury Potion (Lv. 1) x 5",
+    "iconPath": "fury_potion_lv1.png",
+    "outputQuantity": 5,
+    "requiredAmity": 3900,
+    "obtainedAmity": 9,
+    "registerCost": 20000000,
+    "successRate": 80,
+    "category": "Fury Potion",
+    "ingredients": [
+      {
+        "name": "Empty Bottle",
+        "quantity": 1
+      },
+      {
+        "name": "Air Disc(Lv. 1)",
+        "quantity": 3
+      },
+      {
+        "name": "Powerless Core",
+        "quantity": 1
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Fury Potion (Lv. 2)",
+    "recipe": "Fury Potion (Lv. 2) x 5",
+    "iconPath": "fury_potion_lv2.png",
+    "outputQuantity": 5,
+    "requiredAmity": 4800,
+    "obtainedAmity": 9,
+    "registerCost": 30000000,
+    "successRate": 70,
+    "category": "Fury Potion",
+    "ingredients": [
+      {
+        "name": "Empty Bottle",
+        "quantity": 1
+      },
+      {
+        "name": "Air Disc(Lv. 2)",
+        "quantity": 3
+      },
+      {
+        "name": "Fury Potion (Lv. 1)",
+        "quantity": 1
+      },
+      {
+        "name": "Powerful Core",
+        "quantity": 1
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Fury Potion (Lv. 3)",
+    "recipe": "Fury Potion (Lv. 3) x 5",
+    "iconPath": "fury_potion_lv3.png",
+    "outputQuantity": 5,
+    "requiredAmity": 5400,
+    "obtainedAmity": 2,
+    "registerCost": 40000000,
+    "successRate": 60,
+    "category": "Fury Potion",
+    "ingredients": [
+      {
+        "name": "Empty Bottle",
+        "quantity": 1
+      },
+      {
+        "name": "Air Disc(Lv. 3)",
+        "quantity": 3
+      },
+      {
+        "name": "Fury Potion (Lv. 2)",
+        "quantity": 1
+      },
+      {
+        "name": "Shining Yellow Powder",
+        "quantity": 1
+      }
+    ],
+    "time": 2
+  },
+  {
     "name": "Diamond Cube",
     "recipe": "Diamond Cube x 1",
     "iconPath": "diamond_cube_icon.png",
@@ -2646,7 +3351,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Sapphire Charm Upgrade (Lv. 1)",
+        "name": "Minesta's Sapphire Charm +1",
         "quantity": 1
       },
       {
@@ -2672,7 +3377,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Sapphire Charm Upgrade (Lv. 2)",
+        "name": "Minesta's Sapphire Charm +2",
         "quantity": 1
       },
       {
@@ -2698,7 +3403,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Sapphire Charm Upgrade (Lv. 3)",
+        "name": "Minesta's Sapphire Charm +3",
         "quantity": 1
       },
       {
@@ -2724,7 +3429,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Sapphire Charm Upgrade (Lv. 4)",
+        "name": "Minesta's Sapphire Charm +4",
         "quantity": 1
       },
       {
@@ -2750,7 +3455,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Sapphire Charm Upgrade (Lv. 5)",
+        "name": "Minesta's Sapphire Charm +5",
         "quantity": 1
       },
       {
@@ -2776,7 +3481,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Sapphire Charm Upgrade (Lv. 6)",
+        "name": "Minesta's Sapphire Charm +6",
         "quantity": 1
       },
       {
@@ -2828,7 +3533,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Ruby Charm Upgrade (Lv. 1)",
+        "name": "Minesta's Ruby Charm +1",
         "quantity": 1
       },
       {
@@ -2854,7 +3559,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Ruby Charm Upgrade (Lv. 2)",
+        "name": "Minesta's Ruby Charm +2",
         "quantity": 1
       },
       {
@@ -2880,7 +3585,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Ruby Charm Upgrade (Lv. 3)",
+        "name": "Minesta's Ruby Charm +3",
         "quantity": 1
       },
       {
@@ -2906,7 +3611,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Ruby Charm Upgrade (Lv. 4)",
+        "name": "Minesta's Ruby Charm +4",
         "quantity": 1
       },
       {
@@ -2932,7 +3637,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Ruby Charm Upgrade (Lv. 5)",
+        "name": "Minesta's Ruby Charm +5",
         "quantity": 1
       },
       {
@@ -2958,7 +3663,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Ruby Charm Upgrade (Lv. 6)",
+        "name": "Minesta's Ruby Charm +6",
         "quantity": 1
       },
       {
@@ -3010,7 +3715,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Emerald Charm Upgrade (Lv. 1)",
+        "name": "Minesta's Emerald Charm +1",
         "quantity": 1
       },
       {
@@ -3036,7 +3741,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Emerald Charm Upgrade (Lv. 2)",
+        "name": "Minesta's Emerald Charm +2",
         "quantity": 1
       },
       {
@@ -3062,7 +3767,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Emerald Charm Upgrade (Lv. 3)",
+        "name": "Minesta's Emerald Charm +3",
         "quantity": 1
       },
       {
@@ -3088,7 +3793,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Emerald Charm Upgrade (Lv. 4)",
+        "name": "Minesta's Emerald Charm +4",
         "quantity": 1
       },
       {
@@ -3114,7 +3819,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Emerald Charm Upgrade (Lv. 5)",
+        "name": "Minesta's Emerald Charm +5",
         "quantity": 1
       },
       {
@@ -3140,7 +3845,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Emerald Charm Upgrade (Lv. 6)",
+        "name": "Minesta's Emerald Charm +6",
         "quantity": 1
       },
       {
@@ -3192,7 +3897,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amber Charm Upgrade (Lv. 1)",
+        "name": "Minesta's Amber Charm +1",
         "quantity": 1
       },
       {
@@ -3218,7 +3923,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amber Charm Upgrade (Lv. 2)",
+        "name": "Minesta's Amber Charm +2",
         "quantity": 1
       },
       {
@@ -3244,7 +3949,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amber Charm Upgrade (Lv. 3)",
+        "name": "Minesta's Amber Charm +3",
         "quantity": 1
       },
       {
@@ -3270,7 +3975,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amber Charm Upgrade (Lv. 4)",
+        "name": "Minesta's Amber Charm +4",
         "quantity": 1
       },
       {
@@ -3296,7 +4001,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amber Charm Upgrade (Lv. 5)",
+        "name": "Minesta's Amber Charm +5",
         "quantity": 1
       },
       {
@@ -3322,7 +4027,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amber Charm Upgrade (Lv. 6)",
+        "name": "Minesta's Amber Charm +6",
         "quantity": 1
       },
       {
@@ -3374,7 +4079,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amethyst Charm Upgrade (Lv. 1)",
+        "name": "Minesta's Amethyst Charm +1",
         "quantity": 1
       },
       {
@@ -3400,7 +4105,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amethyst Charm Upgrade (Lv. 2)",
+        "name": "Minesta's Amethyst Charm +2",
         "quantity": 1
       },
       {
@@ -3426,7 +4131,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amethyst Charm Upgrade (Lv. 3)",
+        "name": "Minesta's Amethyst Charm +3",
         "quantity": 1
       },
       {
@@ -3452,7 +4157,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amethyst Charm Upgrade (Lv. 4)",
+        "name": "Minesta's Amethyst Charm +4",
         "quantity": 1
       },
       {
@@ -3478,7 +4183,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amethyst Charm Upgrade (Lv. 5)",
+        "name": "Minesta's Amethyst Charm +5",
         "quantity": 1
       },
       {
@@ -3504,7 +4209,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "category": "Charm",
     "ingredients": [
       {
-        "name": "Amethyst Charm Upgrade (Lv. 6)",
+        "name": "Minesta's Amethyst Charm +6",
         "quantity": 1
       },
       {
@@ -3519,6 +4224,606 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "time": 2
   },
   {
+    "name": "Minesta's Red Sapphire Charm",
+    "recipe": "Minesta's Red Sapphire Charm",
+    "iconPath": "sapphire_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Sapphire Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Ruby Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Green Sapphire Charm",
+    "recipe": "Minesta's Green Sapphire Charm",
+    "iconPath": "sapphire_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Sapphire Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Emerald Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Yellow Sapphire Charm",
+    "recipe": "Minesta's Yellow Sapphire Charm",
+    "iconPath": "sapphire_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Sapphire Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Amber Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Blue Ruby Charm",
+    "recipe": "Minesta's Blue Ruby Charm",
+    "iconPath": "ruby_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Ruby Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Sapphire Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Green Ruby Charm",
+    "recipe": "Minesta's Green Ruby Charm",
+    "iconPath": "ruby_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Ruby Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Emerald Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Yellow Ruby Charm",
+    "recipe": "Minesta's Yellow Ruby Charm",
+    "iconPath": "ruby_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Ruby Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Amber Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Blue Emerald Charm",
+    "recipe": "Minesta's Blue Emerald Charm",
+    "iconPath": "emerald_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Emerald Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Sapphire Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Red Emerald Charm",
+    "recipe": "Minesta's Red Emerald Charm",
+    "iconPath": "emerald_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Emerald Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Ruby Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Yellow Emerald Charm",
+    "recipe": "Minesta's Yellow Emerald Charm",
+    "iconPath": "emerald_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Emerald Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Amber Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Blue Amber Charm",
+    "recipe": "Minesta's Blue Amber Charm",
+    "iconPath": "amber_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Amber Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Sapphire Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Red Amber Charm",
+    "recipe": "Minesta's Red Amber Charm",
+    "iconPath": "amber_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Amber Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Ruby Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Green Amber Charm",
+    "recipe": "Minesta's Green Amber Charm",
+    "iconPath": "amber_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Amber Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Emerald Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Red Amethyst Charm",
+    "recipe": "Minesta's Red Amethyst Charm",
+    "iconPath": "amethyst_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Amethyst Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Ruby Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Green Amethyst Charm",
+    "recipe": "Minesta's Green Amethyst Charm",
+    "iconPath": "amethyst_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Amethyst Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Emerald Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Yellow Amethyst Charm",
+    "recipe": "Minesta's Yellow Amethyst Charm",
+    "iconPath": "amethyst_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Amethyst Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Amber Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Blue Amethyst Charm",
+    "recipe": "Minesta's Blue Amethyst Charm",
+    "iconPath": "amethyst_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Amethyst Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Sapphire Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Purple Sapphire Charm",
+    "recipe": "Minesta's Purple Sapphire Charm",
+    "iconPath": "sapphire_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Sapphire Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Amethyst Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Purple Ruby Charm",
+    "recipe": "Minesta's Purple Ruby Charm",
+    "iconPath": "ruby_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Ruby Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Amethyst Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Purple Emerald Charm",
+    "recipe": "Minesta's Purple Emerald Charm",
+    "iconPath": "emerald_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Emerald Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Amethyst Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
+    "name": "Minesta's Purple Amber Charm",
+    "recipe": "Minesta's Purple Amber Charm",
+    "iconPath": "amber_charm_icon.png",
+    "outputQuantity": 1,
+    "requiredAmity": 7000,
+    "obtainedAmity": 5,
+    "registerCost": 1000000000,
+    "successRate": 40,
+    "category": "Charm",
+    "ingredients": [
+      {
+        "name": "Minesta's Amber Charm +7",
+        "quantity": 1
+      },
+      {
+        "name": "Minesta's Amethyst Charm +5",
+        "quantity": 1
+      },
+      {
+        "name": "Stain Clone",
+        "quantity": 60
+      },
+      {
+        "name": "Upgrade Core(Highest)",
+        "quantity": 30
+      }
+    ],
+    "time": 2
+  },
+  {
     "name": "Map Part",
     "recipe": "Map Part x 1",
     "iconPath": "map_part_icon.png",
@@ -3526,7 +4831,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 200,
     "obtainedAmity": 10,
     "registerCost": 500000,
-    "successRate": 100,
+    "successRate": 90,
     "category": "Dungeon Entry",
     "ingredients": [
       {
@@ -3548,7 +4853,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 200,
     "obtainedAmity": 10,
     "registerCost": 500000,
-    "successRate": 100,
+    "successRate": 90,
     "category": "Dungeon Entry",
     "ingredients": [
       {
@@ -3618,7 +4923,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 1300,
     "obtainedAmity": 10,
     "registerCost": 1000000,
-    "successRate": 100,
+    "successRate": 85,
     "category": "Dungeon Entry",
     "ingredients": [
       {
@@ -3640,7 +4945,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 1300,
     "obtainedAmity": 10,
     "registerCost": 1000000,
-    "successRate": 100,
+    "successRate": 85,
     "category": "Dungeon Entry",
     "ingredients": [
       {
@@ -3662,7 +4967,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 2300,
     "obtainedAmity": 10,
     "registerCost": 1500000,
-    "successRate": 100,
+    "successRate": 80,
     "category": "Dungeon Entry",
     "ingredients": [
       {
@@ -3684,7 +4989,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 2300,
     "obtainedAmity": 10,
     "registerCost": 1500000,
-    "successRate": 100,
+    "successRate": 80,
     "category": "Dungeon Entry",
     "ingredients": [
       {
@@ -3706,7 +5011,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 3300,
     "obtainedAmity": 10,
     "registerCost": 2000000,
-    "successRate": 100,
+    "successRate": 75,
     "category": "Dungeon Entry",
     "ingredients": [
       {
@@ -3728,7 +5033,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 3300,
     "obtainedAmity": 10,
     "registerCost": 2000000,
-    "successRate": 100,
+    "successRate": 75,
     "category": "Dungeon Entry",
     "ingredients": [
       {
@@ -3750,7 +5055,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 4300,
     "obtainedAmity": 10,
     "registerCost": 2500000,
-    "successRate": 100,
+    "successRate": 70,
     "category": "Dungeon Entry",
     "ingredients": [
       {
@@ -3772,7 +5077,7 @@ export const CHLOE_RECIPES: ChloeRecipe[] = [
     "requiredAmity": 4300,
     "obtainedAmity": 10,
     "registerCost": 2500000,
-    "successRate": 100,
+    "successRate": 70,
     "category": "Dungeon Entry",
     "ingredients": [
       {

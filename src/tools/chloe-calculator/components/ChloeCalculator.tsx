@@ -23,6 +23,8 @@ interface SortConfig {
   direction: 'asc' | 'desc';
 }
 
+const RECIPES_PER_PAGE = 50; // Number of recipes to load per "Load More" click
+
 export default function ChloeCalculator() {
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -57,6 +59,7 @@ export default function ChloeCalculator() {
     itemType: 'cartridge',
     outputQuantity: 0
   });
+  const [displayCount, setDisplayCount] = useState(RECIPES_PER_PAGE); // Initial number of recipes to show
   
   const { getPrice, setPrice, clearAllPrices, hydrate } = usePriceStore();
 
@@ -202,6 +205,20 @@ export default function ChloeCalculator() {
 
     return filtered;
   }, [CHLOE_RECIPES, searchTerm, selectedCategories, demandFilter, showOnlyFavorites, excludeMissingPrices, favorites, sortConfig, calculateRecipeMetrics, getPrice, salesFee]);
+
+  // Slice the filtered/sorted recipes for display (but filtering/sorting works on all recipes)
+  const displayedRecipes = useMemo(() => {
+    return filteredAndSortedRecipes.slice(0, displayCount);
+  }, [filteredAndSortedRecipes, displayCount]);
+
+  // Reset display count when filters change (so search results show from the top)
+  useEffect(() => {
+    setDisplayCount(RECIPES_PER_PAGE);
+  }, [searchTerm, selectedCategories, demandFilter, showOnlyFavorites, excludeMissingPrices, sortConfig]);
+
+  const handleLoadMore = () => {
+    setDisplayCount(prev => prev + RECIPES_PER_PAGE);
+  };
 
   const handleSort = (key: SortConfig['key']) => {
     setSortConfig(current => ({
@@ -412,7 +429,7 @@ export default function ChloeCalculator() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-border-dark">
-                {filteredAndSortedRecipes.map((recipe) => {
+                {displayedRecipes.map((recipe) => {
                   const recipeId = `${recipe.name}-${recipe.recipe}`;
                   const isExpanded = expandedRows.has(recipeId);
                   const isFavorite = favorites.has(recipeId);
@@ -598,7 +615,7 @@ export default function ChloeCalculator() {
 
           {/* Mobile Cards - shown only on mobile */}
           <div className="md:hidden space-y-4 p-4">
-            {filteredAndSortedRecipes.map((recipe) => {
+            {displayedRecipes.map((recipe) => {
               const recipeId = `${recipe.name}-${recipe.recipe}`;
               const isExpanded = expandedRows.has(recipeId);
               const isFavorite = favorites.has(recipeId);
@@ -758,6 +775,25 @@ export default function ChloeCalculator() {
           {filteredAndSortedRecipes.length === 0 && (
             <div className="text-center py-8 text-foreground/80">
               No recipes found matching your criteria.
+            </div>
+          )}
+
+          {/* Load More Button */}
+          {filteredAndSortedRecipes.length > displayCount && (
+            <div className="border-t border-border-dark p-4 text-center">
+              <button
+                onClick={handleLoadMore}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+              >
+                Load More ({filteredAndSortedRecipes.length - displayCount} remaining)
+              </button>
+            </div>
+          )}
+
+          {/* Show count info */}
+          {filteredAndSortedRecipes.length > 0 && (
+            <div className="border-t border-border-dark px-4 py-3 text-sm text-foreground/60 text-center">
+              Showing {displayedRecipes.length} of {filteredAndSortedRecipes.length} recipes
             </div>
           )}
         </div>

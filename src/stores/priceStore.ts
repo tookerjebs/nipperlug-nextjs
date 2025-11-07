@@ -49,6 +49,29 @@ const normalizeItemName = (name: string): string => {
   return name.toLowerCase().replace(/\s+/g, '');
 };
 
+// Charm name mapping: converts between "X Charm Upgrade (Lv. Y)" and "Minesta's X Charm +Y"
+// Note: Lv. 1 maps to "+1", not base charm (base charm is separate)
+const getCharmNameAliases = (itemName: string): string[] => {
+  const aliases: string[] = [itemName]; // Always include original name
+  
+  // Pattern 1: "X Charm Upgrade (Lv. Y)" -> "Minesta's X Charm +Y" (including Lv. 1 -> +1)
+  const upgradeMatch = itemName.match(/^(\w+)\s+Charm\s+Upgrade\s+\(Lv\.\s+(\d+)\)$/i);
+  if (upgradeMatch) {
+    const [, charmType, level] = upgradeMatch;
+    // All levels including Lv. 1 use "+Y" format
+    aliases.push(`Minesta's ${charmType} Charm +${level}`);
+  }
+  
+  // Pattern 2: "Minesta's X Charm +Y" -> "X Charm Upgrade (Lv. Y)"
+  const minestaMatch = itemName.match(/^Minesta's\s+(\w+)\s+Charm\s+\+(\d+)$/i);
+  if (minestaMatch) {
+    const [, charmType, level] = minestaMatch;
+    aliases.push(`${charmType} Charm Upgrade (Lv. ${level})`);
+  }
+  
+  return aliases;
+};
+
 // NPC prices (these are fixed and don't change)
 const NPC_PRICES: Record<string, number> = {
   "Shape Cartridge(Lv. 1)": 400,
@@ -82,16 +105,21 @@ export const usePriceStore = create<PriceStore>()(
       apiError: null,
       
       setPrice: (itemName: string, price: number, source: 'user' | 'api' | 'npc' = 'user') => {
-        set(state => ({
-          prices: {
-            ...state.prices,
-            [itemName]: {
+        const aliases = getCharmNameAliases(itemName);
+        const timestamp = new Date().toISOString();
+        
+        set(state => {
+          const newPrices = { ...state.prices };
+          // Set price for all aliases to ensure syncing
+          aliases.forEach(alias => {
+            newPrices[alias] = {
               price,
-              timestamp: new Date().toISOString(),
+              timestamp,
               source
-            }
-          }
-        }));
+            };
+          });
+          return { prices: newPrices };
+        });
       },
       
       getPrice: (itemName: string) => {
@@ -103,6 +131,17 @@ export const usePriceStore = create<PriceStore>()(
         }
         if (NPC_PRICES[itemName]) {
           return NPC_PRICES[itemName];
+        }
+        
+        // Try charm name aliases (e.g., "Amber Charm Upgrade (Lv. 7)" <-> "Minesta's Amber Charm +7")
+        const aliases = getCharmNameAliases(itemName);
+        for (const alias of aliases) {
+          if (state.prices[alias]) {
+            return state.prices[alias].price;
+          }
+          if (NPC_PRICES[alias]) {
+            return NPC_PRICES[alias];
+          }
         }
         
         // Try normalized match
@@ -134,6 +173,21 @@ export const usePriceStore = create<PriceStore>()(
             timestamp: new Date().toISOString(),
             source: 'npc' as const
           };
+        }
+        
+        // Try charm name aliases (e.g., "Amber Charm Upgrade (Lv. 7)" <-> "Minesta's Amber Charm +7")
+        const aliases = getCharmNameAliases(itemName);
+        for (const alias of aliases) {
+          if (state.prices[alias]) {
+            return state.prices[alias];
+          }
+          if (NPC_PRICES[alias]) {
+            return {
+              price: NPC_PRICES[alias],
+              timestamp: new Date().toISOString(),
+              source: 'npc' as const
+            };
+          }
         }
         
         // Try normalized match

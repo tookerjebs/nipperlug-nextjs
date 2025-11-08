@@ -8,6 +8,7 @@ import React from 'react';
 import { ConfiguredAmulet } from '../upgrade-modals/AmuletUpgradeModal';
 import { getAmuletChaosUpgradeStats } from '../../data/amulets/amulets-chaos-upgrade';
 import { getStatInfo, formatStatValue } from '@/tools/build-planner/data/stats-config';
+import { StatIcon } from '@/tools/build-planner/components/StatIcon';
 
 interface AmuletTooltipProps {
   amulet: ConfiguredAmulet;
@@ -36,6 +37,24 @@ const AmuletTooltip: React.FC<AmuletTooltipProps> = ({
   // Get only the actual base stats (no slot or varying stats)
   const getBaseStatsOnly = (amulet: ConfiguredAmulet) => {
     return { ...amulet.baseStats };
+  };
+
+  // Get slot icons based on selected slot
+  const getSlotIcons = (amulet: ConfiguredAmulet) => {
+    if (!amulet.selectedSlot) return null;
+    
+    const statInfo = getStatInfo(amulet.selectedSlot.statId);
+    
+    return (
+      <div className="inline-block mr-1">
+        <StatIcon 
+          statId={amulet.selectedSlot.statId}
+          width={32}
+          height={32}
+          alt={statInfo?.name || amulet.selectedSlot.statId}
+        />
+      </div>
+    );
   };
 
   return (
@@ -67,11 +86,12 @@ const AmuletTooltip: React.FC<AmuletTooltipProps> = ({
         <>
           <div className="w-full h-px bg-gray-600 bg-opacity-30 my-2"></div>
           <div className="mb-2">
-            <div className="text-blue-400 font-bold mb-1">[ Slot Stats ]</div>
-            <div className="text-blue-400 flex justify-between">
+            <div className="text-cyan-400 font-bold mb-1">[ Slot Stats ]</div>
+            <div className="text-cyan-400 flex justify-between">
               <span>{formatStatName(amulet.selectedSlot.statId)}</span>
               <span>{formatStatValueWithSign(amulet.selectedSlot.statId, amulet.selectedSlot.value)}</span>
             </div>
+            <div className="mt-1">{getSlotIcons(amulet)}</div>
           </div>
         </>
       )}

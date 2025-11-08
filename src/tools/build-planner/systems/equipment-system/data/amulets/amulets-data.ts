@@ -28,9 +28,11 @@ export interface AmuletStats {
   maxHpStealPerHit?: number;
   maxMpStealPerHit?: number;
   allAttackUp?: number;
+  allAttackUpPercent?: number;
   normalDamageUp?: number;
   ignoreAccuracy?: number;
   maxCriticalRate?: number;
+  auraDurationIncrease?: number;
 }
 
 // Slot option for unique amulets (separate from varying stats)
@@ -148,7 +150,8 @@ export const createAmuletWithVaryingStats = (
   return {
     ...amulet,
     selectedVaryingStats: [...varyingStats],
-    selectedSlot: selectedSlot || amulet.selectedSlot
+    // Use the passed selectedSlot value directly (undefined means no slot selected)
+    selectedSlot
   };
 };
 
@@ -332,6 +335,251 @@ export const amulets: Amulet[] = [
         statId: 'allSkillAmp',
         name: 'All Skill Amp',
         values: [1, 2, 3]
+      }
+    ],
+    selectedVaryingStats: [],
+    hasChaosUpgrade: true,
+    chaosUpgradeLevel: 0
+  },
+  {
+    id: 'gaia_force_amulet_low',
+    name: 'Gaia Force Amulet (low)',
+    type: 'amulet',
+    subtype: 'amulet',
+    grade: 'unique',
+    imagePath: '/images/equipment-system/amulets/orphidia-amulet.png', // Placeholder - using Orphidia's amulet icon temporarily
+    baseStats: {
+      allAttackUp: 5,
+      defense: 35,
+      evasion: 65,
+      accuracy: 65,
+      maxCriticalRate: 3
+    },
+    isUnique: true,
+    // Slot system (max 1 slot)
+    hasSlot: true,
+    maxSlots: 1,
+    slotOptions: [
+      {
+        statId: 'auraDurationIncrease',
+        name: 'Aura Duration Increase',
+        value: 6
+      },
+      {
+        statId: 'allAttackUpPercent',
+        name: 'All Attack Up %',
+        value: 2
+      }
+    ],
+    selectedSlot: undefined,
+    // Varying stats system (always 3 stats)
+    maxVaryingStats: 3,
+    varyingStatOptions: [
+      {
+        statId: 'allSkillAmp',
+        name: 'All Skill Amp',
+        values: [1, 2, 3, 4]
+      },
+      {
+        statId: 'criticalDamage',
+        name: 'Crit DMG',
+        values: [3, 5, 7, 9]
+      }
+    ],
+    selectedVaryingStats: [],
+    hasChaosUpgrade: true,
+    chaosUpgradeLevel: 0
+  },
+  {
+    id: 'gaia_force_amulet_medium',
+    name: 'Gaia Force Amulet (medium)',
+    type: 'amulet',
+    subtype: 'amulet',
+    grade: 'unique',
+    imagePath: '/images/equipment-system/amulets/orphidia-amulet.png', // Placeholder - using Orphidia's amulet icon temporarily
+    baseStats: {
+      allAttackUp: 10,
+      defense: 40,
+      evasion: 85,
+      accuracy: 85,
+      maxCriticalRate: 4
+    },
+    isUnique: true,
+    // Slot system (max 1 slot)
+    hasSlot: true,
+    maxSlots: 1,
+    slotOptions: [
+      {
+        statId: 'auraDurationIncrease',
+        name: 'Aura Duration Increase',
+        value: 6
+      },
+      {
+        statId: 'allAttackUpPercent',
+        name: 'All Attack Up %',
+        value: 2
+      }
+    ],
+    selectedSlot: undefined,
+    // Varying stats system (always 3 stats)
+    maxVaryingStats: 3,
+    varyingStatOptions: [
+      {
+        statId: 'allSkillAmp',
+        name: 'All Skill Amp',
+        values: [1, 2, 3, 4]
+      },
+      {
+        statId: 'criticalDamage',
+        name: 'Crit DMG',
+        values: [3, 5, 7, 9]
+      }
+    ],
+    selectedVaryingStats: [],
+    hasChaosUpgrade: true,
+    chaosUpgradeLevel: 0
+  },
+  {
+    id: 'gaia_force_amulet_high',
+    name: 'Gaia Force Amulet (high)',
+    type: 'amulet',
+    subtype: 'amulet',
+    grade: 'unique',
+    imagePath: '/images/equipment-system/amulets/orphidia-amulet.png', // Placeholder - using Orphidia's amulet icon temporarily
+    baseStats: {
+      allAttackUp: 35,
+      defense: 80,
+      evasion: 160,
+      accuracy: 160,
+      maxCriticalRate: 4
+    },
+    isUnique: true,
+    // Slot system (max 1 slot)
+    hasSlot: true,
+    maxSlots: 1,
+    slotOptions: [
+      {
+        statId: 'auraDurationIncrease',
+        name: 'Aura Duration Increase',
+        value: 6
+      },
+      {
+        statId: 'allAttackUpPercent',
+        name: 'All Attack Up %',
+        value: 2
+      }
+    ],
+    selectedSlot: undefined,
+    // Varying stats system (always 3 stats)
+    maxVaryingStats: 3,
+    varyingStatOptions: [
+      {
+        statId: 'allSkillAmp',
+        name: 'All Skill Amp',
+        values: [4]
+      },
+      {
+        statId: 'criticalDamage',
+        name: 'Crit DMG',
+        values: [7, 9]
+      }
+    ],
+    selectedVaryingStats: [],
+    hasChaosUpgrade: true,
+    chaosUpgradeLevel: 0
+  },
+  {
+    id: 'gaia_force_amulet_highest',
+    name: 'Gaia Force Amulet (highest)',
+    type: 'amulet',
+    subtype: 'amulet',
+    grade: 'unique',
+    imagePath: '/images/equipment-system/amulets/orphidia-amulet.png', // Placeholder - using Orphidia's amulet icon temporarily
+    baseStats: {
+      allAttackUp: 70,
+      defense: 120,
+      evasion: 240,
+      accuracy: 240,
+      maxCriticalRate: 5
+    },
+    isUnique: true,
+    // Slot system (max 1 slot)
+    hasSlot: true,
+    maxSlots: 1,
+    slotOptions: [
+      {
+        statId: 'auraDurationIncrease',
+        name: 'Aura Duration Increase',
+        value: 6
+      },
+      {
+        statId: 'allAttackUpPercent',
+        name: 'All Attack Up %',
+        value: 2
+      }
+    ],
+    selectedSlot: undefined,
+    // Varying stats system (always 3 stats)
+    maxVaryingStats: 3,
+    varyingStatOptions: [
+      {
+        statId: 'allSkillAmp',
+        name: 'All Skill Amp',
+        values: [5]
+      },
+      {
+        statId: 'criticalDamage',
+        name: 'Crit DMG',
+        values: [9, 11]
+      }
+    ],
+    selectedVaryingStats: [],
+    hasChaosUpgrade: true,
+    chaosUpgradeLevel: 0
+  },
+  {
+    id: 'terra_force_amulet',
+    name: 'Terra Force Amulet',
+    type: 'amulet',
+    subtype: 'amulet',
+    grade: 'unique',
+    imagePath: '/images/equipment-system/amulets/orphidia-amulet.png', // Placeholder - using Orphidia's amulet icon temporarily
+    baseStats: {
+      allAttackUp: 35,
+      defense: 80,
+      evasion: 160,
+      accuracy: 160,
+      maxCriticalRate: 4
+    },
+    isUnique: true,
+    // Slot system (max 1 slot)
+    hasSlot: true,
+    maxSlots: 1,
+    slotOptions: [
+      {
+        statId: 'auraDurationIncrease',
+        name: 'Aura Duration Increase',
+        value: 6
+      },
+      {
+        statId: 'allAttackUpPercent',
+        name: 'All Attack Up %',
+        value: 2
+      }
+    ],
+    selectedSlot: undefined,
+    // Varying stats system (always 3 stats)
+    maxVaryingStats: 3,
+    varyingStatOptions: [
+      {
+        statId: 'allSkillAmp',
+        name: 'All Skill Amp',
+        values: [3, 4]
+      },
+      {
+        statId: 'criticalDamage',
+        name: 'Crit DMG',
+        values: [5, 7, 9]
       }
     ],
     selectedVaryingStats: [],

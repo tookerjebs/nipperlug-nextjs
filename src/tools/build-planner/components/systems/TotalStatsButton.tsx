@@ -24,7 +24,7 @@ export const TotalStatsButton: React.FC<TotalStatsButtonProps> = ({
 
   // Helper function to check if a stat is a pseudo stat
   const isPseudoStat = (stat: string): boolean => {
-    const pseudoStats = ['allAttackUp', 'pveAllAttackUp', 'pvpAllAttackUp', 'allSkillAmp', 'str', 'int', 'dex'];
+    const pseudoStats = ['allAttackUp', 'allAttackUpPercent', 'pveAllAttackUp', 'pvpAllAttackUp', 'allSkillAmp', 'str', 'int', 'dex'];
     return pseudoStats.includes(stat);
   };
 

@@ -142,7 +142,8 @@ export const createBroochWithVaryingStats = (
   return {
     ...brooch,
     selectedVaryingStats: [...varyingStats],
-    selectedSlot: selectedSlot || brooch.selectedSlot
+    // Use the passed selectedSlot value directly (undefined means no slot selected)
+    selectedSlot
   };
 };
 

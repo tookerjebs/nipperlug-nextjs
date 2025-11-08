@@ -146,7 +146,8 @@ export const createEarringWithVaryingStats = (
   return {
     ...earring,
     selectedVaryingStats: [...varyingStats],
-    selectedSlot: selectedSlot || earring.selectedSlot
+    // Use the passed selectedSlot value directly (undefined means no slot selected)
+    selectedSlot
   };
 };
 

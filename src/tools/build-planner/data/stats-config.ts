@@ -234,6 +234,15 @@ export const statsConfig: StatsConfig = {
       icon: "/images/stat icons/all_atk_icon.png"
     },
 
+    allAttackUpPercent: {
+      name: "All Attack Up %",
+      category: "offensive",
+      isPercentage: true,
+      description: "Increases Attack and Magic Attack by a percentage",
+      variants: ["pvp", "pve"],
+      icon: "/images/stat icons/all_atk_percent_icon.png"
+    },
+
     allSkillAmp: {
       name: "All Skill Amp.",
       category: "offensive",

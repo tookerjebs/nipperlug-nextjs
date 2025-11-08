@@ -129,8 +129,15 @@ function processPseudoStats(stats: BuildStats, selectedClass: CharacterClass | n
   }
   
   // Process allAttackUp - increases both physical and magic attack
+  // Also applies allAttackUpPercent if present (percentage bonus to allAttackUp)
   if (processedStats.allAttackUp) {
-    const allAttackUpValue = processedStats.allAttackUp;
+    let allAttackUpValue = processedStats.allAttackUp;
+    
+    // Apply allAttackUpPercent if it exists (adds percentage bonus to allAttackUp)
+    if (processedStats.allAttackUpPercent) {
+      const percentBonus = allAttackUpValue * (processedStats.allAttackUpPercent / 100);
+      allAttackUpValue = allAttackUpValue + percentBonus;
+    }
     
     // Add to attack
     processedStats.attack = (processedStats.attack || 0) + allAttackUpValue;
@@ -138,8 +145,14 @@ function processPseudoStats(stats: BuildStats, selectedClass: CharacterClass | n
     // Add to magicAttack
     processedStats.magicAttack = (processedStats.magicAttack || 0) + allAttackUpValue;
     
-    // Remove the pseudo-stat from final stats to avoid double counting in CP calculations
+    // Remove the pseudo-stats from final stats to avoid double counting in CP calculations
     delete processedStats.allAttackUp;
+    if (processedStats.allAttackUpPercent) {
+      delete processedStats.allAttackUpPercent;
+    }
+  } else if (processedStats.allAttackUpPercent) {
+    // If only allAttackUpPercent exists without allAttackUp, remove it (no base to apply to)
+    delete processedStats.allAttackUpPercent;
   }
 
   // Process pveAllAttackUp - increases both PvE physical and magic attack

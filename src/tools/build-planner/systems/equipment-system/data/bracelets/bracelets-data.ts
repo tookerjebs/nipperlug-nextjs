@@ -152,7 +152,8 @@ export const createBraceletWithVaryingStats = (
   return {
     ...bracelet,
     selectedVaryingStats: [...varyingStats],
-    selectedSlot: selectedSlot || bracelet.selectedSlot
+    // Use the passed selectedSlot value directly (undefined means no slot selected)
+    selectedSlot
   };
 };
 

@@ -44,45 +44,23 @@ const CascadingEpicDropdown: React.FC<CascadingEpicDropdownProps> = ({
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownContentRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const categoryRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-        setExpandedCategory(null);
-        setSearchTerm('');
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  // Handler functions
+  const handleClose = () => {
+    setIsOpen(false);
+    setExpandedCategory(null);
+    setSearchTerm('');
+  };
 
   // Focus search input when dropdown opens
   useEffect(() => {
     if (isOpen && searchInputRef.current) {
       setTimeout(() => searchInputRef.current?.focus(), 100);
     }
-  }, [isOpen]);
-
-  // Keyboard navigation
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setIsOpen(false);
-        setExpandedCategory(null);
-        setSearchTerm('');
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen]);
 
   // Auto-scroll to expanded category and smooth focus behavior
@@ -248,33 +226,60 @@ const CascadingEpicDropdown: React.FC<CascadingEpicDropdownProps> = ({
         </div>
       </button>
 
-      {/* Dropdown Content */}
+      {/* Modal Overlay */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-theme-dark border border-border-dark rounded-md shadow-lg z-50 max-h-96 overflow-hidden">
-          {/* Search Bar */}
-          <div className="p-3 border-b border-border-dark">
-            <div className="relative">
-              <input
-                ref={searchInputRef}
-                type="text"
-                placeholder="Search epic options..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-theme-darker border border-border-dark rounded px-3 py-2 pl-9 text-sm focus:outline-none focus:border-game-highlight"
-              />
-              <svg 
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-          </div>
+        <>
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-70 z-[100]"
+            onClick={handleClose}
+          />
+          
+          {/* Centered Modal */}
+          <div 
+            ref={dropdownContentRef} 
+            className="fixed inset-0 z-[101] flex items-center justify-center p-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="bg-theme-dark border border-border-dark rounded-md shadow-lg w-full max-w-lg max-h-[90vh] flex flex-col overflow-hidden">
+              {/* Header with Close Button */}
+              <div className="flex items-center justify-between p-4 border-b border-border-dark">
+                <h3 className="text-lg font-semibold text-game-gold">Select Epic Option</h3>
+                <button
+                  onClick={handleClose}
+                  className="text-gray-400 hover:text-white transition-colors focus:outline-none hover:bg-black/20 rounded p-1"
+                  aria-label="Close"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </button>
+              </div>
 
-          {/* Categories and Options */}
-          <div ref={scrollContainerRef} className="max-h-80 overflow-y-auto dark-scrollbar">
+              {/* Search Bar */}
+              <div className="p-3 border-b border-border-dark">
+                <div className="relative">
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    placeholder="Search epic options..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full bg-theme-darker border border-border-dark rounded px-3 py-2 pl-9 text-sm focus:outline-none focus:border-game-highlight"
+                  />
+                  <svg 
+                    className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Categories and Options */}
+              <div ref={scrollContainerRef} className="flex-1 overflow-y-auto dark-scrollbar min-h-0">
             {filteredCategories.length === 0 ? (
               <div className="p-4 text-center text-gray-400">
                 No epic options found
@@ -366,21 +371,23 @@ const CascadingEpicDropdown: React.FC<CascadingEpicDropdownProps> = ({
                 </div>
               ))
             )}
-          </div>
+              </div>
 
-          {/* Quick Actions */}
-          {selectedOption && (
-            <div className="p-3 border-t border-border-dark bg-theme-darker">
-              <button
-                type="button"
-                onClick={handleClearSelection}
-                className="w-full px-3 py-2 text-sm text-red-400 hover:text-red-300 hover:bg-red-900/20 rounded transition-colors"
-              >
-                Clear Selection
-              </button>
+              {/* Quick Actions */}
+              {selectedOption && (
+                <div className="p-3 border-t border-border-dark bg-theme-darker">
+                  <button
+                    type="button"
+                    onClick={handleClearSelection}
+                    className="w-full px-3 py-2 text-sm text-red-400 hover:text-red-300 hover:bg-red-900/20 rounded transition-colors"
+                  >
+                    Clear Selection
+                  </button>
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          </div>
+        </>
       )}
     </div>
   );

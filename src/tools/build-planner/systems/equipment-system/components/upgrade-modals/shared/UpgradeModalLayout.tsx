@@ -110,7 +110,7 @@ const UpgradeModalLayout: React.FC<UpgradeModalLayoutProps> = ({
 
         {/* Scrollable content area - now takes full remaining space */}
         <div className="flex-1 overflow-y-auto dark-scrollbar p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full pb-12">
             {/* Left column - Configuration controls */}
             <div>
               {leftContent}

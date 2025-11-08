@@ -34,120 +34,100 @@ export const armorEpicOptionsByGradeAndType: Record<string, Record<ArmorStatType
     body: {
       swordSkillAmp: [2, 3, 4, 5, 6, 7],
       magicSkillAmp: [2, 3, 4, 5, 6, 7],
-      resistCriticalDamage: [1, 2, 3, 4, 5, 6],
     },
     helmet: {
       swordSkillAmp: [2, 3, 4, 5, 6, 7],
       magicSkillAmp: [2, 3, 4, 5, 6, 7],
-      resistSkillAmp: [2, 3, 4, 5, 6, 7],
       criticalDamage: [6, 7, 10, 17, 18, 20],
       criticalRate: [3, 4, 5, 8, 9, 10],
     },
     gauntlet: {
       swordSkillAmp: [2, 3, 4, 5, 6, 7],
       magicSkillAmp: [2, 3, 4, 5, 6, 7],
-      damageReduction: [1, 2, 3, 4, 5, 6],
     },
     shoes: {
       swordSkillAmp: [2, 3, 4, 5, 6, 7],
       magicSkillAmp: [2, 3, 4, 5, 6, 7],
-      resistCriticalDamage: [1, 2, 3, 4, 5, 6],
     }
   },
   medium: {
     body: {
       swordSkillAmp: [2, 3, 4, 6, 7, 8],
       magicSkillAmp: [2, 3, 4, 6, 7, 8],
-      resistCriticalDamage: [2, 3, 4, 5, 6, 7],
     },
     helmet: {
       swordSkillAmp: [2, 3, 4, 6, 7, 8],
       magicSkillAmp: [2, 3, 4, 6, 7, 8],
-      resistSkillAmp: [2, 3, 4, 6, 7, 8],
       criticalDamage: [6, 7, 10, 16, 18, 20],
       criticalRate: [3, 4, 5, 8, 9, 10],
     },
     gauntlet: {
       swordSkillAmp: [2, 3, 4, 6, 7, 8],
       magicSkillAmp: [2, 3, 4, 6, 7, 8],
-      damageReduction: [2, 3, 4, 5, 6, 7],
     },
     shoes: {
       swordSkillAmp: [2, 3, 4, 6, 7, 8],
       magicSkillAmp: [2, 3, 4, 6, 7, 8],
-      resistCriticalDamage: [2, 3, 4, 5, 6, 7],
     }
   },
   high: {
     body: {
       swordSkillAmp: [3, 4, 5, 7, 8, 10],
       magicSkillAmp: [3, 4, 5, 7, 8, 10],
-      resistCriticalDamage: [2, 3, 4, 6, 7, 8],
     },
     helmet: {
       swordSkillAmp: [3, 4, 5, 7, 8, 10],
       magicSkillAmp: [3, 4, 5, 7, 8, 10],
-      resistSkillAmp: [3, 4, 5, 7, 8, 10],
       criticalDamage: [6, 7, 10, 16, 18, 20],
       criticalRate: [3, 4, 5, 8, 9, 10],
     },
     gauntlet: {
       swordSkillAmp: [3, 4, 5, 7, 8, 10],
       magicSkillAmp: [3, 4, 5, 7, 8, 10],
-      damageReduction: [2, 3, 4, 6, 7, 8],
     },
     shoes: {
       swordSkillAmp: [3, 4, 5, 7, 8, 10],
       magicSkillAmp: [3, 4, 5, 7, 8, 10],
-      resistCriticalDamage: [2, 3, 4, 6, 7, 8],
     }
   },
   highest: {
     body: {
       swordSkillAmp: [3, 4, 5, 7, 8, 10],
       magicSkillAmp: [3, 4, 5, 7, 8, 10],
-      resistCriticalDamage: [3, 4, 5, 6, 7, 9],
     },
     helmet: {
       swordSkillAmp: [3, 4, 5, 7, 8, 10],
       magicSkillAmp: [3, 4, 5, 7, 8, 10],
-      resistSkillAmp: [3, 4, 5, 7, 8, 10],
       criticalDamage: [6, 7, 10, 16, 18, 20],
       criticalRate: [3, 4, 5, 8, 9, 10],
     },
     gauntlet: {
       swordSkillAmp: [3, 4, 5, 7, 8, 10],
       magicSkillAmp: [3, 4, 5, 7, 8, 10],
-      damageReduction: [3, 4, 5, 6, 7, 9],
     },
     shoes: {
       swordSkillAmp: [3, 4, 5, 7, 8, 10],
       magicSkillAmp: [3, 4, 5, 7, 8, 10],
-      resistCriticalDamage: [3, 4, 5, 6, 7, 9],
     }
   },
   ultimate: {
     body: {
       swordSkillAmp: [4, 5, 6, 8, 9, 11],
       magicSkillAmp: [4, 5, 6, 8, 9, 11],
-      resistCriticalDamage: [3, 4, 6, 7, 8, 10],
     },
     helmet: {
       swordSkillAmp: [4, 5, 6, 8, 9, 11],
       magicSkillAmp: [4, 5, 6, 8, 9, 11],
-      resistSkillAmp: [4, 5, 6, 8, 9, 11],
       criticalDamage: [9, 11, 13, 19, 23, 27],
       criticalRate: [4, 5, 6, 9, 10, 11],
     },
     gauntlet: {
       swordSkillAmp: [4, 5, 6, 8, 9, 11],
       magicSkillAmp: [4, 5, 6, 8, 9, 11],
-      damageReduction: [3, 4, 6, 7, 8, 10],
     },
     shoes: {
       swordSkillAmp: [4, 5, 6, 8, 9, 11],
       magicSkillAmp: [4, 5, 6, 8, 9, 11],
-      resistCriticalDamage: [3, 4, 6, 7, 8, 10],
     }
   }
 };
@@ -316,7 +296,7 @@ export const armorMasterEpicOptions: Record<string, Record<ArmorStatType, Record
 /**
  * Get epic option stat value for a specific armor type, stat, grade and level
  * @param armorType The armor subtype (body, helmet, gauntlet, shoes)
- * @param stat The stat type (swordSkillAmp, magicSkillAmp, resistCriticalDamage, resistSkillAmp, damageReduction, criticalDamage, criticalRate)
+ * @param stat The stat type (swordSkillAmp, magicSkillAmp, criticalDamage, criticalRate)
  * @param grade The equipment grade (low, medium, high, highest, ultimate)
  * @param level The epic option level (1=Very Low, 2=Low, 3=Medium Low, 4=Medium High, 5=High, 6=Very High)
  * @returns The stat value for the specified parameters, or 0 if not available

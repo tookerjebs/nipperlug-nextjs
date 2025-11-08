@@ -155,8 +155,8 @@ export default function ExtremeUpgradeCalculator() {
     let totalCoresNeeded = 0;
     let averageSuccessRate = 0;
     let validLevels = 0;
-    let expectedBreaks = 0;
-    let expectedResets = 0;
+    const expectedBreaks = 0;
+    const expectedResets = 0;
     
 
     

@@ -129,7 +129,7 @@ export const useHonorMedalStore = create<
           const slotState = newSlotStates[s.id];
           const isOccupied = !!slotState?.statId;
           
-          let contributedStats: Record<string, number> = {};
+          const contributedStats: Record<string, number> = {};
           if (isOccupied && slotState.statId) {
             const statDef = HonorMedalData.rankStats[s.category]?.find(stat => stat.id === slotState.statId);
             if (statDef) {

@@ -226,7 +226,7 @@ export default function PenetrationEffectivenessTable() {
                     </tr>
                     
                     {/* Defense Rows for this stage */}
-                    {defenseList.map((defense, defenseIndex) => (
+                    {defenseList.map((defense) => (
                       <tr 
                         key={defense} 
                         className={`border-b border-border-dark/50 hover:bg-theme-light/30 ${stageInfo.color}`}

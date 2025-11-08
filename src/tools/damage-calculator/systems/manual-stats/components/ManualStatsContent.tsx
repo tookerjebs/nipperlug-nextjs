@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
-import { getStatInfo, formatStatValue, getStatsByCategory } from '../../../data/stats-config';
+import React, { useState } from 'react';
+import { getStatsByCategory, getStatInfo } from '../../../data/stats-config';
 import { useManualStatsStore } from '../stores/manual-stats-store';
 
 interface ManualStatsContentProps {

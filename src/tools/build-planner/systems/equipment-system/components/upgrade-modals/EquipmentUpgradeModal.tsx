@@ -678,7 +678,7 @@ const EquipmentUpgradeModal: React.FC<EquipmentUpgradeModalProps> = ({
                   }
                   
                   // Format display value
-                  let displayValue = formatStatValue(stat, value as number);
+                  const displayValue = formatStatValue(stat, value as number);
                   let enhancementNote = '';
                   
                   // If slot extender is active, show the enhanced value with the standard value for comparison

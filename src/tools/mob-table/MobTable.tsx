@@ -21,7 +21,6 @@ export const MobTable: React.FC = () => {
   const [sortConfig, setSortConfig] = useState<SortConfig>({ key: 'Name', direction: 'asc' });
   const [selectedMonster, setSelectedMonster] = useState<MonsterStats | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSorting, setIsSorting] = useState(false);
 
   // Get dungeon IDs for filter dropdown
   const dungeonIds = useMemo(() => getDungeonIds(), [getDungeonIds]);
@@ -33,12 +32,12 @@ export const MobTable: React.FC = () => {
   const filteredAndSortedMonsters = useMemo(() => {
     if (isLoading) return [];
     
-    let monsters = searchMonsters(searchTerm, filters, 5000); // Get all results for proper sorting
+    const monsters = searchMonsters(searchTerm, filters, 5000); // Get all results for proper sorting
     
     // Apply sorting - always sort since we only have asc/desc states
     monsters.sort((a, b) => {
-      let aValue = a[sortConfig.key as keyof MonsterStats];
-      let bValue = b[sortConfig.key as keyof MonsterStats];
+      const aValue = a[sortConfig.key as keyof MonsterStats];
+      const bValue = b[sortConfig.key as keyof MonsterStats];
       
       // Handle null/undefined values
       if (aValue == null && bValue == null) return 0;
@@ -88,19 +87,16 @@ export const MobTable: React.FC = () => {
 
   // Handler functions
   const handleSort = (key: string) => {
-    setIsSorting(true);
     setSortConfig(prevSort => {
       if (prevSort.key === key) {
         // Cycle through: asc -> desc -> asc (only two states)
-        const newDirection: SortDirection = 
+        const newDirection: SortDirection =
           prevSort.direction === 'asc' ? 'desc' : 'asc';
         return { key, direction: newDirection };
       } else {
         return { key, direction: 'asc' };
       }
     });
-    // Reset sorting state after a brief delay
-    setTimeout(() => setIsSorting(false), 100);
   };
 
   const handleColumnToggle = (columnKey: string, visible: boolean) => {

@@ -100,7 +100,7 @@ export const useClassPassiveSkillsStore = create<ClassPassiveSkillsStore>()(
 
     restoreFromImport: (selectedClass: CharacterClass | null, passiveSkills: Record<string, number>) => {
       // Validate imported skills against the selected class
-      let validSkills: Record<string, number> = {};
+      const validSkills: Record<string, number> = {};
       if (selectedClass) {
         const availableSkills = getPassiveSkillsForClass(selectedClass);
         Object.entries(passiveSkills).forEach(([skillId, level]) => {

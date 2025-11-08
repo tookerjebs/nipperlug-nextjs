@@ -1,7 +1,6 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import { useStatRegistryStore } from '../../../stores/statRegistryStore';
-import { BuildStats } from '../../../stores/buildPlannerStore';
 import { ManualStatsStore } from '../types';
 
 const SYSTEM_ID = 'manual-stats';

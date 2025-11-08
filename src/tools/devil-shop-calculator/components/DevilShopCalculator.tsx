@@ -140,7 +140,7 @@ export default function DevilShopCalculator() {
 
   // Filter and sort items
   const filteredAndSortedItems = useMemo(() => {
-    let filtered = DEVIL_SHOP_ITEMS.filter(item => {
+    const filtered = DEVIL_SHOP_ITEMS.filter(item => {
       const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesTokenType = !tokenTypeFilter || item.tokenType === tokenTypeFilter;
       const matchesFavorites = !showOnlyFavorites || favorites.has(item.name);

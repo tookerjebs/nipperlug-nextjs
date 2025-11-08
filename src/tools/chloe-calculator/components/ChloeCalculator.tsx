@@ -150,7 +150,7 @@ export default function ChloeCalculator() {
 
   // Filter and sort recipes
   const filteredAndSortedRecipes = useMemo(() => {
-    let filtered = CHLOE_RECIPES.filter(recipe => {
+    const filtered = CHLOE_RECIPES.filter(recipe => {
       const recipeId = `${recipe.name}-${recipe.recipe}`;
       
       const matchesSearch = recipe.name.toLowerCase().includes(searchTerm.toLowerCase()) ||

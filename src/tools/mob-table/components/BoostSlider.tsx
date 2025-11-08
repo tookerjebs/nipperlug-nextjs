@@ -10,8 +10,6 @@ export const BoostSlider: React.FC<BoostSliderProps> = ({
   currentLevel,
   onLevelChange
 }) => {
-  const boostLevels = getBoostLevels();
-  
   return (
     <div className="flex items-center gap-3 px-2 py-1">
       <label className="text-xs font-medium text-foreground/70 whitespace-nowrap">

@@ -5,8 +5,7 @@
 
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
-import { usePriceStore } from '@/stores/priceStore';
+import React from 'react';
 
 interface DevilShopFiltersProps {
   searchTerm: string;

@@ -207,7 +207,7 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
       
       // Iterative approach: keep filling until no more progress can be made or points run out
       let progressMade = true;
-      let maxIterations = 100; // Safety limit to prevent infinite loops
+      const maxIterations = 100; // Safety limit to prevent infinite loops
       let iterations = 0;
       
       while (progressMade && iterations < maxIterations && currentPointsSpent < state.maxPointsAllowed) {

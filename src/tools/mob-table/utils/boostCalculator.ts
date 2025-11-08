@@ -63,7 +63,7 @@ export function calculateAllBoostedStats(
   const boostedStats: BoostedStats = {};
 
   // Calculate boost for all stats that have boost configurations
-  Object.entries(boostData.boostStats).forEach(([statKey, statConfig]) => {
+  Object.entries(boostData.boostStats).forEach(([statKey]) => {
     if (monster[statKey as keyof MonsterStats] !== undefined) {
       const originalValue = monster[statKey as keyof MonsterStats] as number;
       boostedStats[statKey] = calculateBoostedStat(originalValue, statKey, boostLevel);

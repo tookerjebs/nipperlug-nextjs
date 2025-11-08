@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { getStatsByCategory, getStatInfo, statsConfig } from '../build-planner/data/stats-config';
+import { getStatInfo, statsConfig } from '../build-planner/data/stats-config';
 import { StatIconClient } from './components/StatIconClient';
 import { statIdToSlug, getTargetStatSlug } from '../../utils/stat-url-utils';
 import { ChevronRight } from 'lucide-react';

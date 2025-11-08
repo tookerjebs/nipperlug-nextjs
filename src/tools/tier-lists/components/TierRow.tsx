@@ -7,14 +7,13 @@ import { ClassIcon } from '../../../components/ui/ClassIcon';
 
 interface TierRowProps {
   tierData: TierData;
-  tierListId: string;
 }
 
 const getTierColors = (tier: string) => {
   return TIER_COLORS[tier as keyof typeof TIER_COLORS] || TIER_COLORS.default;
 };
 
-export default function TierRow({ tierData, tierListId }: TierRowProps) {
+export default function TierRow({ tierData }: TierRowProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const colors = getTierColors(tierData.tier);
 

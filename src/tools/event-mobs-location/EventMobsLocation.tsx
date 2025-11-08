@@ -4,7 +4,6 @@ import { useState, useRef, useMemo, useEffect } from 'react';
 import {
   getAllEventMobs,
   getMobSpawnersOnMap,
-  WORLD_ID_MAP,
   AVAILABLE_MAPS,
 } from '@/lib/game-data/event-mobs';
 import { Clipboard } from 'lucide-react';

@@ -304,24 +304,24 @@ export function calculateDamageWithSteps(
   const swordCritAmp = totalSwordAmp; // No bonus for crits
   
   // Normal hit calculation path
-  let swordNormalAmplifiedDamage = swordBaseDamage * (100 + swordNormalAmp) / 100;
-  let swordNormalLevelAdjustedDamage = swordNormalAmplifiedDamage * (100 - levelPenaltyPercent) / 100;
-  let swordNormalDefenseAdjustedDamage = swordNormalLevelAdjustedDamage * (1 - finalDefenseReduction);
-  let swordNormalDamageWithNormalUp = swordNormalDefenseAdjustedDamage * (100 + normalDamageUp) / 100;
+  const swordNormalAmplifiedDamage = swordBaseDamage * (100 + swordNormalAmp) / 100;
+  const swordNormalLevelAdjustedDamage = swordNormalAmplifiedDamage * (100 - levelPenaltyPercent) / 100;
+  const swordNormalDefenseAdjustedDamage = swordNormalLevelAdjustedDamage * (1 - finalDefenseReduction);
+  const swordNormalDamageWithNormalUp = swordNormalDefenseAdjustedDamage * (100 + normalDamageUp) / 100;
   
   // Critical hit calculation path
-  let swordCritAmplifiedDamage = swordBaseDamage * (100 + swordCritAmp) / 100;
-  let swordCritLevelAdjustedDamage = swordCritAmplifiedDamage * (100 - levelPenaltyPercent) / 100;
-  let swordCritDefenseAdjustedDamage = swordCritLevelAdjustedDamage * (1 - finalDefenseReduction);
-  let swordCriticalDamageValue = swordCritDefenseAdjustedDamage * (100 + effectiveCritDamage) / 100;
+  const swordCritAmplifiedDamage = swordBaseDamage * (100 + swordCritAmp) / 100;
+  const swordCritLevelAdjustedDamage = swordCritAmplifiedDamage * (100 - levelPenaltyPercent) / 100;
+  const swordCritDefenseAdjustedDamage = swordCritLevelAdjustedDamage * (1 - finalDefenseReduction);
+  const swordCriticalDamageValue = swordCritDefenseAdjustedDamage * (100 + effectiveCritDamage) / 100;
   
   // Now apply Add Damage, Enemy Damage Reduction (after ignore damage reduction), and Final modifiers
-  let swordNormalWithAddDamage = swordNormalDamageWithNormalUp + addDamage;
-  let swordCritWithAddDamage = swordCriticalDamageValue + addDamage;
-  let swordNormalAfterDamageReduction = (swordNormalWithAddDamage - effectiveEnemyDamageReduction) * (100 - effectiveEnemyDamageReductionPercent) / 100;
-  let swordCritAfterDamageReduction = (swordCritWithAddDamage - effectiveEnemyDamageReduction) * (100 - effectiveEnemyDamageReductionPercent) / 100;
-  let swordNormalFinalDamage = swordNormalAfterDamageReduction * (100 + finalDamageIncreased) / 100 * (100 - enemyFinalDamageDecrease) / 100;
-  let swordCritFinalDamage = swordCritAfterDamageReduction * (100 + finalDamageIncreased) / 100 * (100 - enemyFinalDamageDecrease) / 100;
+  const swordNormalWithAddDamage = swordNormalDamageWithNormalUp + addDamage;
+  const swordCritWithAddDamage = swordCriticalDamageValue + addDamage;
+  const swordNormalAfterDamageReduction = (swordNormalWithAddDamage - effectiveEnemyDamageReduction) * (100 - effectiveEnemyDamageReductionPercent) / 100;
+  const swordCritAfterDamageReduction = (swordCritWithAddDamage - effectiveEnemyDamageReduction) * (100 - effectiveEnemyDamageReductionPercent) / 100;
+  const swordNormalFinalDamage = swordNormalAfterDamageReduction * (100 + finalDamageIncreased) / 100 * (100 - enemyFinalDamageDecrease) / 100;
+  const swordCritFinalDamage = swordCritAfterDamageReduction * (100 + finalDamageIncreased) / 100 * (100 - enemyFinalDamageDecrease) / 100;
   
   // Apply variance for sword
   const swordVariance = 0.20; // 20% variance for sword normal hits (0.80 to 1.0, official Korean documentation)
@@ -342,24 +342,24 @@ export function calculateDamageWithSteps(
   const magicCritAmp = totalMagicAmp; // No bonus for crits
   
   // Normal hit calculation path
-  let magicNormalAmplifiedDamage = magicBaseDamage * (100 + magicNormalAmp) / 100;
-  let magicNormalLevelAdjustedDamage = magicNormalAmplifiedDamage * (100 - levelPenaltyPercent) / 100;
-  let magicNormalDefenseAdjustedDamage = magicNormalLevelAdjustedDamage * (1 - finalDefenseReduction);
-  let magicNormalDamageValue = magicNormalDefenseAdjustedDamage * (100 + normalDamageUp) / 100;
+  const magicNormalAmplifiedDamage = magicBaseDamage * (100 + magicNormalAmp) / 100;
+  const magicNormalLevelAdjustedDamage = magicNormalAmplifiedDamage * (100 - levelPenaltyPercent) / 100;
+  const magicNormalDefenseAdjustedDamage = magicNormalLevelAdjustedDamage * (1 - finalDefenseReduction);
+  const magicNormalDamageValue = magicNormalDefenseAdjustedDamage * (100 + normalDamageUp) / 100;
   
   // Critical hit calculation path
-  let magicCritAmplifiedDamage = magicBaseDamage * (100 + magicCritAmp) / 100;
-  let magicCritLevelAdjustedDamage = magicCritAmplifiedDamage * (100 - levelPenaltyPercent) / 100;
-  let magicCritDefenseAdjustedDamage = magicCritLevelAdjustedDamage * (1 - finalDefenseReduction);
-  let magicCriticalDamageValue = magicCritDefenseAdjustedDamage * (100 + effectiveCritDamage) / 100;
+  const magicCritAmplifiedDamage = magicBaseDamage * (100 + magicCritAmp) / 100;
+  const magicCritLevelAdjustedDamage = magicCritAmplifiedDamage * (100 - levelPenaltyPercent) / 100;
+  const magicCritDefenseAdjustedDamage = magicCritLevelAdjustedDamage * (1 - finalDefenseReduction);
+  const magicCriticalDamageValue = magicCritDefenseAdjustedDamage * (100 + effectiveCritDamage) / 100;
   
   // Now apply Add Damage, Enemy Damage Reduction (after ignore damage reduction), and Final modifiers
-  let magicNormalWithAddDamage = magicNormalDamageValue + addDamage;
-  let magicCritWithAddDamage = magicCriticalDamageValue + addDamage;
-  let magicNormalAfterDamageReduction = (magicNormalWithAddDamage - effectiveEnemyDamageReduction) * (100 - effectiveEnemyDamageReductionPercent) / 100;
-  let magicCritAfterDamageReduction = (magicCritWithAddDamage - effectiveEnemyDamageReduction) * (100 - effectiveEnemyDamageReductionPercent) / 100;
-  let magicNormalFinalDamage = magicNormalAfterDamageReduction * (100 + finalDamageIncreased) / 100 * (100 - enemyFinalDamageDecrease) / 100;
-  let magicCritFinalDamage = magicCritAfterDamageReduction * (100 + finalDamageIncreased) / 100 * (100 - enemyFinalDamageDecrease) / 100;
+  const magicNormalWithAddDamage = magicNormalDamageValue + addDamage;
+  const magicCritWithAddDamage = magicCriticalDamageValue + addDamage;
+  const magicNormalAfterDamageReduction = (magicNormalWithAddDamage - effectiveEnemyDamageReduction) * (100 - effectiveEnemyDamageReductionPercent) / 100;
+  const magicCritAfterDamageReduction = (magicCritWithAddDamage - effectiveEnemyDamageReduction) * (100 - effectiveEnemyDamageReductionPercent) / 100;
+  const magicNormalFinalDamage = magicNormalAfterDamageReduction * (100 + finalDamageIncreased) / 100 * (100 - enemyFinalDamageDecrease) / 100;
+  const magicCritFinalDamage = magicCritAfterDamageReduction * (100 + finalDamageIncreased) / 100 * (100 - enemyFinalDamageDecrease) / 100;
   
   const magicMinNormalDamage = Math.max(1, magicNormalFinalDamage);
   const magicMaxNormalDamage = Math.max(1, magicNormalFinalDamage);

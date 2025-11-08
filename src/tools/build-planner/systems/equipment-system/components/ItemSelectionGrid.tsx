@@ -136,7 +136,7 @@ function ItemSelectionGrid<T extends BaseEquipmentItem>({
 
   // Default tooltip generator
   const getDefaultTooltip = (item: T) => {
-    let tooltip = `${item.name} - ${item.grade}`;
+    const tooltip = `${item.name} - ${item.grade}`;
     // Remove upgrade information from tooltips for accessories
     return tooltip;
   };

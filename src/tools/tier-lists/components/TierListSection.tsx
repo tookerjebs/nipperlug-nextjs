@@ -21,10 +21,9 @@ export default function TierListSection({ tierListData }: TierListSectionProps) 
       {/* Tier Rows */}
       <div className="space-y-3">
         {tierListData.tiers.map((tier) => (
-          <TierRow 
-            key={tier.tier} 
-            tierData={tier} 
-            tierListId={tierListData.id}
+          <TierRow
+            key={tier.tier}
+            tierData={tier}
           />
         ))}
       </div>

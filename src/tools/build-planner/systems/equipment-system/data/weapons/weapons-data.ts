@@ -6,14 +6,6 @@
 
 // Type definitions moved to ./types.ts
 import {
-  WeaponStats,
-  WeaponUpgradeStats,
-  ExtremeUpgradeLevel,
-  DivineUpgradeLevel,
-  EpicOption,
-  SlotOption,
-  WeaponGradeData,
-  WeaponTemplate,
   Weapon,
   WeaponStatType
 } from './types';
@@ -33,15 +25,6 @@ export const materialGrades: Record<string, string> = {
 import { weaponTemplates } from './weapon-templates';
 import { extremeUpgrades, getExtremeUpgradeStats } from './extreme-upgrades';
 import { divineUpgrades, getDivineUpgradeStats } from './divine-upgrades';
-import { 
-  epicOptionSuffixes, 
-  epicOptionLevels, 
-  slotOptions, 
-  enhancedSlotOptions,
-  getEpicOptionStatValue,
-  getEpicOptionSuffix,
-  getAvailableEpicStats
-} from './epic-options';
 
 /**
  * Weapon templates for different weapon types

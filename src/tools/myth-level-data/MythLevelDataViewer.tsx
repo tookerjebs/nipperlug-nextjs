@@ -11,7 +11,7 @@ export function MythLevelDataViewer() {
 
   // Filter and sort nodes - but filter individual stats within nodes
   const filteredNodes = useMemo(() => {
-    let processedNodes = mythLevelData.map(node => {
+    const processedNodes = mythLevelData.map(node => {
       // First apply node-level filters
       if (selectedNodeId !== null && node.nodeId !== selectedNodeId) {
         return null; // Skip this entire node

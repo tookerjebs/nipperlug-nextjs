@@ -245,7 +245,7 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
       
       // Iterative approach: keep filling until no more progress can be made
       let progressMade = true;
-      let maxIterations = 100; // Safety limit to prevent infinite loops
+      const maxIterations = 100; // Safety limit to prevent infinite loops
       let iterations = 0;
       
       while (progressMade && iterations < maxIterations) {

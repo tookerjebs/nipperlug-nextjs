@@ -10,6 +10,12 @@ import { getEquipmentStrategy } from '../../../strategies/equipment-strategy';
 // Equipment types and strategy pattern
 import { Equipment, isVehicle } from '../../../types/base-equipment';
 
+// Master epic option definition types
+import { WeaponMasterEpicOptionDefinition } from '../../../data/weapons/epic-options';
+import { ArmorMasterEpicOptionDefinition } from '../../../data/armor/armor-epic-options';
+
+type MasterEpicOptionDefinition = WeaponMasterEpicOptionDefinition | ArmorMasterEpicOptionDefinition;
+
 /**
  * Transform normal epic options into cascading dropdown format
  */
@@ -80,7 +86,7 @@ export const transformMasterEpicOptions = (equipment: Equipment): EpicCategory[]
 
   availableOptions.forEach(optionName => {
     // Get definition and max level using strategy pattern
-    const definition = strategy.getMasterEpicOptionDefinition(optionName);
+    const definition = strategy.getMasterEpicOptionDefinition(optionName) as MasterEpicOptionDefinition | null;
     const maxLevel = strategy.getMasterEpicOptionMaxLevel(optionName);
 
     if (!definition) return;

@@ -7,7 +7,6 @@
 import { 
   BaseEquipment, 
   Equipment, 
-  ConfiguredEquipment,
   WeaponEquipment,
   ArmorEquipment,
   VehicleEquipment,
@@ -35,7 +34,6 @@ import { getDivineUpgradeStats as getWeaponDivineUpgradeStats } from '../data/we
 
 // Armor-specific imports
 import { 
-  getArmorBaseUpgradeStats,
   getArmorSlotOptions,
   calculateArmorTotalStats
 } from '../data/armor/armors-data';
@@ -48,8 +46,6 @@ import {
   getAvailableArmorMasterEpicOptions,
   getArmorMasterEpicOptionMaxLevel
 } from '../data/armor/armor-epic-options';
-import { getArmorExtremeUpgradeStats } from '../data/armor/armor-extreme-upgrades';
-import { getArmorDivineUpgradeStats } from '../data/armor/armor-divine-upgrades';
 import { ArmorStatType } from '../data/armor/armor-types';
 
 // Vehicle-specific imports
@@ -57,10 +53,9 @@ import {
   getVehicleEpicOptionStatValue,
   calculateVehicleTotalStats,
   getVehicleSlotOptions,
-  getVehicleBaseUpgradeStats
+  getVehicleEpicOptionMaxLevel,
+  getAvailableVehicleEpicStats
 } from '../data/vehicles/vehicles-data';
-import { getVehicleExtremeUpgradeStats } from '../data/vehicles/vehicle-extreme-upgrades';
-import { getVehicleDivineUpgradeStats } from '../data/vehicles/vehicle-divine-upgrades';
 
 /**
  * Base strategy interface for equipment operations
@@ -83,10 +78,10 @@ export interface EquipmentStrategy<T extends BaseEquipment> {
   getEpicOptionStatValue(stat: string, level: number): number;
   getEpicOptionMaxLevel(stat: string): number;
   getMasterEpicOptionValues(optionName: string, level: number): Record<string, number>;
-  getSlotOptions(isExtended: boolean): Record<string, number> | any;
+  getSlotOptions(isExtended: boolean): Record<string, number>;
   getAvailableEpicStats(): string[];
   getAvailableMasterEpicOptions(): string[];
-  getMasterEpicOptionDefinition(optionName: string): any;
+  getMasterEpicOptionDefinition(optionName: string): unknown;
   getMasterEpicOptionMaxLevel(optionName: string): number;
 }
 
@@ -179,7 +174,8 @@ export class WeaponStrategy implements EquipmentStrategy<WeaponEquipment> {
     return getWeaponEpicOptionStatValue(stat, this.equipment.grade, level, this.equipment.handType);
   }
 
-  getEpicOptionMaxLevel(stat: string): number {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  getEpicOptionMaxLevel(_stat: string): number {
     return 6; // Weapons have max level 6 for all epic options
   }
 
@@ -189,7 +185,7 @@ export class WeaponStrategy implements EquipmentStrategy<WeaponEquipment> {
 
   getSlotOptions(isExtended: boolean): Record<string, number> {
     const slotOptions = getWeaponSlotOptions(this.equipment.grade, isExtended, this.equipment.handType);
-    return slotOptions as any;
+    return slotOptions as unknown as Record<string, number>;
   }
 
   getAvailableEpicStats(): string[] {
@@ -200,7 +196,7 @@ export class WeaponStrategy implements EquipmentStrategy<WeaponEquipment> {
     return getAvailableWeaponMasterEpicOptions(this.equipment.handType, this.equipment.grade);
   }
 
-  getMasterEpicOptionDefinition(optionName: string): any {
+  getMasterEpicOptionDefinition(optionName: string): unknown {
     return getWeaponMasterEpicOptionDefinition(this.equipment.handType, optionName, this.equipment.grade);
   }
 
@@ -229,13 +225,14 @@ export class ArmorStrategy implements EquipmentStrategy<ArmorEquipment> {
     isExtended: boolean
   ): Record<string, number> {
     // Use existing armor calculation function
+    // Note: calculateArmorTotalStats expects legacy types, so we cast for compatibility
     return calculateArmorTotalStats(
-      equipment as any, // Cast to legacy type for now
+      equipment as unknown as Parameters<typeof calculateArmorTotalStats>[0],
       baseUpgradeLevel,
       extremeUpgradeLevel,
       divineUpgradeLevel,
       epicOptionType === 'normal' ? epicOptionStat : null,
-      slots as any,
+      slots as unknown as Parameters<typeof calculateArmorTotalStats>[5],
       epicOptionLevel,
       isExtended,
       epicOptionType,
@@ -257,7 +254,7 @@ export class ArmorStrategy implements EquipmentStrategy<ArmorEquipment> {
   }
 
   getSlotOptions(isExtended: boolean): Record<string, number> {
-    return getArmorSlotOptions(this.equipment.subtype as ArmorStatType, isExtended) as any;
+    return getArmorSlotOptions(this.equipment.subtype as ArmorStatType, isExtended) as unknown as Record<string, number>;
   }
 
   getAvailableEpicStats(): string[] {
@@ -268,7 +265,7 @@ export class ArmorStrategy implements EquipmentStrategy<ArmorEquipment> {
     return getAvailableArmorMasterEpicOptions(this.equipment.subtype as ArmorStatType, this.equipment.grade || 'highest');
   }
 
-  getMasterEpicOptionDefinition(optionName: string): any {
+  getMasterEpicOptionDefinition(optionName: string): unknown {
     return getArmorMasterEpicOptionDefinition(this.equipment.subtype as ArmorStatType, optionName, this.equipment.grade || 'highest');
   }
 
@@ -290,20 +287,21 @@ export class VehicleStrategy implements EquipmentStrategy<VehicleEquipment> {
     divineUpgradeLevel: number,
     epicOptionStat: string | null,
     epicOptionLevel: number,
-    masterEpicOption: string | null,
-    masterEpicOptionLevel: number,
+    _masterEpicOption: string | null,
+    _masterEpicOptionLevel: number,
     epicOptionType: 'none' | 'normal' | 'master' | null,
     slots: SlotConfiguration[],
     isExtended: boolean
   ): Record<string, number> {
     // Use existing vehicle calculation function
+    // Note: calculateVehicleTotalStats expects legacy types, so we cast for compatibility
     return calculateVehicleTotalStats(
-      equipment as any, // Cast to legacy type for now
+      equipment as unknown as Parameters<typeof calculateVehicleTotalStats>[0],
       baseUpgradeLevel,
       extremeUpgradeLevel,
       divineUpgradeLevel,
       epicOptionType === 'normal' ? epicOptionStat : null,
-      slots as any,
+      slots as unknown as Parameters<typeof calculateVehicleTotalStats>[5],
       epicOptionLevel,
       isExtended
     ) as Record<string, number>;
@@ -314,11 +312,11 @@ export class VehicleStrategy implements EquipmentStrategy<VehicleEquipment> {
   }
 
   getEpicOptionMaxLevel(stat: string): number {
-    const { getVehicleEpicOptionMaxLevel } = require('../data/vehicles/vehicles-data');
     return getVehicleEpicOptionMaxLevel(stat, this.equipment.grade);
   }
 
-  getMasterEpicOptionValues(optionName: string, level: number): Record<string, number> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  getMasterEpicOptionValues(_optionName: string, _level: number): Record<string, number> {
     return {}; // Vehicles don't support master epic options
   }
 
@@ -327,8 +325,6 @@ export class VehicleStrategy implements EquipmentStrategy<VehicleEquipment> {
   }
 
   getAvailableEpicStats(): string[] {
-    // Import and use the vehicle epic stats function
-    const { getAvailableVehicleEpicStats } = require('../data/vehicles/vehicles-data');
     return getAvailableVehicleEpicStats();
   }
 
@@ -336,22 +332,24 @@ export class VehicleStrategy implements EquipmentStrategy<VehicleEquipment> {
     return []; // Vehicles don't support master epic options
   }
 
-  getMasterEpicOptionDefinition(optionName: string): any {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  getMasterEpicOptionDefinition(_optionName: string): unknown {
     return null; // Vehicles don't support master epic options
   }
 
-  getMasterEpicOptionMaxLevel(optionName: string): number {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  getMasterEpicOptionMaxLevel(_optionName: string): number {
     return 0; // Vehicles don't support master epic options
   }
 }
 
 // Strategy cache for performance optimization
-const strategyCache = new WeakMap<Equipment, EquipmentStrategy<any>>();
+const strategyCache = new WeakMap<Equipment, EquipmentStrategy<BaseEquipment>>();
 
 /**
  * Factory function to create the appropriate strategy for equipment
  */
-export function createEquipmentStrategy(equipment: Equipment): EquipmentStrategy<any> {
+export function createEquipmentStrategy(equipment: Equipment): EquipmentStrategy<BaseEquipment> {
   if (isWeapon(equipment)) {
     return new WeaponStrategy(equipment);
   } else if (isArmor(equipment)) {
@@ -359,14 +357,16 @@ export function createEquipmentStrategy(equipment: Equipment): EquipmentStrategy
   } else if (isVehicle(equipment)) {
     return new VehicleStrategy(equipment);
   } else {
-    throw new Error(`Unknown equipment material: ${(equipment as any).material} (type: ${(equipment as any).type})`);
+    // This should never happen due to type guards, but TypeScript needs this for exhaustiveness
+    const unknownEquipment = equipment as { material?: string; type?: string };
+    throw new Error(`Unknown equipment material: ${unknownEquipment.material ?? 'unknown'} (type: ${unknownEquipment.type ?? 'unknown'})`);
   }
 }
 
 /**
  * Get cached strategy for equipment (performance optimized)
  */
-export function getEquipmentStrategy(equipment: Equipment): EquipmentStrategy<any> {
+export function getEquipmentStrategy(equipment: Equipment): EquipmentStrategy<BaseEquipment> {
   if (!strategyCache.has(equipment)) {
     strategyCache.set(equipment, createEquipmentStrategy(equipment));
   }
@@ -391,7 +391,7 @@ export function calculateEquipmentStats<T extends BaseEquipment>(
 ): Record<string, number> {
   const strategy = getEquipmentStrategy(equipment as Equipment);
   return strategy.calculateTotalStats(
-    equipment as any,
+    equipment,
     baseUpgradeLevel,
     extremeUpgradeLevel,
     divineUpgradeLevel,

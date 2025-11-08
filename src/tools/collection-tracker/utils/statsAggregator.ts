@@ -1,5 +1,6 @@
 import collectionData from '@/lib/game-data/collection-tracker-data.json';
 import { calculateCollectionStatCP, hasCollectionStatCPMapping, CPCategory } from './cpMapping';
+import { CollectionTab, CollectionPage, Collection, Mission } from '../types';
 
 export interface StatProgress {
   statName: string;
@@ -35,16 +36,16 @@ export function calculateMaxStats(): Record<string, number> {
   const maxStats: Record<string, number> = {};
   
   // Iterate through all tabs
-  Object.values(collectionData.tabs).forEach((tab: any) => {
+  Object.values(collectionData.tabs).forEach((tab: CollectionTab) => {
     // Iterate through all pages in the tab
-    Object.values(tab.pages).forEach((page: any) => {
+    Object.values(tab.pages).forEach((page: CollectionPage) => {
       // Iterate through all collections in the page
-      Object.values(page.collections).forEach((collection: any) => {
+      Object.values(page.collections).forEach((collection: Collection) => {
         // Get the 100% completion stats for this collection
         const stats100 = collection.stats['100'] || {};
         
         // Add each stat to the max totals (using original stat names)
-        Object.entries(stats100).forEach(([statName, value]: [string, any]) => {
+        Object.entries(stats100).forEach(([statName, value]: [string, number]) => {
           maxStats[statName] = (maxStats[statName] || 0) + value;
         });
       });
@@ -61,11 +62,11 @@ export function calculateCurrentStats(collectionProgress: Record<string, { compl
   const currentStats: Record<string, number> = {};
   
   // Iterate through all tabs
-  Object.values(collectionData.tabs).forEach((tab: any) => {
+  Object.values(collectionData.tabs).forEach((tab: CollectionTab) => {
     // Iterate through all pages in the tab
-    Object.values(tab.pages).forEach((page: any) => {
+    Object.values(tab.pages).forEach((page: CollectionPage) => {
       // Iterate through all collections in the page
-      Object.values(page.collections).forEach((collection: any) => {
+      Object.values(page.collections).forEach((collection: Collection) => {
         const collectionId = collection.id;
         const progress = collectionProgress[collectionId];
         
@@ -73,7 +74,7 @@ export function calculateCurrentStats(collectionProgress: Record<string, { compl
         
         // Calculate completion percentage for this collection
         let totalItems = 0;
-        Object.values(collection.missions).forEach((mission: any) => {
+        Object.values(collection.missions).forEach((mission: Mission) => {
           totalItems += mission.items.length;
         });
         
@@ -81,7 +82,7 @@ export function calculateCurrentStats(collectionProgress: Record<string, { compl
         const percentage = totalItems > 0 ? Math.round((completedCount / totalItems) * 100) : 0;
         
         // Determine which milestone stats to apply
-        let milestoneStats = {};
+        let milestoneStats: Record<string, number> = {};
         if (percentage >= 100) {
           milestoneStats = collection.stats['100'] || {};
         } else if (percentage >= 60) {
@@ -91,7 +92,7 @@ export function calculateCurrentStats(collectionProgress: Record<string, { compl
         }
         
         // Add milestone stats to current totals (using original stat names)
-        Object.entries(milestoneStats).forEach(([statName, value]: [string, any]) => {
+        Object.entries(milestoneStats).forEach(([statName, value]: [string, number]) => {
           currentStats[statName] = (currentStats[statName] || 0) + value;
         });
       });
@@ -194,15 +195,15 @@ export function getStatsAggregation(collectionProgress: Record<string, { complet
   let totalCollections = 0;
   let completedCollections = 0;
   
-  Object.values(collectionData.tabs).forEach((tab: any) => {
-    Object.values(tab.pages).forEach((page: any) => {
-      Object.values(page.collections).forEach((collection: any) => {
+  Object.values(collectionData.tabs).forEach((tab: CollectionTab) => {
+    Object.values(tab.pages).forEach((page: CollectionPage) => {
+      Object.values(page.collections).forEach((collection: Collection) => {
         totalCollections++;
         
         const progress = collectionProgress[collection.id];
         if (progress && progress.completedItems) {
           let totalItems = 0;
-          Object.values(collection.missions).forEach((mission: any) => {
+          Object.values(collection.missions).forEach((mission: Mission) => {
             totalItems += mission.items.length;
           });
           

@@ -6,6 +6,7 @@
 'use client';
 
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
+import Image from 'next/image';
 import { DEVIL_SHOP_ITEMS, type DevilShopItem } from '../data/items';
 import { usePriceStore } from '@/stores/priceStore';
 import { formatNumber } from '@/utils/numberFormat';
@@ -192,7 +193,7 @@ export default function DevilShopCalculator() {
     }
 
     return filtered;
-  }, [DEVIL_SHOP_ITEMS, searchTerm, tokenTypeFilter, showOnlyFavorites, excludeMissingPrices, favorites, sortConfig, calculateProfit, calculateProfitPerToken, calculateTokenCost, calculateTotalValue, getPrice, getTokenPrice]);
+  }, [searchTerm, tokenTypeFilter, showOnlyFavorites, excludeMissingPrices, favorites, sortConfig, calculateProfit, calculateProfitPerToken, calculateTokenCost, calculateTotalValue, getPrice, getTokenPrice]);
 
   const handleSort = (key: SortConfig['key']) => {
     setSortConfig(current => ({
@@ -245,7 +246,7 @@ export default function DevilShopCalculator() {
             <div>
               <p>
                 The Devil Shop Calculator helps you analyze the profitability of items available through 
-                Devil's Token shops in Cabal Online. It calculates expected profits based on token costs 
+                Devil&apos;s Token shops in Cabal Online. It calculates expected profits based on token costs 
                 and current market prices to help you make informed purchasing decisions.
               </p>
             </div>
@@ -254,7 +255,7 @@ export default function DevilShopCalculator() {
               <h2 className="text-xl font-semibold text-foreground mb-2">How to use</h2>
               <ul className="list-disc list-inside space-y-1 ml-4">
                 <li><strong>Set token prices:</strong> Enter current market prices for High and Highest tokens</li>
-                <li><strong>Set item prices:</strong> Enter current market prices in the "Item Sell Price" column</li>
+                <li><strong>Set item prices:</strong> Enter current market prices in the &quot;Item Sell Price&quot; column</li>
                 <li><strong>Use filters:</strong> Search by name, filter by token type, or show only profitable items</li>
                 <li><strong>Sort columns:</strong> Click column headers to sort by profit, cost, or other metrics</li>
                 <li><strong>Favorite items:</strong> Click the ♥ icon to mark items for easy access</li>
@@ -266,7 +267,7 @@ export default function DevilShopCalculator() {
               <ul className="list-disc list-inside space-y-1 ml-4">
                 <li><strong>Profit Per Purchase:</strong> Total profit from buying one complete shop entry (e.g., 127 items for 10 tokens)</li>
                 <li><strong>Profit Per Token:</strong> Profit efficiency per token spent - better for comparing items with different token costs</li>
-                <li><strong>Tip:</strong> Sort by "Profit Per Token" to find the most efficient token investments</li>
+                <li><strong>Tip:</strong> Sort by &quot;Profit Per Token&quot; to find the most efficient token investments</li>
               </ul>
             </div>
 
@@ -276,52 +277,58 @@ export default function DevilShopCalculator() {
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Incubo - High Token Merchant */}
                 <div className="bg-theme-dark/50 border border-border-dark rounded-lg p-4 flex flex-col md:flex-row items-center gap-4">
-                  <div className="w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg">
-                    <img 
+                  <div className="w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg relative">
+                    <Image 
                       src="/images/devil-shop/devil merchant incubo.png" 
                       alt="Devil Merchant Incubo" 
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-blue-400">Incubo</h3>
                     <p className="text-sm text-foreground/80 mt-1">
-                      Located in Porta Inferno (205, 227) near the Devil's Tower dungeon entrance. Incubo offers items in exchange for <strong>High Devil's Tokens</strong>. 
+                      Located in Porta Inferno (205, 227) near the Devil&apos;s Tower dungeon entrance. Incubo offers items in exchange for <strong>High Devil&apos;s Tokens</strong>. 
                       His inventory includes various consumables and enhancement materials at lower token costs.
                     </p>
                     <div className="flex items-center mt-2">
-                      <img 
+                      <Image 
                         src="/images/devil-shop/devil-token-high.png" 
                         alt="High Devil's Token" 
-                        className="w-6 h-6 mr-2"
+                        width={24}
+                        height={24}
+                        className="mr-2"
                       />
-                      <span className="text-sm text-foreground/80">Accepts High Devil's Tokens</span>
+                      <span className="text-sm text-foreground/80">Accepts High Devil&apos;s Tokens</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Secubo - Highest Token Merchant */}
                 <div className="bg-theme-dark/50 border border-border-dark rounded-lg p-4 flex flex-col md:flex-row items-center gap-4">
-                  <div className="w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg">
-                    <img 
+                  <div className="w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg relative">
+                    <Image 
                       src="/images/devil-shop/devil merchant secubo.png" 
                       alt="Devil Merchant Secubo" 
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-purple-400">Secubo</h3>
                     <p className="text-sm text-foreground/80 mt-1">
-                      Located in Porta Inferno (230, 227) near the Devil's Tower dungeon entrance. Secubo trades premium items for <strong>Highest Devil's Tokens</strong>. 
+                      Located in Porta Inferno (230, 227) near the Devil&apos;s Tower dungeon entrance. Secubo trades premium items for <strong>Highest Devil&apos;s Tokens</strong>. 
                       His shop features rarer and more valuable items, including equipment and special materials.
                     </p>
                     <div className="flex items-center mt-2">
-                      <img 
+                      <Image 
                         src="/images/devil-shop/devil-token-highest.png" 
                         alt="Highest Devil's Token" 
-                        className="w-6 h-6 mr-2"
+                        width={24}
+                        height={24}
+                        className="mr-2"
                       />
-                      <span className="text-sm text-foreground/80">Accepts Highest Devil's Tokens</span>
+                      <span className="text-sm text-foreground/80">Accepts Highest Devil&apos;s Tokens</span>
                     </div>
                   </div>
                 </div>
@@ -334,7 +341,7 @@ export default function DevilShopCalculator() {
                 <li><strong>Market prices change:</strong> Update prices regularly as market conditions fluctuate</li>
                 <li><strong>Sales fee applied:</strong> The calculator accounts for market transaction fees (default 5%)</li>
                 <li><strong>Token availability:</strong> Consider how easy it is to obtain the required tokens</li>
-                <li><strong>Demand matters:</strong> High-profit items might be hard to sell if there's no demand</li>
+                <li><strong>Demand matters:</strong> High-profit items might be hard to sell if there&apos;s no demand</li>
               </ul>
             </div>
           </div>
@@ -443,7 +450,6 @@ export default function DevilShopCalculator() {
                   const isFavorite = favorites.has(item.name);
                   const profit = calculateProfit(item);
                   const profitPerToken = calculateProfitPerToken(item);
-                  const tokenCost = calculateTokenCost(item);
                   const marketPrice = getPrice(item.name) || 0;
                   const hasTokenPrice = getTokenPrice(item.tokenType) > 0;
 
@@ -466,10 +472,12 @@ export default function DevilShopCalculator() {
                       <td className="px-4 py-3 text-blue-400 border-r border-border-dark">{item.quantity}</td>
                       <td className="px-4 py-3 border-r border-border-dark">
                         <div className="flex items-center gap-1">
-                          <img 
+                          <Image 
                             src={`/images/devil-shop/devil-token-${item.tokenType.toLowerCase()}.png`}
                             alt={`Devil's Token (${item.tokenType})`}
-                            className="w-6 h-6 flex-shrink-0"
+                            width={24}
+                            height={24}
+                            className="flex-shrink-0"
                             title={`Devil's Token (${item.tokenType})`}
                           />
                           <span className="text-white font-medium">×</span>
@@ -524,7 +532,6 @@ export default function DevilShopCalculator() {
               const isFavorite = favorites.has(item.name);
               const profit = calculateProfit(item);
               const profitPerToken = calculateProfitPerToken(item);
-              const tokenCost = calculateTokenCost(item);
               const marketPrice = getPrice(item.name) || 0;
               const hasTokenPrice = getTokenPrice(item.tokenType) > 0;
 
@@ -549,10 +556,12 @@ export default function DevilShopCalculator() {
                     <div className="flex items-center gap-2">
                       <span className="text-foreground/80">Token Cost:</span>
                       <div className="flex items-center gap-1">
-                        <img 
+                        <Image 
                           src={`/images/devil-shop/devil-token-${item.tokenType.toLowerCase()}.png`}
                           alt={`Devil's Token (${item.tokenType})`}
-                          className="w-5 h-5 flex-shrink-0"
+                          width={20}
+                          height={20}
+                          className="flex-shrink-0"
                         />
                         <span className="text-white font-medium">×</span>
                         <span className="text-yellow-400 font-medium">{item.tokensRequired}</span>

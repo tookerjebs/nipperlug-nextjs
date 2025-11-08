@@ -33,16 +33,25 @@ import GeneralItemTooltip from './tooltips/GeneralItemTooltip';
 import CharmTooltip from './tooltips/CharmTooltip';
 import TalismanTooltip from './tooltips/TalismanTooltip';
 import { getStatInfo, formatStatValue } from '@/tools/build-planner/data/stats-config';
-import { useEquipmentSystemStore } from '../stores/equipmentSystemStore';
+import { useEquipmentSystemStore, AnyEquipmentType } from '../stores/equipmentSystemStore';
 import { useClassStore } from '../../class/stores';
 import { filterWeaponsByClass, filterArmorsByClass } from '../utils/classCompatibility';
 
+// Type for GeneralItemTooltip
+type GeneralItemTooltipItem = Belt | ConfiguredCarnelian | ConfiguredArcana | ConfiguredTalisman;
+
+// Type for TalismanTooltip
+interface TalismanTooltipItem extends Talisman {
+  currentLevel: number;
+  totalStats: Record<string, number>;
+}
+
 // Wrapper components for tooltips to handle different prop requirements
-const GeneralItemTooltipWrapper: React.FC<{ item: any }> = ({ item }) => (
+const GeneralItemTooltipWrapper: React.FC<{ item: GeneralItemTooltipItem }> = ({ item }) => (
   <GeneralItemTooltip item={item} />
 );
 
-const CharmTooltipWrapper: React.FC<{ item: any }> = ({ item }) => {
+const CharmTooltipWrapper: React.FC<{ item: ConfiguredCharm }> = ({ item }) => {
   const formatStatName = (stat: string) => {
     const statInfo = getStatInfo(stat);
     return statInfo?.name || stat;
@@ -63,7 +72,7 @@ const CharmTooltipWrapper: React.FC<{ item: any }> = ({ item }) => {
   );
 };
 
-const TalismanTooltipWrapper: React.FC<{ item: any }> = ({ item }) => {
+const TalismanTooltipWrapper: React.FC<{ item: TalismanTooltipItem }> = ({ item }) => {
   const formatStatName = (stat: string) => {
     const statInfo = getStatInfo(stat);
     return statInfo?.name || stat;
@@ -85,8 +94,6 @@ const TalismanTooltipWrapper: React.FC<{ item: any }> = ({ item }) => {
 };
 
 type AllEquipmentTypes = Weapon | Ring | Belt | Charm | Carnelian | Arcana | Armor | Epaulet | Vehicle | Earring | Amulet | Bracelet | Brooch | Talisman;
-// Define a union type for all configured equipment types (local scope)
-type LocalConfiguredEquipment = ConfiguredWeapon | ConfiguredArmor | ConfiguredVehicle;
 
 interface EquipmentSlotModalProps {
   isOpen: boolean;
@@ -95,15 +102,10 @@ interface EquipmentSlotModalProps {
 }
 
 const EquipmentSlotModal: React.FC<EquipmentSlotModalProps> = ({ isOpen, onClose, slotId }) => {
-  const [selectedWeapon, setSelectedWeapon] = useState<Weapon | undefined>(undefined);
-  const [selectedRing, setSelectedRing] = useState<Ring | undefined>(undefined);
   const [selectedBelt, setSelectedBelt] = useState<Belt | undefined>(undefined);
   const [selectedCharm, setSelectedCharm] = useState<Charm | undefined>(undefined);
   const [selectedCarnelian, setSelectedCarnelian] = useState<Carnelian | undefined>(undefined);
   const [selectedArcana, setSelectedArcana] = useState<Arcana | undefined>(undefined);
-  const [selectedArmor, setSelectedArmor] = useState<Armor | undefined>(undefined);
-  const [selectedEpaulet, setSelectedEpaulet] = useState<Epaulet | undefined>(undefined);
-  const [selectedVehicle, setSelectedVehicle] = useState<Vehicle | undefined>(undefined);
   const [selectedEarring, setSelectedEarring] = useState<Earring | undefined>(undefined);
   const [selectedAmulet, setSelectedAmulet] = useState<Amulet | undefined>(undefined);
   const [selectedBracelet, setSelectedBracelet] = useState<Bracelet | undefined>(undefined);
@@ -155,15 +157,10 @@ const EquipmentSlotModal: React.FC<EquipmentSlotModalProps> = ({ isOpen, onClose
   }
   
   const handleWeaponSelect = (weapon: Weapon) => {
-    setSelectedWeapon(weapon);
     setTimeout(() => {
       setSelectedEquipment(weapon as BaseEquipment);
       setIsEquipmentUpgradeModalOpen(true);
     }, 50);
-  };
-  
-  const handleOpenUpgradeModal = () => {
-    setIsEquipmentUpgradeModalOpen(true);
   };
   
   const handleCloseEquipmentUpgradeModal = () => {
@@ -174,7 +171,7 @@ const EquipmentSlotModal: React.FC<EquipmentSlotModalProps> = ({ isOpen, onClose
   const handleSaveEquipmentConfiguration = (configuredEquipment: ConfiguredEquipment) => {
     // Save the configured equipment to the store
     if (slotId) {
-      equipmentStore.setConfiguredEquipment(slotId, configuredEquipment as any);
+      equipmentStore.setConfiguredEquipment(slotId, configuredEquipment as AnyEquipmentType);
     }
     // Close both modals to return to equipment system UI
     setIsEquipmentUpgradeModalOpen(false);
@@ -186,7 +183,6 @@ const EquipmentSlotModal: React.FC<EquipmentSlotModalProps> = ({ isOpen, onClose
     // Save the ring directly to the store (no upgrades needed) and close the modal
     if (slotId) {
       equipmentStore.setConfiguredEquipment(slotId, ring);
-      setSelectedRing(ring);
       // Immediately close the modal after selection
       onClose();
     }
@@ -297,21 +293,11 @@ const EquipmentSlotModal: React.FC<EquipmentSlotModalProps> = ({ isOpen, onClose
 
   // Armor handlers
   const handleArmorSelect = (armor: Armor) => {
-    setSelectedArmor(armor);
     setTimeout(() => {
       setSelectedEquipment(armor as BaseEquipment);
       setIsEquipmentUpgradeModalOpen(true);
     }, 50);
   };
-
-  // Legacy armor configuration save (now handled by unified modal)
-  const handleSaveArmorConfiguration = (configuredArmor: ConfiguredArmor) => {
-    if (slotId) {
-      equipmentStore.setConfiguredEquipment(slotId, configuredArmor);
-    }
-    onClose();
-  };
-
 
   
   // Epaulet handlers
@@ -326,19 +312,10 @@ const EquipmentSlotModal: React.FC<EquipmentSlotModalProps> = ({ isOpen, onClose
   
   // Vehicle handlers
   const handleVehicleSelect = (vehicle: Vehicle) => {
-    setSelectedVehicle(vehicle);
     setTimeout(() => {
       setSelectedEquipment(vehicle as BaseEquipment);
       setIsEquipmentUpgradeModalOpen(true);
     }, 50);
-  };
-
-  const handleSaveVehicleConfiguration = (configuredVehicle: ConfiguredVehicle) => {
-    if (slotId) {
-      equipmentStore.setConfiguredEquipment(slotId, configuredVehicle);
-    }
-    setIsEquipmentUpgradeModalOpen(false);
-    onClose();
   };
 
 
@@ -467,20 +444,14 @@ const EquipmentSlotModal: React.FC<EquipmentSlotModalProps> = ({ isOpen, onClose
     equipmentStore.removeConfiguredEquipment(slotId);
     
     // Clear the appropriate selected state based on slot ID
-    if (slotId.startsWith('ring-')) {
-      setSelectedRing(undefined);
-    } else if (slotId.startsWith('belt-')) {
+    if (slotId.startsWith('belt-')) {
       setSelectedBelt(undefined);
     } else if (slotId === 'charm') {
       setSelectedCharm(undefined);
-    } else if (slotId.startsWith('armor-') || slotId === 'gloves') {
-      setSelectedArmor(undefined);
     } else if (slotId === 'carnelian') {
       setSelectedCarnelian(undefined);
     } else if (slotId === 'arcana-1' || slotId === 'arcana-2') {
       setSelectedArcana(undefined);
-    } else if (slotId === 'epaulet') {
-      setSelectedEpaulet(undefined);
     } else if (slotId.startsWith('earring-')) {
       setSelectedEarring(undefined);
     } else if (slotId === 'amulet') {
@@ -491,10 +462,6 @@ const EquipmentSlotModal: React.FC<EquipmentSlotModalProps> = ({ isOpen, onClose
       setSelectedBrooch(undefined);
     } else if (slotId === 'talisman') {
       setSelectedTalisman(undefined);
-    } else if (slotId === 'bike') {
-      setSelectedVehicle(undefined);
-    } else if (slotId.startsWith('weapon-')) {
-      setSelectedWeapon(undefined);
     }
     
     onClose(); // Always close modal after removing

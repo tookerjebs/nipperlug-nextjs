@@ -14,7 +14,6 @@ import StellarSystem from '@/tools/build-planner/systems/stellar-system/StellarS
 import EssenceRuneSystem from '@/tools/build-planner/systems/essence-rune/EssenceRuneSystem';
 import KarmaRuneSystem from '@/tools/build-planner/systems/karma-rune/KarmaRuneSystem';
 import { OverlordMasterySystem } from '@/tools/build-planner/systems/overlord-mastery';
-import { OverlordMasteryStats } from '@/tools/build-planner/systems/overlord-mastery/components/OverlordMasteryStats';
 import MythLevelSystem from '@/tools/build-planner/systems/myth-level/MythLevelSystem';
 import BuffsPotions from '@/tools/build-planner/systems/buffs-potions';
 import { ClassSystem } from '@/tools/build-planner/systems/class';
@@ -305,14 +304,7 @@ function BuildPlannerContent() {
                 <KarmaRuneSystem />
               )}
               {activeSystem === 'overlord-mastery' && (
-                <div className="flex flex-col lg:flex-row gap-6">
-                  <div className="flex-1">
-                    <OverlordMasterySystem />
-                  </div>
-                  <div className="w-full lg:w-80">
-                    <OverlordMasteryStats />
-                  </div>
-                </div>
+                <OverlordMasterySystem />
               )}
               {activeSystem === 'achievements' && (
                 <AchievementSystem />

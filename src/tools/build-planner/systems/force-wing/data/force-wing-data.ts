@@ -544,7 +544,7 @@ export const FORCE_WING_CONFIG = {
   // Force Wing Level Configuration
   // To extend max level in the future, simply change forceWingMaxLevel value
   // All components and validation will automatically adapt
-  forceWingMaxLevel: 400, // Current max level for Force Wing itself
+  forceWingMaxLevel: 500, // Current max level for Force Wing itself
   forceWingMinLevel: 1,
   forceWingBaseStatMultiplier: 1 // 1:1 scaling (level = stat value)
 };

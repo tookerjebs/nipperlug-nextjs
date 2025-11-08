@@ -6,7 +6,8 @@
 'use client';
 
 import React from 'react';
-import { cpWeights } from '@/tools/build-planner/data/cp-weights';
+import { cpWeights, getCPWeight } from '@/tools/build-planner/data/cp-weights';
+import { statsConfig } from '@/tools/build-planner/data/stats-config';
 import { X } from 'lucide-react';
 
 interface CPWeightsModalProps {
@@ -121,10 +122,23 @@ const CPWeightsModal: React.FC<CPWeightsModalProps> = ({ isOpen, onClose }) => {
 
         {/* Content */}
         <div className="p-6">
-          <p className="text-gray-300 mb-6">
-            These weights determine how much Combat Power each stat contributes. 
-            Higher weights mean the stat has more impact on your overall CP.
-          </p>
+          <div className="text-gray-300 mb-6 space-y-2">
+            <p>
+              These weights determine how much Combat Power each stat contributes. 
+              Higher weights mean the stat has more impact on your overall CP.
+            </p>
+            <div className="p-3 rounded-lg" style={{ backgroundColor: 'var(--theme-darkest)' }}>
+              <p className="text-sm font-semibold text-game-gold mb-1">CP Types:</p>
+              <ul className="text-xs space-y-1 text-gray-400 ml-4 list-disc">
+                <li><strong className="text-gray-300">General CP:</strong> Base stats only (excludes PvE/PvP variants)</li>
+                <li><strong className="text-gray-300">PvE CP:</strong> Base stats + PvE variants (excludes PvP variants)</li>
+                <li><strong className="text-gray-300">PvP CP:</strong> Base stats + PvP variants (excludes PvE variants)</li>
+              </ul>
+              <p className="text-xs text-gray-500 mt-2">
+                Stats marked with <span className="px-1.5 py-0.5 rounded bg-game-gold/20 text-game-gold">PvE/PvP</span> have variant versions that contribute to their respective CP types using the same weight.
+              </p>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Object.entries(statCategories).map(([category, stats]) => (
@@ -137,11 +151,22 @@ const CPWeightsModal: React.FC<CPWeightsModalProps> = ({ isOpen, onClose }) => {
                     const weight = cpWeights[statName];
                     if (!weight) return null;
                     
+                    // Check if this stat has variants
+                    const statInfo = statsConfig.stats[statName];
+                    const hasVariants = statInfo?.variants && statInfo.variants.length > 0;
+                    
                     return (
                       <div key={statName} className="flex justify-between items-center">
-                        <span className="text-sm text-gray-300">
-                          {formatStatName(statName)}
-                        </span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm text-gray-300">
+                            {formatStatName(statName)}
+                          </span>
+                          {hasVariants && (
+                            <span className="text-xs px-1.5 py-0.5 rounded bg-game-gold/20 text-game-gold">
+                              PvE/PvP
+                            </span>
+                          )}
+                        </div>
                         <span className="text-sm font-mono text-game-gold">
                           {weight.toLocaleString()} CP
                         </span>

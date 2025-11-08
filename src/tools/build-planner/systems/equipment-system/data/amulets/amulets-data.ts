@@ -271,7 +271,7 @@ export const amulets: Amulet[] = [
   },
   {
     id: 'orphidias_amulet_low',
-    name: 'Orphidia\'s Amulet (low)',
+    name: 'Orphidia\'s Amulet (Low)',
     type: 'amulet',
     subtype: 'amulet',
     grade: 'unique',
@@ -307,7 +307,7 @@ export const amulets: Amulet[] = [
   },
   {
     id: 'orphidias_amulet_high',
-    name: 'Orphidia\'s Amulet (high)',
+    name: 'Orphidia\'s Amulet (High)',
     type: 'amulet',
     subtype: 'amulet',
     grade: 'unique',
@@ -343,11 +343,11 @@ export const amulets: Amulet[] = [
   },
   {
     id: 'gaia_force_amulet_low',
-    name: 'Gaia Force Amulet (low)',
+    name: 'Gaia Force Amulet (Lv. 1)',
     type: 'amulet',
     subtype: 'amulet',
     grade: 'unique',
-    imagePath: '/images/equipment-system/amulets/orphidia-amulet.png', // Placeholder - using Orphidia's amulet icon temporarily
+    imagePath: '/images/equipment-system/amulets/gaia-lv1.png', // Placeholder - using Orphidia's amulet icon temporarily
     baseStats: {
       allAttackUp: 5,
       defense: 35,
@@ -392,11 +392,11 @@ export const amulets: Amulet[] = [
   },
   {
     id: 'gaia_force_amulet_medium',
-    name: 'Gaia Force Amulet (medium)',
+    name: 'Gaia Force Amulet (Lv. 2)',
     type: 'amulet',
     subtype: 'amulet',
     grade: 'unique',
-    imagePath: '/images/equipment-system/amulets/orphidia-amulet.png', // Placeholder - using Orphidia's amulet icon temporarily
+    imagePath: '/images/equipment-system/amulets/gaia-lv2.png', // Placeholder - using Orphidia's amulet icon temporarily
     baseStats: {
       allAttackUp: 10,
       defense: 40,
@@ -441,11 +441,11 @@ export const amulets: Amulet[] = [
   },
   {
     id: 'gaia_force_amulet_high',
-    name: 'Gaia Force Amulet (high)',
+    name: 'Gaia Force Amulet (Lv. 3)',
     type: 'amulet',
     subtype: 'amulet',
     grade: 'unique',
-    imagePath: '/images/equipment-system/amulets/orphidia-amulet.png', // Placeholder - using Orphidia's amulet icon temporarily
+    imagePath: '/images/equipment-system/amulets/gaia-lv2.png', // Placeholder - using Orphidia's amulet icon temporarily
     baseStats: {
       allAttackUp: 35,
       defense: 80,
@@ -490,11 +490,11 @@ export const amulets: Amulet[] = [
   },
   {
     id: 'gaia_force_amulet_highest',
-    name: 'Gaia Force Amulet (highest)',
+    name: 'Gaia Force Amulet (Lv. 4)',
     type: 'amulet',
     subtype: 'amulet',
     grade: 'unique',
-    imagePath: '/images/equipment-system/amulets/orphidia-amulet.png', // Placeholder - using Orphidia's amulet icon temporarily
+    imagePath: '/images/equipment-system/amulets/gaia-lv2.png', // Placeholder - using Orphidia's amulet icon temporarily
     baseStats: {
       allAttackUp: 70,
       defense: 120,
@@ -543,7 +543,7 @@ export const amulets: Amulet[] = [
     type: 'amulet',
     subtype: 'amulet',
     grade: 'unique',
-    imagePath: '/images/equipment-system/amulets/orphidia-amulet.png', // Placeholder - using Orphidia's amulet icon temporarily
+    imagePath: '/images/equipment-system/amulets/gaia-lv2.png', // Placeholder - using Orphidia's amulet icon temporarily
     baseStats: {
       allAttackUp: 35,
       defense: 80,

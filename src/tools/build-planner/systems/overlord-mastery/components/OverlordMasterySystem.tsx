@@ -6,6 +6,7 @@ import { useOverlordMasteryStore } from '../stores/overlordMasteryStore';
 import { OverlordCategoryTabs } from './OverlordCategoryTabs';
 import { OverlordSkillGrid } from './OverlordSkillGrid';
 import { ActionButtons } from '@/tools/build-planner/components/systems/ActionButtons';
+import { TotalStatsButton } from '@/tools/build-planner/components/systems/TotalStatsButton';
 
 
 export const OverlordMasterySystem: React.FC<OverlordMasterySystemProps> = ({ className }) => {
@@ -15,19 +16,27 @@ export const OverlordMasterySystem: React.FC<OverlordMasterySystemProps> = ({ cl
     setSelectedCategory,
     totalOpSpent,
     quickFillSystem,
-    resetAll
+    resetAll,
+    calculateTotalStats
   } = useOverlordMasteryStore();
 
   const selectedCategoryData = categories.find(cat => cat.id === selectedCategory);
+  const totalStats = calculateTotalStats();
 
   return (
     <div className={`overlord-mastery-panel ${className || ''}`}>
       {/* Header with Points Used Display and Action Buttons */}
       <div className="flex justify-between items-center p-4 border-b border-border-dark">
-        <ActionButtons 
-          onQuickFill={quickFillSystem}
-          onReset={resetAll}
-        />
+        <div className="flex items-center gap-4">
+          <ActionButtons 
+            onQuickFill={quickFillSystem}
+            onReset={resetAll}
+          />
+          <TotalStatsButton
+            totalStats={totalStats}
+            systemName="Overlord Mastery"
+          />
+        </div>
         <div className="bg-theme-darker px-3 py-1 rounded border border-border-dark">
           <span className="text-sm text-gray-300">Points Used: </span>
           <span className="text-game-gold font-bold">{totalOpSpent}</span>

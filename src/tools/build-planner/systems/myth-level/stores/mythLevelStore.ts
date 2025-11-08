@@ -6,6 +6,7 @@ import { BuildStats } from '@/tools/build-planner/stores/buildPlannerStore';
 import { mythLevelNodes } from '../mythLevelNodes';
 import { isNodeUnlocked, getNodeZone, getZoneProgress, MythZone, calculateActualHolyPowerCost } from '../data/mythZoneConfig';
 import { getNodeData } from '../data/mythLevelNodeData';
+import { getStatInfo } from '@/tools/build-planner/data/stats-config';
 
 export interface MythNode {
   id: number;
@@ -202,14 +203,18 @@ export const useMythLevelStore = create<MythLevelStore>()(
         .sort((a, b) => a.id - b.id); // Process in zone order
 
       // Fill each unlocked empty node with the highest holy power stat
+      // Prioritize offensive stats over defensive when holy power is equal
       unlockedEmptyNodes.forEach(node => {
         const nodeData = getNodeData(node.id);
         if (!nodeData || !nodeData.availableStats.length) return;
 
         let bestStat: SelectedStatWithLevel | undefined;
         let maxHolyPower = 0;
+        let bestStatCategory: 'offensive' | 'defensive' | 'utility' | null = null;
+        let bestStatIsPve: boolean | null = null;
 
         // Find the stat with highest holy power at max level
+        // When holy power is equal, prioritize: offensive > defensive > utility, then PVE > PVP
         nodeData.availableStats.forEach((stat) => {
           const maxLevel = stat.maxLevel;
           const maxLevelData = stat.levels.find((level) => level.level === maxLevel);
@@ -217,9 +222,51 @@ export const useMythLevelStore = create<MythLevelStore>()(
           if (maxLevelData) {
             // Calculate actual holy power with zone bonus
             const actualHolyPower = calculateActualHolyPowerCost(maxLevelData.holyPower, node.id);
+            
+            // Get stat category for prioritization
+            const statInfo = getStatInfo(stat.statKey);
+            const statCategory = statInfo?.category || 'utility';
+            
+            // Category priority: offensive (0) > defensive (1) > utility (2)
+            const categoryPriority = statCategory === 'offensive' ? 0 : statCategory === 'defensive' ? 1 : 2;
+            
+            // Check if stat is PVE variant (prioritize PVE over PVP)
+            const isPve = stat.statKey.toLowerCase().startsWith('pve');
 
+            // Check if this stat is better than current best
+            let isBetter = false;
+            
             if (actualHolyPower > maxHolyPower) {
+              // Higher holy power always wins
+              isBetter = true;
+            } else if (actualHolyPower === maxHolyPower) {
+              // Same holy power - use tiebreakers
+              if (bestStatCategory === null) {
+                // First stat found, always accept it
+                isBetter = true;
+              } else {
+                const currentCategoryPriority = bestStatCategory === 'offensive' ? 0 : bestStatCategory === 'defensive' ? 1 : 2;
+                
+                // First tiebreaker: category priority (offensive > defensive > utility)
+                if (categoryPriority < currentCategoryPriority) {
+                  isBetter = true;
+                } else if (categoryPriority === currentCategoryPriority) {
+                  // Second tiebreaker: PVE > PVP
+                  if (bestStatIsPve === null) {
+                    isBetter = true;
+                  } else if (isPve && !bestStatIsPve) {
+                    // Current is PVE, best is PVP - prefer PVE
+                    isBetter = true;
+                  }
+                  // If both are PVE or both are PVP, keep current best (first found)
+                }
+              }
+            }
+
+            if (isBetter) {
               maxHolyPower = actualHolyPower;
+              bestStatCategory = statCategory;
+              bestStatIsPve = isPve;
               bestStat = {
                 statKey: stat.statKey,
                 level: maxLevelData.level,

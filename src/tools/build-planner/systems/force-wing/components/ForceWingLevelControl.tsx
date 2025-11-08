@@ -46,6 +46,9 @@ export const ForceWingLevelControl: React.FC<ForceWingLevelControlProps> = ({
     if (currentLevel >= 301) {
       totalPoints += 40;
     }
+    if (currentLevel >= 401) {
+      totalPoints += 50;
+    }
     
     return totalPoints;
   };

@@ -4,20 +4,25 @@
 import React from 'react';
 import { GoldMeritSlotGridProps, GoldMeritArrow } from '../types/index';
 import { GoldMeritSlot } from './GoldMeritSlot';
+import { ArrowIcon } from './ArrowIcon';
 
 export const GoldMeritSlotGrid: React.FC<GoldMeritSlotGridProps> = ({ category }) => {
   const { gridSize, slots, gridElements } = category;
 
   return (
     <div className="space-y-3">
-      {/* Grid Layout */}
-      <div 
-        className="grid gap-x-1 gap-y-3 justify-items-center relative"
-        style={{ 
-          gridTemplateColumns: `repeat(${gridSize.cols}, 1fr)`,
-          gridTemplateRows: `repeat(${gridSize.rows}, 1fr)`
-        }}
-      >
+      {/* Scrollable container with scaling on smaller screens */}
+      <div className="overflow-x-auto overflow-y-visible pb-4">
+        {/* Grid Layout with minimum width to prevent extreme shrinking */}
+        <div 
+          className="grid gap-x-1 gap-y-3 justify-items-center relative mx-auto"
+          style={{ 
+            gridTemplateColumns: `repeat(${gridSize.cols}, 1fr)`,
+            gridTemplateRows: `repeat(${gridSize.rows}, 1fr)`,
+            minWidth: '600px', // Prevent grid from becoming too small
+            maxWidth: '100%'
+          }}
+        >
         {/* Render slots with explicit grid positioning */}
         {slots.map(slot => (
           <div
@@ -35,33 +40,28 @@ export const GoldMeritSlotGrid: React.FC<GoldMeritSlotGridProps> = ({ category }
         {gridElements?.map(element => {
           if ('type' in element && element.type === 'arrow') {
             const arrowElement = element as GoldMeritArrow;
-            const arrowSymbol = {
-              up: '↑',
-              down: '↓',
-              left: '←',
-              right: '→',
-              'up-right': '↗',
-              'up-left': '↖',
-              'down-right': '↘',
-              'down-left': '↙'
-            }[arrowElement.direction];
             
             return (
               <div
                 key={element.id}
-                className="w-12 h-12 flex items-center justify-center text-3xl text-gray-200 font-black"
+                className="w-12 h-12 flex items-center justify-center text-gray-200"
                 style={{
                   gridColumn: element.gridPosition.col + 1,
                   gridRow: element.gridPosition.row + 1,
-                  textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
+                  filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.5))'
                 }}
               >
-                {arrowSymbol}
+                <ArrowIcon 
+                  direction={arrowElement.direction} 
+                  size={48}
+                  className="text-gray-200"
+                />
               </div>
             );
           }
           return null;
         })}
+        </div>
       </div>
     </div>
   );

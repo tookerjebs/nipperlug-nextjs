@@ -2,8 +2,13 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import type { GoldMeritStore, GoldMeritSlotState, GoldMeritSlot } from '../types/index';
-import { GoldMeritData } from '../data/gold-merit-data';
+import { loadGoldMeritData, getPointCostForLevel, getMasteryBySlotId, getPrerequisiteInfo } from '../data/gold-merit-data-loader';
+import { GoldMeritSlotMapping } from '../data/gold-merit-config';
+import { calculateRequiredMeritScore } from '../data/gold-merit-score';
 import { useStatRegistryStore } from '@/tools/build-planner/stores/statRegistryStore';
+
+// Load data
+const GoldMeritData = loadGoldMeritData();
 
 // Initialize slot states
 const initializeSlotStates = (): Record<string, GoldMeritSlotState> => {
@@ -39,6 +44,7 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
     categories: GoldMeritData,
     slotStates: initializeSlotStates(),
     totalPointsSpent: 0,
+    requiredMeritScore: 0,
     selectedCategory: 'ignore-evasion',
 
     // Category management
@@ -55,7 +61,8 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
       if (!slot || !slotState || !state.canUpgradeSlot(slotId)) return;
       
       const newLevel = slotState.currentLevel + 1;
-      const pointCost = slot.pointsRequired;
+      const masteryIndex = GoldMeritSlotMapping[slotId];
+      const pointCost = masteryIndex ? getPointCostForLevel(masteryIndex, newLevel) : slot.pointsRequired;
       
       set(state => {
         const newSlotStates = {
@@ -69,9 +76,11 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
         // Update unlock states for dependent slots
         const updatedSlotStates = state.updateSlotUnlockStates(newSlotStates);
         
+        const newTotalPoints = state.totalPointsSpent + pointCost;
         return {
           slotStates: updatedSlotStates,
-          totalPointsSpent: state.totalPointsSpent + pointCost
+          totalPointsSpent: newTotalPoints,
+          requiredMeritScore: calculateRequiredMeritScore(newTotalPoints) ?? 0
         };
       });
       
@@ -86,8 +95,10 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
       
       if (!slot || !slotState || !state.canDowngradeSlot(slotId)) return;
       
-      const newLevel = slotState.currentLevel - 1;
-      const pointRefund = slot.pointsRequired;
+      const currentLevel = slotState.currentLevel;
+      const newLevel = currentLevel - 1;
+      const masteryIndex = GoldMeritSlotMapping[slotId];
+      const pointRefund = masteryIndex ? getPointCostForLevel(masteryIndex, currentLevel) : slot.pointsRequired;
       
       set(state => {
         const newSlotStates = {
@@ -101,9 +112,11 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
         // Update unlock states for dependent slots
         const updatedSlotStates = state.updateSlotUnlockStates(newSlotStates);
         
+        const newTotalPoints = state.totalPointsSpent - pointRefund;
         return {
           slotStates: updatedSlotStates,
-          totalPointsSpent: state.totalPointsSpent - pointRefund
+          totalPointsSpent: newTotalPoints,
+          requiredMeritScore: calculateRequiredMeritScore(newTotalPoints) ?? 0
         };
       });
       
@@ -118,7 +131,16 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
       
       if (!slot || !slotState) return;
       
-      const pointsToRefund = slotState.currentLevel * slot.pointsRequired;
+      // Calculate total points to refund
+      const masteryIndex = GoldMeritSlotMapping[slotId];
+      let pointsToRefund = 0;
+      if (masteryIndex) {
+        for (let level = 1; level <= slotState.currentLevel; level++) {
+          pointsToRefund += getPointCostForLevel(masteryIndex, level);
+        }
+      } else {
+        pointsToRefund = slotState.currentLevel * slot.pointsRequired;
+      }
       
       set(state => {
         const newSlotStates = {
@@ -132,9 +154,11 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
         // Update unlock states for dependent slots
         const updatedSlotStates = state.updateSlotUnlockStates(newSlotStates);
         
+        const newTotalPoints = state.totalPointsSpent - pointsToRefund;
         return {
           slotStates: updatedSlotStates,
-          totalPointsSpent: state.totalPointsSpent - pointsToRefund
+          totalPointsSpent: newTotalPoints,
+          requiredMeritScore: calculateRequiredMeritScore(newTotalPoints) ?? 0
         };
       });
       
@@ -154,7 +178,15 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
       category.slots.forEach(slot => {
         const slotState = newSlotStates[slot.id];
         if (slotState) {
-          totalRefund += slotState.currentLevel * slot.pointsRequired;
+          // Calculate points to refund using per-level costs
+          const masteryIndex = GoldMeritSlotMapping[slot.id];
+          if (masteryIndex) {
+            for (let level = 1; level <= slotState.currentLevel; level++) {
+              totalRefund += getPointCostForLevel(masteryIndex, level);
+            }
+          } else {
+            totalRefund += slotState.currentLevel * slot.pointsRequired;
+          }
           newSlotStates[slot.id] = {
             ...slotState,
             currentLevel: 0
@@ -165,9 +197,11 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
       // Update unlock states
       const updatedSlotStates = state.updateSlotUnlockStates(newSlotStates);
       
+      const newTotalPoints = state.totalPointsSpent - totalRefund;
       set({
         slotStates: updatedSlotStates,
-        totalPointsSpent: state.totalPointsSpent - totalRefund
+        totalPointsSpent: newTotalPoints,
+        requiredMeritScore: calculateRequiredMeritScore(newTotalPoints) ?? 0
       });
       
       // Register stats with the global registry
@@ -177,7 +211,8 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
     resetAll: () => {
       set({
         slotStates: initializeSlotStates(),
-        totalPointsSpent: 0
+        totalPointsSpent: 0,
+        requiredMeritScore: 0
       });
       
       // Register stats with the global registry
@@ -194,6 +229,14 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
         
         if (!slot || !slot.prerequisites) return true;
         
+        // Get prerequisite info from new data structure
+        const prereqInfo = getPrerequisiteInfo(slotId);
+        if (prereqInfo) {
+          const prereqState = workingStates[prereqInfo.slotId];
+          return prereqState && prereqState.currentLevel >= prereqInfo.requiredLevel;
+        }
+        
+        // Fallback to old prerequisites array
         return slot.prerequisites.every(prereqId => {
           const prereqState = workingStates[prereqId];
           return prereqState && prereqState.currentLevel > 0;
@@ -241,18 +284,26 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
       // Final update of unlock states
       const finalSlotStates = state.updateSlotUnlockStates(newSlotStates);
       
-      // Calculate total points spent
+      // Calculate total points spent using per-level costs
       let totalPointsSpent = 0;
       Object.values(finalSlotStates).forEach(slotState => {
         const slot = state.getSlotById(slotState.slotId);
         if (slot && slotState.currentLevel > 0) {
-          totalPointsSpent += slotState.currentLevel * slot.pointsRequired;
+          const masteryIndex = GoldMeritSlotMapping[slotState.slotId];
+          if (masteryIndex) {
+            for (let level = 1; level <= slotState.currentLevel; level++) {
+              totalPointsSpent += getPointCostForLevel(masteryIndex, level);
+            }
+          } else {
+            totalPointsSpent += slotState.currentLevel * slot.pointsRequired;
+          }
         }
       });
       
       set({
         slotStates: finalSlotStates,
-        totalPointsSpent: totalPointsSpent
+        totalPointsSpent: totalPointsSpent,
+        requiredMeritScore: calculateRequiredMeritScore(totalPointsSpent) ?? 0
       });
       
       // Register stats with the global registry
@@ -305,10 +356,21 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
       
       // Helper function to find expansion slot for a given base slot
       const findExpansionSlotForBase = (baseSlotId: string): string | null => {
+        const baseMasteryIndex = GoldMeritSlotMapping[baseSlotId];
+        if (!baseMasteryIndex) return null;
+        
+        // Find expansion slot that has linkedMasteryIndex matching baseMasteryIndex
         for (const category of state.categories) {
           for (const slot of category.slots) {
-            if (slot.isExpansion && slot.expandsSlot === baseSlotId) {
-              return slot.id;
+            if (slot.isExpansion) {
+              const expansionMastery = getMasteryBySlotId(slot.id);
+              if (expansionMastery && expansionMastery.linkedMasteryIndex === baseMasteryIndex) {
+                return slot.id;
+              }
+              // Fallback to old expandsSlot field
+              if (slot.expandsSlot === baseSlotId) {
+                return slot.id;
+              }
             }
           }
         }
@@ -338,8 +400,17 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
                 return;
               }
               // Expansion slot is unlocked, contribute stats
-              baseStatValue = slot.values[slotState.currentLevel - 1] || 0;
-              bonusStatValue = slot.bonusValues ? (slot.bonusValues[slotState.currentLevel - 1] || 0) : 0;
+              // Get stat values from the mastery data
+              const mastery = getMasteryBySlotId(slot.id);
+              if (mastery && mastery.values[slotState.currentLevel - 1]) {
+                const valueEntry = mastery.values[slotState.currentLevel - 1];
+                baseStatValue = valueEntry.baseStat.value;
+                bonusStatValue = valueEntry.bonusStat ? valueEntry.bonusStat.value : 0;
+              } else {
+                // Fallback to slot values
+                baseStatValue = slot.values[slotState.currentLevel - 1] || 0;
+                bonusStatValue = slot.bonusValues ? (slot.bonusValues[slotState.currentLevel - 1] || 0) : 0;
+              }
             } else {
               // No expansion slot exists for this slot, so it never contributes stats to PvE
               return;
@@ -361,7 +432,17 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
       const state = get();
       const slot = state.getSlotById(slotId);
       
-      if (!slot || !slot.prerequisites) return true;
+      if (!slot) return true;
+      
+      // Get prerequisite info from new data structure
+      const prereqInfo = getPrerequisiteInfo(slotId);
+      if (prereqInfo) {
+        const prereqState = state.slotStates[prereqInfo.slotId];
+        return prereqState && prereqState.currentLevel >= prereqInfo.requiredLevel;
+      }
+      
+      // Fallback to old prerequisites array
+      if (!slot.prerequisites) return true;
       
       return slot.prerequisites.every(prereqId => {
         const prereqState = state.slotStates[prereqId];
@@ -377,7 +458,17 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
       const isSlotPrerequisiteMetInStates = (slotId: string, states: Record<string, GoldMeritSlotState>): boolean => {
         const slot = state.getSlotById(slotId);
         
-        if (!slot || !slot.prerequisites) return true;
+        if (!slot) return true;
+        
+        // Get prerequisite info from new data structure
+        const prereqInfo = getPrerequisiteInfo(slotId);
+        if (prereqInfo) {
+          const prereqState = states[prereqInfo.slotId];
+          return prereqState && prereqState.currentLevel >= prereqInfo.requiredLevel;
+        }
+        
+        // Fallback to old prerequisites array
+        if (!slot.prerequisites) return true;
         
         return slot.prerequisites.every(prereqId => {
           const prereqState = states[prereqId];
@@ -407,6 +498,7 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
       set({
         slotStates: validatedSlotStates,
         totalPointsSpent: importData.totalPointsSpent,
+        requiredMeritScore: calculateRequiredMeritScore(importData.totalPointsSpent) ?? 0,
         selectedCategory: importData.selectedCategory
       });
       
@@ -467,10 +559,18 @@ export const useGoldMeritStore = create<GoldMeritStore>()(subscribeWithSelector(
         const slot = state.getSlotById(slotId);
         if (slot && slotState.currentLevel <= slot.maxLevel && slotState.currentLevel >= 0) {
           // Check if prerequisites are met before restoring
-          const prereqsMet = !slot.prerequisites || slot.prerequisites.every(prereqId => {
-            const prereqState = validatedStates[prereqId];
-            return prereqState && prereqState.currentLevel > 0;
-          });
+          const prereqInfo = getPrerequisiteInfo(slotId);
+          let prereqsMet = true;
+          
+          if (prereqInfo) {
+            const prereqState = validatedStates[prereqInfo.slotId];
+            prereqsMet = prereqState && prereqState.currentLevel >= prereqInfo.requiredLevel;
+          } else if (slot.prerequisites) {
+            prereqsMet = slot.prerequisites.every(prereqId => {
+              const prereqState = validatedStates[prereqId];
+              return prereqState && prereqState.currentLevel > 0;
+            });
+          }
           
           if (prereqsMet || slotState.currentLevel === 0) {
             validatedStates[slotId] = {

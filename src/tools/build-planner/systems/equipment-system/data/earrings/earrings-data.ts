@@ -27,11 +27,11 @@ export interface EarringStats {
   resistCriticalRate?: number;
   maxHpStealPerHit?: number; // New stat for vampiric earring
   maxMpStealPerHit?: number; // New stat for vampiric earring
-  ignoreDamageReduction?: number; // Added for Eroding Perious' Earring slot options
-  damageReduction?: number; // Added for Ascending Perious' Earring
-  ignoreAccuracy?: number; // Added for Ascending Perious' Earring
-  allAttackUp?: number; // Added for Ascending Perious' Earring slot options
-  normalDamageUp?: number; // Added for Ascending Perious' Earring slot options
+  ignoreDamageReduction?: number; // Added for Eroding Perius' Earring slot options
+  damageReduction?: number; // Added for Ascending Perius' Earring
+  ignoreAccuracy?: number; // Added for Ascending Perius' Earring
+  allAttackUp?: number; // Added for Ascending Perius' Earring slot options
+  normalDamageUp?: number; // Added for Ascending Perius' Earring slot options
 }
 
 // Slot option for unique earrings (separate from varying stats)
@@ -275,7 +275,7 @@ export const earrings: Earring[] = [
   },
   {
     id: 'eroding_perious_earring_low',
-    name: 'Eroding Perious\' Earring (low)',
+    name: 'Eroding Perius\' Earring (low)',
     type: 'earring',
     subtype: 'earring',
     grade: 'unique',
@@ -316,7 +316,7 @@ export const earrings: Earring[] = [
   },
   {
     id: 'eroding_perious_earring_medium',
-    name: 'Eroding Perious\' Earring (medium)',
+    name: 'Eroding Perius\' Earring (medium)',
     type: 'earring',
     subtype: 'earring',
     grade: 'unique',
@@ -357,7 +357,7 @@ export const earrings: Earring[] = [
   },
   {
     id: 'eroding_perious_earring_high',
-    name: 'Eroding Perious\' Earring (high)',
+    name: 'Eroding Perius\' Earring (high)',
     type: 'earring',
     subtype: 'earring',
     grade: 'unique',
@@ -398,7 +398,7 @@ export const earrings: Earring[] = [
   },
   {
     id: 'ascending_perious_earring_low',
-    name: 'Ascending Perious\' Earring (low)',
+    name: 'Ascending Perius\' Earring (low)',
     type: 'earring',
     subtype: 'earring',
     grade: 'unique',
@@ -439,7 +439,7 @@ export const earrings: Earring[] = [
   },
   {
     id: 'ascending_perious_earring_medium',
-    name: 'Ascending Perious\' Earring (medium)',
+    name: 'Ascending Perius\' Earring (medium)',
     type: 'earring',
     subtype: 'earring',
     grade: 'unique',
@@ -480,7 +480,7 @@ export const earrings: Earring[] = [
   },
   {
     id: 'ascending_perious_earring_high',
-    name: 'Ascending Perious\' Earring (high)',
+    name: 'Ascending Perius\' Earring (high)',
     type: 'earring',
     subtype: 'earring',
     grade: 'unique',

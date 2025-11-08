@@ -22,7 +22,8 @@ export interface GoldMeritSlot {
 export interface GoldMeritArrow {
   id: string;
   type: 'arrow';
-  direction: 'up' | 'down' | 'left' | 'right' | 'up-right' | 'up-left' | 'down-right' | 'down-left';
+  direction: 'up' | 'down' | 'left' | 'right' | 
+             'up-right' | 'down-right' | 'up-left' | 'down-left';
   gridPosition: {
     row: number;
     col: number;
@@ -55,6 +56,7 @@ export interface GoldMeritState {
   categories: GoldMeritCategory[];
   slotStates: Record<string, GoldMeritSlotState>;
   totalPointsSpent: number;
+  requiredMeritScore: number | null; // Merit score needed to earn the current points
   selectedCategory: string;
 }
 

@@ -26,9 +26,10 @@ const CombatStats: React.FC = () => {
   const selectedClass = useClassStore((state) => state.selectedClass);
   const [showCPWeightsModal, setShowCPWeightsModal] = useState(false);
   const [showPvEModal, setShowPvEModal] = useState(false);
+  const [selectedCPType, setSelectedCPType] = useState<'general' | 'pve' | 'pvp'>('general');
 
   
-  // Track CP changes
+  // Track CP changes for the selected type
   const [cpChange, setCpChange] = useState<number>(0);
   const [showCpChange, setShowCpChange] = useState<boolean>(false);
   const previousCpRef = useRef<number>(damageStats.combatPower);
@@ -49,9 +50,21 @@ const CombatStats: React.FC = () => {
 
 
 
-  // Effect to track CP changes
+  // Get current CP value based on selected type
+  const getCurrentCP = () => {
+    switch (selectedCPType) {
+      case 'pve':
+        return damageStats.pveCombatPower;
+      case 'pvp':
+        return damageStats.pvpCombatPower;
+      default:
+        return damageStats.combatPower;
+    }
+  };
+
+  // Effect to track CP changes for the selected type
   useEffect(() => {
-    const currentCp = damageStats.combatPower;
+    const currentCp = getCurrentCP();
     const previousCp = previousCpRef.current;
     
     if (currentCp !== previousCp) {
@@ -60,7 +73,17 @@ const CombatStats: React.FC = () => {
       setShowCpChange(true);
       previousCpRef.current = currentCp;
     }
-  }, [damageStats.combatPower]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [damageStats.combatPower, damageStats.pveCombatPower, damageStats.pvpCombatPower, selectedCPType]);
+
+  // Reset change tracking when CP type changes
+  useEffect(() => {
+    const currentCp = getCurrentCP();
+    previousCpRef.current = currentCp;
+    setShowCpChange(false);
+    setCpChange(0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedCPType]);
 
   // Effect to track PvE damage changes
   useEffect(() => {
@@ -90,42 +113,70 @@ const CombatStats: React.FC = () => {
 
 
   // Render the combat power (always visible)
-  const renderCombatPower = () => (
-    <div className="glass-panel p-3 sm:p-4 flex flex-col items-center justify-center">
-      <div className="text-xs sm:text-sm text-gray-300 mb-1 flex items-center gap-1">
-        Combat Power
-        <button
-          onClick={() => setShowCPWeightsModal(true)}
-          className="text-gray-400 hover:text-game-gold transition-colors"
-          title="View CP Weights"
-        >
-          <Info size={14} />
-        </button>
-      </div>
-      <div className="flex flex-col items-center">
-        <div className="text-xl sm:text-2xl font-bold text-game-gold">
-          {formatNumber(damageStats.combatPower)}
+  const renderCombatPower = () => {
+    const currentCP = getCurrentCP();
+    const cpTypeLabels = {
+      general: 'General',
+      pve: 'PvE',
+      pvp: 'PvP'
+    };
+
+    return (
+      <div className="glass-panel p-3 sm:p-4 flex flex-col items-center justify-center">
+        <div className="text-xs sm:text-sm text-gray-300 mb-2 flex items-center gap-1">
+          Combat Power
+          <button
+            onClick={() => setShowCPWeightsModal(true)}
+            className="text-gray-400 hover:text-game-gold transition-colors"
+            title="View CP Weights"
+          >
+            <Info size={14} />
+          </button>
         </div>
-        {/* CP Change Indicator */}
-        {showCpChange && cpChange !== 0 && (
-          <div className={`flex items-center gap-1 text-xs sm:text-sm font-medium transition-all duration-300 ${
-            cpChange > 0 
-              ? 'text-green-400' 
-              : 'text-red-400'
-          }`}>
-            {cpChange > 0 ? (
-              <TrendingUp size={12} />
-            ) : (
-              <TrendingDown size={12} />
-            )}
-            <span>
-              {cpChange > 0 ? '+' : ''}{formatNumber(cpChange)}
-            </span>
+        
+        {/* CP Type Toggle */}
+        <div className="flex gap-1 mb-3 bg-theme-darkest rounded-md p-1">
+          {(['general', 'pve', 'pvp'] as const).map((type) => (
+            <button
+              key={type}
+              onClick={() => setSelectedCPType(type)}
+              className={`px-3 py-1 text-xs font-medium rounded transition-colors ${
+                selectedCPType === type
+                  ? 'bg-game-gold text-black'
+                  : 'text-gray-400 hover:text-gray-300'
+              }`}
+            >
+              {cpTypeLabels[type]}
+            </button>
+          ))}
+        </div>
+
+        {/* CP Value Display */}
+        <div className="flex flex-col items-center">
+          <div className="text-xl sm:text-2xl font-bold text-game-gold">
+            {formatNumber(currentCP)}
           </div>
-        )}
+          {/* CP Change Indicator */}
+          {showCpChange && cpChange !== 0 && (
+            <div className={`flex items-center gap-1 text-xs sm:text-sm font-medium transition-all duration-300 ${
+              cpChange > 0 
+                ? 'text-green-400' 
+                : 'text-red-400'
+            }`}>
+              {cpChange > 0 ? (
+                <TrendingUp size={12} />
+              ) : (
+                <TrendingDown size={12} />
+              )}
+              <span>
+                {cpChange > 0 ? '+' : ''}{formatNumber(cpChange)}
+              </span>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   // Render the damage panels (class-dependent)
   const renderDamagePanels = () => {

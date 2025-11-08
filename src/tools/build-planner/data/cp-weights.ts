@@ -81,11 +81,57 @@ export const cpWeights: CPWeights = {
 };
 
 /**
+ * Check if a stat name is a PvE or PvP variant
+ * @param statName - Name of the stat
+ * @returns True if the stat is a variant (starts with 'pve' or 'pvp')
+ */
+export function isVariantStat(statName: string): boolean {
+  return statName.startsWith('pve') || statName.startsWith('pvp');
+}
+
+/**
+ * Extract the base stat name from a variant stat name
+ * @param statName - Variant stat name (e.g., 'pveAttack', 'pvpCriticalDamage')
+ * @returns Base stat name (e.g., 'attack', 'criticalDamage') or null if not a variant
+ */
+export function getBaseStatName(statName: string): string | null {
+  if (statName.startsWith('pve') || statName.startsWith('pvp')) {
+    // Remove the prefix (pve or pvp) and lowercase the first letter
+    const withoutPrefix = statName.substring(3);
+    if (withoutPrefix.length > 0) {
+      return withoutPrefix.charAt(0).toLowerCase() + withoutPrefix.slice(1);
+    }
+  }
+  return null;
+}
+
+/**
+ * Get the CP weight for a stat, handling variants by looking up the base stat weight
+ * @param statName - Name of the stat (can be base or variant)
+ * @returns CP weight for the stat, or 0 if not found
+ */
+function getCPWeightForStat(statName: string): number {
+  // If it's a variant, get the base stat name and use its weight
+  if (isVariantStat(statName)) {
+    const baseStatName = getBaseStatName(statName);
+    if (baseStatName) {
+      return cpWeights[baseStatName] || 0;
+    }
+  }
+  // Otherwise, use the stat name directly
+  return cpWeights[statName] || 0;
+}
+
+/**
  * Calculate Combat Power based on character stats
  * @param stats - Object containing character stats
+ * @param combatType - Type of CP to calculate: 'general' (base only), 'pve' (base + PvE), 'pvp' (base + PvP), or undefined (all stats)
  * @returns Total Combat Power as a number
  */
-export function calculateCombatPower(stats: Record<string, number>): number {
+export function calculateCombatPower(
+  stats: Record<string, number>,
+  combatType?: 'general' | 'pve' | 'pvp'
+): number {
   if (!stats || typeof stats !== 'object') {
     return 0;
   }
@@ -95,7 +141,27 @@ export function calculateCombatPower(stats: Record<string, number>): number {
   // Calculate CP for each stat based on weights
   for (const statName in stats) {
     const statValue = stats[statName];
-    const cpWeight = cpWeights[statName];
+    
+    // Filter stats based on combat type
+    if (combatType === 'general') {
+      // General CP: exclude all variants
+      if (isVariantStat(statName)) {
+        continue;
+      }
+    } else if (combatType === 'pve') {
+      // PvE CP: exclude PvP variants
+      if (statName.startsWith('pvp')) {
+        continue;
+      }
+    } else if (combatType === 'pvp') {
+      // PvP CP: exclude PvE variants
+      if (statName.startsWith('pve')) {
+        continue;
+      }
+    }
+    // If combatType is undefined, include all stats (backward compatibility)
+
+    const cpWeight = getCPWeightForStat(statName);
     
     if (typeof statValue === 'number' && cpWeight && statValue > 0) {
       totalCP += statValue * cpWeight;
@@ -107,12 +173,56 @@ export function calculateCombatPower(stats: Record<string, number>): number {
 }
 
 /**
- * Get the CP weight for a specific stat
- * @param statName - Name of the stat
+ * Calculate General CP (base stats only, no PvE/PvP variants)
+ * @param stats - Object containing character stats
+ * @returns General Combat Power as a number
+ */
+export function calculateGeneralCP(stats: Record<string, number>): number {
+  return calculateCombatPower(stats, 'general');
+}
+
+/**
+ * Calculate PvE CP (base stats + PvE variants)
+ * @param stats - Object containing character stats
+ * @returns PvE Combat Power as a number
+ */
+export function calculatePveCP(stats: Record<string, number>): number {
+  return calculateCombatPower(stats, 'pve');
+}
+
+/**
+ * Calculate PvP CP (base stats + PvP variants)
+ * @param stats - Object containing character stats
+ * @returns PvP Combat Power as a number
+ */
+export function calculatePvpCP(stats: Record<string, number>): number {
+  return calculateCombatPower(stats, 'pvp');
+}
+
+/**
+ * Calculate all three CP types at once
+ * @param stats - Object containing character stats
+ * @returns Object with general, pve, and pvp CP values
+ */
+export function calculateAllCP(stats: Record<string, number>): {
+  general: number;
+  pve: number;
+  pvp: number;
+} {
+  return {
+    general: calculateGeneralCP(stats),
+    pve: calculatePveCP(stats),
+    pvp: calculatePvpCP(stats),
+  };
+}
+
+/**
+ * Get the CP weight for a specific stat (handles variants)
+ * @param statName - Name of the stat (can be base or variant)
  * @returns CP weight for the stat, or 0 if not found
  */
 export function getCPWeight(statName: string): number {
-  return cpWeights[statName] || 0;
+  return getCPWeightForStat(statName);
 }
 
 /**
@@ -124,8 +234,8 @@ export function getCPStats(): string[] {
 }
 
 /**
- * Calculate CP contribution for a specific stat
- * @param statName - Name of the stat
+ * Calculate CP contribution for a specific stat (handles variants)
+ * @param statName - Name of the stat (can be base or variant)
  * @param statValue - Value of the stat
  * @returns CP contribution from this stat
  */

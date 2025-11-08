@@ -7,9 +7,6 @@ export { GoldMeritSlot } from './components/GoldMeritSlot';
 // Store exports
 export { useGoldMeritStore } from './stores/goldMeritStore';
 
-// Data exports
-export { GoldMeritData } from './data/gold-merit-data';
-
 // Type exports
 export type {
   GoldMeritSlot as GoldMeritSlotType,

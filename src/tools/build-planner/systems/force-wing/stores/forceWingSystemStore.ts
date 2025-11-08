@@ -443,6 +443,9 @@ export const useForceWingSystemStore = create<ForceWingSystemStore>()(
       if (forceWingLevel >= 301) {
         totalPoints += 40;
       }
+      if (forceWingLevel >= 401) {
+        totalPoints += 50;
+      }
       
       set({ availableTrainingPoints: totalPoints });
       return totalPoints;

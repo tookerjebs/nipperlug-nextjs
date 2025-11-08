@@ -7,7 +7,7 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import { statsConfig } from '@/tools/build-planner/data/stats-config';
-import { calculateCombatPower } from '@/tools/build-planner/data/cp-weights';
+import { calculateAllCP } from '@/tools/build-planner/data/cp-weights';
 import type { CharacterClass } from '../systems/class/types';
 import { getClassDamageType, getClassPrimaryStats } from '../utils/classDamageUtils';
 
@@ -20,7 +20,9 @@ export interface BuildStats {
 
 // Define damage calculation results
 export interface DamageStats {
-  combatPower: number;
+  combatPower: number; // General CP (base stats only)
+  pveCombatPower: number; // PvE CP (base + PvE variants)
+  pvpCombatPower: number; // PvP CP (base + PvP variants)
   pveAttack?: {
     normal: {
       min: number;
@@ -90,8 +92,11 @@ const initialBuildStats: BuildStats = {
   finalDamageIncreased: 0,
 };
 
+const initialCPValues = calculateAllCP(initialBuildStats);
 const initialDamageStats: DamageStats = {
-  combatPower: calculateCombatPower(initialBuildStats),
+  combatPower: initialCPValues.general,
+  pveCombatPower: initialCPValues.pve,
+  pvpCombatPower: initialCPValues.pvp,
   selectedClass: null,
   normalAttack: { min: 0, max: 0, critical: 0 },
   magicAttack: { min: 0, max: 0, critical: 0 },
@@ -134,14 +139,17 @@ function recalculateDamageStats(
   enemyConfig: EnemyConfig,
   selectedClass: CharacterClass | null = null
 ): DamageStats {
-  const combatPower = calculateCombatPower(buildStats);
+  // Calculate all three CP types
+  const cpValues = calculateAllCP(buildStats);
   const dpsEstimate = calculateDPS(buildStats, level);
   
   // Legacy damage calculations (for backward compatibility) - now using shared utility
   const legacyDamageValues = calculateDamage(buildStats, level, enemyConfig);
-  
+
   const baseStats: DamageStats = {
-    combatPower,
+    combatPower: cpValues.general,
+    pveCombatPower: cpValues.pve,
+    pvpCombatPower: cpValues.pvp,
     selectedClass,
     normalAttack: {
       min: legacyDamageValues.sword.normal.min,

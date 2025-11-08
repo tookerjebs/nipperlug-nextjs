@@ -185,9 +185,9 @@ export const PASSIVE_SKILLS_DATA: PassiveSkill[] = [
     icon: '/images/passives-general/damage-absorb.png',
     maxLevel: 3,
     stats: [
-      { level: 1, statId: 'hpAbsorb', value: 41 },
-      { level: 2, statId: 'hpAbsorb', value: 64 },
-      { level: 3, statId: 'hpAbsorb', value: 87 }
+      { level: 1, statId: 'defense', value: 41 },
+      { level: 2, statId: 'defense', value: 64 },
+      { level: 3, statId: 'defense', value: 87 }
     ]
   }
 ];

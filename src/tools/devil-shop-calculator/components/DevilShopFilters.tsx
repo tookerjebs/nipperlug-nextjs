@@ -6,6 +6,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 interface DevilShopFiltersProps {
   searchTerm: string;
@@ -49,13 +50,15 @@ export default function DevilShopFilters({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-2">
-              <img 
+              <Image 
                 src="/images/devil-shop/devil-token-high.png"
-                alt="Devil's Token (High)"
+                alt="Devil&apos;s Token (High)"
+                width={20}
+                height={20}
                 className="w-5 h-5"
                 title="Devil's Token (High)"
               />
-              Devil's Token (High) - Market Price
+              Devil&apos;s Token (High) - Market Price
             </label>
             <input
               type="number"
@@ -67,13 +70,15 @@ export default function DevilShopFilters({
           </div>
           <div>
             <label className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-2">
-              <img 
+              <Image 
                 src="/images/devil-shop/devil-token-highest.png"
-                alt="Devil's Token (Highest)"
+                alt="Devil&apos;s Token (Highest)"
+                width={20}
+                height={20}
                 className="w-5 h-5"
                 title="Devil's Token (Highest)"
               />
-              Devil's Token (Highest) - Market Price
+              Devil&apos;s Token (Highest) - Market Price
             </label>
             <input
               type="number"

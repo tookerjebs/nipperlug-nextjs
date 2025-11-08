@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import Image from 'next/image';
 import { formatNumber } from '@/utils/numberFormat';
 
 // EXP data table for levels 1-200
@@ -432,9 +433,11 @@ export default function CharacterExpCalculator() {
                         <td className="py-2 px-4">
                           <div className="flex items-center space-x-3">
                             <div className="w-6 h-6 bg-game-highlight/20 rounded border border-game-highlight/40 flex items-center justify-center flex-shrink-0">
-                              <img 
+                              <Image 
                                 src="/images/exp/exp-pot-icon.png" 
                                 alt="EXP Potion" 
+                                width={16}
+                                height={16}
                                 className="w-4 h-4"
                               />
                             </div>
@@ -449,7 +452,7 @@ export default function CharacterExpCalculator() {
                 </table>
               </div>
             ) : (
-              <p className="text-foreground/60 text-center py-4">No potions needed - you're already at your target level!</p>
+              <p className="text-foreground/60 text-center py-4">No potions needed - you&apos;re already at your target level!</p>
             )}
           </div>
         </div>

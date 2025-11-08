@@ -4,59 +4,24 @@
  * Provides a consistent upgrade experience across all equipment types
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { 
-  BaseEquipment, 
   Equipment, 
   ConfiguredEquipment,
-  ConfiguredWeapon, 
-  ConfiguredArmor, 
-  ConfiguredVehicle,
   isWeapon,
   isArmor,
   isVehicle,
-  supportsDivineUpgrades,
-  supportsMasterEpicOptions
+  supportsDivineUpgrades
 } from '../../types/base-equipment';
-import { ArmorStatType, ArmorSlotOption } from '../../data/armor/armor-types';
+import { ArmorStatType } from '../../data/armor/armor-types';
 import { getStatInfo, formatStatValue } from '@/tools/build-planner/data/stats-config';
 import { StatIcon } from '@/tools/build-planner/components/StatIcon';
 
-// Weapon-specific imports
-import { 
-  getUpgradeStatType, 
-  getBaseUpgradeStats
-} from '../../data/weapons/weapons-data';
-import {
-  getEpicOptionStatValue,
-  getWeaponSlotOptions,
-  getWeaponMasterEpicOption
-} from '../../data/weapons/epic-options';
-import { extremeUpgrades, getExtremeUpgradeStats } from '../../data/weapons/extreme-upgrades';
-import { getDivineUpgradeStats } from '../../data/weapons/divine-upgrades';
-
-// Armor-specific imports
-import { 
-  getArmorBaseUpgradeStats,
-  getArmorSlotOptions,
-  getAvailableArmorSlotStats,
-  calculateArmorTotalStats
-} from '../../data/armor/armors-data';
-import {
-  getArmorEpicOptionStatValue,
-  getArmorMasterEpicOption
-} from '../../data/armor/armor-epic-options';
-import { getArmorExtremeUpgradeStats } from '../../data/armor/armor-extreme-upgrades';
-import { getArmorDivineUpgradeStats } from '../../data/armor/armor-divine-upgrades';
-
-// Vehicle-specific imports
-import {
-  getVehicleEpicOptionStatValue,
-  calculateVehicleTotalStats,
-  getVehicleSlotOptions
-} from '../../data/vehicles/vehicles-data';
-import { getVehicleExtremeUpgradeStats } from '../../data/vehicles/vehicle-extreme-upgrades';
-import { getVehicleDivineUpgradeStats } from '../../data/vehicles/vehicle-divine-upgrades';
+// Slot options imports (only what's needed for comparison)
+import { getWeaponSlotOptions } from '../../data/weapons/epic-options';
+import { getArmorSlotOptions } from '../../data/armor/armors-data';
+import { getVehicleSlotOptions } from '../../data/vehicles/vehicles-data';
 
 // Tooltip import
 import UnifiedEquipmentTooltip from '../tooltips/UnifiedEquipmentTooltip';
@@ -64,9 +29,6 @@ import UpgradeModalLayout from './shared/UpgradeModalLayout';
 
 // Strategy pattern import
 import { calculateEquipmentStats, getEquipmentStrategy } from '../../strategies/equipment-strategy';
-
-// Color utilities
-import { getEpicOptionColors } from '../../utils/epic-option-colors';
 
 // Shared components
 import UpgradeSlider from './shared/UpgradeSlider';
@@ -77,15 +39,6 @@ import {
   parseSelectedOption, 
   createOptionId 
 } from './shared/epic-options-transformer';
-
-// Union types for equipment (now using unified types)
-type EquipmentUnion = Equipment;
-type ConfiguredEquipmentUnion = ConfiguredEquipment;
-
-// Helper function to get level display name
-const getLevelDisplayName = (level: number): string => {
-  return `Level ${level}`;
-};
 
 interface EquipmentUpgradeModalProps {
   isOpen: boolean;
@@ -129,7 +82,7 @@ const EquipmentUpgradeModal: React.FC<EquipmentUpgradeModalProps> = ({
   const [selectedEpicOption, setSelectedEpicOption] = useState<string | null>(() => {
     if (!isMatchingConfiguration()) return null;
     
-    const config = configuredEquipment as any;
+    const config = configuredEquipment as ConfiguredEquipment;
     
     // Handle master epic options
     if (config?.masterEpicOption) {
@@ -161,64 +114,8 @@ const EquipmentUpgradeModal: React.FC<EquipmentUpgradeModalProps> = ({
     slotIndex: number;
   }>({ isOpen: false, slotIndex: -1 });
   
-  // Reset state when equipment changes or when configuration doesn't match
-  useEffect(() => {
-    if (equipment) {
-      if (isMatchingConfiguration()) {
-        // Load configuration from matching equipment
-        setBaseUpgradeLevel(configuredEquipment!.baseUpgradeLevel || 0);
-        setExtremeUpgradeLevel(configuredEquipment!.extremeUpgradeLevel || 0);
-        setDivineUpgradeLevel(configuredEquipment!.divineUpgradeLevel || 0);
-        
-        // Handle master epic options
-        const config = configuredEquipment as any;
-        if (config?.masterEpicOption) {
-          const masterOption = config.masterEpicOption;
-          const masterLevel = config.masterEpicOptionLevel || 1;
-          setSelectedEpicOption(createOptionId(masterOption, masterLevel));
-        } else if (config?.epicOptionStat && config?.epicOptionLevel) {
-          setSelectedEpicOption(createOptionId(config.epicOptionStat, config.epicOptionLevel));
-        } else {
-          setSelectedEpicOption(null);
-        }
-        
-        setSlots(configuredEquipment!.slots || Array(equipment.maxSlots).fill({ isActive: false, selectedStat: null }));
-        setIsExtended(configuredEquipment!.isExtended || false);
-      } else {
-        // Reset to default values for new/different equipment
-        setBaseUpgradeLevel(0);
-        setExtremeUpgradeLevel(0);
-        setDivineUpgradeLevel(0);
-        setSelectedEpicOption(null);
-        setSlots(Array(equipment.maxSlots).fill({ isActive: false, selectedStat: null }));
-        setIsExtended(false);
-      }
-    }
-    calculateTotalStats();
-  }, [equipment, configuredEquipment]);
-  
-  // Reset divine upgrade level if equipment doesn't support divine upgrades
-  useEffect(() => {
-    if (equipment && !supportsDivineUpgrades(equipment) && divineUpgradeLevel > 0) {
-      setDivineUpgradeLevel(0);
-    }
-  }, [equipment, divineUpgradeLevel]);
-  
-  // Calculate total stats whenever any upgrade level changes
-  useEffect(() => {
-    calculateTotalStats();
-  }, [baseUpgradeLevel, extremeUpgradeLevel, divineUpgradeLevel, selectedEpicOption, slots, isExtended]);
-  
-  // Auto-apply slot extender when slots are loaded from configuration
-  useEffect(() => {
-    const activeSlots = slots.filter(slot => slot.isActive).length;
-    if (activeSlots === 3 && !isExtended) {
-      setIsExtended(true);
-    }
-  }, [slots]);
-  
   // Calculate total stats based on all upgrades using unified strategy
-  const calculateTotalStats = () => {
+  const calculateTotalStats = useCallback(() => {
     if (!equipment) return;
     
     // Parse selected epic option
@@ -245,7 +142,67 @@ const EquipmentUpgradeModal: React.FC<EquipmentUpgradeModalProps> = ({
     );
     
     setTotalStats(calculatedStats);
-  };
+  }, [equipment, baseUpgradeLevel, extremeUpgradeLevel, divineUpgradeLevel, selectedEpicOption, slots, isExtended]);
+
+  // Reset state when equipment changes or when configuration doesn't match
+  useEffect(() => {
+    if (equipment) {
+      const isMatching = configuredEquipment && equipment && configuredEquipment.id === equipment.id;
+      if (isMatching) {
+        // Load configuration from matching equipment
+        setBaseUpgradeLevel(configuredEquipment!.baseUpgradeLevel || 0);
+        setExtremeUpgradeLevel(configuredEquipment!.extremeUpgradeLevel || 0);
+        setDivineUpgradeLevel(configuredEquipment!.divineUpgradeLevel || 0);
+        
+        // Handle master epic options
+        const config = configuredEquipment as ConfiguredEquipment;
+        if (config?.masterEpicOption) {
+          const masterOption = config.masterEpicOption;
+          const masterLevel = config.masterEpicOptionLevel || 1;
+          setSelectedEpicOption(createOptionId(masterOption, masterLevel));
+        } else if (config?.epicOptionStat && config?.epicOptionLevel) {
+          setSelectedEpicOption(createOptionId(config.epicOptionStat, config.epicOptionLevel));
+        } else {
+          setSelectedEpicOption(null);
+        }
+        
+        setSlots(configuredEquipment!.slots || Array(equipment.maxSlots).fill({ isActive: false, selectedStat: null }));
+        setIsExtended(configuredEquipment!.isExtended || false);
+      } else {
+        // Reset to default values for new/different equipment
+        setBaseUpgradeLevel(0);
+        setExtremeUpgradeLevel(0);
+        setDivineUpgradeLevel(0);
+        setSelectedEpicOption(null);
+        setSlots(Array(equipment.maxSlots).fill({ isActive: false, selectedStat: null }));
+        setIsExtended(false);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [equipment, configuredEquipment]);
+  
+  // Reset divine upgrade level if equipment doesn't support divine upgrades
+  useEffect(() => {
+    if (equipment && !supportsDivineUpgrades(equipment) && divineUpgradeLevel > 0) {
+      setDivineUpgradeLevel(0);
+    }
+  }, [equipment, divineUpgradeLevel]);
+  
+  // Calculate total stats whenever any upgrade level changes
+  useEffect(() => {
+    if (equipment) {
+      calculateTotalStats();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [equipment, baseUpgradeLevel, extremeUpgradeLevel, divineUpgradeLevel, selectedEpicOption, slots, isExtended]);
+  
+  // Auto-apply slot extender when slots are loaded from configuration
+  useEffect(() => {
+    const activeSlots = slots.filter(slot => slot.isActive).length;
+    if (activeSlots === 3 && !isExtended) {
+      setIsExtended(true);
+    }
+  }, [slots, isExtended]);
   
   // Handle slot stat selection
   const handleSlotStatChange = (index: number, stat: string | null) => {
@@ -321,20 +278,6 @@ const EquipmentUpgradeModal: React.FC<EquipmentUpgradeModalProps> = ({
     return [...normalCategories, ...masterCategories];
   };
 
-  // Helper functions using cached strategy pattern
-  const getEpicOptionStatValueForEquipment = (stat: string, level: number) => {
-    if (!equipment) return 0;
-    const strategy = getEquipmentStrategy(equipment);
-    return strategy.getEpicOptionStatValue(stat, level);
-  };
-
-  const getMasterEpicOptionValuesForEquipment = (optionName: string, level: number) => {
-    if (!equipment) return {};
-    const strategy = getEquipmentStrategy(equipment);
-    return strategy.getMasterEpicOptionValues(optionName, level);
-  };
-  
-
   const getSlotOptionsForEquipment = () => {
     if (!equipment) return {};
     const strategy = getEquipmentStrategy(equipment);
@@ -362,9 +305,11 @@ const EquipmentUpgradeModal: React.FC<EquipmentUpgradeModalProps> = ({
     <>
             {/* Equipment info */}
             <div className="flex items-center mb-6 bg-theme-darker p-4 rounded-md border border-border-dark">
-              <img 
+              <Image 
                 src={equipment.imagePath} 
                 alt={equipment.name}
+                width={64}
+                height={64}
                 className="w-16 h-16 object-contain mr-4"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -668,13 +613,13 @@ const EquipmentUpgradeModal: React.FC<EquipmentUpgradeModalProps> = ({
                   let standardValue: number | undefined;
                   if (isWeapon(equipment)) {
                     const standardOptions = getWeaponSlotOptions(equipment.grade, false, equipment.handType);
-                    standardValue = (standardOptions as any)[stat];
+                    standardValue = standardOptions[stat as keyof typeof standardOptions] as number | undefined;
                   } else if (isArmor(equipment)) {
                     const standardOptions = getArmorSlotOptions(equipment.subtype as ArmorStatType, false);
-                    standardValue = (standardOptions as any)[stat];
+                    standardValue = standardOptions[stat as keyof typeof standardOptions] as number | undefined;
                   } else if (isVehicle(equipment)) {
                     const standardOptions = getVehicleSlotOptions(equipment.grade, false);
-                    standardValue = (standardOptions as any)[stat];
+                    standardValue = standardOptions[stat];
                   }
                   
                   // Format display value

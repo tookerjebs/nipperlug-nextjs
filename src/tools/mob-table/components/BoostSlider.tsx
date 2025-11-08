@@ -1,5 +1,4 @@
 import React from 'react';
-import { getBoostLevels } from '../utils/boostCalculator';
 
 interface BoostSliderProps {
   currentLevel: number;

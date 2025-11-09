@@ -3,6 +3,7 @@ import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import type { ClassState, ClassActions, CharacterClass, StatDistribution } from '../types';
 import { CLASS_BASE_STATS } from '../data/classScaling';
+import { calculateClassStats } from '../../../data/classScaling';
 
 import { useStatRegistryStore } from '../../../stores/statRegistryStore';
 
@@ -151,7 +152,7 @@ export const useClassStore = create<ClassStore>()(subscribeWithSelector((set, ge
     }
   },
 
-  // Calculate total stats from stat distribution
+  // Calculate total stats from stat distribution (raw STR/INT/DEX for registry)
   calculateTotalStats: () => {
     const { statDistribution, selectedClass } = get();
     const totalStats: Record<string, number> = {};
@@ -164,6 +165,23 @@ export const useClassStore = create<ClassStore>()(subscribeWithSelector((set, ge
     }
 
     return totalStats;
+  },
+
+  // Calculate derived stats from STR/INT/DEX (for display in TotalStatsButton)
+  calculateDerivedStats: () => {
+    const { statDistribution, selectedClass } = get();
+    
+    if (!selectedClass) {
+      return {};
+    }
+
+    // Calculate derived stats using the class scaling system
+    return calculateClassStats(
+      statDistribution.str,
+      statDistribution.int,
+      statDistribution.dex,
+      selectedClass
+    );
   },
 
   // Helper method to register stats with StatRegistry

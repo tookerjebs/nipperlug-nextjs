@@ -47,4 +47,5 @@ export interface ClassActions {
   // Helper methods
   registerStatsWithRegistry: () => void;
   calculateTotalStats: () => Record<string, number>;
+  calculateDerivedStats: () => Record<string, number>;
 }

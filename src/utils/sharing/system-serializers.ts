@@ -17,6 +17,7 @@ import { useMythLevelStore } from '@/tools/build-planner/systems/myth-level/stor
 import { useClassStore } from '@/tools/build-planner/systems/class/stores';
 import { useClassPassiveSkillsStore } from '@/tools/build-planner/systems/class-passive-skills/stores';
 import { useGoldMeritStore } from '@/tools/build-planner/systems/gold-merit/stores/goldMeritStore';
+import { usePlatinumMeritStore } from '@/tools/build-planner/systems/platinum-merit/stores/platinumMeritStore';
 import { useForceWingSystemStore } from '@/tools/build-planner/systems/force-wing/stores/forceWingSystemStore';
 import { useCollectionTrackerStore } from '@/tools/collection-tracker/stores/collectionTrackerStore';
 import { artifactSystemConfig } from '@/tools/build-planner/systems/artifact-system/stores/artifactSystemStore';
@@ -329,6 +330,29 @@ export function getDefaultSystemSerializers(): SystemSerializer[] {
           slotStates: data.slotStates,
           totalPointsSpent: data.totalPointsSpent,
           selectedCategory: data.selectedCategory
+        });
+      }
+    },
+
+    // Platinum Merit System
+    {
+      systemId: 'platinumMerit',
+      extract: () => {
+        const platinumMeritState = usePlatinumMeritStore.getState();
+        return {
+          slotStates: platinumMeritState.slotStates,
+          totalPointsSpent: platinumMeritState.totalPointsSpent,
+          selectedCategory: platinumMeritState.selectedCategory,
+          specialMasteryStates: platinumMeritState.specialMasteryStates
+        };
+      },
+      restore: (data) => {
+        const platinumMeritStore = usePlatinumMeritStore.getState();
+        platinumMeritStore.restoreFromImport({
+          slotStates: data.slotStates,
+          totalPointsSpent: data.totalPointsSpent,
+          selectedCategory: data.selectedCategory,
+          specialMasteryStates: data.specialMasteryStates || {}
         });
       }
     },

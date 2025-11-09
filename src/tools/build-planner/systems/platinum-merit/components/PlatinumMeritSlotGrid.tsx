@@ -44,7 +44,7 @@ export const PlatinumMeritSlotGrid: React.FC<PlatinumMeritSlotGridProps> = ({ ca
             return (
               <div
                 key={element.id}
-                className="w-12 h-12 flex items-center justify-center text-gray-200"
+                className="w-12 h-12 flex items-center justify-center text-gray-300"
                 style={{
                   gridColumn: element.gridPosition.col + 1,
                   gridRow: element.gridPosition.row + 1,
@@ -54,7 +54,7 @@ export const PlatinumMeritSlotGrid: React.FC<PlatinumMeritSlotGridProps> = ({ ca
                 <ArrowIcon 
                   direction={arrowElement.direction} 
                   size={48}
-                  className="text-gray-200"
+                  className="text-gray-300"
                 />
               </div>
             );

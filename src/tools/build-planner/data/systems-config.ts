@@ -65,12 +65,21 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     badge: 'NEW'
   },
   {
+    id: 'platinum-merit',
+    name: 'Platinum Merit',
+    description: 'Platinum merit system and rewards',
+    icon: '💎',
+    category: 'progression',
+    priority: 2,
+    badge: 'NEW'
+  },
+  {
     id: 'mythical-level',
     name: 'Mythical Level',
     description: 'Mythical level progression and bonuses',
     icon: '✨',
     category: 'progression',
-    priority: 2
+    priority: 3
   },
   {
     id: 'stellar-link',
@@ -78,7 +87,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Stellar constellation system',
     icon: '⭐',
     category: 'progression',
-    priority: 3
+    priority: 4
   },
   {
     id: 'overlord-mastery',
@@ -86,7 +95,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Overlord mastery system and skills',
     icon: '👑',
     category: 'progression',
-    priority: 4
+    priority: 5
   },
   {
     id: 'force-wing',
@@ -94,7 +103,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Force wing system and abilities',
     icon: '🪶',
     category: 'progression',
-    priority: 5
+    priority: 6
   },
   {
     id: 'pet',
@@ -102,7 +111,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Configure your Pet',
     icon: '🐾',
     category: 'progression',
-    priority: 6
+    priority: 7
   },
   {
     id: 'honor-medal',
@@ -110,7 +119,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Honor medals',
     icon: '🏅',
     category: 'progression',
-    priority: 7
+    priority: 8
   },
   {
     id: 'achievements',
@@ -118,7 +127,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Achievement system',
     icon: '🏆',
     category: 'progression',
-    priority: 8
+    priority: 9
   },
   {
     id: 'collection',
@@ -126,21 +135,13 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Collection system and items',
     icon: '📦',
     category: 'progression',
-    priority: 9
+    priority: 10
   },
   {
     id: 'gold-merit',
     name: 'Gold Merit',
     description: 'Gold merit system',
     icon: '🪙',
-    category: 'progression',
-    priority: 10
-  },
-  {
-    id: 'platinum-merit',
-    name: 'Platinum Merit',
-    description: 'Platinum merit system and rewards',
-    icon: '💎',
     category: 'progression',
     priority: 11
   },

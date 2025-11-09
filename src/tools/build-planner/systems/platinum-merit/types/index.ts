@@ -13,9 +13,11 @@ export interface PlatinumMeritSlot {
   pointsRequired: number; // Merit points required to unlock
   values: number[]; // Stat values per level (only one stat type for platinum)
   statType: string; // The stat this slot affects
-  prerequisites?: string[]; // Other slot IDs that must be learned first
+  prerequisites?: Array<{ slotId: string; requiredLevel: number }>; // Other slots that must be learned first with required levels
   isExpansion?: boolean; // Whether this is an expansion slot
   expandsSlot?: string; // ID of the slot this expansion affects
+  unlockCost?: { divineCore: number; chaosCore: number }; // Material cost to unlock this slot
+  unlockTime?: number; // Time in seconds required to unlock this slot
 }
 
 export interface PlatinumMeritArrow {
@@ -57,6 +59,8 @@ export interface PlatinumMeritState {
   maxPointsAllowed: number; // New: maximum points that can be spent
   selectedCategory: string;
   specialMasteryStates: Record<string, SpecialMasteryCategoryState>; // categoryId -> SpecialMasteryCategoryState
+  requiredMeritScore: number | null; // Merit score required for current points spent
+  maxPossibleMeritScore: number; // Maximum merit score if all slots maxed
 }
 
 export interface PlatinumMeritActions {
@@ -88,6 +92,13 @@ export interface PlatinumMeritActions {
   getSpecialMasteryStats: (categoryId: string) => SpecialMasteryStatOption[] | null;
   getSpecialMasterySlotState: (categoryId: string, slotIndex: 0 | 1) => SpecialMasterySlotState | undefined;
   calculateSpecialMasteryStats: (categoryId: string) => Record<string, number>;
+  
+  // Cost and time calculations
+  calculateTotalUnlockCosts: () => { divineCore: number; chaosCore: number };
+  calculateTotalUnlockTime: () => number; // Returns total time in seconds
+  formatUnlockTime: (seconds: number) => string; // Formats seconds as "Dd Hh Mm Ss"
+  requiredMeritScore: number | null; // Merit score required for current points spent
+  maxPossibleMeritScore: number; // Maximum merit score if all slots maxed
   
   // Import/Export functionality
   restoreFromImport: (importData: {

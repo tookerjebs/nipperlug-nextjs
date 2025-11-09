@@ -20,7 +20,7 @@ export default function SystemsSidebar({ activeSystem, onSystemChange }: Systems
   
   const handleSystemClick = (systemId: string) => {
     // Check if system is coming soon
-    const comingSoonSystems = ['platinum-merit', 'battle-configuration', 'class-passive-skills'];
+    const comingSoonSystems = ['battle-configuration', 'class-passive-skills'];
     if (comingSoonSystems.includes(systemId)) {
       // Still allow navigation to show the coming soon message in main content
       onSystemChange(systemId);
@@ -41,7 +41,7 @@ export default function SystemsSidebar({ activeSystem, onSystemChange }: Systems
 
   const renderSystemItem = (system: ProgressionSystem) => {
     const isActive = activeSystem === system.id;
-    const comingSoonSystems = ['platinum-merit', 'battle-configuration', 'class-passive-skills'];
+    const comingSoonSystems = ['battle-configuration', 'class-passive-skills'];
     const isComingSoon = comingSoonSystems.includes(system.id);
     
     return (
@@ -49,7 +49,7 @@ export default function SystemsSidebar({ activeSystem, onSystemChange }: Systems
         key={system.id}
         onClick={() => handleSystemClick(system.id)}
         className={`
-          w-full flex items-center p-2 sm:p-3 rounded-lg transition-all duration-200
+          w-full flex items-center justify-between p-2 sm:p-3 rounded-lg transition-all duration-200
           ${isActive 
             ? 'glass-panel border-game-highlight glow-border text-white' 
             : isComingSoon
@@ -58,15 +58,10 @@ export default function SystemsSidebar({ activeSystem, onSystemChange }: Systems
           }
         `}
       >
-        <div className="flex items-center">
-          <div className="text-left">
+        <div className="flex items-center flex-1 min-w-0">
+          <div className="text-left flex-1 min-w-0">
             <div className="font-medium flex items-center gap-1 sm:gap-2 text-sm sm:text-base">
               {system.name}
-              {system.badge && (
-                <span className="text-xs px-1.5 sm:px-2 py-0.5 bg-green-400/20 text-green-400 rounded-full border border-green-400/30">
-                  {system.badge}
-                </span>
-              )}
               {isComingSoon && (
                 <span className="text-xs px-1.5 sm:px-2 py-0.5 bg-orange-400/20 text-orange-400 rounded-full border border-orange-400/30">
                   Coming Soon
@@ -80,6 +75,11 @@ export default function SystemsSidebar({ activeSystem, onSystemChange }: Systems
             </div>
           </div>
         </div>
+        {system.badge && (
+          <span className="text-xs px-1.5 sm:px-2 py-0.5 bg-green-400/20 text-green-400 rounded-full border border-green-400/30 flex-shrink-0 ml-2">
+            {system.badge}
+          </span>
+        )}
       </button>
     );
   };

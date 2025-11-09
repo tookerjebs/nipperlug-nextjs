@@ -27,6 +27,7 @@ export interface SerializedBuildData {
     mythLevel?: any;
     class?: any;
     goldMerit?: any;
+    platinumMerit?: any;
     'force-wing'?: any;
     artifact?: any;
   };

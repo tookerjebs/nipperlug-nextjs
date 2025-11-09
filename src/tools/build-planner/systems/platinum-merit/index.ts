@@ -8,7 +8,7 @@ export { PlatinumMeritSlot } from './components/PlatinumMeritSlot';
 export { usePlatinumMeritStore } from './stores/platinumMeritStore';
 
 // Data exports
-export { PlatinumMeritData, MAX_PLATINUM_MERIT_POINTS } from './data/platinum-merit-data';
+export { loadPlatinumMeritData, MAX_PLATINUM_MERIT_POINTS, MAX_PLATINUM_MERIT_SCORE } from './data/platinum-merit-loader';
 
 // Type exports
 export type {

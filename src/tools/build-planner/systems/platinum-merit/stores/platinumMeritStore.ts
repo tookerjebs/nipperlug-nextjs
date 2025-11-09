@@ -2,13 +2,15 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import type { PlatinumMeritStore, PlatinumMeritSlotState, PlatinumMeritSlot, SpecialMasteryCategoryState, SpecialMasterySlotState } from '../types/index';
-import { PlatinumMeritData, MAX_PLATINUM_MERIT_POINTS } from '../data/platinum-merit-data';
+import { loadPlatinumMeritData, MAX_PLATINUM_MERIT_POINTS, MAX_PLATINUM_MERIT_SCORE } from '../data/platinum-merit-loader';
 import { useStatRegistryStore } from '@/tools/build-planner/stores/statRegistryStore';
 import { getSpecialMasteryStatsForCategory } from '../data/platinum-special-mastery-loader';
+import { calculateRequiredMeritScore } from '../data/platinum-merit-score';
 
 // Initialize slot states
 const initializeSlotStates = (): Record<string, PlatinumMeritSlotState> => {
   const slotStates: Record<string, PlatinumMeritSlotState> = {};
+  const PlatinumMeritData = loadPlatinumMeritData();
   
   PlatinumMeritData.forEach(category => {
     category.slots.forEach(slot => {
@@ -37,12 +39,14 @@ const updateStatsRegistry = (getState: () => any) => {
 export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithSelector(
   (set, get) => ({
     // State
-    categories: PlatinumMeritData,
+    categories: loadPlatinumMeritData(),
     slotStates: initializeSlotStates(),
     totalPointsSpent: 0,
     maxPointsAllowed: MAX_PLATINUM_MERIT_POINTS,
     selectedCategory: 'fierce-spirit',
     specialMasteryStates: {} as Record<string, SpecialMasteryCategoryState>,
+    requiredMeritScore: null as number | null,
+    maxPossibleMeritScore: MAX_PLATINUM_MERIT_SCORE, // Maximum achievable merit score (360542)
 
     // Category management
     setSelectedCategory: (categoryId: string) => {
@@ -75,9 +79,13 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
         // Update unlock states for dependent slots
         const updatedSlotStates = state.updateSlotUnlockStates(newSlotStates);
         
+        const newTotalPoints = state.totalPointsSpent + pointCost;
+        const requiredScore = calculateRequiredMeritScore(newTotalPoints);
+        
         return {
           slotStates: updatedSlotStates,
-          totalPointsSpent: state.totalPointsSpent + pointCost
+          totalPointsSpent: newTotalPoints,
+          requiredMeritScore: requiredScore
         };
       });
       
@@ -107,9 +115,13 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
         // Update unlock states for dependent slots
         const updatedSlotStates = state.updateSlotUnlockStates(newSlotStates);
         
+        const newTotalPoints = state.totalPointsSpent - pointRefund;
+        const requiredScore = calculateRequiredMeritScore(newTotalPoints);
+        
         return {
           slotStates: updatedSlotStates,
-          totalPointsSpent: state.totalPointsSpent - pointRefund
+          totalPointsSpent: newTotalPoints,
+          requiredMeritScore: requiredScore
         };
       });
       
@@ -137,10 +149,13 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
         
         // Update unlock states for dependent slots
         const updatedSlotStates = state.updateSlotUnlockStates(newSlotStates);
+        const newTotalPoints = state.totalPointsSpent - pointsToRefund;
+        const requiredScore = calculateRequiredMeritScore(newTotalPoints);
         
         return {
           slotStates: updatedSlotStates,
-          totalPointsSpent: state.totalPointsSpent - pointsToRefund
+          totalPointsSpent: newTotalPoints,
+          requiredMeritScore: requiredScore
         };
       });
       
@@ -170,10 +185,13 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
       
       // Update unlock states
       const updatedSlotStates = state.updateSlotUnlockStates(newSlotStates);
+      const newTotalPoints = state.totalPointsSpent - totalRefund;
+      const requiredScore = calculateRequiredMeritScore(newTotalPoints);
       
       set({
         slotStates: updatedSlotStates,
-        totalPointsSpent: state.totalPointsSpent - totalRefund
+        totalPointsSpent: newTotalPoints,
+        requiredMeritScore: requiredScore
       });
       
       // Register stats with the global registry
@@ -183,7 +201,8 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
     resetAll: () => {
       set({
         slotStates: initializeSlotStates(),
-        totalPointsSpent: 0
+        totalPointsSpent: 0,
+        requiredMeritScore: null
       });
       
       // Register stats with the global registry
@@ -201,9 +220,9 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
         
         if (!slot || !slot.prerequisites) return true;
         
-        return slot.prerequisites.every(prereqId => {
-          const prereqState = workingStates[prereqId];
-          return prereqState && prereqState.currentLevel > 0;
+        return slot.prerequisites.every(prereq => {
+          const prereqState = workingStates[prereq.slotId];
+          return prereqState && prereqState.currentLevel >= prereq.requiredLevel;
         });
       };
       
@@ -261,9 +280,12 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
         }
       });
       
+      const requiredScore = calculateRequiredMeritScore(totalPointsSpent);
+      
       set({
         slotStates: finalSlotStates,
-        totalPointsSpent: totalPointsSpent
+        totalPointsSpent: totalPointsSpent,
+        requiredMeritScore: requiredScore
       });
       
       // Register stats with the global registry
@@ -385,9 +407,9 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
       
       if (!slot || !slot.prerequisites) return true;
       
-      return slot.prerequisites.every(prereqId => {
-        const prereqState = state.slotStates[prereqId];
-        return prereqState && prereqState.currentLevel > 0;
+      return slot.prerequisites.every(prereq => {
+        const prereqState = state.slotStates[prereq.slotId];
+        return prereqState && prereqState.currentLevel >= prereq.requiredLevel;
       });
     },
 
@@ -401,9 +423,9 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
         
         if (!slot || !slot.prerequisites) return true;
         
-        return slot.prerequisites.every(prereqId => {
-          const prereqState = states[prereqId];
-          return prereqState && prereqState.currentLevel > 0;
+        return slot.prerequisites.every(prereq => {
+          const prereqState = states[prereq.slotId];
+          return prereqState && prereqState.currentLevel >= prereq.requiredLevel;
         });
       };
       
@@ -515,6 +537,25 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
       const categoryState = state.specialMasteryStates[categoryId];
       if (!categoryState) return {};
       
+      // Check if special mastery expansion slot is unlocked for this category
+      // Special mastery expansion slots have statType "unknown" and forceID 146
+      const category = state.categories.find(c => c.id === categoryId);
+      if (!category) return {};
+      
+      // Find the special mastery expansion slot for this category
+      const specialMasteryExpansionSlot = category.slots.find(
+        slot => slot.isExpansion && slot.statType === 'unknown'
+      );
+      
+      if (!specialMasteryExpansionSlot) return {};
+      
+      // Check if the expansion slot is unlocked (currentLevel > 0)
+      const expansionSlotState = state.slotStates[specialMasteryExpansionSlot.id];
+      if (!expansionSlotState || expansionSlotState.currentLevel === 0) {
+        // Special mastery expansion slot not unlocked, don't contribute stats
+        return {};
+      }
+      
       const stats = state.getSpecialMasteryStats(categoryId);
       if (!stats) return {};
       
@@ -535,15 +576,69 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
       return totalStats;
     },
     
+    // Cost and time calculations
+    calculateTotalUnlockCosts: () => {
+      const state = get();
+      let totalDivineCore = 0;
+      let totalChaosCore = 0;
+      
+      state.categories.forEach(category => {
+        category.slots.forEach(slot => {
+          const slotState = state.slotStates[slot.id];
+          // Only count costs for slots that are unlocked (currentLevel > 0)
+          if (slotState && slotState.currentLevel > 0 && slot.unlockCost) {
+            totalDivineCore += slot.unlockCost.divineCore;
+            totalChaosCore += slot.unlockCost.chaosCore;
+          }
+        });
+      });
+      
+      return { divineCore: totalDivineCore, chaosCore: totalChaosCore };
+    },
+    
+    calculateTotalUnlockTime: () => {
+      const state = get();
+      let totalTime = 0;
+      
+      state.categories.forEach(category => {
+        category.slots.forEach(slot => {
+          const slotState = state.slotStates[slot.id];
+          // Only count time for slots that are unlocked (currentLevel > 0)
+          if (slotState && slotState.currentLevel > 0 && slot.unlockTime) {
+            totalTime += slot.unlockTime;
+          }
+        });
+      });
+      
+      return totalTime;
+    },
+    
+    formatUnlockTime: (seconds: number) => {
+      const days = Math.floor(seconds / 86400);
+      const hours = Math.floor((seconds % 86400) / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      const secs = seconds % 60;
+      
+      const parts: string[] = [];
+      if (days > 0) parts.push(`${days}d`);
+      if (hours > 0) parts.push(`${hours}h`);
+      if (minutes > 0) parts.push(`${minutes}m`);
+      if (secs > 0 || parts.length === 0) parts.push(`${secs}s`);
+      
+      return parts.join(' ');
+    },
+    
     // Import/Export functionality
     restoreFromImport: (importData) => {
       const validatedSlotStates = get().validateAndRestoreSlotStates(importData.slotStates);
+      const requiredScore = calculateRequiredMeritScore(importData.totalPointsSpent);
       
       set({
         slotStates: validatedSlotStates,
         totalPointsSpent: importData.totalPointsSpent,
         selectedCategory: importData.selectedCategory,
-        specialMasteryStates: importData.specialMasteryStates || {}
+        specialMasteryStates: importData.specialMasteryStates || {},
+        requiredMeritScore: requiredScore
       });
       
       // Register stats with the global registry after restore
@@ -579,9 +674,9 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
         
         // First, add all prerequisites
         if (slot.prerequisites) {
-          slot.prerequisites.forEach(prereqId => {
-            if (importedSlotStates[prereqId] && !processedSlots.has(prereqId)) {
-              addSlotWithDependencies(prereqId, importedSlotStates[prereqId]);
+          slot.prerequisites.forEach(prereq => {
+            if (importedSlotStates[prereq.slotId] && !processedSlots.has(prereq.slotId)) {
+              addSlotWithDependencies(prereq.slotId, importedSlotStates[prereq.slotId]);
             }
           });
         }
@@ -603,9 +698,9 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
         const slot = state.getSlotById(slotId);
         if (slot && slotState.currentLevel <= slot.maxLevel && slotState.currentLevel >= 0) {
           // Check if prerequisites are met before restoring
-          const prereqsMet = !slot.prerequisites || slot.prerequisites.every(prereqId => {
-            const prereqState = validatedStates[prereqId];
-            return prereqState && prereqState.currentLevel > 0;
+          const prereqsMet = !slot.prerequisites || slot.prerequisites.every(prereq => {
+            const prereqState = validatedStates[prereq.slotId];
+            return prereqState && prereqState.currentLevel >= prereq.requiredLevel;
           });
           
           if (prereqsMet || slotState.currentLevel === 0) {

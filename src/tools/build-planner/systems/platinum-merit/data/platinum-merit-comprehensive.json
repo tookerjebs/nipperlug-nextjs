@@ -1,0 +1,8625 @@
+{
+  "meritScoreFormula": [
+    [
+      0,
+      62,
+      1
+    ],
+    [
+      62,
+      122,
+      1
+    ],
+    [
+      122,
+      182,
+      1
+    ],
+    [
+      182,
+      242,
+      1
+    ],
+    [
+      242,
+      312,
+      1
+    ],
+    [
+      312,
+      382,
+      1
+    ],
+    [
+      382,
+      452,
+      1
+    ],
+    [
+      452,
+      522,
+      1
+    ],
+    [
+      522,
+      592,
+      1
+    ],
+    [
+      592,
+      662,
+      1
+    ],
+    [
+      662,
+      732,
+      1
+    ],
+    [
+      732,
+      802,
+      1
+    ],
+    [
+      802,
+      872,
+      1
+    ],
+    [
+      872,
+      952,
+      1
+    ],
+    [
+      952,
+      1032,
+      1
+    ],
+    [
+      1032,
+      1112,
+      1
+    ],
+    [
+      1112,
+      1192,
+      1
+    ],
+    [
+      1192,
+      1272,
+      1
+    ],
+    [
+      1272,
+      1352,
+      1
+    ],
+    [
+      1352,
+      1432,
+      1
+    ],
+    [
+      1432,
+      1512,
+      1
+    ],
+    [
+      1512,
+      1592,
+      1
+    ],
+    [
+      1592,
+      1682,
+      1
+    ],
+    [
+      1682,
+      1772,
+      1
+    ],
+    [
+      1772,
+      1862,
+      1
+    ],
+    [
+      1862,
+      1952,
+      1
+    ],
+    [
+      1952,
+      2042,
+      1
+    ],
+    [
+      2042,
+      2132,
+      1
+    ],
+    [
+      2132,
+      2222,
+      1
+    ],
+    [
+      2222,
+      2322,
+      1
+    ],
+    [
+      2322,
+      2422,
+      1
+    ],
+    [
+      2422,
+      2522,
+      1
+    ],
+    [
+      2522,
+      2622,
+      1
+    ],
+    [
+      2622,
+      2722,
+      1
+    ],
+    [
+      2722,
+      2822,
+      1
+    ],
+    [
+      2822,
+      2922,
+      1
+    ],
+    [
+      2922,
+      3032,
+      1
+    ],
+    [
+      3032,
+      3142,
+      1
+    ],
+    [
+      3142,
+      3252,
+      1
+    ],
+    [
+      3252,
+      3362,
+      1
+    ],
+    [
+      3362,
+      3472,
+      1
+    ],
+    [
+      3472,
+      3582,
+      1
+    ],
+    [
+      3582,
+      3702,
+      1
+    ],
+    [
+      3702,
+      3822,
+      1
+    ],
+    [
+      3822,
+      3942,
+      1
+    ],
+    [
+      3942,
+      4062,
+      1
+    ],
+    [
+      4062,
+      4182,
+      1
+    ],
+    [
+      4182,
+      4302,
+      1
+    ],
+    [
+      4302,
+      4432,
+      1
+    ],
+    [
+      4432,
+      4562,
+      1
+    ],
+    [
+      4562,
+      4692,
+      1
+    ],
+    [
+      4692,
+      4822,
+      1
+    ],
+    [
+      4822,
+      4952,
+      1
+    ],
+    [
+      4952,
+      5092,
+      1
+    ],
+    [
+      5092,
+      5232,
+      1
+    ],
+    [
+      5232,
+      5372,
+      1
+    ],
+    [
+      5372,
+      5512,
+      1
+    ],
+    [
+      5512,
+      5652,
+      1
+    ],
+    [
+      5652,
+      5802,
+      1
+    ],
+    [
+      5802,
+      5952,
+      1
+    ],
+    [
+      5952,
+      6102,
+      1
+    ],
+    [
+      6102,
+      6252,
+      1
+    ],
+    [
+      6252,
+      6412,
+      1
+    ],
+    [
+      6412,
+      6572,
+      1
+    ],
+    [
+      6572,
+      6732,
+      1
+    ],
+    [
+      6732,
+      6892,
+      1
+    ],
+    [
+      6892,
+      7062,
+      1
+    ],
+    [
+      7062,
+      7232,
+      1
+    ],
+    [
+      7232,
+      7402,
+      1
+    ],
+    [
+      7402,
+      7572,
+      1
+    ],
+    [
+      7572,
+      7752,
+      1
+    ],
+    [
+      7752,
+      7932,
+      1
+    ],
+    [
+      7932,
+      8112,
+      1
+    ],
+    [
+      8112,
+      8292,
+      1
+    ],
+    [
+      8292,
+      8482,
+      2
+    ],
+    [
+      8482,
+      8672,
+      2
+    ],
+    [
+      8672,
+      8862,
+      2
+    ],
+    [
+      8862,
+      9052,
+      2
+    ],
+    [
+      9052,
+      9252,
+      2
+    ],
+    [
+      9252,
+      9452,
+      2
+    ],
+    [
+      9452,
+      9652,
+      2
+    ],
+    [
+      9652,
+      9862,
+      2
+    ],
+    [
+      9862,
+      10072,
+      2
+    ],
+    [
+      10072,
+      10282,
+      2
+    ],
+    [
+      10282,
+      10502,
+      2
+    ],
+    [
+      10502,
+      10722,
+      2
+    ],
+    [
+      10722,
+      10942,
+      2
+    ],
+    [
+      10942,
+      11172,
+      2
+    ],
+    [
+      11172,
+      11402,
+      2
+    ],
+    [
+      11402,
+      11632,
+      2
+    ],
+    [
+      11632,
+      11872,
+      2
+    ],
+    [
+      11872,
+      12112,
+      2
+    ],
+    [
+      12112,
+      12352,
+      2
+    ],
+    [
+      12352,
+      12602,
+      2
+    ],
+    [
+      12602,
+      12852,
+      2
+    ],
+    [
+      12852,
+      13102,
+      2
+    ],
+    [
+      13102,
+      13362,
+      2
+    ],
+    [
+      13362,
+      13622,
+      2
+    ],
+    [
+      13622,
+      13892,
+      2
+    ],
+    [
+      13892,
+      14162,
+      2
+    ],
+    [
+      14162,
+      14432,
+      2
+    ],
+    [
+      14432,
+      14712,
+      2
+    ],
+    [
+      14712,
+      14992,
+      2
+    ],
+    [
+      14992,
+      15282,
+      2
+    ],
+    [
+      15282,
+      15572,
+      2
+    ],
+    [
+      15572,
+      15872,
+      2
+    ],
+    [
+      15872,
+      16172,
+      2
+    ],
+    [
+      16172,
+      16472,
+      2
+    ],
+    [
+      16472,
+      16782,
+      2
+    ],
+    [
+      16782,
+      17092,
+      2
+    ],
+    [
+      17092,
+      17412,
+      2
+    ],
+    [
+      17412,
+      17732,
+      2
+    ],
+    [
+      17732,
+      18062,
+      2
+    ],
+    [
+      18062,
+      18392,
+      2
+    ],
+    [
+      18392,
+      18732,
+      2
+    ],
+    [
+      18732,
+      19072,
+      2
+    ],
+    [
+      19072,
+      19422,
+      2
+    ],
+    [
+      19422,
+      19772,
+      2
+    ],
+    [
+      19772,
+      20132,
+      2
+    ],
+    [
+      20132,
+      20492,
+      2
+    ],
+    [
+      20492,
+      20862,
+      2
+    ],
+    [
+      20862,
+      21232,
+      2
+    ],
+    [
+      21232,
+      21612,
+      3
+    ],
+    [
+      21612,
+      22002,
+      3
+    ],
+    [
+      22002,
+      22392,
+      3
+    ],
+    [
+      22392,
+      22792,
+      3
+    ],
+    [
+      22792,
+      23192,
+      3
+    ],
+    [
+      23192,
+      23602,
+      3
+    ],
+    [
+      23602,
+      24022,
+      3
+    ],
+    [
+      24022,
+      24442,
+      3
+    ],
+    [
+      24442,
+      24872,
+      3
+    ],
+    [
+      24872,
+      25312,
+      3
+    ],
+    [
+      25312,
+      25752,
+      3
+    ],
+    [
+      25752,
+      26202,
+      3
+    ],
+    [
+      26202,
+      26662,
+      3
+    ],
+    [
+      26662,
+      27122,
+      3
+    ],
+    [
+      27122,
+      27592,
+      3
+    ],
+    [
+      27592,
+      28072,
+      3
+    ],
+    [
+      28072,
+      28552,
+      3
+    ],
+    [
+      28552,
+      29042,
+      3
+    ],
+    [
+      29042,
+      29542,
+      3
+    ],
+    [
+      29542,
+      30052,
+      3
+    ],
+    [
+      30052,
+      30562,
+      3
+    ],
+    [
+      30562,
+      31082,
+      3
+    ],
+    [
+      31082,
+      31612,
+      3
+    ],
+    [
+      31612,
+      32152,
+      3
+    ],
+    [
+      32152,
+      32692,
+      3
+    ],
+    [
+      32692,
+      33242,
+      3
+    ],
+    [
+      33242,
+      33802,
+      3
+    ],
+    [
+      33802,
+      34372,
+      4
+    ],
+    [
+      34372,
+      34952,
+      4
+    ],
+    [
+      34952,
+      35542,
+      4
+    ],
+    [
+      35542,
+      36142,
+      4
+    ],
+    [
+      36142,
+      36742,
+      4
+    ],
+    [
+      36742,
+      37352,
+      4
+    ],
+    [
+      37352,
+      37972,
+      4
+    ],
+    [
+      37972,
+      38602,
+      4
+    ],
+    [
+      38602,
+      39242,
+      4
+    ],
+    [
+      39242,
+      39892,
+      4
+    ],
+    [
+      39892,
+      40552,
+      4
+    ],
+    [
+      40552,
+      41222,
+      4
+    ],
+    [
+      41222,
+      41902,
+      4
+    ],
+    [
+      41902,
+      42592,
+      4
+    ],
+    [
+      42592,
+      43292,
+      4
+    ],
+    [
+      43292,
+      44002,
+      4
+    ],
+    [
+      44002,
+      44722,
+      4
+    ],
+    [
+      44722,
+      45452,
+      4
+    ],
+    [
+      45452,
+      46192,
+      4
+    ],
+    [
+      46192,
+      46942,
+      4
+    ],
+    [
+      46942,
+      47712,
+      5
+    ],
+    [
+      47712,
+      48492,
+      5
+    ],
+    [
+      48492,
+      49282,
+      5
+    ],
+    [
+      49282,
+      50082,
+      5
+    ],
+    [
+      50082,
+      50892,
+      5
+    ],
+    [
+      50892,
+      51722,
+      5
+    ],
+    [
+      51722,
+      52562,
+      5
+    ],
+    [
+      52562,
+      53412,
+      5
+    ],
+    [
+      53412,
+      54272,
+      5
+    ],
+    [
+      54272,
+      55152,
+      5
+    ],
+    [
+      55152,
+      56042,
+      5
+    ],
+    [
+      56042,
+      56942,
+      5
+    ],
+    [
+      56942,
+      57862,
+      5
+    ],
+    [
+      57862,
+      58792,
+      5
+    ],
+    [
+      58792,
+      59732,
+      5
+    ],
+    [
+      59732,
+      60692,
+      6
+    ],
+    [
+      60692,
+      61662,
+      6
+    ],
+    [
+      61662,
+      62652,
+      6
+    ],
+    [
+      62652,
+      63652,
+      6
+    ],
+    [
+      63652,
+      64672,
+      6
+    ],
+    [
+      64672,
+      65702,
+      6
+    ],
+    [
+      65702,
+      66752,
+      6
+    ],
+    [
+      66752,
+      67812,
+      6
+    ],
+    [
+      67812,
+      68892,
+      6
+    ],
+    [
+      68892,
+      69992,
+      6
+    ],
+    [
+      69992,
+      71102,
+      6
+    ],
+    [
+      71102,
+      72232,
+      6
+    ],
+    [
+      72232,
+      73382,
+      7
+    ],
+    [
+      73382,
+      74542,
+      7
+    ],
+    [
+      74542,
+      75722,
+      7
+    ],
+    [
+      75722,
+      76922,
+      7
+    ],
+    [
+      76922,
+      78142,
+      7
+    ],
+    [
+      78142,
+      79372,
+      7
+    ],
+    [
+      79372,
+      80622,
+      7
+    ],
+    [
+      80622,
+      81892,
+      7
+    ],
+    [
+      81892,
+      83182,
+      7
+    ],
+    [
+      83182,
+      84492,
+      7
+    ],
+    [
+      84492,
+      85822,
+      8
+    ],
+    [
+      85822,
+      87172,
+      8
+    ],
+    [
+      87172,
+      88542,
+      8
+    ],
+    [
+      88542,
+      89932,
+      8
+    ],
+    [
+      89932,
+      91342,
+      8
+    ],
+    [
+      91342,
+      92772,
+      8
+    ],
+    [
+      92772,
+      94222,
+      8
+    ],
+    [
+      94222,
+      95702,
+      8
+    ],
+    [
+      95702,
+      97202,
+      8
+    ],
+    [
+      97202,
+      98722,
+      9
+    ],
+    [
+      98722,
+      100262,
+      9
+    ],
+    [
+      100262,
+      101832,
+      9
+    ],
+    [
+      101832,
+      103422,
+      9
+    ],
+    [
+      103422,
+      105032,
+      9
+    ],
+    [
+      105032,
+      106672,
+      9
+    ],
+    [
+      106672,
+      108332,
+      9
+    ],
+    [
+      108332,
+      110022,
+      9
+    ],
+    [
+      110022,
+      111732,
+      10
+    ],
+    [
+      111732,
+      113472,
+      10
+    ],
+    [
+      113472,
+      115232,
+      10
+    ],
+    [
+      115232,
+      117022,
+      10
+    ],
+    [
+      117022,
+      118842,
+      10
+    ],
+    [
+      118842,
+      120682,
+      10
+    ],
+    [
+      120682,
+      122552,
+      10
+    ],
+    [
+      122552,
+      124452,
+      11
+    ],
+    [
+      124452,
+      126382,
+      11
+    ],
+    [
+      126382,
+      128342,
+      11
+    ],
+    [
+      128342,
+      130332,
+      11
+    ],
+    [
+      130332,
+      132352,
+      11
+    ],
+    [
+      132352,
+      134402,
+      11
+    ],
+    [
+      134402,
+      136482,
+      11
+    ],
+    [
+      136482,
+      138592,
+      12
+    ],
+    [
+      138592,
+      140732,
+      12
+    ],
+    [
+      140732,
+      142902,
+      12
+    ],
+    [
+      142902,
+      145112,
+      12
+    ],
+    [
+      145112,
+      147352,
+      12
+    ],
+    [
+      147352,
+      149622,
+      12
+    ],
+    [
+      149622,
+      151932,
+      13
+    ],
+    [
+      151932,
+      154272,
+      13
+    ],
+    [
+      154272,
+      156652,
+      13
+    ],
+    [
+      156652,
+      159062,
+      13
+    ],
+    [
+      159062,
+      161512,
+      13
+    ],
+    [
+      161512,
+      163992,
+      14
+    ],
+    [
+      163992,
+      166512,
+      14
+    ],
+    [
+      166512,
+      169072,
+      14
+    ],
+    [
+      169072,
+      171672,
+      14
+    ],
+    [
+      171672,
+      174312,
+      14
+    ],
+    [
+      174312,
+      176992,
+      15
+    ],
+    [
+      176992,
+      179712,
+      15
+    ],
+    [
+      179712,
+      182472,
+      15
+    ],
+    [
+      182472,
+      185272,
+      15
+    ],
+    [
+      185272,
+      188112,
+      15
+    ],
+    [
+      188112,
+      190992,
+      16
+    ],
+    [
+      190992,
+      193922,
+      16
+    ],
+    [
+      193922,
+      196892,
+      16
+    ],
+    [
+      196892,
+      199912,
+      16
+    ],
+    [
+      199912,
+      202972,
+      17
+    ],
+    [
+      202972,
+      206082,
+      17
+    ],
+    [
+      206082,
+      209232,
+      17
+    ],
+    [
+      209232,
+      212432,
+      17
+    ],
+    [
+      212432,
+      215682,
+      18
+    ],
+    [
+      215682,
+      218982,
+      18
+    ],
+    [
+      218982,
+      222332,
+      18
+    ],
+    [
+      222332,
+      225732,
+      18
+    ],
+    [
+      225732,
+      229182,
+      19
+    ],
+    [
+      229182,
+      232682,
+      19
+    ],
+    [
+      232682,
+      236232,
+      19
+    ],
+    [
+      236232,
+      239842,
+      20
+    ],
+    [
+      239842,
+      243502,
+      20
+    ],
+    [
+      243502,
+      247212,
+      20
+    ],
+    [
+      247212,
+      250982,
+      20
+    ],
+    [
+      250982,
+      254812,
+      21
+    ],
+    [
+      254812,
+      258692,
+      21
+    ],
+    [
+      258692,
+      262632,
+      21
+    ],
+    [
+      262632,
+      266632,
+      22
+    ],
+    [
+      266632,
+      270692,
+      22
+    ],
+    [
+      270692,
+      274812,
+      22
+    ],
+    [
+      274812,
+      278992,
+      23
+    ],
+    [
+      278992,
+      283242,
+      23
+    ],
+    [
+      283242,
+      287552,
+      23
+    ],
+    [
+      287552,
+      291932,
+      24
+    ],
+    [
+      291932,
+      296372,
+      24
+    ],
+    [
+      296372,
+      300882,
+      24
+    ],
+    [
+      300882,
+      305462,
+      25
+    ],
+    [
+      305462,
+      310102,
+      25
+    ],
+    [
+      310102,
+      314812,
+      25
+    ],
+    [
+      314812,
+      319592,
+      26
+    ],
+    [
+      319592,
+      324452,
+      26
+    ],
+    [
+      324452,
+      329382,
+      26
+    ],
+    [
+      329382,
+      334382,
+      27
+    ],
+    [
+      334382,
+      339462,
+      27
+    ],
+    [
+      339462,
+      344612,
+      28
+    ],
+    [
+      344612,
+      349842,
+      28
+    ],
+    [
+      349842,
+      355152,
+      28
+    ],
+    [
+      355152,
+      360542,
+      29
+    ]
+  ],
+  "masteries": [
+    {
+      "masteryIndex": 65,
+      "category": 5,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 0,
+      "prerequisiteLevel": 0,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 2,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 8,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 10,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 66,
+      "category": 5,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 65,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 2,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 8,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 10,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 67,
+      "category": 5,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 66,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 3,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 9,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 15,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 18,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 21,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 24,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 27,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 68,
+      "category": 5,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 67,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 3,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 9,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 15,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 18,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 21,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 24,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 27,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 69,
+      "category": 5,
+      "masteryType": 1,
+      "maxLevel": 15,
+      "prerequisiteIndex": 68,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 8,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 16,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 20,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 24,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 28,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 32,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 36,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 40,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 11,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 44,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 12,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 48,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 13,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 52,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 14,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 56,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 15,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 60,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 70,
+      "category": 5,
+      "masteryType": 1,
+      "maxLevel": 15,
+      "prerequisiteIndex": 69,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 8,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 16,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 20,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 24,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 28,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 32,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 36,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 40,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 11,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 44,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 12,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 48,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 13,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 52,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 14,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 56,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 15,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 60,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 71,
+      "category": 5,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 70,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 114,
+            "statName": "All Skill Amp. UP",
+            "statType": "allSkillAmp",
+            "value": 2,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 114,
+            "statName": "All Skill Amp. UP",
+            "statType": "allSkillAmp",
+            "value": 4,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 114,
+            "statName": "All Skill Amp. UP",
+            "statType": "allSkillAmp",
+            "value": 6,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 114,
+            "statName": "All Skill Amp. UP",
+            "statType": "allSkillAmp",
+            "value": 8,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 114,
+            "statName": "All Skill Amp. UP",
+            "statType": "allSkillAmp",
+            "value": 10,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 72,
+      "category": 5,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 74,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 8,
+            "statName": "Critical DMG.",
+            "statType": "criticalDamage",
+            "value": 3,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 8,
+            "statName": "Critical DMG.",
+            "statType": "criticalDamage",
+            "value": 6,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 8,
+            "statName": "Critical DMG.",
+            "statType": "criticalDamage",
+            "value": 9,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 8,
+            "statName": "Critical DMG.",
+            "statType": "criticalDamage",
+            "value": 12,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 8,
+            "statName": "Critical DMG.",
+            "statType": "criticalDamage",
+            "value": 15,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 73,
+      "category": 5,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 70,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 80,
+            "statName": "Penetration",
+            "statType": "penetration",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 80,
+            "statName": "Penetration",
+            "statType": "penetration",
+            "value": 8,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 80,
+            "statName": "Penetration",
+            "statType": "penetration",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 80,
+            "statName": "Penetration",
+            "statType": "penetration",
+            "value": 16,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 80,
+            "statName": "Penetration",
+            "statType": "penetration",
+            "value": 20,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 74,
+      "category": 5,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 70,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 65,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 75,
+      "category": 5,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 74,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 66,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 76,
+      "category": 5,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 74,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 67,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 77,
+      "category": 5,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 75,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 68,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 78,
+      "category": 5,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 76,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 69,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 45,
+          "baseStat": {
+            "forceID": 113,
+            "statName": "All Attack UP",
+            "statType": "allAttackUp",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 79,
+      "category": 5,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 77,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 70,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 45,
+          "baseStat": {
+            "forceID": 73,
+            "statName": "Ignore Damage Reduction",
+            "statType": "ignoreDamageReduction",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 80,
+      "category": 5,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 71,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 71,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 114,
+            "statName": "All Skill Amp. UP",
+            "statType": "allSkillAmp",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 81,
+      "category": 5,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 72,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 72,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 8,
+            "statName": "Critical DMG.",
+            "statType": "criticalDamage",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 82,
+      "category": 5,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 73,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 73,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 80,
+            "statName": "Penetration",
+            "statType": "penetration",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 83,
+      "category": 5,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 75,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 60,
+          "baseStat": {
+            "forceID": 146,
+            "statName": "UNKNOWN",
+            "statType": "unknown",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 84,
+      "category": 6,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 0,
+      "prerequisiteLevel": 0,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 10,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 20,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 40,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 50,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 85,
+      "category": 6,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 84,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 1,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 2,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 3,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 5,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 86,
+      "category": 6,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 85,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 15,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 45,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 60,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 75,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 90,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 105,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 120,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 135,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 150,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 87,
+      "category": 6,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 86,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 2,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 8,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 10,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 14,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 16,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 18,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 20,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 88,
+      "category": 6,
+      "masteryType": 1,
+      "maxLevel": 15,
+      "prerequisiteIndex": 87,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 20,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 40,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 60,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 80,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 100,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 120,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 140,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 160,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 180,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 200,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 11,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 220,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 12,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 240,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 13,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 260,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 14,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 280,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 15,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 300,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 89,
+      "category": 6,
+      "masteryType": 1,
+      "maxLevel": 15,
+      "prerequisiteIndex": 88,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 3,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 9,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 15,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 18,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 21,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 24,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 27,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 11,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 33,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 12,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 36,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 13,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 39,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 14,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 42,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 15,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 45,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 90,
+      "category": 6,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 87,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 5,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 10,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 15,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 20,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 25,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 91,
+      "category": 6,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 90,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 8,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 16,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 24,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 32,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 40,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 48,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 56,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 64,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 72,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 80,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 92,
+      "category": 6,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 88,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 12,
+            "statName": "Max HP Steal per hit",
+            "statType": "maxHpStealPerHit",
+            "value": 3,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 12,
+            "statName": "Max HP Steal per hit",
+            "statType": "maxHpStealPerHit",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 12,
+            "statName": "Max HP Steal per hit",
+            "statType": "maxHpStealPerHit",
+            "value": 9,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 12,
+            "statName": "Max HP Steal per hit",
+            "statType": "maxHpStealPerHit",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 12,
+            "statName": "Max HP Steal per hit",
+            "statType": "maxHpStealPerHit",
+            "value": 15,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 93,
+      "category": 6,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 89,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 84,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 94,
+      "category": 6,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 93,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 85,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 95,
+      "category": 6,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 93,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 86,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 96,
+      "category": 6,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 94,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 87,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 97,
+      "category": 6,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 95,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 88,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 45,
+          "baseStat": {
+            "forceID": 1,
+            "statName": "HP",
+            "statType": "hp",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 98,
+      "category": 6,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 96,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 89,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 45,
+          "baseStat": {
+            "forceID": 74,
+            "statName": "Ignore Penetration",
+            "statType": "ignorePenetration",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 99,
+      "category": 6,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 91,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 90,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 100,
+      "category": 6,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 99,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 91,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 5,
+            "statName": "Defense",
+            "statType": "defense",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 101,
+      "category": 6,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 92,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 92,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 12,
+            "statName": "Max HP Steal per hit",
+            "statType": "maxHpStealPerHit",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 102,
+      "category": 6,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 94,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 60,
+          "baseStat": {
+            "forceID": 146,
+            "statName": "UNKNOWN",
+            "statType": "unknown",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 103,
+      "category": 7,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 0,
+      "prerequisiteLevel": 0,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 1,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 2,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 3,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 5,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 104,
+      "category": 7,
+      "masteryType": 1,
+      "maxLevel": 3,
+      "prerequisiteIndex": 103,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 2,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 4,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 6,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 105,
+      "category": 7,
+      "masteryType": 1,
+      "maxLevel": 3,
+      "prerequisiteIndex": 104,
+      "prerequisiteLevel": 2,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 1,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 2,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 3,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 106,
+      "category": 7,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 105,
+      "prerequisiteLevel": 2,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 2,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 8,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 10,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 14,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 16,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 18,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 20,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 107,
+      "category": 7,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 106,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 3,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 6,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 9,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 12,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 15,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 108,
+      "category": 7,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 107,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 1,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 2,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 3,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 4,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 5,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 109,
+      "category": 7,
+      "masteryType": 1,
+      "maxLevel": 15,
+      "prerequisiteIndex": 108,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 3,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 9,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 15,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 18,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 21,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 24,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 27,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 11,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 33,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 12,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 36,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 13,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 39,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 14,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 42,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 15,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 45,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 110,
+      "category": 7,
+      "masteryType": 1,
+      "maxLevel": 7,
+      "prerequisiteIndex": 107,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 4,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 8,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 12,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 16,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 20,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 24,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 28,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 111,
+      "category": 7,
+      "masteryType": 1,
+      "maxLevel": 7,
+      "prerequisiteIndex": 108,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 2,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 4,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 6,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 8,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 10,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 12,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 14,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 112,
+      "category": 7,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 106,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 103,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 0,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 113,
+      "category": 7,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 109,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 106,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 0,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 114,
+      "category": 7,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 113,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 109,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 45,
+          "baseStat": {
+            "forceID": 139,
+            "statName": "Cancel Ignore Penetration",
+            "statType": "cancelIgnorePenetration",
+            "value": 0,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 115,
+      "category": 7,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 107,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 104,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 116,
+      "category": 7,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 115,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 107,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 127,
+            "statName": "Ignore Resist Critical Damage",
+            "statType": "ignoreResistCriticalDamage",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 117,
+      "category": 7,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 108,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 105,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 118,
+      "category": 7,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 117,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 108,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 128,
+            "statName": "Ignore Resist Skill Amp",
+            "statType": "ignoreResistSkillAmp",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 119,
+      "category": 7,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 109,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 60,
+          "baseStat": {
+            "forceID": 146,
+            "statName": "UNKNOWN",
+            "statType": "unknown",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 120,
+      "category": 8,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 0,
+      "prerequisiteLevel": 0,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 1,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 2,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 3,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 5,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 121,
+      "category": 8,
+      "masteryType": 1,
+      "maxLevel": 3,
+      "prerequisiteIndex": 120,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 2,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 4,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 6,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 122,
+      "category": 8,
+      "masteryType": 1,
+      "maxLevel": 3,
+      "prerequisiteIndex": 121,
+      "prerequisiteLevel": 2,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 1,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 2,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 4,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 3,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 123,
+      "category": 8,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 122,
+      "prerequisiteLevel": 2,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 2,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 8,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 10,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 14,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 16,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 18,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 20,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 124,
+      "category": 8,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 123,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 3,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 6,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 9,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 12,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 15,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 125,
+      "category": 8,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 124,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 1,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 2,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 3,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 4,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 6,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 5,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 126,
+      "category": 8,
+      "masteryType": 1,
+      "maxLevel": 15,
+      "prerequisiteIndex": 125,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 3,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 9,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 15,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 18,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 21,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 24,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 27,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 11,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 33,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 12,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 36,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 13,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 39,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 14,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 42,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 15,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 45,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 127,
+      "category": 8,
+      "masteryType": 1,
+      "maxLevel": 7,
+      "prerequisiteIndex": 124,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 3,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 6,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 9,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 12,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 15,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 18,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 98,
+            "statName": "Resist Critical Damage",
+            "statType": "resistCriticalDamage",
+            "value": 21,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 128,
+      "category": 8,
+      "masteryType": 1,
+      "maxLevel": 7,
+      "prerequisiteIndex": 125,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 1,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 2,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 3,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 4,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 5,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 6,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 8,
+          "baseStat": {
+            "forceID": 112,
+            "statName": "Resist Skill Amp",
+            "statType": "resistSkillAmp",
+            "value": 7,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 129,
+      "category": 8,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 120,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 2,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 4,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 8,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 10,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 130,
+      "category": 8,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 129,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 3,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 9,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 15,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 18,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 21,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 24,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 27,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 131,
+      "category": 8,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 123,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 120,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 0,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 132,
+      "category": 8,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 126,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 123,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 0,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 133,
+      "category": 8,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 132,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 126,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 45,
+          "baseStat": {
+            "forceID": 81,
+            "statName": "Cancel Ignore DMG Reduction",
+            "statType": "cancelIgnoreDamageReduction",
+            "value": 0,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 134,
+      "category": 8,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 130,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 129,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 0,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 135,
+      "category": 8,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 134,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 130,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 78,
+            "statName": "DMG Reduction",
+            "statType": "damageReduction",
+            "value": 0,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 136,
+      "category": 8,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 126,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "unlockTime": 900,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 50,
+          "baseStat": {
+            "forceID": 146,
+            "statName": "UNKNOWN",
+            "statType": "unknown",
+            "value": 0,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 137,
+      "category": 9,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 0,
+      "prerequisiteLevel": 0,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 5,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 10,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 15,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 20,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 25,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 138,
+      "category": 9,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 137,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 60,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 90,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 120,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 150,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 139,
+      "category": 9,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 138,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 10,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 20,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 40,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 50,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 60,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 70,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 80,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 90,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 100,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 140,
+      "category": 9,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 139,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 60,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 120,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 180,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 240,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 300,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 360,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 420,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 480,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 540,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 600,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 141,
+      "category": 9,
+      "masteryType": 1,
+      "maxLevel": 15,
+      "prerequisiteIndex": 140,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 15,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 45,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 60,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 75,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 90,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 105,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 120,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 135,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 150,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 11,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 165,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 12,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 180,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 13,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 195,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 14,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 210,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 15,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 225,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 142,
+      "category": 9,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 141,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 137,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 143,
+      "category": 9,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 142,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 139,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 144,
+      "category": 9,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 143,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 141,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 45,
+          "baseStat": {
+            "forceID": 71,
+            "statName": "Ignore Evasion",
+            "statType": "ignoreEvasion",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 145,
+      "category": 9,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 140,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 138,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 146,
+      "category": 9,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 145,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 140,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 6,
+            "statName": "Attack Rate",
+            "statType": "attackRate",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 147,
+      "category": 9,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 141,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 45,
+          "baseStat": {
+            "forceID": 146,
+            "statName": "UNKNOWN",
+            "statType": "unknown",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 148,
+      "category": 10,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 0,
+      "prerequisiteLevel": 0,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 6,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 18,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 24,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 149,
+      "category": 10,
+      "masteryType": 1,
+      "maxLevel": 5,
+      "prerequisiteIndex": 148,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 30,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 60,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 90,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 120,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 3,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 150,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 150,
+      "category": 10,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 149,
+      "prerequisiteLevel": 3,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 12,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 24,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 36,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 48,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 60,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 72,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 84,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 96,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 108,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 120,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 151,
+      "category": 10,
+      "masteryType": 1,
+      "maxLevel": 10,
+      "prerequisiteIndex": 150,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 40,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 80,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 120,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 160,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 200,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 240,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 280,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 320,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 360,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 5,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 400,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 152,
+      "category": 10,
+      "masteryType": 1,
+      "maxLevel": 15,
+      "prerequisiteIndex": 151,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 18,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 2,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 36,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 3,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 54,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 4,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 72,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 5,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 90,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 6,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 108,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 7,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 126,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 8,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 144,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 9,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 162,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 10,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 180,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 11,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 198,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 12,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 216,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 13,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 234,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 14,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 252,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        },
+        {
+          "level": 15,
+          "reqMeritPoint": 7,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 270,
+            "valueType": "flat"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 153,
+      "category": 10,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 152,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 148,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 154,
+      "category": 10,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 153,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 150,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 155,
+      "category": 10,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 154,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 152,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 45,
+          "baseStat": {
+            "forceID": 72,
+            "statName": "Ignore Accuracy",
+            "statType": "ignoreAccuracy",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 156,
+      "category": 10,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 151,
+      "prerequisiteLevel": 5,
+      "linkedMasteryIndex": 149,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 15,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 157,
+      "category": 10,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 156,
+      "prerequisiteLevel": 1,
+      "linkedMasteryIndex": 151,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 30,
+          "baseStat": {
+            "forceID": 7,
+            "statName": "Defense Rate",
+            "statType": "defenseRate",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    },
+    {
+      "masteryIndex": 158,
+      "category": 10,
+      "masteryType": 2,
+      "maxLevel": 1,
+      "prerequisiteIndex": 152,
+      "prerequisiteLevel": 10,
+      "linkedMasteryIndex": 0,
+      "unlockCost": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "unlockTime": 3600,
+      "values": [
+        {
+          "level": 1,
+          "reqMeritPoint": 45,
+          "baseStat": {
+            "forceID": 146,
+            "statName": "UNKNOWN",
+            "statType": "unknown",
+            "value": 0,
+            "valueType": "percent"
+          },
+          "bonusStat": null
+        }
+      ]
+    }
+  ],
+  "slotCostsByCategory": {
+    "5": {
+      "0": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "1": {
+        "divineCore": 4,
+        "chaosCore": 4
+      },
+      "2": {
+        "divineCore": 6,
+        "chaosCore": 6
+      },
+      "3": {
+        "divineCore": 8,
+        "chaosCore": 8
+      },
+      "4": {
+        "divineCore": 10,
+        "chaosCore": 10
+      },
+      "5": {
+        "divineCore": 12,
+        "chaosCore": 12
+      },
+      "6": {
+        "divineCore": 14,
+        "chaosCore": 14
+      },
+      "7": {
+        "divineCore": 16,
+        "chaosCore": 16
+      },
+      "8": {
+        "divineCore": 18,
+        "chaosCore": 18
+      },
+      "9": {
+        "divineCore": 20,
+        "chaosCore": 20
+      },
+      "10": {
+        "divineCore": 22,
+        "chaosCore": 22
+      },
+      "11": {
+        "divineCore": 24,
+        "chaosCore": 24
+      },
+      "12": {
+        "divineCore": 26,
+        "chaosCore": 26
+      },
+      "13": {
+        "divineCore": 28,
+        "chaosCore": 28
+      },
+      "14": {
+        "divineCore": 30,
+        "chaosCore": 30
+      },
+      "15": {
+        "divineCore": 32,
+        "chaosCore": 32
+      },
+      "16": {
+        "divineCore": 34,
+        "chaosCore": 34
+      },
+      "17": {
+        "divineCore": 36,
+        "chaosCore": 36
+      },
+      "18": {
+        "divineCore": 38,
+        "chaosCore": 38
+      }
+    },
+    "6": {
+      "0": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "1": {
+        "divineCore": 4,
+        "chaosCore": 4
+      },
+      "2": {
+        "divineCore": 6,
+        "chaosCore": 6
+      },
+      "3": {
+        "divineCore": 8,
+        "chaosCore": 8
+      },
+      "4": {
+        "divineCore": 10,
+        "chaosCore": 10
+      },
+      "5": {
+        "divineCore": 12,
+        "chaosCore": 12
+      },
+      "6": {
+        "divineCore": 14,
+        "chaosCore": 14
+      },
+      "7": {
+        "divineCore": 16,
+        "chaosCore": 16
+      },
+      "8": {
+        "divineCore": 18,
+        "chaosCore": 18
+      },
+      "9": {
+        "divineCore": 20,
+        "chaosCore": 20
+      },
+      "10": {
+        "divineCore": 22,
+        "chaosCore": 22
+      },
+      "11": {
+        "divineCore": 24,
+        "chaosCore": 24
+      },
+      "12": {
+        "divineCore": 26,
+        "chaosCore": 26
+      },
+      "13": {
+        "divineCore": 28,
+        "chaosCore": 28
+      },
+      "14": {
+        "divineCore": 30,
+        "chaosCore": 30
+      },
+      "15": {
+        "divineCore": 32,
+        "chaosCore": 32
+      },
+      "16": {
+        "divineCore": 34,
+        "chaosCore": 34
+      },
+      "17": {
+        "divineCore": 36,
+        "chaosCore": 36
+      },
+      "18": {
+        "divineCore": 38,
+        "chaosCore": 38
+      }
+    },
+    "7": {
+      "0": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "1": {
+        "divineCore": 5,
+        "chaosCore": 5
+      },
+      "2": {
+        "divineCore": 7,
+        "chaosCore": 7
+      },
+      "3": {
+        "divineCore": 9,
+        "chaosCore": 9
+      },
+      "4": {
+        "divineCore": 10,
+        "chaosCore": 10
+      },
+      "5": {
+        "divineCore": 13,
+        "chaosCore": 13
+      },
+      "6": {
+        "divineCore": 15,
+        "chaosCore": 15
+      },
+      "7": {
+        "divineCore": 17,
+        "chaosCore": 17
+      },
+      "8": {
+        "divineCore": 19,
+        "chaosCore": 19
+      },
+      "9": {
+        "divineCore": 21,
+        "chaosCore": 21
+      },
+      "10": {
+        "divineCore": 25,
+        "chaosCore": 25
+      },
+      "11": {
+        "divineCore": 27,
+        "chaosCore": 27
+      },
+      "12": {
+        "divineCore": 29,
+        "chaosCore": 29
+      },
+      "13": {
+        "divineCore": 31,
+        "chaosCore": 31
+      },
+      "14": {
+        "divineCore": 33,
+        "chaosCore": 33
+      },
+      "15": {
+        "divineCore": 35,
+        "chaosCore": 35
+      },
+      "16": {
+        "divineCore": 36,
+        "chaosCore": 36
+      }
+    },
+    "8": {
+      "0": {
+        "divineCore": 3,
+        "chaosCore": 3
+      },
+      "1": {
+        "divineCore": 5,
+        "chaosCore": 5
+      },
+      "2": {
+        "divineCore": 7,
+        "chaosCore": 7
+      },
+      "3": {
+        "divineCore": 9,
+        "chaosCore": 9
+      },
+      "4": {
+        "divineCore": 10,
+        "chaosCore": 10
+      },
+      "5": {
+        "divineCore": 12,
+        "chaosCore": 12
+      },
+      "6": {
+        "divineCore": 14,
+        "chaosCore": 14
+      },
+      "7": {
+        "divineCore": 16,
+        "chaosCore": 16
+      },
+      "8": {
+        "divineCore": 18,
+        "chaosCore": 18
+      },
+      "9": {
+        "divineCore": 20,
+        "chaosCore": 20
+      },
+      "10": {
+        "divineCore": 22,
+        "chaosCore": 22
+      },
+      "11": {
+        "divineCore": 24,
+        "chaosCore": 24
+      },
+      "12": {
+        "divineCore": 26,
+        "chaosCore": 26
+      },
+      "13": {
+        "divineCore": 28,
+        "chaosCore": 28
+      },
+      "14": {
+        "divineCore": 32,
+        "chaosCore": 32
+      },
+      "15": {
+        "divineCore": 34,
+        "chaosCore": 34
+      },
+      "16": {
+        "divineCore": 36,
+        "chaosCore": 36
+      }
+    },
+    "9": {
+      "0": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "1": {
+        "divineCore": 4,
+        "chaosCore": 4
+      },
+      "2": {
+        "divineCore": 7,
+        "chaosCore": 7
+      },
+      "3": {
+        "divineCore": 10,
+        "chaosCore": 10
+      },
+      "4": {
+        "divineCore": 14,
+        "chaosCore": 14
+      },
+      "5": {
+        "divineCore": 18,
+        "chaosCore": 18
+      },
+      "6": {
+        "divineCore": 23,
+        "chaosCore": 23
+      },
+      "7": {
+        "divineCore": 28,
+        "chaosCore": 28
+      },
+      "8": {
+        "divineCore": 34,
+        "chaosCore": 34
+      },
+      "9": {
+        "divineCore": 38,
+        "chaosCore": 38
+      },
+      "10": {
+        "divineCore": 42,
+        "chaosCore": 42
+      }
+    },
+    "10": {
+      "0": {
+        "divineCore": 2,
+        "chaosCore": 2
+      },
+      "1": {
+        "divineCore": 4,
+        "chaosCore": 4
+      },
+      "2": {
+        "divineCore": 7,
+        "chaosCore": 7
+      },
+      "3": {
+        "divineCore": 10,
+        "chaosCore": 10
+      },
+      "4": {
+        "divineCore": 14,
+        "chaosCore": 14
+      },
+      "5": {
+        "divineCore": 18,
+        "chaosCore": 18
+      },
+      "6": {
+        "divineCore": 23,
+        "chaosCore": 23
+      },
+      "7": {
+        "divineCore": 28,
+        "chaosCore": 28
+      },
+      "8": {
+        "divineCore": 34,
+        "chaosCore": 34
+      },
+      "9": {
+        "divineCore": 38,
+        "chaosCore": 38
+      },
+      "10": {
+        "divineCore": 42,
+        "chaosCore": 42
+      }
+    }
+  },
+  "slotTimesByCategory": {
+    "5": {
+      "0": 900,
+      "1": 2700,
+      "2": 28800,
+      "3": 57600,
+      "4": 216000,
+      "5": 388800,
+      "6": 604800,
+      "7": 864000,
+      "8": 1209600,
+      "9": 2073600,
+      "10": 3024000,
+      "11": 4060800,
+      "12": 5184000,
+      "13": 7257600,
+      "14": 8899200,
+      "15": 10713600,
+      "16": 13478400,
+      "17": 16588800,
+      "18": 18835200
+    },
+    "6": {
+      "0": 900,
+      "1": 2700,
+      "2": 28800,
+      "3": 57600,
+      "4": 216000,
+      "5": 388800,
+      "6": 604800,
+      "7": 864000,
+      "8": 1209600,
+      "9": 2073600,
+      "10": 3024000,
+      "11": 4060800,
+      "12": 5184000,
+      "13": 7257600,
+      "14": 8899200,
+      "15": 10713600,
+      "16": 13478400,
+      "17": 16588800,
+      "18": 18835200
+    },
+    "7": {
+      "0": 900,
+      "1": 2700,
+      "2": 28800,
+      "3": 57600,
+      "4": 216000,
+      "5": 388800,
+      "6": 777600,
+      "7": 1296000,
+      "8": 2246400,
+      "9": 3369600,
+      "10": 4492800,
+      "11": 5788800,
+      "12": 7344000,
+      "13": 9158400,
+      "14": 11232000,
+      "15": 13651200,
+      "16": 16416000
+    },
+    "8": {
+      "0": 900,
+      "1": 2700,
+      "2": 28800,
+      "3": 57600,
+      "4": 216000,
+      "5": 388800,
+      "6": 777600,
+      "7": 1296000,
+      "8": 2246400,
+      "9": 3369600,
+      "10": 4492800,
+      "11": 5788800,
+      "12": 7344000,
+      "13": 9158400,
+      "14": 11232000,
+      "15": 13651200,
+      "16": 16416000
+    },
+    "9": {
+      "0": 3600,
+      "1": 86400,
+      "2": 172800,
+      "3": 259200,
+      "4": 432000,
+      "5": 864000,
+      "6": 2937600,
+      "7": 5356800,
+      "8": 8208000,
+      "9": 11664000,
+      "10": 16761600
+    },
+    "10": {
+      "0": 3600,
+      "1": 86400,
+      "2": 172800,
+      "3": 259200,
+      "4": 432000,
+      "5": 864000,
+      "6": 2937600,
+      "7": 5356800,
+      "8": 8208000,
+      "9": 11664000,
+      "10": 16761600
+    }
+  }
+}

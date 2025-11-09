@@ -7,8 +7,10 @@ import { usePlatinumMeritStore } from '../stores/platinumMeritStore';
 import { PlatinumMeritCategoryTabs } from './PlatinumMeritCategoryTabs';
 import { PlatinumMeritSlotGrid } from './PlatinumMeritSlotGrid';
 import { PlatinumSpecialMasterySection } from './PlatinumSpecialMasterySection';
+import { PlatinumMeritCostsDisplay } from './PlatinumMeritCostsDisplay';
 import { ActionButtons } from '@/tools/build-planner/components/systems/ActionButtons';
 import { TotalStatsButton } from '@/tools/build-planner/components/systems/TotalStatsButton';
+import { useMemo } from 'react';
 
 export const PlatinumMeritSystem: React.FC<PlatinumMeritSystemProps> = ({ className }) => {
   const {
@@ -17,12 +19,22 @@ export const PlatinumMeritSystem: React.FC<PlatinumMeritSystemProps> = ({ classN
     setSelectedCategory,
     totalPointsSpent,
     maxPointsAllowed,
+    requiredMeritScore,
+    maxPossibleMeritScore,
     quickFillSystem,
     resetAll,
     calculateTotalStats
   } = usePlatinumMeritStore();
 
   const selectedCategoryData = categories.find(cat => cat.id === selectedCategory);
+
+  // Calculate progress percentage
+  const progressPercentage = useMemo(() => {
+    if (maxPossibleMeritScore > 0 && requiredMeritScore !== null && requiredMeritScore > 0) {
+      return Math.min((requiredMeritScore / maxPossibleMeritScore) * 100, 100);
+    }
+    return 0;
+  }, [requiredMeritScore, maxPossibleMeritScore]);
 
   return (
     <div className={`glass-panel min-w-0 w-full max-w-full ${className || ''}`}>
@@ -45,6 +57,25 @@ export const PlatinumMeritSystem: React.FC<PlatinumMeritSystemProps> = ({ classN
             <span className="text-xs lg:text-sm text-gray-400"> / {maxPointsAllowed}</span>
           </div>
         </div>
+
+        {/* Merit Score Progress Bar */}
+        <div className="space-y-1">
+          <div className="flex justify-between items-center text-xs text-gray-400">
+            <span>Merit Score Required</span>
+            <span className="font-medium">
+              {(requiredMeritScore ?? 0).toLocaleString()} / {maxPossibleMeritScore.toLocaleString()}
+            </span>
+          </div>
+          <div className="w-full bg-theme-darker rounded-full h-2.5 border border-border-dark overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-game-platinum to-game-highlight transition-all duration-300 ease-out"
+              style={{ width: `${progressPercentage}%` }}
+            />
+          </div>
+          <div className="text-xs text-gray-500 text-center">
+            {progressPercentage.toFixed(1)}% of maximum merit score
+          </div>
+        </div>
       </div>
 
       {/* Category Tabs */}
@@ -63,6 +94,9 @@ export const PlatinumMeritSystem: React.FC<PlatinumMeritSystemProps> = ({ classN
           
           {/* Special Mastery Section */}
           <PlatinumSpecialMasterySection categoryId={selectedCategory} />
+          
+          {/* Costs Display (includes separator) */}
+          <PlatinumMeritCostsDisplay />
         </div>
       )}
     </div>

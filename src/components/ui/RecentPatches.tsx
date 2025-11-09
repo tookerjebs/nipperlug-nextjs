@@ -15,6 +15,14 @@ interface PatchItem {
 
 const RECENT_PATCHES: PatchItem[] = [
   {
+    id: '2025-01-15',
+    date: '2025-11-09',
+    type: 'feature',
+    title: 'Build Planner: Artifact & Platinum Merit Systems',
+    description: 'Added Artifact and Platinum Merit systems to the build planner. Gold Merit system has been improved.',
+    category: 'Build Planner'
+  },
+  {
     id: '2025-10-24',
     date: '2025-10-24',
     type: 'improvement',

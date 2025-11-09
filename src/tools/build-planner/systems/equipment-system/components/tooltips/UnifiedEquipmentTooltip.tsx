@@ -77,8 +77,8 @@ const UnifiedEquipmentTooltip: React.FC<UnifiedEquipmentTooltipProps> = ({
       const slotOptionsToUse = getWeaponSlotOptions(equipment.grade, hasSlotExtender, equipment.handType);
       return slotOptionsToUse[statName as keyof typeof slotOptionsToUse] || 0;
     } else if (isArmor(equipment)) {
-      // Use the new armor-specific slot options based on armor subtype
-      const slotOptionsToUse = getArmorSlotOptions(equipment.subtype as ArmorStatType, hasSlotExtender);
+      // Use the new armor-specific slot options based on armor subtype and grade
+      const slotOptionsToUse = getArmorSlotOptions(equipment.subtype as ArmorStatType, hasSlotExtender, equipment.grade || 'highest');
       return slotOptionsToUse[statName as keyof typeof slotOptionsToUse] || 0;
     } else if (isVehicle(equipment)) {
       const slotOptionsToUse = getVehicleSlotOptions(equipment.grade, hasSlotExtender);

@@ -615,7 +615,7 @@ const EquipmentUpgradeModal: React.FC<EquipmentUpgradeModalProps> = ({
                     const standardOptions = getWeaponSlotOptions(equipment.grade, false, equipment.handType);
                     standardValue = standardOptions[stat as keyof typeof standardOptions] as number | undefined;
                   } else if (isArmor(equipment)) {
-                    const standardOptions = getArmorSlotOptions(equipment.subtype as ArmorStatType, false);
+                    const standardOptions = getArmorSlotOptions(equipment.subtype as ArmorStatType, false, equipment.grade || 'highest');
                     standardValue = standardOptions[stat as keyof typeof standardOptions] as number | undefined;
                   } else if (isVehicle(equipment)) {
                     const standardOptions = getVehicleSlotOptions(equipment.grade, false);

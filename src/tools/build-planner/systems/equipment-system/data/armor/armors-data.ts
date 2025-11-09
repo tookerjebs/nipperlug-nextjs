@@ -29,8 +29,266 @@ import {
 
 
 /**
- * Slot options for different armor types
- * Each armor type has different available slot options
+ * Grade-based slot options for armors
+ * Each grade has normal and enhanced values (enhanced when slot extender is used)
+ * Organized by grade -> armor type -> normal/enhanced
+ */
+export const armorSlotOptionsByGrade: Record<string, Record<ArmorStatType, { normal: ArmorSlotOption; enhanced: ArmorSlotOption }>> = {
+  low: {
+    body: {
+      normal: {
+        swordSkillAmp: 6,
+        maxCriticalRate: 2,
+        magicSkillAmp: 6,
+      },
+      enhanced: {
+        swordSkillAmp: 7,
+        maxCriticalRate: 2,
+        magicSkillAmp: 7,
+      }
+    },
+    helmet: {
+      normal: {
+        swordSkillAmp: 6,
+        magicSkillAmp: 6,
+        criticalDamage: 8,
+        criticalRate: 4,
+      },
+      enhanced: {
+        swordSkillAmp: 7,
+        magicSkillAmp: 7,
+        criticalDamage: 10,
+        criticalRate: 5,
+      }
+    },
+    gauntlet: {
+      normal: {
+        swordSkillAmp: 6,
+        maxCriticalRate: 2,
+        magicSkillAmp: 6,
+      },
+      enhanced: {
+        swordSkillAmp: 7,
+        maxCriticalRate: 2,
+        magicSkillAmp: 7,
+      }
+    },
+    shoes: {
+      normal: {
+        swordSkillAmp: 6,
+        magicSkillAmp: 6,
+      },
+      enhanced: {
+        swordSkillAmp: 7,
+        magicSkillAmp: 7,
+      }
+    }
+  },
+  medium: {
+    body: {
+      normal: {
+        swordSkillAmp: 7,
+        maxCriticalRate: 2,
+        magicSkillAmp: 7,
+      },
+      enhanced: {
+        swordSkillAmp: 8,
+        maxCriticalRate: 3,
+        magicSkillAmp: 8,
+      }
+    },
+    helmet: {
+      normal: {
+        swordSkillAmp: 7,
+        magicSkillAmp: 7,
+        criticalDamage: 9,
+        criticalRate: 4,
+      },
+      enhanced: {
+        swordSkillAmp: 8,
+        magicSkillAmp: 8,
+        criticalDamage: 11,
+        criticalRate: 6,
+      }
+    },
+    gauntlet: {
+      normal: {
+        swordSkillAmp: 7,
+        maxCriticalRate: 2,
+        magicSkillAmp: 7,
+      },
+      enhanced: {
+        swordSkillAmp: 8,
+        maxCriticalRate: 3,
+        magicSkillAmp: 8,
+      }
+    },
+    shoes: {
+      normal: {
+        swordSkillAmp: 7,
+        magicSkillAmp: 7,
+      },
+      enhanced: {
+        swordSkillAmp: 8,
+        magicSkillAmp: 8,
+      }
+    }
+  },
+  high: {
+    body: {
+      normal: {
+        swordSkillAmp: 7,
+        maxCriticalRate: 2,
+        magicSkillAmp: 7,
+      },
+      enhanced: {
+        swordSkillAmp: 10,
+        maxCriticalRate: 3,
+        magicSkillAmp: 10,
+      }
+    },
+    helmet: {
+      normal: {
+        swordSkillAmp: 7,
+        magicSkillAmp: 7,
+        criticalDamage: 10,
+        criticalRate: 5,
+      },
+      enhanced: {
+        swordSkillAmp: 10,
+        magicSkillAmp: 10,
+        criticalDamage: 12,
+        criticalRate: 8,
+      }
+    },
+    gauntlet: {
+      normal: {
+        swordSkillAmp: 7,
+        maxCriticalRate: 2,
+        magicSkillAmp: 7,
+      },
+      enhanced: {
+        swordSkillAmp: 10,
+        maxCriticalRate: 3,
+        magicSkillAmp: 10,
+      }
+    },
+    shoes: {
+      normal: {
+        swordSkillAmp: 7,
+        magicSkillAmp: 7,
+      },
+      enhanced: {
+        swordSkillAmp: 10,
+        magicSkillAmp: 10,
+      }
+    }
+  },
+  highest: {
+    body: {
+      normal: {
+        swordSkillAmp: 7,
+        maxCriticalRate: 2,
+        magicSkillAmp: 7,
+      },
+      enhanced: {
+        swordSkillAmp: 10,
+        maxCriticalRate: 3,
+        magicSkillAmp: 10,
+      }
+    },
+    helmet: {
+      normal: {
+        swordSkillAmp: 7,
+        magicSkillAmp: 7,
+        criticalDamage: 10,
+        criticalRate: 5,
+      },
+      enhanced: {
+        swordSkillAmp: 10,
+        magicSkillAmp: 10,
+        criticalDamage: 12,
+        criticalRate: 8,
+      }
+    },
+    gauntlet: {
+      normal: {
+        swordSkillAmp: 7,
+        maxCriticalRate: 2,
+        magicSkillAmp: 7,
+      },
+      enhanced: {
+        swordSkillAmp: 10,
+        maxCriticalRate: 3,
+        magicSkillAmp: 10,
+      }
+    },
+    shoes: {
+      normal: {
+        swordSkillAmp: 7,
+        magicSkillAmp: 7,
+      },
+      enhanced: {
+        swordSkillAmp: 10,
+        magicSkillAmp: 10,
+      }
+    }
+  },
+  ultimate: {
+    body: {
+      normal: {
+        swordSkillAmp: 8,
+        maxCriticalRate: 2,
+        magicSkillAmp: 8,
+      },
+      enhanced: {
+        swordSkillAmp: 11,
+        maxCriticalRate: 3,
+        magicSkillAmp: 11,
+      }
+    },
+    helmet: {
+      normal: {
+        swordSkillAmp: 8,
+        magicSkillAmp: 8,
+        criticalDamage: 12,
+        criticalRate: 6,
+      },
+      enhanced: {
+        swordSkillAmp: 11,
+        magicSkillAmp: 11,
+        criticalDamage: 18,
+        criticalRate: 8,
+      }
+    },
+    gauntlet: {
+      normal: {
+        swordSkillAmp: 8,
+        maxCriticalRate: 2,
+        magicSkillAmp: 8,
+      },
+      enhanced: {
+        swordSkillAmp: 11,
+        maxCriticalRate: 3,
+        magicSkillAmp: 11,
+      }
+    },
+    shoes: {
+      normal: {
+        swordSkillAmp: 8,
+        magicSkillAmp: 8,
+      },
+      enhanced: {
+        swordSkillAmp: 11,
+        magicSkillAmp: 11,
+      }
+    }
+  }
+};
+
+/**
+ * Legacy slot options for backward compatibility
+ * @deprecated Use armorSlotOptionsByGrade instead
  */
 export const armorSlotOptionsByType: Record<ArmorStatType, { normal: ArmorSlotOption; enhanced: ArmorSlotOption }> = {
   body: {
@@ -84,16 +342,25 @@ export const armorSlotOptionsByType: Record<ArmorStatType, { normal: ArmorSlotOp
 };
 
 /**
- * Get slot options for a specific armor type
+ * Get slot options for a specific armor type and grade
  * @param armorType The armor subtype (body, helmet, gauntlet, shoes)
  * @param hasThirdSlotActive Whether the third slot is active (determines enhanced vs normal)
- * @returns The appropriate slot options for the armor type
+ * @param grade The armor grade (low, medium, high, highest, ultimate). Defaults to 'highest' if not provided for backward compatibility
+ * @returns The appropriate slot options for the armor type and grade
  */
-export function getArmorSlotOptions(armorType: ArmorStatType, hasThirdSlotActive: boolean = false): ArmorSlotOption {
-  const typeOptions = armorSlotOptionsByType[armorType];
+export function getArmorSlotOptions(armorType: ArmorStatType, hasThirdSlotActive: boolean = false, grade: string = 'highest'): ArmorSlotOption {
+  const gradeOptions = armorSlotOptionsByGrade[grade];
+  if (!gradeOptions) {
+    // Fallback to highest grade if grade not found
+    const fallbackOptions = armorSlotOptionsByGrade.highest[armorType] || armorSlotOptionsByGrade.highest.body;
+    return hasThirdSlotActive ? fallbackOptions.enhanced : fallbackOptions.normal;
+  }
+  
+  const typeOptions = gradeOptions[armorType];
   if (!typeOptions) {
     // Fallback to body armor options if type not found
-    return hasThirdSlotActive ? armorSlotOptionsByType.body.enhanced : armorSlotOptionsByType.body.normal;
+    const fallbackOptions = gradeOptions.body;
+    return hasThirdSlotActive ? fallbackOptions.enhanced : fallbackOptions.normal;
   }
   
   return hasThirdSlotActive ? typeOptions.enhanced : typeOptions.normal;
@@ -110,14 +377,15 @@ export function getAvailableArmorSlotStats(armorType: ArmorStatType): string[] {
 }
 
 /**
- * Get slot stat value for a specific armor type and stat
+ * Get slot stat value for a specific armor type, stat, and grade
  * @param armorType The armor subtype (body, helmet, gauntlet, shoes)
  * @param statName The stat name (swordSkillAmp, maxCriticalRate, magicSkillAmp, criticalDamage, criticalRate)
  * @param hasThirdSlotActive Whether the third slot is active (determines enhanced vs normal)
+ * @param grade The armor grade (low, medium, high, highest, ultimate). Defaults to 'highest' if not provided
  * @returns The stat value, or 0 if the stat is not available for this armor type
  */
-export function getArmorSlotStatValue(armorType: ArmorStatType, statName: string, hasThirdSlotActive: boolean = false): number {
-  const slotOptions = getArmorSlotOptions(armorType, hasThirdSlotActive);
+export function getArmorSlotStatValue(armorType: ArmorStatType, statName: string, hasThirdSlotActive: boolean = false, grade: string = 'highest'): number {
+  const slotOptions = getArmorSlotOptions(armorType, hasThirdSlotActive, grade);
   return slotOptions[statName as keyof ArmorSlotOption] || 0;
 }
 
@@ -389,7 +657,7 @@ export function calculateArmorTotalStats(
   }
   
   // Add slot stats using the extension-aware system
-  const slotOptionsToUse = getArmorSlotOptions(armor.subtype as ArmorStatType, isExtended);
+  const slotOptionsToUse = getArmorSlotOptions(armor.subtype as ArmorStatType, isExtended, armor.grade || 'highest');
   
   slots.forEach(slot => {
     if (slot.isActive && slot.selectedStat) {

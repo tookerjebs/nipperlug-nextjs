@@ -112,22 +112,18 @@ export const armorEpicOptionsByGradeAndType: Record<string, Record<ArmorStatType
   },
   ultimate: {
     body: {
-      swordSkillAmp: [4, 5, 6, 8, 9, 11],
-      magicSkillAmp: [4, 5, 6, 8, 9, 11],
+      allSkillAmp: [4, 5, 6, 9, 11, 13],
     },
     helmet: {
-      swordSkillAmp: [4, 5, 6, 8, 9, 11],
-      magicSkillAmp: [4, 5, 6, 8, 9, 11],
+      allSkillAmp: [4, 5, 6, 9, 11, 13],
       criticalDamage: [9, 11, 13, 19, 23, 27],
       criticalRate: [4, 5, 6, 9, 10, 11],
     },
     gauntlet: {
-      swordSkillAmp: [4, 5, 6, 8, 9, 11],
-      magicSkillAmp: [4, 5, 6, 8, 9, 11],
+      allSkillAmp: [4, 5, 6, 9, 11, 13],
     },
     shoes: {
-      swordSkillAmp: [4, 5, 6, 8, 9, 11],
-      magicSkillAmp: [4, 5, 6, 8, 9, 11],
+      allSkillAmp: [4, 5, 6, 9, 11, 13],
     }
   }
 };
@@ -243,50 +239,10 @@ export const armorMasterEpicOptions: Record<string, Record<ArmorStatType, Record
     }
   },
   ultimate: {
-    body: {
-      "master_combat": {
-        name: "Master",
-        description: "Ultimate combat enhancement",
-        levels: [
-          { allSkillAmp: 12, hp: 350, maxCriticalRate: 4 },
-          { allSkillAmp: 13, hp: 350, maxCriticalRate: 4 },
-          { allSkillAmp: 14, hp: 350, maxCriticalRate: 4 }
-        ]
-      }
-    },
-    helmet: {
-      "combat_focus": {
-        name: "Master",
-        description: "Ultimate focus enhancement",
-        levels: [
-          { criticalRate: 12, resistCriticalDamage: 10, allSkillAmp: 4 },
-          { criticalRate: 13, resistCriticalDamage: 10, allSkillAmp: 4 },
-          { criticalRate: 14, resistCriticalDamage: 10, allSkillAmp: 4 }
-        ]
-      }
-    },
-    gauntlet: {
-      "combat_defense": {
-        name: "Master",
-        description: "Ultimate defensive enhancement",
-        levels: [
-          { allSkillAmp: 12, resistCriticalRate: 5, maxCriticalRate: 4 },
-          { allSkillAmp: 13, resistCriticalRate: 5, maxCriticalRate: 4 },
-          { allSkillAmp: 14, resistCriticalRate: 5, maxCriticalRate: 4 },
-        ]
-      }
-    },
-    shoes: {
-      "combat_resilience": {
-        name: "Master",
-        description: "Ultimate resilience enhancement",
-        levels: [
-          { allSkillAmp: 12, resistSkillAmp: 5, maxHpStealPerHit: 25 },
-          { allSkillAmp: 13, resistSkillAmp: 5, maxHpStealPerHit: 25 },
-          { allSkillAmp: 14, resistSkillAmp: 5, maxHpStealPerHit: 25 },
-        ]
-      }
-    }
+    body: {},
+    helmet: {},
+    gauntlet: {},
+    shoes: {}
   }
 
 };

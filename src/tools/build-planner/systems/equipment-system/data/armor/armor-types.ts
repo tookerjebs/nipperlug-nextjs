@@ -41,6 +41,7 @@ export interface ArmorDivineUpgradeLevel {
 export interface ArmorEpicOption {
   swordSkillAmp?: number;
   magicSkillAmp?: number;
+  allSkillAmp?: number;
   resistCriticalDamage?: number;
   resistSkillAmp?: number;
   damageReduction?: number;

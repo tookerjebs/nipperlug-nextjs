@@ -254,7 +254,7 @@ export class ArmorStrategy implements EquipmentStrategy<ArmorEquipment> {
   }
 
   getSlotOptions(isExtended: boolean): Record<string, number> {
-    return getArmorSlotOptions(this.equipment.subtype as ArmorStatType, isExtended) as unknown as Record<string, number>;
+    return getArmorSlotOptions(this.equipment.subtype as ArmorStatType, isExtended, this.equipment.grade || 'highest') as unknown as Record<string, number>;
   }
 
   getAvailableEpicStats(): string[] {

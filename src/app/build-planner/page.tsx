@@ -266,8 +266,8 @@ function BuildPlannerContent() {
             <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-game-gold glow-text-sm">{PROGRESSION_SYSTEMS.find(system => system.id === activeSystem)?.name}</h2>
             <div className={cn(
               "min-h-64 sm:min-h-80 lg:min-h-96",
-              // Full width for collection, overlord mastery, gold merit, achievements, passive skills, manual stats, and damage analysis systems, center everything else
-              activeSystem === 'collection' || activeSystem === 'overlord-mastery' || activeSystem === 'gold-merit' || activeSystem === 'achievements' || activeSystem === 'passive-skills' || activeSystem === 'manual-stats' || activeSystem === 'damage-analysis'
+              // Full width for collection, overlord mastery, gold merit, platinum merit, achievements, passive skills, manual stats, and damage analysis systems, center everything else
+              activeSystem === 'collection' || activeSystem === 'overlord-mastery' || activeSystem === 'gold-merit' || activeSystem === 'platinum-merit' || activeSystem === 'achievements' || activeSystem === 'passive-skills' || activeSystem === 'manual-stats' || activeSystem === 'damage-analysis'
                 ? "w-full" 
                 : "flex items-center justify-center"
             )}>

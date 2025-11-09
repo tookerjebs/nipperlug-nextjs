@@ -55,7 +55,7 @@ export const GoldMeritSystem: React.FC<GoldMeritSystemProps> = ({ className }) =
     : 0;
 
   return (
-    <div className={`glass-panel ${className || ''}`}>
+    <div className={`glass-panel min-w-0 ${className || ''}`}>
       {/* Header with Points Used Display and Action Buttons */}
       <div className="p-4 border-b border-border-dark space-y-3">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">

@@ -8,13 +8,14 @@ import { useEquipmentSystemStore } from './stores/equipmentSystemStore';
 import { systemConfig as equipmentSystemConfig } from './stores/equipmentSystemStore';
 import UnifiedEquipmentTooltip from './components/UnifiedEquipmentTooltip'; // Import the unified tooltip component
 import { isEpaulet } from './components/UnifiedEquipmentTooltip';
+import { TotalStatsButton } from '@/tools/build-planner/components/systems/TotalStatsButton';
 
 // Export the equipment system config for build sharing
 export { equipmentSystemConfig };
 
 const EquipmentSystem: React.FC = () => {
   // Use the equipment system store for state management
-  const { isModalOpen, selectedSlotId, openModal, closeModal, getConfiguredEquipment } = useEquipmentSystemStore();
+  const { isModalOpen, selectedSlotId, openModal, closeModal, getConfiguredEquipment, calculateTotalStats } = useEquipmentSystemStore();
 
   // Utility function to get equipment for any slot using the new generic method
   const getEquipmentForSlot = (slotId: string) => {
@@ -110,9 +111,19 @@ const EquipmentSystem: React.FC = () => {
     return equipment?.imagePath;
   };
 
+  const totalStats = calculateTotalStats();
+  
   // SVG viewBox is set to maintain aspect ratio while being responsive
   return (
-    <div className="w-full h-full flex items-center justify-center p-4">
+    <div className="w-full h-full flex flex-col items-center justify-center p-4">
+      {/* Header with Total Stats Button */}
+      <div className="mb-6 flex justify-end w-full max-w-[500px]">
+        <TotalStatsButton
+          totalStats={totalStats}
+          systemName="Equipment"
+        />
+      </div>
+      
       {/* Use the extracted EquipmentGrid component */}
       <EquipmentGrid
         onSlotClick={handleSlotClick}

@@ -62,6 +62,11 @@ export default function SystemsSidebar({ activeSystem, onSystemChange }: Systems
           <div className="text-left">
             <div className="font-medium flex items-center gap-1 sm:gap-2 text-sm sm:text-base">
               {system.name}
+              {system.badge && (
+                <span className="text-xs px-1.5 sm:px-2 py-0.5 bg-green-400/20 text-green-400 rounded-full border border-green-400/30">
+                  {system.badge}
+                </span>
+              )}
               {isComingSoon && (
                 <span className="text-xs px-1.5 sm:px-2 py-0.5 bg-orange-400/20 text-orange-400 rounded-full border border-orange-400/30">
                   Coming Soon

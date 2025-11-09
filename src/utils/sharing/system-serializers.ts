@@ -19,6 +19,7 @@ import { useClassPassiveSkillsStore } from '@/tools/build-planner/systems/class-
 import { useGoldMeritStore } from '@/tools/build-planner/systems/gold-merit/stores/goldMeritStore';
 import { useForceWingSystemStore } from '@/tools/build-planner/systems/force-wing/stores/forceWingSystemStore';
 import { useCollectionTrackerStore } from '@/tools/collection-tracker/stores/collectionTrackerStore';
+import { artifactSystemConfig } from '@/tools/build-planner/systems/artifact-system/stores/artifactSystemStore';
 
 // System serialization interface
 export interface SystemSerializer {
@@ -392,6 +393,17 @@ export function getDefaultSystemSerializers(): SystemSerializer[] {
             collectionProgress: data.collectionProgress
           });
         }
+      }
+    },
+
+    // Artifact System
+    {
+      systemId: 'artifact',
+      extract: () => {
+        return artifactSystemConfig.serialize();
+      },
+      restore: (data) => {
+        artifactSystemConfig.deserialize(data);
       }
     }
   ];

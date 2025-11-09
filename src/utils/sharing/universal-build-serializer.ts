@@ -28,6 +28,7 @@ export interface SerializedBuildData {
     class?: any;
     goldMerit?: any;
     'force-wing'?: any;
+    artifact?: any;
   };
 }
 

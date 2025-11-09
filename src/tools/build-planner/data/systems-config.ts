@@ -7,6 +7,7 @@ export interface ProgressionSystem {
   icon: string; // Placeholder icon path for now
   category?: string; // For future grouping
   priority?: number; // For ordering within categories
+  badge?: string; // Optional badge (e.g., "NEW", "Coming Soon")
 }
 
 // All available progression systems organized by category
@@ -55,12 +56,21 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
   
   // Progression Systems
   {
+    id: 'artifact',
+    name: 'Artifact',
+    description: 'Artifact system with Dawn, Dusk, and Midnight artifacts',
+    icon: '💎',
+    category: 'progression',
+    priority: 1,
+    badge: 'NEW'
+  },
+  {
     id: 'mythical-level',
     name: 'Mythical Level',
     description: 'Mythical level progression and bonuses',
     icon: '✨',
     category: 'progression',
-    priority: 1
+    priority: 2
   },
   {
     id: 'stellar-link',
@@ -68,7 +78,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Stellar constellation system',
     icon: '⭐',
     category: 'progression',
-    priority: 2
+    priority: 3
   },
   {
     id: 'overlord-mastery',
@@ -76,7 +86,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Overlord mastery system and skills',
     icon: '👑',
     category: 'progression',
-    priority: 3
+    priority: 4
   },
   {
     id: 'force-wing',
@@ -84,7 +94,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Force wing system and abilities',
     icon: '🪶',
     category: 'progression',
-    priority: 4
+    priority: 5
   },
   {
     id: 'pet',
@@ -92,7 +102,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Configure your Pet',
     icon: '🐾',
     category: 'progression',
-    priority: 5
+    priority: 6
   },
   {
     id: 'honor-medal',
@@ -100,7 +110,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Honor medals',
     icon: '🏅',
     category: 'progression',
-    priority: 6
+    priority: 7
   },
   {
     id: 'achievements',
@@ -108,7 +118,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Achievement system',
     icon: '🏆',
     category: 'progression',
-    priority: 7
+    priority: 8
   },
   {
     id: 'collection',
@@ -116,7 +126,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Collection system and items',
     icon: '📦',
     category: 'progression',
-    priority: 8
+    priority: 9
   },
   {
     id: 'gold-merit',
@@ -124,7 +134,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Gold merit system',
     icon: '🪙',
     category: 'progression',
-    priority: 9
+    priority: 10
   },
   {
     id: 'platinum-merit',
@@ -132,7 +142,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Platinum merit system and rewards',
     icon: '💎',
     category: 'progression',
-    priority: 10
+    priority: 11
   },
   {
     id: 'buffs-potions',
@@ -140,7 +150,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Temporary buffs and consumable items',
     icon: '🧪',
     category: 'progression',
-    priority: 11
+    priority: 12
   },
   {
     id: 'essence-runes',
@@ -148,7 +158,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Essence runes',
     icon: '🔮',
     category: 'progression',
-    priority: 12
+    priority: 13
   },
   {
     id: 'karma-runes',
@@ -156,7 +166,7 @@ export const PROGRESSION_SYSTEMS: ProgressionSystem[] = [
     description: 'Karma rune system',
     icon: '🌀',
     category: 'progression',
-    priority: 13
+    priority: 14
   },
   
   // Custom Configuration

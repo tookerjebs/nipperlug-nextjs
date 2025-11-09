@@ -26,6 +26,7 @@ import { ForceWingSystem } from '@/tools/build-planner/systems/force-wing/ForceW
 import { BattleConfigurationSystem } from '@/tools/build-planner/systems/battle-configuration';
 import { ManualStatsSystem } from '@/tools/build-planner/systems/manual-stats';
 import { DamageAnalysisSystem } from '@/tools/build-planner/systems/damage-analysis';
+import ArtifactSystem from '@/tools/build-planner/systems/artifact-system/ArtifactSystem';
 import StatRegistryInitializer from '@/tools/build-planner/utils/StatRegistryInitializer';
 
 import { cn } from '@/tools/build-planner/lib/utils';
@@ -332,6 +333,9 @@ function BuildPlannerContent() {
               )}
               {activeSystem === 'manual-stats' && (
                 <ManualStatsSystem />
+              )}
+              {activeSystem === 'artifact' && (
+                <ArtifactSystem />
               )}
             </div>
           </div>

@@ -167,6 +167,18 @@ export function loadGoldMeritData(): GoldMeritCategory[] {
         expandsSlot: expandsSlot
       };
 
+      // Enhance expansion slot names with tier information
+      if (slot.isExpansion) {
+        const tierMatch = oldSlotId.match(/tier-(\d+)/);
+        if (tierMatch) {
+          const tierNum = parseInt(tierMatch[1]);
+          const tierRoman = tierNum === 1 ? 'I' : tierNum === 2 ? 'II' : 'III';
+          const originalName = slot.name;
+          slot.name = `${slot.name} Expand ${tierRoman}`;
+          slot.description = `Expansion slot for ${originalName}`;
+        }
+      }
+
       slots.push(slot);
     });
 

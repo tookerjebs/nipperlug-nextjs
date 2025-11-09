@@ -1,6 +1,4 @@
 // Gold Merit System Configuration
-// Contains slot mappings, grid positions, and grid elements (arrows)
-
 import type { GoldMeritArrow } from '../types/index';
 
 // ============================================================================
@@ -19,21 +17,21 @@ export const GoldMeritSlotMapping: Record<string, number> = {
   'attack-rate-tier-3': 7,            // Attack Rate, maxLevel 15
   'accuracy-tier-3': 8,               // Accuracy, maxLevel 15
   'ignore-evasion-tier-3': 9,         // Ignore Evasion, maxLevel 15
-  'expanded-attack-rate-tier-1': 10,  // Expansion slot, maxLevel 1
-  'expanded-attack-rate-tier-2': 11,  // Expansion slot, maxLevel 1
-  'expanded-attack-rate-tier-3': 12,  // Expansion slot, maxLevel 1
-  'expanded-accuracy-tier-1': 13,    // Expansion slot, maxLevel 1
-  'expanded-accuracy-tier-2': 14,    // Expansion slot, maxLevel 1
-  'expanded-accuracy-tier-3': 15,    // Expansion slot, maxLevel 1
+  'expanded-attack-rate-tier-1': 10,  // Expansion slot, maxLevel 1, linked to attack-rate-tier-1
+  'expanded-accuracy-tier-1': 11,    // Expansion slot, maxLevel 1, linked to accuracy-tier-1
+  'expanded-attack-rate-tier-2': 12,  // Expansion slot, maxLevel 1, linked to attack-rate-tier-2
+  'expanded-accuracy-tier-2': 13,    // Expansion slot, maxLevel 1, linked to accuracy-tier-2
+  'expanded-attack-rate-tier-3': 14,  // Expansion slot, maxLevel 1, linked to attack-rate-tier-3
+  'expanded-accuracy-tier-3': 15,    // Expansion slot, maxLevel 1, linked to accuracy-tier-3
 
   // Category 2: Ignore Accuracy
-  'evasion-tier-1': 16,               // Evasion, maxLevel 5
-  'defense-rate-tier-1': 17,          // Defense Rate, maxLevel 5
-  'ignore-accuracy-tier-1': 18,       // Ignore Accuracy, maxLevel 5
-  'defense-rate-tier-2': 19,          // Defense Rate, maxLevel 10
-  'ignore-accuracy-tier-2': 20,       // Ignore Accuracy, maxLevel 10
-  'cancel-ignore-evasion-tier-1': 21, // Cancel Ignore Evasion, maxLevel 5
-  'evasion-tier-2': 22,                // Evasion, maxLevel 10
+  'evasion-tier-1': 16,
+  'defense-rate-tier-1': 17,
+  'ignore-accuracy-tier-1': 18,
+  'defense-rate-tier-2': 19,
+  'evasion-tier-2': 20,
+  'ignore-accuracy-tier-2': 21,
+  'cancel-ignore-evasion-tier-1': 22,
   'defense-rate-tier-3': 23,          // Defense Rate, maxLevel 15
   'evasion-tier-3': 24,               // Evasion, maxLevel 15
   'cancel-ignore-evasion-tier-2': 25, // Cancel Ignore Evasion, maxLevel 10
@@ -84,7 +82,6 @@ export const GoldMeritSlotMapping: Record<string, number> = {
 
 // ============================================================================
 // Grid Positions
-// Maps old slot IDs to grid positions (extracted from gold-merit-data.ts)
 // ============================================================================
 
 export const GoldMeritGridPositions: Record<string, { row: number; col: number }> = {
@@ -108,19 +105,19 @@ export const GoldMeritGridPositions: Record<string, { row: number; col: number }
   // Category 2: Ignore Accuracy
   'evasion-tier-1': { row: 0, col: 0 },
   'evasion-tier-3': { row: 0, col: 2 },
-  'cancel-ignore-evasion-tier-2': { row: 0, col: 4 },
+  'ignore-accuracy-tier-3': { row: 0, col: 4 },
   'defense-rate-tier-1': { row: 2, col: 0 },
   'defense-rate-tier-2': { row: 5, col: 1 },
-  'ignore-accuracy-tier-3': { row: 2, col: 4 },
+  'cancel-ignore-evasion-tier-2': { row: 2, col: 4 },
   'defense-rate-expand-tier-1': { row: 2, col: 6 },
   'evasion-expand-tier-1': { row: 2, col: 8 },
   'ignore-accuracy-tier-1': { row: 4, col: 0 },
-  'ignore-accuracy-tier-2': { row: 4, col: 2 },
   'cancel-ignore-evasion-tier-1': { row: 4, col: 4 },
+  'evasion-tier-2': { row: 6, col: 2 },
   'defense-rate-expand-tier-2': { row: 4, col: 6 },
   'evasion-expand-tier-2': { row: 4, col: 8 },
   'defense-rate-tier-3': { row: 2, col: 2 },
-  'evasion-tier-2': { row: 6, col: 2 },
+  'ignore-accuracy-tier-2': { row: 4, col: 2 },
   'defense-rate-expand-tier-3': { row: 6, col: 6 },
   'evasion-expand-tier-3': { row: 6, col: 8 },
 
@@ -131,13 +128,13 @@ export const GoldMeritGridPositions: Record<string, { row: number; col: number }
   'additional-damage-expand-tier-1': { row: 1, col: 7 },
   'penetration-expand-tier-1': { row: 1, col: 9 },
   'additional-damage-tier-1': { row: 2, col: 0 },
-  'additional-damage-tier-2': { row: 2, col: 2 },
+  'ignore-damage-reduction-tier-2': { row: 2, col: 2 },
   'penetration-tier-3': { row: 2, col: 4 },
   'additional-damage-expand-tier-2': { row: 3, col: 7 },
   'penetration-expand-tier-2': { row: 3, col: 9 },
   'ignore-damage-reduction-tier-1': { row: 4, col: 0 },
   'penetration-tier-2': { row: 4, col: 2 },
-  'ignore-damage-reduction-tier-2': { row: 4, col: 4 },
+  'additional-damage-tier-2': { row: 4, col: 4 },
   'additional-damage-expand-tier-3': { row: 5, col: 7 },
   'penetration-expand-tier-3': { row: 5, col: 9 },
 
@@ -146,17 +143,17 @@ export const GoldMeritGridPositions: Record<string, { row: number; col: number }
   'damage-reduce-tier-2': { row: 6, col: 2 },
   'cancel-ignore-damage-reduce-tier-2': { row: 0, col: 4 },
   'defense-tier-1': { row: 2, col: 0 },
-  'defense-tier-3': { row: 2, col: 2 },
+  'damage-reduce-tier-3': { row: 2, col: 2 },
   'ignore-penetration-tier-3': { row: 2, col: 4 },
   'defense-expand-tier-1': { row: 2, col: 6 },
   'damage-reduce-expand-tier-1': { row: 2, col: 8 },
   'ignore-penetration-tier-1': { row: 4, col: 0 },
   'ignore-penetration-tier-2': { row: 4, col: 2 },
-  'cancel-ignore-damage-reduce-tier-1': { row: 4, col: 4 },
+  'defense-tier-2': { row: 4, col: 4 },
   'defense-expand-tier-2': { row: 4, col: 6 },
   'damage-reduce-expand-tier-2': { row: 4, col: 8 },
-  'defense-tier-2': { row: 5, col: 1 },
-  'damage-reduce-tier-3': { row: 0, col: 2 },
+  'cancel-ignore-damage-reduce-tier-1': { row: 5, col: 1 },
+  'defense-tier-3': { row: 0, col: 2 },
   'defense-expand-tier-3': { row: 6, col: 6 },
   'damage-reduce-expand-tier-3': { row: 6, col: 8 }
 };
@@ -193,7 +190,7 @@ export const GoldMeritGridElements: Record<string, GoldMeritArrow[]> = {
     { id: 'arrow-7', type: 'arrow', direction: 'down', gridPosition: { row: 3, col: 0 } },
     { id: 'arrow-8', type: 'arrow', direction: 'up', gridPosition: { row: 3, col: 2 } },
     { id: 'arrow-9', type: 'arrow', direction: 'down', gridPosition: { row: 3, col: 6 } },
-    { id: 'arrow-10', type: 'arrow', direction: 'right', gridPosition: { row: 4, col: 1 } },
+    { id: 'arrow-10', type: 'arrow', direction: 'up-right', gridPosition: { row: 4, col: 1 } },
     { id: 'arrow-11', type: 'arrow', direction: 'right', gridPosition: { row: 4, col: 3 } },
     { id: 'arrow-12', type: 'arrow', direction: 'right', gridPosition: { row: 4, col: 7 } },
     { id: 'arrow-13', type: 'arrow', direction: 'down-right', gridPosition: { row: 5, col: 0 } },

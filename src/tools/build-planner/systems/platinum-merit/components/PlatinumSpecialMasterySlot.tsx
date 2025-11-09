@@ -88,7 +88,7 @@ export const PlatinumSpecialMasterySlot: React.FC<PlatinumSpecialMasterySlotProp
         {/* Value Display */}
         {hasSelection && (
           <div className="text-xs text-center text-gray-300 mt-0.5">
-            {displayValue}
+            +{displayValue}
           </div>
         )}
       </div>

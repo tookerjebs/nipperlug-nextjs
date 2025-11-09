@@ -65,7 +65,7 @@ export const PlatinumSpecialMasterySelectionModal: React.FC<PlatinumSpecialMaste
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" onClick={onClose}>
       <div 
-        className="bg-theme-dark border border-game-platinum rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto"
+        className="bg-theme-dark border border-transparent p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -148,15 +148,12 @@ export const PlatinumSpecialMasterySelectionModal: React.FC<PlatinumSpecialMaste
                             Grade {grade.grade}
                           </div>
                           <div className="text-game-platinum font-bold text-sm">
-                            {formattedValue}
+                            +{formattedValue}
                           </div>
                         </div>
                         {grade.ratio !== null && (
                           <div className="text-xs text-gray-400 text-right">
                             <div>Chance: {grade.ratio.toFixed(2)}%</div>
-                            {grade.ratioSum !== null && (
-                              <div className="text-gray-500">Cumulative: {grade.ratioSum.toFixed(2)}%</div>
-                            )}
                           </div>
                         )}
                       </div>

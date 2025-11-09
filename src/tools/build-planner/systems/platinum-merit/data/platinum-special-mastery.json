@@ -295,7 +295,7 @@
       "statOptions": [
         {
           "specialMasteryIndex": 7,
-          "statType": "cancelIgnoreDmgReduction",
+          "statType": "cancelIgnoreDamageReduction",
           "statName": "Cancel Ignore DMG Reduction",
           "grades": [
             {

@@ -56,6 +56,7 @@ export interface PlatinumMeritState {
   totalPointsSpent: number;
   maxPointsAllowed: number; // New: maximum points that can be spent
   selectedCategory: string;
+  specialMasteryStates: Record<string, SpecialMasteryCategoryState>; // categoryId -> SpecialMasteryCategoryState
 }
 
 export interface PlatinumMeritActions {
@@ -81,11 +82,19 @@ export interface PlatinumMeritActions {
   updateSlotUnlockStates: (slotStates: Record<string, PlatinumMeritSlotState>) => Record<string, PlatinumMeritSlotState>;
   hasPointsAvailable: (pointsNeeded: number) => boolean; // New: check if points are available
   
+  // Special Mastery actions
+  selectSpecialMasteryStat: (categoryId: string, slotIndex: 0 | 1, statIndex: number, grade: number) => void;
+  clearSpecialMasterySlot: (categoryId: string, slotIndex: 0 | 1) => void;
+  getSpecialMasteryStats: (categoryId: string) => SpecialMasteryStatOption[] | null;
+  getSpecialMasterySlotState: (categoryId: string, slotIndex: 0 | 1) => SpecialMasterySlotState | undefined;
+  calculateSpecialMasteryStats: (categoryId: string) => Record<string, number>;
+  
   // Import/Export functionality
   restoreFromImport: (importData: {
     slotStates: Record<string, PlatinumMeritSlotState>;
     totalPointsSpent: number;
     selectedCategory: string;
+    specialMasteryStates?: Record<string, SpecialMasteryCategoryState>;
   }) => void;
   validateAndRestoreSlotStates: (importedSlotStates: Record<string, PlatinumMeritSlotState>) => Record<string, PlatinumMeritSlotState>;
 }
@@ -109,4 +118,40 @@ export interface PlatinumMeritCategoryTabsProps {
 
 export interface PlatinumMeritSystemProps {
   className?: string;
+}
+
+export interface PlatinumSpecialMasterySectionProps {
+  categoryId: string;
+}
+
+// Special Mastery Types
+export interface SpecialMasteryGrade {
+  grade: number;
+  value: number;
+  valueType: 'flat' | 'percent';
+  ratio: number | null;
+  ratioSum: number | null;
+}
+
+export interface SpecialMasteryStatOption {
+  specialMasteryIndex: number;
+  statType: string; // camelCase stat type matching stats-config.ts
+  statName: string; // Display name
+  grades: SpecialMasteryGrade[];
+}
+
+export interface SpecialMasterySlotState {
+  selectedStatIndex: number | null; // Index in statOptions array
+  selectedGrade: number | null; // Selected grade (1-6)
+}
+
+export interface SpecialMasteryCategoryState {
+  slots: [SpecialMasterySlotState, SpecialMasterySlotState]; // Exactly 2 slots
+}
+
+export interface SpecialMasteryData {
+  categories: Record<string, {
+    statOptions: SpecialMasteryStatOption[];
+  }>;
+  unlockMapping: Record<string, number>; // Mastery_Index -> Category
 }

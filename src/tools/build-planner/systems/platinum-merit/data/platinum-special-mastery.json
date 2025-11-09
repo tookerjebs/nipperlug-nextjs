@@ -1,0 +1,1549 @@
+{
+  "categories": {
+    "5": {
+      "statOptions": [
+        {
+          "specialMasteryIndex": 1,
+          "statType": "penetration",
+          "statName": "Penetration",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 5,
+              "valueType": "flat",
+              "ratio": 7.475,
+              "ratioSum": 7.475
+            },
+            {
+              "grade": 2,
+              "value": 10,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 12.475
+            },
+            {
+              "grade": 3,
+              "value": 15,
+              "valueType": "flat",
+              "ratio": 3,
+              "ratioSum": 15.475
+            },
+            {
+              "grade": 4,
+              "value": 25,
+              "valueType": "flat",
+              "ratio": 1,
+              "ratioSum": 16.475
+            },
+            {
+              "grade": 5,
+              "value": 35,
+              "valueType": "flat",
+              "ratio": 0.5,
+              "ratioSum": 16.975
+            },
+            {
+              "grade": 6,
+              "value": 55,
+              "valueType": "flat",
+              "ratio": 0.05,
+              "ratioSum": 17.025
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 2,
+          "statType": "criticalDamage",
+          "statName": "Critical DMG.",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 1,
+              "valueType": "percent",
+              "ratio": 8,
+              "ratioSum": 25.025
+            },
+            {
+              "grade": 2,
+              "value": 3,
+              "valueType": "percent",
+              "ratio": 5,
+              "ratioSum": 30.025
+            },
+            {
+              "grade": 3,
+              "value": 5,
+              "valueType": "percent",
+              "ratio": 3,
+              "ratioSum": 33.025
+            },
+            {
+              "grade": 4,
+              "value": 7,
+              "valueType": "percent",
+              "ratio": 1.1,
+              "ratioSum": 34.125
+            },
+            {
+              "grade": 5,
+              "value": 9,
+              "valueType": "percent",
+              "ratio": 0.6,
+              "ratioSum": 34.725
+            },
+            {
+              "grade": 6,
+              "value": 12,
+              "valueType": "percent",
+              "ratio": 0.065,
+              "ratioSum": 34.79
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 3,
+          "statType": "allSkillAmp",
+          "statName": "All Skill Amp. UP",
+          "grades": [
+            {
+              "grade": 2,
+              "value": 1,
+              "valueType": "percent",
+              "ratio": 5,
+              "ratioSum": 39.79
+            },
+            {
+              "grade": 3,
+              "value": 2,
+              "valueType": "percent",
+              "ratio": 3,
+              "ratioSum": 42.79
+            },
+            {
+              "grade": 4,
+              "value": 3,
+              "valueType": "percent",
+              "ratio": 1.2,
+              "ratioSum": 43.99
+            },
+            {
+              "grade": 5,
+              "value": 4,
+              "valueType": "percent",
+              "ratio": 0.7,
+              "ratioSum": 44.69
+            },
+            {
+              "grade": 6,
+              "value": 6,
+              "valueType": "percent",
+              "ratio": 0.08,
+              "ratioSum": 44.77
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 4,
+          "statType": "allAttackUp",
+          "statName": "All Attack UP",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 10,
+              "valueType": "flat",
+              "ratio": 8,
+              "ratioSum": 52.77
+            },
+            {
+              "grade": 2,
+              "value": 20,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 57.77
+            },
+            {
+              "grade": 3,
+              "value": 30,
+              "valueType": "flat",
+              "ratio": 3,
+              "ratioSum": 60.77
+            },
+            {
+              "grade": 4,
+              "value": 40,
+              "valueType": "flat",
+              "ratio": 1.3,
+              "ratioSum": 62.07
+            },
+            {
+              "grade": 5,
+              "value": 50,
+              "valueType": "flat",
+              "ratio": 0.8,
+              "ratioSum": 62.87
+            },
+            {
+              "grade": 6,
+              "value": 75,
+              "valueType": "flat",
+              "ratio": 0.095,
+              "ratioSum": 62.965
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 5,
+          "statType": "normalDamageUp",
+          "statName": "Normal Attack DMG UP",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 2,
+              "valueType": "percent",
+              "ratio": 8,
+              "ratioSum": 70.965
+            },
+            {
+              "grade": 2,
+              "value": 4,
+              "valueType": "percent",
+              "ratio": 5,
+              "ratioSum": 75.965
+            },
+            {
+              "grade": 3,
+              "value": 6,
+              "valueType": "percent",
+              "ratio": 3,
+              "ratioSum": 78.965
+            },
+            {
+              "grade": 4,
+              "value": 8,
+              "valueType": "percent",
+              "ratio": 1.4,
+              "ratioSum": 80.365
+            },
+            {
+              "grade": 5,
+              "value": 10,
+              "valueType": "percent",
+              "ratio": 0.9,
+              "ratioSum": 81.265
+            },
+            {
+              "grade": 6,
+              "value": 14,
+              "valueType": "percent",
+              "ratio": 0.11,
+              "ratioSum": 81.375
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 6,
+          "statType": "addDamage",
+          "statName": "Add. Damage",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 20,
+              "valueType": "flat",
+              "ratio": 8,
+              "ratioSum": 89.375
+            },
+            {
+              "grade": 2,
+              "value": 30,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 94.375
+            },
+            {
+              "grade": 3,
+              "value": 40,
+              "valueType": "flat",
+              "ratio": 3,
+              "ratioSum": 97.375
+            },
+            {
+              "grade": 4,
+              "value": 50,
+              "valueType": "flat",
+              "ratio": 1.5,
+              "ratioSum": 98.875
+            },
+            {
+              "grade": 5,
+              "value": 60,
+              "valueType": "flat",
+              "ratio": 1,
+              "ratioSum": 99.875
+            },
+            {
+              "grade": 6,
+              "value": 85,
+              "valueType": "flat",
+              "ratio": 0.125,
+              "ratioSum": 100
+            }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "statOptions": [
+        {
+          "specialMasteryIndex": 7,
+          "statType": "cancelIgnoreDmgReduction",
+          "statName": "Cancel Ignore DMG Reduction",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 5,
+              "valueType": "flat",
+              "ratio": 9,
+              "ratioSum": 9
+            },
+            {
+              "grade": 2,
+              "value": 10,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 14
+            },
+            {
+              "grade": 3,
+              "value": 15,
+              "valueType": "flat",
+              "ratio": 3,
+              "ratioSum": 17
+            },
+            {
+              "grade": 4,
+              "value": 25,
+              "valueType": "flat",
+              "ratio": 1,
+              "ratioSum": 18
+            },
+            {
+              "grade": 5,
+              "value": 35,
+              "valueType": "flat",
+              "ratio": 0.5,
+              "ratioSum": 18.5
+            },
+            {
+              "grade": 6,
+              "value": 55,
+              "valueType": "flat",
+              "ratio": 0.05,
+              "ratioSum": 18.55
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 8,
+          "statType": "ignorePenetration",
+          "statName": "Ignore Penetration",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 5,
+              "valueType": "flat",
+              "ratio": 9,
+              "ratioSum": 27.55
+            },
+            {
+              "grade": 2,
+              "value": 10,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 32.55
+            },
+            {
+              "grade": 3,
+              "value": 15,
+              "valueType": "flat",
+              "ratio": 3,
+              "ratioSum": 35.55
+            },
+            {
+              "grade": 4,
+              "value": 25,
+              "valueType": "flat",
+              "ratio": 1.1,
+              "ratioSum": 36.65
+            },
+            {
+              "grade": 5,
+              "value": 35,
+              "valueType": "flat",
+              "ratio": 0.65,
+              "ratioSum": 37.3
+            },
+            {
+              "grade": 6,
+              "value": 55,
+              "valueType": "flat",
+              "ratio": 0.075,
+              "ratioSum": 37.375
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 9,
+          "statType": "defense",
+          "statName": "Defense",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 5,
+              "valueType": "flat",
+              "ratio": 9.425,
+              "ratioSum": 46.8
+            },
+            {
+              "grade": 2,
+              "value": 10,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 51.8
+            },
+            {
+              "grade": 3,
+              "value": 15,
+              "valueType": "flat",
+              "ratio": 3,
+              "ratioSum": 54.8
+            },
+            {
+              "grade": 4,
+              "value": 25,
+              "valueType": "flat",
+              "ratio": 1.2,
+              "ratioSum": 56
+            },
+            {
+              "grade": 5,
+              "value": 35,
+              "valueType": "flat",
+              "ratio": 0.8,
+              "ratioSum": 56.8
+            },
+            {
+              "grade": 6,
+              "value": 55,
+              "valueType": "flat",
+              "ratio": 0.1,
+              "ratioSum": 56.9
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 10,
+          "statType": "maxHpStealPerHit",
+          "statName": "Max HP Steal per hit",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 4,
+              "valueType": "flat",
+              "ratio": 10,
+              "ratioSum": 66.9
+            },
+            {
+              "grade": 2,
+              "value": 8,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 71.9
+            },
+            {
+              "grade": 3,
+              "value": 12,
+              "valueType": "flat",
+              "ratio": 3,
+              "ratioSum": 74.9
+            },
+            {
+              "grade": 4,
+              "value": 16,
+              "valueType": "flat",
+              "ratio": 2,
+              "ratioSum": 76.9
+            },
+            {
+              "grade": 5,
+              "value": 20,
+              "valueType": "flat",
+              "ratio": 1.25,
+              "ratioSum": 78.15
+            },
+            {
+              "grade": 6,
+              "value": 25,
+              "valueType": "flat",
+              "ratio": 0.15,
+              "ratioSum": 78.3
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 11,
+          "statType": "hp",
+          "statName": "HP",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 100,
+              "valueType": "flat",
+              "ratio": 10,
+              "ratioSum": 88.3
+            },
+            {
+              "grade": 2,
+              "value": 180,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 93.3
+            },
+            {
+              "grade": 3,
+              "value": 260,
+              "valueType": "flat",
+              "ratio": 3,
+              "ratioSum": 96.3
+            },
+            {
+              "grade": 4,
+              "value": 380,
+              "valueType": "flat",
+              "ratio": 2,
+              "ratioSum": 98.3
+            },
+            {
+              "grade": 5,
+              "value": 500,
+              "valueType": "flat",
+              "ratio": 1.5,
+              "ratioSum": 99.8
+            },
+            {
+              "grade": 6,
+              "value": 700,
+              "valueType": "flat",
+              "ratio": 0.2,
+              "ratioSum": 100
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "statOptions": [
+        {
+          "specialMasteryIndex": 12,
+          "statType": "finalDamageIncreased",
+          "statName": "Final Damage Increased",
+          "grades": [
+            {
+              "grade": 4,
+              "value": 1,
+              "valueType": "percent",
+              "ratio": 1,
+              "ratioSum": 1
+            },
+            {
+              "grade": 5,
+              "value": 2,
+              "valueType": "percent",
+              "ratio": 0.1,
+              "ratioSum": 1.1
+            },
+            {
+              "grade": 6,
+              "value": 3,
+              "valueType": "percent",
+              "ratio": 0.01,
+              "ratioSum": 1.11
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 13,
+          "statType": "cancelIgnorePenetration",
+          "statName": "Cancel Ignore Penetration",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 10,
+              "valueType": "flat",
+              "ratio": 9,
+              "ratioSum": 10.11
+            },
+            {
+              "grade": 2,
+              "value": 15,
+              "valueType": "flat",
+              "ratio": 4,
+              "ratioSum": 14.11
+            },
+            {
+              "grade": 3,
+              "value": 20,
+              "valueType": "flat",
+              "ratio": 3,
+              "ratioSum": 17.11
+            },
+            {
+              "grade": 4,
+              "value": 30,
+              "valueType": "flat",
+              "ratio": 1.1,
+              "ratioSum": 18.21
+            },
+            {
+              "grade": 5,
+              "value": 40,
+              "valueType": "flat",
+              "ratio": 0.5,
+              "ratioSum": 18.71
+            },
+            {
+              "grade": 6,
+              "value": 60,
+              "valueType": "flat",
+              "ratio": 0.07,
+              "ratioSum": 18.78
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 14,
+          "statType": "ignoreResistSkillAmp",
+          "statName": "Ignore Resist Skill Amp",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 1,
+              "valueType": "percent",
+              "ratio": 9.165,
+              "ratioSum": 27.945
+            },
+            {
+              "grade": 2,
+              "value": 2,
+              "valueType": "percent",
+              "ratio": 4,
+              "ratioSum": 31.945
+            },
+            {
+              "grade": 3,
+              "value": 3,
+              "valueType": "percent",
+              "ratio": 3,
+              "ratioSum": 34.945
+            },
+            {
+              "grade": 4,
+              "value": 4,
+              "valueType": "percent",
+              "ratio": 1.2,
+              "ratioSum": 36.145
+            },
+            {
+              "grade": 5,
+              "value": 5,
+              "valueType": "percent",
+              "ratio": 0.65,
+              "ratioSum": 36.795
+            },
+            {
+              "grade": 6,
+              "value": 7,
+              "valueType": "percent",
+              "ratio": 0.09,
+              "ratioSum": 36.885
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 15,
+          "statType": "ignoreResistCriticalDamage",
+          "statName": "Ignore Resist Critical Damage",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 1,
+              "valueType": "percent",
+              "ratio": 9.6,
+              "ratioSum": 46.485
+            },
+            {
+              "grade": 2,
+              "value": 3,
+              "valueType": "percent",
+              "ratio": 4,
+              "ratioSum": 50.485
+            },
+            {
+              "grade": 3,
+              "value": 5,
+              "valueType": "percent",
+              "ratio": 3,
+              "ratioSum": 53.485
+            },
+            {
+              "grade": 4,
+              "value": 7,
+              "valueType": "percent",
+              "ratio": 1.3,
+              "ratioSum": 54.785
+            },
+            {
+              "grade": 5,
+              "value": 9,
+              "valueType": "percent",
+              "ratio": 0.8,
+              "ratioSum": 55.585
+            },
+            {
+              "grade": 6,
+              "value": 15,
+              "valueType": "percent",
+              "ratio": 0.11,
+              "ratioSum": 55.695
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 16,
+          "statType": "normalDamageUp",
+          "statName": "Normal Attack DMG UP",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 2,
+              "valueType": "percent",
+              "ratio": 10,
+              "ratioSum": 65.695
+            },
+            {
+              "grade": 2,
+              "value": 4,
+              "valueType": "percent",
+              "ratio": 5,
+              "ratioSum": 70.695
+            },
+            {
+              "grade": 3,
+              "value": 6,
+              "valueType": "percent",
+              "ratio": 6,
+              "ratioSum": 76.695
+            },
+            {
+              "grade": 4,
+              "value": 8,
+              "valueType": "percent",
+              "ratio": 1.4,
+              "ratioSum": 78.095
+            },
+            {
+              "grade": 5,
+              "value": 10,
+              "valueType": "percent",
+              "ratio": 0.95,
+              "ratioSum": 79.045
+            },
+            {
+              "grade": 6,
+              "value": 14,
+              "valueType": "percent",
+              "ratio": 0.13,
+              "ratioSum": 79.175
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 17,
+          "statType": "ignoreDamageReduction",
+          "statName": "Ignore Damage Reduction",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 25,
+              "valueType": "flat",
+              "ratio": 10.125,
+              "ratioSum": 89.3
+            },
+            {
+              "grade": 2,
+              "value": 35,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 94.3
+            },
+            {
+              "grade": 3,
+              "value": 45,
+              "valueType": "flat",
+              "ratio": 3,
+              "ratioSum": 97.3
+            },
+            {
+              "grade": 4,
+              "value": 55,
+              "valueType": "flat",
+              "ratio": 1.5,
+              "ratioSum": 98.8
+            },
+            {
+              "grade": 5,
+              "value": 65,
+              "valueType": "flat",
+              "ratio": 1.05,
+              "ratioSum": 99.85
+            },
+            {
+              "grade": 6,
+              "value": 90,
+              "valueType": "flat",
+              "ratio": 0.15,
+              "ratioSum": 100
+            }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "statOptions": [
+        {
+          "specialMasteryIndex": 18,
+          "statType": "finalDamageDecreased",
+          "statName": "Final Damage decreased",
+          "grades": [
+            {
+              "grade": 4,
+              "value": 1,
+              "valueType": "percent",
+              "ratio": 1,
+              "ratioSum": 1
+            },
+            {
+              "grade": 5,
+              "value": 2,
+              "valueType": "percent",
+              "ratio": 0.1,
+              "ratioSum": 1.1
+            },
+            {
+              "grade": 6,
+              "value": 3,
+              "valueType": "percent",
+              "ratio": 0.01,
+              "ratioSum": 1.11
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 19,
+          "statType": "damageReduction",
+          "statName": "DMG Reduction",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 5,
+              "valueType": "flat",
+              "ratio": 10,
+              "ratioSum": 11.11
+            },
+            {
+              "grade": 2,
+              "value": 10,
+              "valueType": "flat",
+              "ratio": 7,
+              "ratioSum": 18.11
+            },
+            {
+              "grade": 3,
+              "value": 15,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 23.11
+            },
+            {
+              "grade": 4,
+              "value": 20,
+              "valueType": "flat",
+              "ratio": 1.2,
+              "ratioSum": 24.31
+            },
+            {
+              "grade": 5,
+              "value": 25,
+              "valueType": "flat",
+              "ratio": 0.8,
+              "ratioSum": 25.11
+            },
+            {
+              "grade": 6,
+              "value": 40,
+              "valueType": "flat",
+              "ratio": 0.1,
+              "ratioSum": 25.21
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 20,
+          "statType": "ignorePenetration",
+          "statName": "Ignore Penetration",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 5,
+              "valueType": "flat",
+              "ratio": 10,
+              "ratioSum": 35.21
+            },
+            {
+              "grade": 2,
+              "value": 10,
+              "valueType": "flat",
+              "ratio": 7,
+              "ratioSum": 42.21
+            },
+            {
+              "grade": 3,
+              "value": 15,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 47.21
+            },
+            {
+              "grade": 4,
+              "value": 25,
+              "valueType": "flat",
+              "ratio": 1.3,
+              "ratioSum": 48.51
+            },
+            {
+              "grade": 5,
+              "value": 35,
+              "valueType": "flat",
+              "ratio": 0.95,
+              "ratioSum": 49.46
+            },
+            {
+              "grade": 6,
+              "value": 55,
+              "valueType": "flat",
+              "ratio": 0.125,
+              "ratioSum": 49.585
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 21,
+          "statType": "resistSkillAmp",
+          "statName": "Resist Skill Amp",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 2,
+              "valueType": "percent",
+              "ratio": 10,
+              "ratioSum": 59.585
+            },
+            {
+              "grade": 2,
+              "value": 3,
+              "valueType": "percent",
+              "ratio": 7,
+              "ratioSum": 66.585
+            },
+            {
+              "grade": 3,
+              "value": 4,
+              "valueType": "percent",
+              "ratio": 5,
+              "ratioSum": 71.585
+            },
+            {
+              "grade": 4,
+              "value": 5,
+              "valueType": "percent",
+              "ratio": 1.4,
+              "ratioSum": 72.985
+            },
+            {
+              "grade": 5,
+              "value": 6,
+              "valueType": "percent",
+              "ratio": 1.05,
+              "ratioSum": 74.035
+            },
+            {
+              "grade": 6,
+              "value": 8,
+              "valueType": "percent",
+              "ratio": 0.15,
+              "ratioSum": 74.185
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 22,
+          "statType": "resistCriticalDamage",
+          "statName": "Resist Critical Damage",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 2,
+              "valueType": "percent",
+              "ratio": 10.94,
+              "ratioSum": 85.125
+            },
+            {
+              "grade": 2,
+              "value": 4,
+              "valueType": "percent",
+              "ratio": 7,
+              "ratioSum": 92.125
+            },
+            {
+              "grade": 3,
+              "value": 6,
+              "valueType": "percent",
+              "ratio": 5,
+              "ratioSum": 97.125
+            },
+            {
+              "grade": 4,
+              "value": 8,
+              "valueType": "percent",
+              "ratio": 1.5,
+              "ratioSum": 98.625
+            },
+            {
+              "grade": 5,
+              "value": 10,
+              "valueType": "percent",
+              "ratio": 1.2,
+              "ratioSum": 99.825
+            },
+            {
+              "grade": 6,
+              "value": 16,
+              "valueType": "percent",
+              "ratio": 0.175,
+              "ratioSum": 100
+            }
+          ]
+        }
+      ]
+    },
+    "9": {
+      "statOptions": [
+        {
+          "specialMasteryIndex": 23,
+          "statType": "ignoreResistCriticalRate",
+          "statName": "Ignore Resist Critical Rate",
+          "grades": [
+            {
+              "grade": 5,
+              "value": 1,
+              "valueType": "percent",
+              "ratio": 0.1,
+              "ratioSum": 0.1
+            },
+            {
+              "grade": 6,
+              "value": 2,
+              "valueType": "percent",
+              "ratio": 0.01,
+              "ratioSum": 0.11
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 24,
+          "statType": "accuracy",
+          "statName": "Accuracy",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 100,
+              "valueType": "flat",
+              "ratio": 8.5,
+              "ratioSum": 8.61
+            },
+            {
+              "grade": 2,
+              "value": 150,
+              "valueType": "flat",
+              "ratio": 4.2,
+              "ratioSum": 12.81
+            },
+            {
+              "grade": 3,
+              "value": 200,
+              "valueType": "flat",
+              "ratio": 3.2,
+              "ratioSum": 16.01
+            },
+            {
+              "grade": 4,
+              "value": 250,
+              "valueType": "flat",
+              "ratio": 1.2,
+              "ratioSum": 17.21
+            },
+            {
+              "grade": 5,
+              "value": 300,
+              "valueType": "flat",
+              "ratio": 0.7,
+              "ratioSum": 17.91
+            },
+            {
+              "grade": 6,
+              "value": 400,
+              "valueType": "flat",
+              "ratio": 0.05,
+              "ratioSum": 17.96
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 25,
+          "statType": "attackRate",
+          "statName": "Attack Rate",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 150,
+              "valueType": "flat",
+              "ratio": 8.5,
+              "ratioSum": 26.46
+            },
+            {
+              "grade": 2,
+              "value": 200,
+              "valueType": "flat",
+              "ratio": 4.4,
+              "ratioSum": 30.86
+            },
+            {
+              "grade": 3,
+              "value": 250,
+              "valueType": "flat",
+              "ratio": 3.4,
+              "ratioSum": 34.26
+            },
+            {
+              "grade": 4,
+              "value": 300,
+              "valueType": "flat",
+              "ratio": 1.4,
+              "ratioSum": 35.66
+            },
+            {
+              "grade": 5,
+              "value": 350,
+              "valueType": "flat",
+              "ratio": 0.9,
+              "ratioSum": 36.56
+            },
+            {
+              "grade": 6,
+              "value": 450,
+              "valueType": "flat",
+              "ratio": 0.09,
+              "ratioSum": 36.65
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 26,
+          "statType": "ignoreEvasion",
+          "statName": "Ignore Evasion",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 150,
+              "valueType": "flat",
+              "ratio": 8.665,
+              "ratioSum": 45.315
+            },
+            {
+              "grade": 2,
+              "value": 200,
+              "valueType": "flat",
+              "ratio": 4.6,
+              "ratioSum": 49.915
+            },
+            {
+              "grade": 3,
+              "value": 250,
+              "valueType": "flat",
+              "ratio": 3.6,
+              "ratioSum": 53.515
+            },
+            {
+              "grade": 4,
+              "value": 300,
+              "valueType": "flat",
+              "ratio": 1.6,
+              "ratioSum": 55.115
+            },
+            {
+              "grade": 5,
+              "value": 350,
+              "valueType": "flat",
+              "ratio": 1.1,
+              "ratioSum": 56.215
+            },
+            {
+              "grade": 6,
+              "value": 450,
+              "valueType": "flat",
+              "ratio": 0.13,
+              "ratioSum": 56.345
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 27,
+          "statType": "str",
+          "statName": "STR",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 4,
+              "valueType": "flat",
+              "ratio": 8.975,
+              "ratioSum": 65.32
+            },
+            {
+              "grade": 2,
+              "value": 5,
+              "valueType": "flat",
+              "ratio": 4.8,
+              "ratioSum": 70.12
+            },
+            {
+              "grade": 3,
+              "value": 6,
+              "valueType": "flat",
+              "ratio": 3.8,
+              "ratioSum": 73.92
+            },
+            {
+              "grade": 4,
+              "value": 8,
+              "valueType": "flat",
+              "ratio": 1.8,
+              "ratioSum": 75.72
+            },
+            {
+              "grade": 5,
+              "value": 10,
+              "valueType": "flat",
+              "ratio": 1.3,
+              "ratioSum": 77.02
+            },
+            {
+              "grade": 6,
+              "value": 15,
+              "valueType": "flat",
+              "ratio": 0.17,
+              "ratioSum": 77.19
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 28,
+          "statType": "int",
+          "statName": "INT",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 4,
+              "valueType": "flat",
+              "ratio": 10.1,
+              "ratioSum": 87.29
+            },
+            {
+              "grade": 2,
+              "value": 5,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 92.29
+            },
+            {
+              "grade": 3,
+              "value": 6,
+              "valueType": "flat",
+              "ratio": 4,
+              "ratioSum": 96.29
+            },
+            {
+              "grade": 4,
+              "value": 8,
+              "valueType": "flat",
+              "ratio": 2,
+              "ratioSum": 98.29
+            },
+            {
+              "grade": 5,
+              "value": 10,
+              "valueType": "flat",
+              "ratio": 1.5,
+              "ratioSum": 99.79
+            },
+            {
+              "grade": 6,
+              "value": 15,
+              "valueType": "flat",
+              "ratio": 0.21,
+              "ratioSum": 100
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "statOptions": [
+        {
+          "specialMasteryIndex": 29,
+          "statType": "ignoreResistCriticalRate",
+          "statName": "Ignore Resist Critical Rate",
+          "grades": [
+            {
+              "grade": 5,
+              "value": 1,
+              "valueType": "percent",
+              "ratio": 0.1,
+              "ratioSum": 0.1
+            },
+            {
+              "grade": 6,
+              "value": 2,
+              "valueType": "percent",
+              "ratio": 0.01,
+              "ratioSum": 0.11
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 30,
+          "statType": "evasion",
+          "statName": "Evasion",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 100,
+              "valueType": "flat",
+              "ratio": 10,
+              "ratioSum": 10.11
+            },
+            {
+              "grade": 2,
+              "value": 150,
+              "valueType": "flat",
+              "ratio": 6.2,
+              "ratioSum": 16.31
+            },
+            {
+              "grade": 3,
+              "value": 200,
+              "valueType": "flat",
+              "ratio": 4.2,
+              "ratioSum": 20.51
+            },
+            {
+              "grade": 4,
+              "value": 250,
+              "valueType": "flat",
+              "ratio": 1.2,
+              "ratioSum": 21.71
+            },
+            {
+              "grade": 5,
+              "value": 300,
+              "valueType": "flat",
+              "ratio": 0.7,
+              "ratioSum": 22.41
+            },
+            {
+              "grade": 6,
+              "value": 400,
+              "valueType": "flat",
+              "ratio": 0.05,
+              "ratioSum": 22.46
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 31,
+          "statType": "defenseRate",
+          "statName": "Defense Rate",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 150,
+              "valueType": "flat",
+              "ratio": 10,
+              "ratioSum": 32.46
+            },
+            {
+              "grade": 2,
+              "value": 200,
+              "valueType": "flat",
+              "ratio": 6.4,
+              "ratioSum": 38.86
+            },
+            {
+              "grade": 3,
+              "value": 250,
+              "valueType": "flat",
+              "ratio": 4.4,
+              "ratioSum": 43.26
+            },
+            {
+              "grade": 4,
+              "value": 300,
+              "valueType": "flat",
+              "ratio": 1.4,
+              "ratioSum": 44.66
+            },
+            {
+              "grade": 5,
+              "value": 350,
+              "valueType": "flat",
+              "ratio": 0.9,
+              "ratioSum": 45.56
+            },
+            {
+              "grade": 6,
+              "value": 450,
+              "valueType": "flat",
+              "ratio": 0.09,
+              "ratioSum": 45.65
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 32,
+          "statType": "ignoreAccuracy",
+          "statName": "Ignore Accuracy",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 100,
+              "valueType": "flat",
+              "ratio": 10,
+              "ratioSum": 55.65
+            },
+            {
+              "grade": 2,
+              "value": 150,
+              "valueType": "flat",
+              "ratio": 6.6,
+              "ratioSum": 62.25
+            },
+            {
+              "grade": 3,
+              "value": 200,
+              "valueType": "flat",
+              "ratio": 4.6,
+              "ratioSum": 66.85
+            },
+            {
+              "grade": 4,
+              "value": 250,
+              "valueType": "flat",
+              "ratio": 1.6,
+              "ratioSum": 68.45
+            },
+            {
+              "grade": 5,
+              "value": 300,
+              "valueType": "flat",
+              "ratio": 1.25,
+              "ratioSum": 69.7
+            },
+            {
+              "grade": 6,
+              "value": 400,
+              "valueType": "flat",
+              "ratio": 0.2,
+              "ratioSum": 69.9
+            }
+          ]
+        },
+        {
+          "specialMasteryIndex": 33,
+          "statType": "dex",
+          "statName": "DEX",
+          "grades": [
+            {
+              "grade": 1,
+              "value": 4,
+              "valueType": "flat",
+              "ratio": 11.87,
+              "ratioSum": 81.77
+            },
+            {
+              "grade": 2,
+              "value": 5,
+              "valueType": "flat",
+              "ratio": 8,
+              "ratioSum": 89.77
+            },
+            {
+              "grade": 3,
+              "value": 6,
+              "valueType": "flat",
+              "ratio": 5,
+              "ratioSum": 94.77
+            },
+            {
+              "grade": 4,
+              "value": 8,
+              "valueType": "flat",
+              "ratio": 2.85,
+              "ratioSum": 97.62
+            },
+            {
+              "grade": 5,
+              "value": 10,
+              "valueType": "flat",
+              "ratio": 2.1,
+              "ratioSum": 99.72
+            },
+            {
+              "grade": 6,
+              "value": 15,
+              "valueType": "flat",
+              "ratio": 0.28,
+              "ratioSum": 100
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "unlockMapping": {
+    "83": 5,
+    "102": 6,
+    "119": 7,
+    "136": 8,
+    "147": 9,
+    "158": 10
+  }
+}
+

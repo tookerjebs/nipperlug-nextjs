@@ -1,9 +1,10 @@
 // Zustand store for Platinum Merit System
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
-import type { PlatinumMeritStore, PlatinumMeritSlotState, PlatinumMeritSlot } from '../types/index';
+import type { PlatinumMeritStore, PlatinumMeritSlotState, PlatinumMeritSlot, SpecialMasteryCategoryState, SpecialMasterySlotState } from '../types/index';
 import { PlatinumMeritData, MAX_PLATINUM_MERIT_POINTS } from '../data/platinum-merit-data';
 import { useStatRegistryStore } from '@/tools/build-planner/stores/statRegistryStore';
+import { getSpecialMasteryStatsForCategory } from '../data/platinum-special-mastery-loader';
 
 // Initialize slot states
 const initializeSlotStates = (): Record<string, PlatinumMeritSlotState> => {
@@ -41,6 +42,7 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
     totalPointsSpent: 0,
     maxPointsAllowed: MAX_PLATINUM_MERIT_POINTS,
     selectedCategory: 'fierce-spirit',
+    specialMasteryStates: {} as Record<string, SpecialMasteryCategoryState>,
 
     // Category management
     setSelectedCategory: (categoryId: string) => {
@@ -366,6 +368,14 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
         }
       });
       
+      // Add special mastery stats
+      Object.entries(state.specialMasteryStates).forEach(([categoryId, categoryState]) => {
+        const specialStats = state.calculateSpecialMasteryStats(categoryId);
+        Object.entries(specialStats).forEach(([statType, value]) => {
+          totalStats[statType] = (totalStats[statType] || 0) + value;
+        });
+      });
+      
       return totalStats;
     },
 
@@ -412,6 +422,119 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
       return updatedStates;
     },
 
+    // Special Mastery actions
+    selectSpecialMasteryStat: (categoryId: string, slotIndex: 0 | 1, statIndex: number, grade: number) => {
+      const state = get();
+      const stats = state.getSpecialMasteryStats(categoryId);
+      
+      if (!stats || statIndex < 0 || statIndex >= stats.length) return;
+      
+      const statOption = stats[statIndex];
+      const selectedGrade = statOption.grades.find(g => g.grade === grade);
+      if (!selectedGrade) return;
+      
+      set(state => {
+        const currentCategoryState = state.specialMasteryStates[categoryId] || {
+          slots: [
+            { selectedStatIndex: null, selectedGrade: null },
+            { selectedStatIndex: null, selectedGrade: null }
+          ]
+        };
+        
+        const newSlots: [SpecialMasterySlotState, SpecialMasterySlotState] = [...currentCategoryState.slots] as [SpecialMasterySlotState, SpecialMasterySlotState];
+        newSlots[slotIndex] = {
+          selectedStatIndex: statIndex,
+          selectedGrade: grade
+        };
+        
+        return {
+          specialMasteryStates: {
+            ...state.specialMasteryStates,
+            [categoryId]: {
+              slots: newSlots
+            }
+          }
+        };
+      });
+      
+      // Register stats with the global registry
+      updateStatsRegistry(get);
+    },
+    
+    clearSpecialMasterySlot: (categoryId: string, slotIndex: 0 | 1) => {
+      set(state => {
+        const currentCategoryState = state.specialMasteryStates[categoryId];
+        if (!currentCategoryState) return state;
+        
+        const newSlots: [SpecialMasterySlotState, SpecialMasterySlotState] = [...currentCategoryState.slots] as [SpecialMasterySlotState, SpecialMasterySlotState];
+        newSlots[slotIndex] = {
+          selectedStatIndex: null,
+          selectedGrade: null
+        };
+        
+        return {
+          specialMasteryStates: {
+            ...state.specialMasteryStates,
+            [categoryId]: {
+              slots: newSlots
+            }
+          }
+        };
+      });
+      
+      // Register stats with the global registry
+      updateStatsRegistry(get);
+    },
+    
+    getSpecialMasteryStats: (categoryId: string) => {
+      // Map category ID to category number (5-10)
+      const categoryMap: Record<string, string> = {
+        'fierce-spirit': '5',
+        'iron-will': '6',
+        'war-slayer': '7',
+        'war-guardian': '8',
+        'sharp-blade': '9',
+        'quick-evasion': '10'
+      };
+      
+      const categoryNumber = categoryMap[categoryId];
+      if (!categoryNumber) return null;
+      
+      return getSpecialMasteryStatsForCategory(categoryNumber);
+    },
+    
+    getSpecialMasterySlotState: (categoryId: string, slotIndex: 0 | 1) => {
+      const state = get();
+      const categoryState = state.specialMasteryStates[categoryId];
+      if (!categoryState) return undefined;
+      return categoryState.slots[slotIndex];
+    },
+    
+    calculateSpecialMasteryStats: (categoryId: string): Record<string, number> => {
+      const state = get();
+      const categoryState = state.specialMasteryStates[categoryId];
+      if (!categoryState) return {};
+      
+      const stats = state.getSpecialMasteryStats(categoryId);
+      if (!stats) return {};
+      
+      const totalStats: Record<string, number> = {};
+      
+      categoryState.slots.forEach(slotState => {
+        if (slotState.selectedStatIndex !== null && slotState.selectedGrade !== null) {
+          const statOption = stats[slotState.selectedStatIndex];
+          const grade = statOption.grades.find(g => g.grade === slotState.selectedGrade);
+          
+          if (grade) {
+            const value = grade.valueType === 'percent' ? grade.value : grade.value;
+            totalStats[statOption.statType] = (totalStats[statOption.statType] || 0) + value;
+          }
+        }
+      });
+      
+      return totalStats;
+    },
+    
     // Import/Export functionality
     restoreFromImport: (importData) => {
       const validatedSlotStates = get().validateAndRestoreSlotStates(importData.slotStates);
@@ -419,7 +542,8 @@ export const usePlatinumMeritStore = create<PlatinumMeritStore>()(subscribeWithS
       set({
         slotStates: validatedSlotStates,
         totalPointsSpent: importData.totalPointsSpent,
-        selectedCategory: importData.selectedCategory
+        selectedCategory: importData.selectedCategory,
+        specialMasteryStates: importData.specialMasteryStates || {}
       });
       
       // Register stats with the global registry after restore

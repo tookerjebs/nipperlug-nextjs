@@ -6,6 +6,7 @@ import { PlatinumMeritSystemProps } from '../types/index';
 import { usePlatinumMeritStore } from '../stores/platinumMeritStore';
 import { PlatinumMeritCategoryTabs } from './PlatinumMeritCategoryTabs';
 import { PlatinumMeritSlotGrid } from './PlatinumMeritSlotGrid';
+import { PlatinumSpecialMasterySection } from './PlatinumSpecialMasterySection';
 import { ActionButtons } from '@/tools/build-planner/components/systems/ActionButtons';
 import { TotalStatsButton } from '@/tools/build-planner/components/systems/TotalStatsButton';
 
@@ -59,6 +60,9 @@ export const PlatinumMeritSystem: React.FC<PlatinumMeritSystemProps> = ({ classN
       {selectedCategoryData && (
         <div className="p-2 lg:p-4">
           <PlatinumMeritSlotGrid category={selectedCategoryData} />
+          
+          {/* Special Mastery Section */}
+          <PlatinumSpecialMasterySection categoryId={selectedCategory} />
         </div>
       )}
     </div>

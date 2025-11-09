@@ -56,7 +56,7 @@ export const epicOptionLevels: Record<string, Record<string, number[]>> = {
     criticalRate: [3, 4, 5, 8, 9, 10]        // [Very Low, Low, Medium Low, Medium High, High, Very High]
   },
   ultimate: {
-    allSkillAmp: [4, 5, 6, 8, 9, 11],     // [Very Low, Low, Medium Low, Medium High, High, Very High]
+    allSkillAmp: [4, 5, 6, 9, 11, 13],     // [Very Low, Low, Medium Low, Medium High, High, Very High]
     criticalDamage: [9, 11, 13, 19, 23, 27],  // [Very Low, Low, Medium Low, Medium High, High, Very High]
     criticalRate: [4, 5, 6, 9, 10, 11]       // [Very Low, Low, Medium Low, Medium High, High, Very High]
   }

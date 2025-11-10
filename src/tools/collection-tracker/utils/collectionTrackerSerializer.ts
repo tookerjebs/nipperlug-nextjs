@@ -141,6 +141,35 @@ export class CollectionTrackerSerializer {
   }
 
   /**
+   * Save to localStorage
+   */
+  public static saveToStorage(): CollectionSerializationResult {
+    try {
+      if (typeof window === 'undefined') {
+        return {
+          success: false,
+          error: 'localStorage requires browser environment'
+        };
+      }
+
+      const collectionData = this.serializeCollectionData();
+      const jsonString = JSON.stringify(collectionData);
+      localStorage.setItem('collection-tracker-storage', jsonString);
+
+      return {
+        success: true,
+        data: jsonString,
+        size: jsonString.length
+      };
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : 'Failed to save to localStorage'
+      };
+    }
+  }
+
+  /**
    * Export collection data to downloadable JSON file
    */
   public static exportToFile(filename?: string): CollectionSerializationResult {
@@ -415,6 +444,7 @@ export class CollectionTrackerSerializer {
 }
 
 // Export convenience functions
+export const saveCollectionToStorage = () => CollectionTrackerSerializer.saveToStorage();
 export const exportCollectionToFile = (filename?: string) => CollectionTrackerSerializer.exportToFile(filename);
 export const importCollectionFromFile = (file: File) => CollectionTrackerSerializer.importFromFile(file);
 export const generateCollectionShareUrl = () => CollectionTrackerSerializer.generateShareUrl();

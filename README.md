@@ -81,7 +81,6 @@ This project is open source and available under the MIT License.
 - Extend Force Wing levels to 500
 - Update achievement data for recent episodes
 - Update collection system data for recent episodes
-- Complete Platinum Merit system implementation
 - Expand available potions and buffs
 - Implement Battle Configuration system
 

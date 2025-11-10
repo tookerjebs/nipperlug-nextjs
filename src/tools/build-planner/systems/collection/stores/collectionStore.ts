@@ -157,3 +157,38 @@ export const useCollectionStore = create<CollectionStore>()((set, get) => {
     };
   }
 );
+
+// Auto-save to localStorage (separate from build planner)
+if (typeof window !== 'undefined') {
+  // Subscribe to store changes to persist data automatically
+  useCollectionStore.subscribe((state) => {
+    const data = { 
+      collectionProgress: state.collectionProgress,
+      activeCategory: state.activeCategory,
+      activeCollection: state.activeCollection,
+    };
+    try {
+      localStorage.setItem('collection-system-storage', JSON.stringify(data));
+    } catch (error) {
+      console.warn('Failed to save collection system data to localStorage:', error);
+    }
+  });
+
+  // Load initial data from localStorage
+  try {
+    const savedData = localStorage.getItem('collection-system-storage');
+    if (savedData) {
+      const parsedData = JSON.parse(savedData);
+      
+      if (parsedData && typeof parsedData === 'object') {
+        useCollectionStore.setState({
+          collectionProgress: parsedData.collectionProgress || {},
+          activeCategory: parsedData.activeCategory || 'world',
+          activeCollection: parsedData.activeCollection || null,
+        });
+      }
+    }
+  } catch (error) {
+    console.warn('Failed to load collection system data from localStorage:', error);
+  }
+}

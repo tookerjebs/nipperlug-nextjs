@@ -19,7 +19,6 @@ import { useClassPassiveSkillsStore } from '@/tools/build-planner/systems/class-
 import { useGoldMeritStore } from '@/tools/build-planner/systems/gold-merit/stores/goldMeritStore';
 import { usePlatinumMeritStore } from '@/tools/build-planner/systems/platinum-merit/stores/platinumMeritStore';
 import { useForceWingSystemStore } from '@/tools/build-planner/systems/force-wing/stores/forceWingSystemStore';
-import { useCollectionTrackerStore } from '@/tools/collection-tracker/stores/collectionTrackerStore';
 import { artifactSystemConfig } from '@/tools/build-planner/systems/artifact-system/stores/artifactSystemStore';
 
 // System serialization interface
@@ -174,26 +173,7 @@ export function getDefaultSystemSerializers(): SystemSerializer[] {
       }
     },
 
-    // Collection System
-    {
-      systemId: 'collection',
-      extract: () => {
-        const collectionState = useCollectionStore.getState();
-        return {
-          collectionProgress: collectionState.collectionProgress,
-          activeCategory: collectionState.activeCategory,
-          activeCollection: collectionState.activeCollection
-        };
-      },
-      restore: (data) => {
-        const collectionStore = useCollectionStore.getState();
-        collectionStore.restoreFromImport({
-          collectionProgress: data.collectionProgress,
-          activeCategory: data.activeCategory,
-          activeCollection: data.activeCollection
-        });
-      }
-    },
+    // Collection System - REMOVED: Now has its own separate save system
 
     // Overlord Mastery System
     {
@@ -373,52 +353,7 @@ export function getDefaultSystemSerializers(): SystemSerializer[] {
       }
     },
 
-    // Collection Tracker System
-    {
-      systemId: 'collectionTracker',
-      extract: () => {
-        const collectionTrackerState = useCollectionTrackerStore.getState();
-        return {
-          collectionProgress: collectionTrackerState.collectionProgress,
-          activeTab: collectionTrackerState.activeTab,
-          activePage: collectionTrackerState.activePage,
-          activeCollection: collectionTrackerState.activeCollection
-        };
-      },
-      restore: (data) => {
-        const { 
-          setActiveTab, 
-          setActivePage, 
-          setActiveCollection,
-          resetAllProgress,
-          completeAllItemsInCollection
-        } = useCollectionTrackerStore.getState();
-        
-        // First reset all progress to clear existing data
-        resetAllProgress();
-        
-        // Restore UI state using individual setters
-        if (data.activeTab) {
-          setActiveTab(data.activeTab);
-        }
-        if (data.activePage) {
-          setActivePage(data.activePage);
-        }
-        if (data.activeCollection) {
-          setActiveCollection(data.activeCollection);
-        }
-        
-        // Restore collection progress data
-        if (data.collectionProgress) {
-          // We need to use Zustand's internal set method to restore the collection progress
-          // Since the store doesn't expose a direct method to bulk restore progress
-          const store = useCollectionTrackerStore;
-          store.setState({ 
-            collectionProgress: data.collectionProgress
-          });
-        }
-      }
-    },
+    // Collection Tracker System - REMOVED: Now has its own separate save system
 
     // Artifact System
     {

@@ -134,9 +134,29 @@ function BuildPlannerContent() {
 
   const handleResetBuild = () => {
     try {
-      // Clear all localStorage
+      // Clear only build planner related localStorage keys
+      // Preserve collection tracker and other independent tools
       if (typeof window !== 'undefined') {
-        localStorage.clear();
+        // List of build planner specific localStorage keys
+        const buildPlannerKeys = [
+          'activeSystem',
+          'collection-system-storage',
+          'manual-stats',
+          'cabal-build-current',
+        ];
+        
+        // Remove specific keys
+        buildPlannerKeys.forEach(key => {
+          localStorage.removeItem(key);
+        });
+        
+        // Remove all saved builds (keys starting with 'cabal-build-')
+        const allKeys = Object.keys(localStorage);
+        allKeys.forEach(key => {
+          if (key.startsWith('cabal-build-')) {
+            localStorage.removeItem(key);
+          }
+        });
       }
 
       // Refresh the page to reset all state
@@ -221,7 +241,6 @@ function BuildPlannerContent() {
                     <li><strong className="text-yellow-300">Equipment System:</strong> Some equipment items and images are missing</li>
                     <li><strong className="text-yellow-300">Class Passive Skills:</strong> Missing Overlord stat bonuses</li>
                     <li><strong className="text-yellow-300">Buffs and Potions:</strong> Missing buffs/potions and images</li>
-                    <li><strong className="text-yellow-300">Platinum Merit:</strong> Incomplete</li>
                     <li><strong className="text-yellow-300">Stat Optimization:</strong> Recommendations need refinement</li>
                     <li><strong className="text-yellow-300">General:</strong> Many minor issues remain including image optimization, performance improvements, and responsive design enhancements</li>
                   </ul>

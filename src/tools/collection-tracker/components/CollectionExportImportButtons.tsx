@@ -8,11 +8,12 @@
 
 import { useRef, useState } from 'react';
 import { toast } from 'react-hot-toast';
-import { Download, Upload, Share2, RotateCcw } from 'lucide-react';
+import { Download, Upload, Share2, RotateCcw, Save } from 'lucide-react';
 import { 
   exportCollectionToFile, 
   importCollectionFromFile, 
-  generateCollectionShareUrl 
+  generateCollectionShareUrl,
+  saveCollectionToStorage
 } from '../utils/collectionTrackerSerializer';
 import { useCollectionTrackerStore } from '../stores/collectionTrackerStore';
 import ShareUrlModal from '@/components/ui/ShareUrlModal';
@@ -30,6 +31,21 @@ export default function CollectionExportImportButtons() {
   } | undefined>();
 
   const { resetAllProgress } = useCollectionTrackerStore();
+
+  const handleSave = () => {
+    try {
+      const result = saveCollectionToStorage();
+      
+      if (result.success) {
+        toast.success('Collection progress saved to local storage!');
+      } else {
+        toast.error(`Save failed: ${result.error}`);
+      }
+    } catch (error) {
+      toast.error('Save failed: Unknown error');
+      console.error('Save error:', error);
+    }
+  };
 
   const handleExport = async () => {
     try {
@@ -169,6 +185,16 @@ export default function CollectionExportImportButtons() {
       />
       
       <div className="flex gap-2">
+        {/* Save Button */}
+        <button 
+          onClick={handleSave}
+          className="glass-button-green text-white font-semibold py-2 px-3 rounded-lg transition duration-150 hover:glass-button-hover flex items-center gap-2"
+          title="Save collection progress to local storage"
+        >
+          <Save className="w-4 h-4" />
+          <span>Save</span>
+        </button>
+        
         {/* Export Button */}
         <button 
           onClick={handleExport}

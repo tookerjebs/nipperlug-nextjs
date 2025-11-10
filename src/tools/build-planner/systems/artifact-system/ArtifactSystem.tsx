@@ -11,6 +11,7 @@ import ArtifactSelectionModal from './components/ArtifactSelectionModal';
 import ArtifactUpgradeModal from './components/ArtifactUpgradeModal';
 import ArtifactTooltipWrapper from './components/ArtifactTooltipWrapper';
 import { TotalStatsButton } from '@/tools/build-planner/components/systems/TotalStatsButton';
+import { ActionButtons } from '@/tools/build-planner/components/systems/ActionButtons';
 
 const ArtifactSystem: React.FC = () => {
   const {
@@ -22,6 +23,8 @@ const ArtifactSystem: React.FC = () => {
     selectArtifact,
     initializeSystem,
     calculateTotalStats,
+    quickFillAll,
+    resetSystem,
   } = useArtifactSystemStore();
   
   const [hoveredArtifactType, setHoveredArtifactType] = useState<ArtifactType | null>(null);
@@ -116,16 +119,20 @@ const ArtifactSystem: React.FC = () => {
   
   return (
     <div className="w-full h-full flex flex-col items-center justify-center p-4">
-      {/* Header with Total Stats Button */}
-      <div className="mb-6 flex justify-end w-full max-w-md">
+      {/* Action Buttons and Total Stats Button - Below header */}
+      <div className="mb-6 flex items-center justify-center gap-4 w-full flex-wrap">
+        <ActionButtons
+          onQuickFill={quickFillAll}
+          onReset={resetSystem}
+        />
         <TotalStatsButton
           totalStats={totalStats}
           systemName="Artifact"
         />
       </div>
       
-      {/* Artifact Slots - 3 stacked */}
-      <div className="flex flex-col items-center space-y-4">
+      {/* Artifact Slots - 3 side by side */}
+      <div className="flex flex-row items-center justify-center gap-6">
         <ArtifactSlot
           artifactType="dawn"
           isConfigured={configuredArtifacts.dawn !== null}
@@ -162,10 +169,8 @@ const ArtifactSystem: React.FC = () => {
           onClose={closeModal}
           onSelectArtifact={(type) => {
             selectArtifact(type);
-            // After selecting, open the upgrade modal
-            setTimeout(() => {
-              openModal(type);
-            }, 100);
+            // Immediately open the upgrade modal without closing first for smooth transition
+            openModal(type);
           }}
           alreadyEquipped={alreadyEquipped}
         />

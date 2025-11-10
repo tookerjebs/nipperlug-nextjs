@@ -42,7 +42,7 @@ const ArtifactSelectionModal: React.FC<ArtifactSelectionModalProps> = ({
       return; // Don't allow selecting already equipped artifact
     }
     onSelectArtifact(artifactType);
-    onClose();
+    // Don't call onClose() here - let the parent component handle the transition to upgrade modal
   };
   
   return (

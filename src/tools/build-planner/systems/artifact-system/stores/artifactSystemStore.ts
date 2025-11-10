@@ -45,6 +45,7 @@ interface ArtifactSystemActions {
   
   // System management
   resetSystem: () => void;
+  quickFillAll: () => void;
   initializeSystem: () => void;
   
   // Getters
@@ -286,6 +287,63 @@ export const useArtifactSystemStore = create<ArtifactSystemState & ArtifactSyste
       });
       
       useStatRegistryStore.getState().unregisterSystem(SYSTEM_ID);
+    },
+    
+    // Quick fill all artifacts with meta build (lowest probability stats, max level)
+    quickFillAll: () => {
+      const artifactTypes: ArtifactType[] = ['dawn', 'dusk', 'midnight'];
+      const newArtifacts: Record<ArtifactType, ConfiguredArtifact | null> = {
+        dawn: null,
+        dusk: null,
+        midnight: null,
+      };
+      
+      artifactTypes.forEach(artifactType => {
+        const artifactDef = getArtifactDefinition(artifactType);
+        
+        // Initialize slots with lowest probability stat for each slot
+        const slots: ArtifactSlot[] = [
+          ...artifactDef.uniqueSlots.map(slotDef => {
+            // Find stat with lowest chance (probability)
+            const bestOption = slotDef.options.reduce((best, current) => 
+              current.chance < best.chance ? current : best
+            );
+            
+            return {
+              slotIndex: slotDef.slotIndex,
+              slotType: 'unique' as SlotType,
+              statId: bestOption.statId,
+              level: artifactDef.maxLevel, // Max level
+              maxLevel: artifactDef.maxLevel,
+            };
+          }),
+          ...artifactDef.assembledSlots.map(slotDef => {
+            // Find stat with lowest chance (probability)
+            const bestOption = slotDef.options.reduce((best, current) => 
+              current.chance < best.chance ? current : best
+            );
+            
+            return {
+              slotIndex: slotDef.slotIndex,
+              slotType: 'assembled' as SlotType,
+              statId: bestOption.statId,
+              level: artifactDef.maxLevel, // Max level
+              maxLevel: artifactDef.maxLevel,
+            };
+          }),
+        ];
+        
+        newArtifacts[artifactType] = {
+          artifactType,
+          slots,
+        };
+      });
+      
+      set({
+        configuredArtifacts: newArtifacts,
+      });
+      
+      get().registerStatsWithRegistry();
     },
     
     // Initialize the system

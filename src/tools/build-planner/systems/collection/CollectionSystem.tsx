@@ -8,6 +8,7 @@ import { cn } from '@/tools/build-planner/lib/utils';
 import { ActionButtons } from '@/tools/build-planner/components/systems/ActionButtons';
 import { TotalStatsButton } from '@/tools/build-planner/components/systems/TotalStatsButton';
 import { StatIcon } from '@/tools/build-planner/components/StatIcon';
+import CollectionExportImportButtons from './components/CollectionExportImportButtons';
 
 export function CollectionSystem() {
   const {
@@ -201,7 +202,7 @@ export function CollectionSystem() {
         {/* Action Buttons and Search Bar */}
         <div className="mb-6 space-y-4">
           {/* Action Buttons */}
-          <div className="flex items-center gap-4 justify-center">
+          <div className="flex items-center gap-4 justify-center flex-wrap">
             <ActionButtons
               onQuickFill={quickFillAll}
               onReset={resetAllProgress}
@@ -210,6 +211,7 @@ export function CollectionSystem() {
               totalStats={totalStats}
               systemName="Collection"
             />
+            <CollectionExportImportButtons />
           </div>
 
           {/* Search Bar */}

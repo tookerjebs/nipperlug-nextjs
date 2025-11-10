@@ -160,6 +160,11 @@ export function CollectionTracker() {
           Collection progress tracker for Cabal Online. Track your progress across World, Dungeon, Special, and Boss collections. 
           Monitor required items and unlock stat bonuses at 30%, 60%, and 100% completion milestones.
         </p>
+        {/* Auto-save notice */}
+        <p className="text-sm text-gray-400 mb-4">
+          <span className="text-gray-300">Auto-save enabled:</span> Your progress is automatically saved to local storage. 
+          However, it is recommended to frequently export your progress as it serves as a backup save file.
+        </p>
       </div>
       
       {/* Simple credit note */}

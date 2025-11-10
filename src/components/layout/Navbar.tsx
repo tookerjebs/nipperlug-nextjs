@@ -50,6 +50,7 @@ const navigationItems: NavigationItem[] = [
         items: [
           { name: 'Amity Calculator', href: '/chloe-amity-calculator' },
           { name: 'Extreme Upgrade Calculator', href: '/extreme-upgrade-calculator' },
+          { name: 'Event Pass Calculator', href: '/event-pass-calculator' },
         ]
       },
       { 

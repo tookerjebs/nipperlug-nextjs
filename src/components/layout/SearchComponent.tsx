@@ -30,6 +30,7 @@ const searchablePages: SearchPage[] = [
   { name: 'Chloe Craft Calculator', href: '/chloe-craft-profit-calculator', description: 'Crafting profit analysis' },
   { name: 'Chloe Amity Calculator', href: '/chloe-amity-calculator', description: 'Amity costs and requirements' },
   { name: 'Extreme Upgrade Calculator', href: '/extreme-upgrade-calculator', description: 'Success rates and costs' },
+  { name: 'Event Pass Calculator', href: '/event-pass-calculator', description: 'Event Pass mission requirements and planning' },
   { name: 'Penetration Effectiveness', href: '/penetration-effectiveness-table', description: 'Stat effectiveness visualization' },
 ];
 

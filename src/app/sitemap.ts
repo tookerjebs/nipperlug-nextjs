@@ -41,6 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'chloe-craft-profit-calculator',
     'devils-shop-calculator',
     'chloe-amity-calculator',
+    'event-pass-calculator',
     'bm3-target-damage-boost'
   ];
 

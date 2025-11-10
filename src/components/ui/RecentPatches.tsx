@@ -15,6 +15,22 @@ interface PatchItem {
 
 const RECENT_PATCHES: PatchItem[] = [
   {
+    id: '2025-11-11-myth-exp',
+    date: '2025-11-11',
+    type: 'tool',
+    title: 'Myth EXP Calculator',
+    description: 'Calculate Myth EXP requirements with rebirth multipliers.',
+    category: 'New Tool'
+  },
+  {
+    id: '2025-11-11-event-pass',
+    date: '2025-11-11',
+    type: 'tool',
+    title: 'Event Pass Calculator',
+    description: 'Calculate daily and weekly mission requirements for Event Pass.',
+    category: 'New Tool'
+  },
+  {
     id: '2025-01-15',
     date: '2025-11-09',
     type: 'feature',

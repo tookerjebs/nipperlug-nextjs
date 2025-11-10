@@ -11,7 +11,7 @@ export default function ExpCalculatorsPage() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Character EXP */}
           <div className="bg-component-card border border-border-dark p-6 rounded-lg">
             <h2 className="text-xl font-semibold mb-3">Character EXP</h2>
@@ -49,6 +49,20 @@ export default function ExpCalculatorsPage() {
             <Link 
               href="/oxp-calculator" 
               className="inline-block bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded transition-colors text-sm"
+            >
+              Open Calculator
+            </Link>
+          </div>
+
+          {/* Myth EXP Calculator */}
+          <div className="bg-component-card border border-border-dark p-6 rounded-lg">
+            <h2 className="text-xl font-semibold mb-3">Myth EXP Calculator</h2>
+            <p className="text-foreground/80 mb-4 text-sm">
+              Calculate Myth EXP requirements with rebirth multipliers and reset penalties.
+            </p>
+            <Link 
+              href="/myth-exp-calculator" 
+              className="inline-block bg-green-600 hover:bg-green-700 px-4 py-2 rounded transition-colors text-sm"
             >
               Open Calculator
             </Link>

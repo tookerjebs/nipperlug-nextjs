@@ -156,6 +156,38 @@ export default function HomePage() {
               </div>
             </Link>
 
+            {/* Myth EXP Calculator */}
+            <Link href="/myth-exp-calculator" prefetch={false} className="block h-full">
+              <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
+                <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
+                  Myth EXP Calculator
+                </h3>
+                <p className="text-foreground/80 mb-4 text-sm leading-relaxed flex-grow">
+                  Calculate Myth EXP requirements with rebirth multipliers.
+                </p>
+                <div className="flex items-center gap-2 text-game-highlight font-normal opacity-70 group-hover:opacity-100 transition-opacity duration-300 mt-auto">
+                  <span>Open</span>
+                  <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Event Pass Calculator */}
+            <Link href="/event-pass-calculator" prefetch={false} className="block h-full">
+              <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">
+                <h3 className="text-lg font-medium text-game-highlight mb-2 group-hover:text-game-highlight/80 tracking-wide">
+                  Event Pass Calculator
+                </h3>
+                <p className="text-foreground/80 mb-4 text-sm leading-relaxed flex-grow">
+                  Calculate daily and weekly mission requirements for Event Pass.
+                </p>
+                <div className="flex items-center gap-2 text-game-highlight font-normal opacity-70 group-hover:opacity-100 transition-opacity duration-300 mt-auto">
+                  <span>Open</span>
+                  <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+                </div>
+              </div>
+            </Link>
+
             {/* Chloe Craft Profit */}
             <Link href="/chloe-craft-profit-calculator" prefetch={false} className="block h-full">
               <div className="glass-panel p-6 border-l-4 border-slate-500/30 hover:border-game-highlight/50 transition-all duration-300 hover:scale-105 cursor-pointer group h-full flex flex-col">

@@ -26,6 +26,7 @@ const searchablePages: SearchPage[] = [
   { name: 'Character EXP Calculator', href: '/exp-calculator', description: 'Level progression planning' },
   { name: 'Force Wing Calculator', href: '/force-wing-calculator', description: 'Wing upgrade planning' },
   { name: 'OXP Calculator', href: '/oxp-calculator', description: 'Overlord experience calculations' },
+  { name: 'Myth EXP Calculator', href: '/myth-exp-calculator', description: 'Myth experience with rebirth multipliers' },
   { name: 'Devil Shop Calculator', href: '/devils-shop-calculator', description: 'Token exchange optimization' },
   { name: 'Chloe Craft Calculator', href: '/chloe-craft-profit-calculator', description: 'Crafting profit analysis' },
   { name: 'Chloe Amity Calculator', href: '/chloe-amity-calculator', description: 'Amity costs and requirements' },

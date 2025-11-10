@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'exp-calculators',
     'force-wing-calculator',
     'oxp-calculator',
+    'myth-exp-calculator',
     'extreme-upgrade-calculator',
     'chloe-craft-profit-calculator',
     'devils-shop-calculator',

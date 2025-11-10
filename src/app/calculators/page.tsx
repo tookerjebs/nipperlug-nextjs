@@ -96,6 +96,36 @@ export default function CalculatorsPage() {
             </Link>
           </div>
 
+          {/* Myth EXP Calculator */}
+          <div className="bg-component-card border border-border-dark p-6 rounded-lg hover:border-blue-500/30 transition-colors">
+            <h3 className="text-xl font-semibold mb-3">Myth EXP Calculator</h3>
+            <p className="text-foreground/70 mb-4 text-sm leading-relaxed">
+              Calculate Myth EXP requirements with rebirth multipliers.
+              Plan your Myth progression across multiple rebirths.
+            </p>
+            <Link 
+              href="/myth-exp-calculator" 
+              className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
+            >
+              Calculate Myth EXP
+            </Link>
+          </div>
+
+          {/* Event Pass Calculator */}
+          <div className="bg-component-card border border-border-dark p-6 rounded-lg hover:border-blue-500/30 transition-colors">
+            <h3 className="text-xl font-semibold mb-3">Event Pass Calculator</h3>
+            <p className="text-foreground/70 mb-4 text-sm leading-relaxed">
+              Calculate daily and weekly mission requirements for Event Pass.
+              Plan your progression to reach level 50.
+            </p>
+            <Link 
+              href="/event-pass-calculator" 
+              className="inline-block bg-game-highlight hover:bg-game-highlight/80 px-4 py-2 rounded transition-colors text-sm font-medium text-theme-darkest"
+            >
+              Calculate Requirements
+            </Link>
+          </div>
+
           {/* Chloe Craft */}
           <div className="bg-component-card border border-border-dark p-6 rounded-lg hover:border-blue-500/30 transition-colors">
             <h3 className="text-xl font-semibold mb-3">Chloe Craft</h3>

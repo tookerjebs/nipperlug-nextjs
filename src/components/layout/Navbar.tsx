@@ -61,6 +61,7 @@ const navigationItems: NavigationItem[] = [
           { name: 'Character EXP', href: '/exp-calculator' },
           { name: 'Force Wing', href: '/force-wing-calculator' },
           { name: 'OXP', href: '/oxp-calculator' },
+          { name: 'Myth EXP', href: '/myth-exp-calculator' },
         ]
       },
     ]

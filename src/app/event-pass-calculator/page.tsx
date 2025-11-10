@@ -9,8 +9,8 @@ export const revalidate = 2592000;
 
 export const metadata: Metadata = {
   title: "Cabal Online Event Pass Calculator - nipperlug",
-  description: "Calculate Event Pass mission requirements in Cabal Online. Plan your Event Pass progression to reach level 50 with accurate daily and weekly mission calculations.",
-  keywords: "Cabal Online Event Pass, Event Pass calculator, Event Pass missions, daily missions, weekly missions, Event Pass level 50, Cabal Online events",
+  description: "Event Pass Calculator for Cabal Online. Calculate daily and weekly mission requirements to reach Event Pass level 50.",
+  keywords: "Event Pass Calculator for Cabal Online, Cabal Online Event Pass, Event Pass calculator, Event Pass missions, daily missions, weekly missions, Event Pass level 50, Cabal Online events",
   robots: {
     index: true,
     follow: true,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Cabal Online Event Pass Calculator - nipperlug",
-    description: "Calculate Event Pass mission requirements in Cabal Online. Plan your Event Pass progression to reach level 50 with accurate daily and weekly mission calculations.",
+    description: "Event Pass Calculator for Cabal Online. Calculate daily and weekly mission requirements to reach Event Pass level 50.",
     url: "https://nipperlug.com/event-pass-calculator/",
     type: "website",
     siteName: "nipperlug",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Cabal Online Event Pass Calculator - nipperlug",
-    description: "Calculate Event Pass mission requirements in Cabal Online. Plan your Event Pass progression to reach level 50 with accurate daily and weekly mission calculations.",
+    description: "Event Pass Calculator for Cabal Online. Calculate daily and weekly mission requirements to reach Event Pass level 50.",
   },
   alternates: {
     canonical: "https://nipperlug.com/event-pass-calculator/",
@@ -46,9 +46,9 @@ export default function EventPassCalculatorPage() {
             <div className="glass-panel">
               {/* Page Header */}
               <div className="glass-panel-dark p-6 sm:p-8 text-center">
-                <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-game-gold">Event Pass Calculator</h1>
+                <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-game-gold">Event Pass Calculator for Cabal Online</h1>
                 <p className="text-foreground/80 max-w-2xl mx-auto">
-                  Calculate how many daily and weekly missions you need to complete to reach Event Pass level 50. Enter your current points and remaining days to see your mission requirements.
+                  Calculate how many daily and weekly missions you need to complete to reach Event Pass level 50 in Cabal Online. Enter your current points and remaining days to see your mission requirements.
                 </p>
               </div>
               

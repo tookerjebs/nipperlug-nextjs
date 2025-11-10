@@ -29,7 +29,7 @@ const nextConfig = {
       },
       // Aggressive caching for static calculator pages
       {
-        source: '/(chloe-craft-profit-calculator|devils-shop-calculator|chloe-amity-calculator|extreme-upgrade-calculator|exp-calculator|oxp-calculator|force-wing-calculator)',
+        source: '/(chloe-craft-profit-calculator|devils-shop-calculator|chloe-amity-calculator|extreme-upgrade-calculator|exp-calculator|oxp-calculator|force-wing-calculator|myth-exp-calculator)',
         headers: [
           {
             key: 'Cache-Control',

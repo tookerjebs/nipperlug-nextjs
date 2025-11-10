@@ -40,6 +40,7 @@ interface CalculationResult {
   weeklyMissionsIfAllDailies: number;
   dailyMissionsCanSkip: number;
   weeklyMissionsCanSkip: number;
+  weeklyMissionsCanSkipPerWeek: number;
 }
 
 export default function EventPassCalculator() {
@@ -158,6 +159,11 @@ export default function EventPassCalculator() {
     
     // How many weekly missions can be skipped if doing all dailies?
     const weeklyMissionsCanSkip = Math.max(0, (totalWeeksAvailable * WEEKLY_MISSIONS_COUNT) - weeklyMissionsIfAllDailies);
+    
+    // How many weekly missions can be skipped per week (average)
+    const weeklyMissionsCanSkipPerWeek = totalWeeksAvailable > 0 
+      ? Math.max(0, weeklyMissionsCanSkip / totalWeeksAvailable)
+      : 0;
 
     setResult({
       pointsNeeded,
@@ -179,16 +185,13 @@ export default function EventPassCalculator() {
       weeklyMissionsIfAllDailies,
       dailyMissionsCanSkip,
       weeklyMissionsCanSkip,
+      weeklyMissionsCanSkipPerWeek,
     });
   }, [currentLevel, currentProgress, remainingDays, getWeeklyPointsTotal, validateInputs]);
 
   const handleCurrentLevelChange = (value: number) => {
     const level = Math.max(1, Math.min(MAX_LEVEL, value));
     setCurrentLevel(level);
-    // If at max level, reset progress to 0
-    if (level === MAX_LEVEL) {
-      setCurrentProgress(0);
-    }
   };
 
   const handleCurrentProgressChange = (value: number) => {
@@ -444,6 +447,9 @@ export default function EventPassCalculator() {
                     <p className="text-foreground/80">
                       <strong className="text-foreground">Weekly missions you can skip:</strong> <span className="text-green-400 font-semibold">{formatNumber(result.weeklyMissionsCanSkip)}</span>
                     </p>
+                    <p className="text-foreground/80">
+                      <strong className="text-foreground">Weekly missions you can skip per week (average):</strong> <span className="text-green-400 font-semibold">{result.weeklyMissionsCanSkipPerWeek % 1 === 0 ? formatNumber(result.weeklyMissionsCanSkipPerWeek) : result.weeklyMissionsCanSkipPerWeek.toFixed(1)}</span>
+                    </p>
                     <p className="text-xs text-foreground/60 mt-2">
                       Out of {formatNumber((result.fullWeeksAvailable + (result.partialWeekDays > 0 ? 1 : 0)) * WEEKLY_MISSIONS_COUNT)} total weekly missions available
                     </p>
@@ -482,7 +488,6 @@ export default function EventPassCalculator() {
           <div className="text-xs text-foreground/60 bg-theme-dark p-3 rounded-lg border border-border-dark">
             <p className="mb-1"><strong>Note:</strong> Daily missions reset every day (3 missions × 50 points = 150 points/day).</p>
             <p className="mb-1"><strong>Note:</strong> Weekly missions reset every week (20 missions = {formatNumber(getWeeklyPointsTotal())} points/week).</p>
-            <p><strong>Tip:</strong> Complete weekly missions first as they provide more points per mission on average.</p>
           </div>
         </div>
       )}
